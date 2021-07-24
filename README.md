@@ -1,20 +1,20 @@
-GRUPO_12_ElMundoDelCalzado
+## GRUPO_12_ElMundoDelCalzado
 
-Integrantes:
+**Integrantes:**
 
-Mierez  Augusto
+- **Mierez  Augusto**
 39 años , Encargado de comercio, Futuro Programador  y Desarrollador FullStack con  Digital House y Fundacion Formar, Operador de Pc en Aplicaciones Windows (word, excel, powerpoint, access).
 
-Mamani Alexander
+- **Mamani Alexander Ruben**  32 años, tecnico electronico, Programador *Full Stack* gracias a **[Digital House](https://www.digitalhouse.com/ar "Digital House")** 
 
 
 
-Cruz Sandra
+- Cruz Sandra
 
 
 
 
-Barrionuevo Soledad
+- **Barrionuevo Soledad**
 34 años,docencia durante 10 años,programadora de pc en aplicaciones windows(word,excel,powerpoint,Ps). Futura programadora y diseñadora grafica.
 
 
@@ -35,13 +35,17 @@ Agregar una referencia sobre que se trata el proyecto
 
 PAGINAS DE REFERENCIAS!!!
 
-https://www.tiendaprowess.com.ar/?gclid=Cj0KCQjw0emHBhC1ARIsAL1QGNc91Lxql4LRTWC2OTXgpqZHiYfTKq7-tJxb-J1C5JB6ePyM2kYTOvEaAsW-EALw_wcB
+- [www.tiendaprowess.com.ar](https://www.tiendaprowess.com.ar/?gclid=Cj0KCQjw0emHBhC1ARIsAL1QGNc91Lxql4LRTWC2OTXgpqZHiYfTKq7-tJxb-J1C5JB6ePyM2kYTOvEaAsW-EALw_wcB "tiendaprowess")
+- [www.atomik.com.ar](https://atomik.com.ar/ "atomik")
+- [www.botanguita.com.ar](https://botanguita.com.ar/ "Botanguita")
+- [www.nazaria.com.ar](https://nazaria.com.ar/ "Nazaria")
+- [www.viamo.com](https://viamo.com/ "Viamo")
 
 
 
 
 
-CORDINACION DE TRABAJO  MEDIANTE PLATAFORMA
+**Cordinacion de trabajo mediante la plataforma**
 
-TRELLO
+*Trello*
 
