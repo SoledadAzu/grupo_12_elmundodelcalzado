@@ -20,7 +20,7 @@
 
 Agregar el logo
 
-![prueba 2](https://user-images.githubusercontent.com/87153906/126855672-d1337878-3511-47e3-95f7-0cb7114eed62.png)
+![image](https://user-images.githubusercontent.com/87153906/126934872-096b52d5-5f05-46c7-a89a-df186840a970.png)
 
 
 
