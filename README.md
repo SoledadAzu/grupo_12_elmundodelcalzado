@@ -38,8 +38,8 @@ PAGINAS DE REFERENCIAS!!!
 - [www.tiendaprowess.com.ar](https://www.tiendaprowess.com.ar/?gclid=Cj0KCQjw0emHBhC1ARIsAL1QGNc91Lxql4LRTWC2OTXgpqZHiYfTKq7-tJxb-J1C5JB6ePyM2kYTOvEaAsW-EALw_wcB "tiendaprowess")
 - [www.atomik.com.ar](https://atomik.com.ar/ "atomik")
 - [www.botanguita.com.ar](https://botanguita.com.ar/ "Botanguita")
-- [www.nazaria.com.ar](https://nazaria.com.ar/ "Nazaria")
-- [www.viamo.com](https://viamo.com/ "Viamo")
+- [www.adidas.com.ar](https://www.adidas.com.ar/"adidas")
+- [www.nike.com.ar](https://www.nike.com/ar/ "nike")
 
 
 
