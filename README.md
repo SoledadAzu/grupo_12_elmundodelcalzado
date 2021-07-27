@@ -12,7 +12,10 @@ Somos una empresa con la mejor atención en el mercado dedicada a el bien estar 
 
 
 - **Cruz Sandra**
-
+38 años
+Provincia:BS.AS (Bella Vista)
+sobre Mi: soy auxiliar en Enfermeria y Farmacia.
+ Cursando gracias a Fundacion Formar, el curso Programacion,Full Stack de DIgital House- 
 
 
 
