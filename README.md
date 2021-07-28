@@ -9,7 +9,7 @@ Ofertas que brindaremos:descuentos especiaales,planes de pago,cupones de descuen
 - **Mierez  Augusto**
 39 años , Encargado de comercio, Futuro Programador  y Desarrollador FullStack con  Digital House y Fundacion Formar, Operador de Pc en Aplicaciones Windows (word, excel, powerpoint, access).
 
-- **Mamani Alexander Ruben**  32 años, tecnico electronico, Programador *Full Stack* gracias a **[Digital House](https://www.digitalhouse.com/ar "Digital House")** 
+- **Mamani Alexander Ruben**  32 años, tecnico electronico, Programador *Full Stack* gracias a **[Digital House](https://www.digitalhouse.com/ar "Digital House")** y **[Fundacion Formar](https://www.fundacionformar.net/ "Fundacion formar")**, Ingles Profesional gracias a Ruth Cabrera y Leonardo Dávalos compañeros de *Fundacion Formar*
 
 
 
