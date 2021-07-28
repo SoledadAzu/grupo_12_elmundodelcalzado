@@ -1,4 +1,5 @@
-![image](https://user-images.githubusercontent.com/87153906/126934872-096b52d5-5f05-46c7-a89a-df186840a970.png)
+![image](https://user-images.githubusercontent.com/87153906/127256057-73a69a3a-4f0b-4aba-8e86-3ff3171d4069.png)
+
 
 Somos una empresa con la mejor atención en el mercado dedicada a el bien estar de nuestro cliente. Estamos seguros que para lograr este fin, nada más agradable que nuestros pies estén cómodos lo cual nos permite disfrutar distintos momentos de manera confortable. Por este motivo tenemos una amplia variedad de modelos y talles tanto para dama como para caballero. Nuestra idea de llamar a esta empresa *"El mundo del calzado"*  es principalmente porque  queremos llegar a todo tipo de interés sin que nuestro cliente tenga q preocuparse si va a lograr conseguir su número de calzado. Nos enfocamos en que su preocupación sea solo por encontrar un modelo que se adapte a su estilo.
 Ofertas que brindaremos:descuentos especiaales,planes de pago,cupones de descuentos.
