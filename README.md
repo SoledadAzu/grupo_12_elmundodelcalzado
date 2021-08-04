@@ -28,11 +28,16 @@ sobre Mi: soy auxiliar en Enfermeria y Farmacia.
 
 PAGINAS DE REFERENCIAS!!!
 
-- [www.solodeportes.com.ar](https://www.solodeportes.com.ar/ "Solo Deporte")
-- [www.atomik.com.ar](https://atomik.com.ar/ "atomik")
-- [www.botanguita.com.ar](https://botanguita.com.ar/ "Botanguita")
-- [www.adidas.com.ar](https://www.adidas.com.ar/ "adidas")
-- [www.nike.com.ar](https://www.nike.com.ar/ "nike")
+- [www.solodeportes.com.ar](https://www.solodeportes.com.ar/ "Solo Deporte") - 
+
+- [www.atomik.com.ar](https://atomik.com.ar/ "atomik") - 
+
+- [www.botanguita.com.ar](https://botanguita.com.ar/ "Botanguita") -
+
+- [www.adidas.com.ar](https://www.adidas.com.ar/ "adidas") - 
+
+- [www.nike.com.ar](https://www.nike.com.ar/ "nike") - 
+
 - [www.ladystork.com.ar](https://www.ladystork.com.ar "ladystork")  - De esta página se utilizó como referencia el login
 
 **Cordinacion de trabajo mediante la plataforma**
