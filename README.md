@@ -33,7 +33,7 @@ PAGINAS DE REFERENCIAS!!!
 - [www.botanguita.com.ar](https://botanguita.com.ar/ "Botanguita")
 - [www.adidas.com.ar](https://www.adidas.com.ar/ "adidas")
 - [www.nike.com.ar](https://www.nike.com.ar/ "nike")
-- [www.ladystork.com.ar](https://www.ladystork.com.ar "ladystork")  De esta página se utilizo como referencia el login
+- [www.ladystork.com.ar](https://www.ladystork.com.ar "ladystork")  - De esta página se utilizo como referencia el login
 
 **Cordinacion de trabajo mediante la plataforma**
 
