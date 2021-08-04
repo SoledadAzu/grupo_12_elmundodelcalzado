@@ -32,7 +32,7 @@ PAGINAS DE REFERENCIAS!!!
 
 - [www.atomik.com.ar](https://atomik.com.ar/ "atomik") - 
 
-- [www.botanguita.com.ar](https://botanguita.com.ar/ "Botanguita") -
+- [www.botanguita.com.ar](https://botanguita.com.ar/ "Botanguita") - 
 
 - [www.adidas.com.ar](https://www.adidas.com.ar/ "adidas") - 
 
