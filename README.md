@@ -30,15 +30,15 @@ PAGINAS DE REFERENCIAS!!!
 
 - [www.solodeportes.com.ar](https://www.solodeportes.com.ar/ "Solo Deporte") - 
 
-- [www.atomik.com.ar](https://atomik.com.ar/ "atomik") - 
+- [www.atomik.com.ar](https://atomik.com.ar/ "atomik") - De esta página se uso de referencia los detalles de productos y el carrusel de imagen
 
-- [www.botanguita.com.ar](https://botanguita.com.ar/ "Botanguita") - 
+- [www.botanguita.com.ar](https://botanguita.com.ar/ "Botanguita") - De esta página se uso como referencia al registro.
 
 - [www.adidas.com.ar](https://www.adidas.com.ar/ "adidas") - 
 
 - [www.nike.com.ar](https://www.nike.com.ar/ "nike") - 
 
-- [www.ladystork.com.ar](https://www.ladystork.com.ar "ladystork")  - De esta página se utilizó como referencia el login
+- [www.ladystork.com.ar](https://www.ladystork.com.ar "ladystork")  - De esta página se utilizó como referencia el login.
 
 **Cordinacion de trabajo mediante la plataforma**
 
