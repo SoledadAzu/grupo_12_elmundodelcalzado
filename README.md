@@ -34,11 +34,12 @@ PAGINAS DE REFERENCIAS!!!
 
 - [www.botanguita.com.ar](https://botanguita.com.ar/ "Botanguita") - De esta página se uso como referencia al registro.
 
-- [www.adidas.com.ar](https://www.adidas.com.ar/ "adidas") - 
+- [www.adidas.com.ar](https://www.adidas.com.ar/ "adidas") - De esta página tomamos como guia su forma de detallar sus productos.
 
-- [www.nike.com.ar](https://www.nike.com.ar/ "nike") - 
+- [www.nike.com.ar](https://www.nike.com.ar/ "nike") - De esta página se uso como referencia como tiene distribuido su menu de distribución.
 
 - [www.ladystork.com.ar](https://www.ladystork.com.ar "ladystork")  - De esta página se utilizó como referencia el login.
+
 
 **Cordinacion de trabajo mediante la plataforma**
 
