@@ -28,7 +28,7 @@ sobre Mi: soy auxiliar en Enfermeria y Farmacia.
 
 PAGINAS DE REFERENCIAS!!!
 
-- [www.solodeportes.com.ar](https://www.solodeportes.com.ar/ "Solo Deporte") - 
+- [www.solodeportes.com.ar](https://www.solodeportes.com.ar/ "Solo Deporte") - De esta página se uso de referencia al modelo del Home
 
 - [www.atomik.com.ar](https://atomik.com.ar/ "atomik") - De esta página se uso de referencia los detalles de productos y el carrusel de imagen
 
