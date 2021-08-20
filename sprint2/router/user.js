@@ -8,3 +8,5 @@ router.get('login',(req,res)=>{
 router.get('register',(req,res)=>{
     res.sendFile(path.join(__dirname,'..','views','registro.html'))
 })
+
+module.exports = router
