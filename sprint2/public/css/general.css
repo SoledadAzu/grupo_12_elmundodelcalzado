@@ -5,6 +5,7 @@
     --azul:#210de9;
     --azul-claro:#2a3ef3;
     --gris:#c4c4c4;
+    --gris-oscuro:#8F8989;
     --celeste:#99e2f9;
     --verde-claro:#3dc563;
     --violeta:#501996;
@@ -23,5 +24,5 @@ html{
 }
 a{
     text-decoration: none;
-    color:black;
+    
 }
