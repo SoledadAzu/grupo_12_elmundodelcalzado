@@ -1,0 +1,236 @@
+.rutas a,
+.rutas strong{
+    color: var(--gris-oscuro);
+}
+.rutas{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+/***************BANER****************/
+
+.banner img{
+    width: 100%;
+}
+
+/************** Articulo ***********/
+.articulo{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.articulo-zapatilla{
+    width:60%;
+    display: flex;
+    flex-direction: column;
+}
+.articulo-img{
+    border:1px solid var(--gris);
+}
+
+.articulo-img img{
+    width: 100%;
+}
+.articulo-general{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+.articulo-modelos{
+    width: 24%;
+    border:1px solid var(--gris);
+    cursor:pointer;
+}
+.articulo-modelos img{
+    width: 100%;
+}
+.articulo-descripcion{
+    width: 38%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.articulo-descripcion_datos{
+    padding-top: 10px;
+    text-align: center;
+    line-height: 185%;
+}
+.articulo-descripcion_talles{
+    padding-bottom: 20px;
+}
+.articulo-descripcion_talles h3{
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+
+.articulo-descripcion_talles nav ol{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.articulo-descripcion_talles nav ol li{
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.articulo-descripcion_accion button{
+    width: 100%;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+
+/******************** DETALLE DE PRODUCTO**************/
+
+.detalle-producto{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.detalle-producto h5{
+    padding-bottom: 30px;
+}
+.detalle-producto p{
+    padding-top: 10px;
+    padding-bottom: 30px;
+    width: 90%;
+}
+/***************************OFERTAS****************************/
+
+.ofertas h5{
+    padding-bottom: 30px;
+}
+.ofertas-general{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.ofertas-zapatillas{
+    width: 47%;
+    margin-top: 5px;
+    border: 1px solid black;
+    text-align: center;
+}
+.ofertas-zapatilla_img{
+    border: 1px solid black;
+    margin: 5px;
+}
+.ofertas-zapatilla_img img{
+    width: 100%;
+}
+.ofertas-zapatilla-precio{
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+/********************** MEDIAS QUERIS *****************************/
+
+@media (min-width:769px){
+    .rutas{
+        display: none;
+    }
+
+    /***************** ARTICULO PRINCIPAL*************/
+    .articulo-zapatilla{
+        width: 60%;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .articulo-general{
+        padding-top: 0;
+        order:-1;
+        flex-direction: column;
+        align-items: center;
+    }
+    .articulo-modelos{
+        width: 75%;
+        border: none;
+    }
+    .articulo-talles ol li{
+        font-size: 1.6rem;
+    }
+    .articulo-descripcion_datos{
+        font-size: 1.3rem;
+    }
+
+    /********************* DETALLE DE PRODUCTO *****************/
+    .detalle-producto h5{
+        font-size: 1.3rem;
+    }
+    .detalle-producto h4{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .detalle-producto p{
+        font-size: 1rem;
+        text-align: center;
+        margin: 0 auto;
+        
+    }
+    /******************* OFERTAS *******************/
+    .ofertas h5{
+        font-size: 1.3rem;
+    }
+    .oculto{
+        display: none;
+    }
+    .ofertas-zapatillas{
+        width: 33%;
+        
+    }
+
+
+
+}
+@media (min-width:1024px){
+    .articulo-descripcion_datos{
+        line-height: 220%;
+    }
+     
+    .articulo-descripcion_datos h3,
+    .articulo-descripcion_datos p{
+        font-size: 2rem;
+    }
+    .articulo-descripcion_datos h5{
+        font-size: 1.5rem;
+    }
+
+    .articulo-descripcion_talles h3{
+        font-size: 2rem;
+    }
+    .articulo-descripcion_talles nav ol li{
+        padding: 15px;
+    }
+    .articulo-descripcion_accion button{
+        padding: 20px 15px;
+    }
+
+    /************** DETALLE DE PRODUCTO*********************/
+    .detalle-producto {
+        width: 94%;
+        margin: 0 auto;
+    }
+    .detalle-producto h5{
+        font-size: 1.5rem;
+    }
+    /**************** OFERTAS *****************************/
+    .ofertas h5{
+        padding-left: 29px;
+        text-align: center;
+        font-size: 2rem;
+    }
+    .oculto{
+        display: block;
+    }
+    .ofertas-zapatillas{
+        width: 25%;
+
+    }
+    .ofertas-zapatilla-precio h5{
+        padding-left: 0;
+    }
+}
