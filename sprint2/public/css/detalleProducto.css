@@ -148,7 +148,7 @@
     }
     .articulo-modelos{
         width: 75%;
-        border: none;
+        border: 1px solid transparent;
     }
     .articulo-talles ol li{
         font-size: 1.6rem;
@@ -187,6 +187,9 @@
 
 }
 @media (min-width:1024px){
+    .articulo-modelos:hover{
+        border: 1px solid grey;
+    }
     .articulo-descripcion_datos{
         line-height: 220%;
     }
@@ -204,9 +207,19 @@
     }
     .articulo-descripcion_talles nav ol li{
         padding: 15px;
+        cursor: pointer;
+    }
+    .articulo-descripcion_talles nav ol li:hover{
+        background-color: var(--azul);
+        color: white;
     }
     .articulo-descripcion_accion button{
         padding: 20px 15px;
+        cursor: pointer;
+    }
+    .articulo-descripcion_accion button:hover{
+        background-color: var(--gris-oscuro);
+        color: white;
     }
 
     /************** DETALLE DE PRODUCTO*********************/
@@ -227,8 +240,13 @@
         display: block;
     }
     .ofertas-zapatillas{
-        width: 25%;
+        width: 24%;
+        cursor: pointer;
 
+    }
+    .ofertas-zapatillas:hover{
+        background-color: teal;
+        color: white;
     }
     .ofertas-zapatilla-precio h5{
         padding-left: 0;
