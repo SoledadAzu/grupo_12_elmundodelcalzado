@@ -14,8 +14,10 @@
 
 /************** Articulo ***********/
 .articulo{
+    width: 95%;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .articulo-zapatilla{
@@ -40,6 +42,10 @@
     border:1px solid var(--gris);
     cursor:pointer;
 }
+.articulo-modelos:active{
+    border:1px solid var(--azul);
+}
+
 .articulo-modelos img{
     width: 100%;
 }
@@ -50,28 +56,33 @@
     justify-content: space-between;
 }
 .articulo-descripcion_datos{
-    padding-top: 10px;
+    padding-top: 5px;
     text-align: center;
-    line-height: 185%;
+    line-height: 160%;
 }
 .articulo-descripcion_talles{
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 .articulo-descripcion_talles h3{
     font-size: 1.5rem;
     padding-bottom: 10px;
 }
 
-.articulo-descripcion_talles nav ol{
+.articulo-talles ol{
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
-.articulo-descripcion_talles nav ol li{
+.articulo-talles ol li{
     background-color: aqua;
-    padding: 10px;
+    padding: 8px;
     border-radius: 50%;
+    cursor: pointer;
+}
+.articulo-talles ol li:hover{
+    background-color: var(--azul);
+    color: white;
 }
 
 .articulo-descripcion_accion button{
@@ -81,12 +92,15 @@
     text-align: center;
     font-size: 1rem;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 
 /******************** DETALLE DE PRODUCTO**************/
 
 .detalle-producto{
+    width: 95%;
+    margin: 0 auto;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -94,12 +108,14 @@
     padding-bottom: 30px;
 }
 .detalle-producto p{
-    padding-top: 10px;
-    padding-bottom: 30px;
-    width: 90%;
+    padding-top: 20px;
+    width: 100%;
 }
 /***************************OFERTAS****************************/
-
+.ofertas{
+    width: 95%;
+    margin: 0 auto;
+}
 .ofertas h5{
     padding-bottom: 30px;
 }
@@ -107,13 +123,14 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 .ofertas-zapatillas{
-    width: 47%;
+    width: 49%;
     margin-top: 5px;
     border: 1px solid black;
     text-align: center;
+    cursor: pointer;
 }
 .ofertas-zapatilla_img{
     border: 1px solid black;
@@ -135,6 +152,9 @@
     }
 
     /***************** ARTICULO PRINCIPAL*************/
+    .articulo{
+        justify-content: space-between;
+    }
     .articulo-zapatilla{
         width: 60%;
         flex-direction: row;
@@ -154,7 +174,15 @@
         font-size: 1.6rem;
     }
     .articulo-descripcion_datos{
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+    }
+    .articulo-descripcion_talles{
+        padding-bottom: 0;
+    }
+    .articulo-descripcion_accion button{
+        
+        padding: 20px 15px;
+      
     }
 
     /********************* DETALLE DE PRODUCTO *****************/
@@ -166,9 +194,8 @@
         text-align: center;
     }
     .detalle-producto p{
-        font-size: 1rem;
-        text-align: center;
-        margin: 0 auto;
+        font-size: 1.3rem;
+        
         
     }
     /******************* OFERTAS *******************/
@@ -177,6 +204,9 @@
     }
     .oculto{
         display: none;
+    }
+    .ofertas-general{
+        justify-content: space-between;
     }
     .ofertas-zapatillas{
         width: 33%;
@@ -205,17 +235,15 @@
     .articulo-descripcion_talles h3{
         font-size: 2rem;
     }
-    .articulo-descripcion_talles nav ol li{
+    .articulo-talles ol li{
         padding: 15px;
         cursor: pointer;
     }
-    .articulo-descripcion_talles nav ol li:hover{
-        background-color: var(--azul);
-        color: white;
-    }
+    
     .articulo-descripcion_accion button{
-        padding: 20px 15px;
+        padding: 25px 15px;
         cursor: pointer;
+        font-size: 1.5rem;
     }
     .articulo-descripcion_accion button:hover{
         background-color: var(--gris-oscuro);
@@ -224,13 +252,17 @@
 
     /************** DETALLE DE PRODUCTO*********************/
     .detalle-producto {
-        width: 94%;
+        width: 95%;
         margin: 0 auto;
     }
     .detalle-producto h5{
         font-size: 1.5rem;
     }
+
     /**************** OFERTAS *****************************/
+    .ofertas-general{
+        justify-content: space-evenly;
+    }
     .ofertas h5{
         padding-left: 29px;
         text-align: center;
