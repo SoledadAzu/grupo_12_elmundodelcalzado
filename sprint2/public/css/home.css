@@ -185,7 +185,7 @@ span{
         display: inline-block;
         font-size: 18px;
     }
-    .ocultar{
+    .iconos .ocultar{
         display:none;
     }
     .usuario .fa-user{
