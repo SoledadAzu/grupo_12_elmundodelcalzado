@@ -85,7 +85,7 @@ header{
 .datos{
     display: none;
 }
-span{
+.datos span{
     display: none;
 }
 #menu{
@@ -124,7 +124,7 @@ span{
     .iconos .fa-search{
         padding-right: 20px;
         font-size: 30px;
-        margin-top: 30px;
+        
     }
     .usuario a{
         color: black;

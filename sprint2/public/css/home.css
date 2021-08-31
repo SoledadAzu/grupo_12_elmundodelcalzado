@@ -23,6 +23,29 @@ header{
     transition: all .5s;
 
 }
+.iconos-search{
+    display: flex;
+}
+.search div{
+    position: fixed;
+    width: 100%;
+    
+    background: linear-gradient(180deg, #F52B0F 0%, #210DE9 100%);
+    top: 77px;
+    right:-100%;
+    transition: all .5s;
+}
+.search div input{
+    border:none;
+    display: inline-block;
+    width: 100%;
+    font-size: 1.2rem;
+    padding-left: 10px;
+    padding-top:20px ;
+    padding-bottom: 20px;
+    
+}
+
 .logo-iconos nav ul li{
     padding-top: 20px;
     padding-bottom: 20px;
@@ -96,6 +119,12 @@ span{
 #menu:checked ~ ul{
     left:0;
 }
+#search{
+    display: none;
+}
+#search:checked ~ div{
+    right: 0;
+}
 
 @media (min-width:769px){
     .logo{
@@ -126,10 +155,21 @@ span{
     .iconos .fa-search{
         padding-right: 20px;
         font-size: 30px;
-        margin-top: 30px;
+        margin-top: 0px;
     }
     .usuario a{
         color: black;
+    }
+    .iconos-search{
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+    
+    .search div{
+        
+        top: 137px;
+        right:-100%;
+        transition: all .5s;
     }
     
 }
@@ -180,6 +220,10 @@ span{
         color:white;
         padding: 5px;
 
+    }
+    .iconos-search{
+        margin-top: 0;
+        
     }
     span{
         display: inline-block;
