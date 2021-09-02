@@ -23,6 +23,29 @@ header{
     transition: all .5s;
 
 }
+.iconos-search{
+    display: flex;
+}
+.search div{
+    position: fixed;
+    width: 100%;
+    
+    background: linear-gradient(180deg, #F52B0F 0%, #210DE9 100%);
+    top: 77px;
+    right:-100%;
+    transition: all .5s;
+}
+.search div input{
+    border:none;
+    display: inline-block;
+    width: 100%;
+    font-size: 1.2rem;
+    padding-left: 10px;
+    padding-top:20px ;
+    padding-bottom: 20px;
+    
+}
+
 .logo-iconos nav ul li{
     padding-top: 20px;
     padding-bottom: 20px;
@@ -36,10 +59,6 @@ header{
     color:white;
 
 }
-
-
-    
-
 .fa-bars{
     font-size: 35px;
 }
@@ -87,7 +106,10 @@ header{
 .datos{
     display: none;
 }
-span{
+.datos span{
+    display: none;
+}
+.iconos-search span{
     display: none;
 }
 #menu{
@@ -95,6 +117,12 @@ span{
 }
 #menu:checked ~ ul{
     left:0;
+}
+#search{
+    display: none;
+}
+#search:checked ~ div{
+    right: 0;
 }
 
 @media (min-width:769px){
@@ -126,10 +154,33 @@ span{
     .iconos .fa-search{
         padding-right: 20px;
         font-size: 30px;
-        margin-top: 30px;
+        margin-top: 0px;
     }
     .usuario a{
         color: black;
+    }
+    .iconos-search{
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+    
+    .search div{
+        
+        top: 137px;
+        right:-100%;
+        transition: all .5s;
+    }
+    .logo-iconos nav ul{
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(180deg, #F52B0F 0%, #210DE9 100%);
+        top: 137px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    
     }
     
 }
@@ -137,14 +188,19 @@ span{
     header{
         flex-direction: column;
     }
+
     .datos{
-        
         display: flex;
         justify-content: space-between;
         width: 100%;
         background-color: var(--gris);
         padding-left: 10px;
         padding-right: 10px;
+    }
+
+    .datos span{
+        display: block;
+        font-size: 18px;
     }
     .menu{
         display: none;
@@ -181,7 +237,16 @@ span{
         padding: 5px;
 
     }
-    span{
+    .iconos-search{
+        margin-top: 0;
+        
+    }
+    .iconos-search a span{
+        display: inline-block;
+        font-size: 18px;
+    }
+    
+    .datos div span{
         display: inline-block;
         font-size: 18px;
     }
