@@ -85,9 +85,7 @@ header{
 .datos{
     display: none;
 }
-span{
-    display: none;
-}
+
 #menu{
     display: none;
 }
@@ -128,6 +126,7 @@ span{
     }
     .usuario a{
         color: black;
+        font-size: 22px;
     }
     
 }
@@ -181,7 +180,7 @@ span{
     }
     span{
         display: inline-block;
-        font-size: 18px;
+        font-size: 22px;
     }
     .ocultar{
         display:none;

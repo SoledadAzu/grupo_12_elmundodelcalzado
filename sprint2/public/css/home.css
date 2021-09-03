@@ -87,7 +87,7 @@ header{
 .datos{
     display: none;
 }
-span{
+span {
     display: none;
 }
 #menu{
@@ -137,8 +137,7 @@ span{
     header{
         flex-direction: column;
     }
-    .datos{
-        
+    .datos{   
         display: flex;
         justify-content: space-between;
         width: 100%;
