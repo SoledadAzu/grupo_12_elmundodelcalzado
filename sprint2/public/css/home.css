@@ -1,373 +1,347 @@
 
-
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+/***main***/
+.body{
+   
+    padding: 0;
+    
 }
-.menu{
-    margin-right: 20px;
-    border: none;
-    background-color: white;
+.home{
+    margin: 0%;
+    padding: 0%;
+    
 }
-.logo-iconos nav ul{
-    display: block;
-    position: fixed;
+.banner{
     width: 100%;
-    height: 100vh;
-    background: linear-gradient(180deg, #F52B0F 0%, #210DE9 100%);
-    top: 78px;
-    left: -100%;
+    padding-left: 5px;
+    padding-right: 5px;
     text-align: center;
-    transition: all .5s;
-
-}
-.iconos-search{
-    display: flex;
-}
-.search div{
-    position: fixed;
-    width: 100%;
-    
-    background: linear-gradient(180deg, #F52B0F 0%, #210DE9 100%);
-    top: 77px;
-    right:-100%;
-    transition: all .5s;
-}
-.search div input{
-    border:none;
-    display: inline-block;
-    width: 100%;
-    font-size: 1.2rem;
-    padding-left: 10px;
-    padding-top:20px ;
-    padding-bottom: 20px;
+    background: linear-gradient(180deg,#210DE9 0%, #F52B0F 100%);
+    margin-bottom: 5px;
     
 }
-
-.logo-iconos nav ul li{
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.logo-iconos nav ul li a{
-    font-size: 30px;
-    color: white;
-}
-.logo-iconos nav ul li:hover{
-    background-color: var(--verde-claro) ;
-    color:white;
-
-}
-.fa-bars{
-    font-size: 35px;
-}
-.iconos{
-    display: flex;
-}
-.usuario{
-    display: none;
-}
-.fa-search{
-    padding-right: 20px;
-    font-size: 30px;
-}
-.buscar{
+.banner2{
     display: none;
 }
 
-
-.fa-shopping-cart{
-   color: black;
-   font-size: 30px;
+.banner img{
+    margin-top: 8px;
+    width: 93%; 
 }
 
-.fa-shopping-cart:hover{
-    color:brown;
+.products{
+   display: flex;
+   flex-direction: column;
+     
 }
-.logo{
-    width: 110px;
+.padreIm{
+    width:100%;
     
 }
 
-.logo img{
-    width: 100%;
-}
-.menu-principal{
-    display: none;
-}
-.logo-iconos{
+.padreHombre{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 95%;
-    margin: 0 auto;
+    justify-content: space-evenly;
+    border-width: medium;
+    background: linear-gradient(
+180deg
+,#210DE9 0%, #F52B0F 100%);
+    
+  
+   
 }
-.datos{
-    display: none;
+.padreHombre h5{
+    width: 47%;
+    
+    color: white;
+    font-size: 23px;
 }
-.datos span{
-    display: none;
+.padreImg{
+    width:100%;
 }
-.iconos-search span{
-    display: none;
+/*.productsMujer{
+    width: 100%;
+}*/
+.padreMujer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-width: medium;
+    background: linear-gradient(
+180deg
+,#210DE9 0%, #F52B0F 100%);
+
+    
+
 }
-#menu{
-    display: none;
+.padreMujer h5{
+    width: 47%;
+    
+    color: white;
+    font-size: 23px;
 }
-#menu:checked ~ ul{
-    left:0;
-}
-#search{
-    display: none;
-}
-#search:checked ~ div{
-    right: 0;
+.oferta{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+    background: linear-gradient(
+        180deg
+        ,#210DE9 0%, #F52B0F 100%);
+    margin-top: 5px;
+ 
+    
+
 }
 
-@media (min-width:769px){
-    .logo{
-        width: 200px;
-        margin-right:-30px ;
-        
-    }
-    .menu{
-        margin-left: 30px;
-        
-    }
-    .menu .fa-bars{
-        font-size: 60px;
-    }
-    .logo{
-        width: 200px;
-        margin-right:-65px ;
-        
-    }
-    .iconos{
-        margin-right: 30px;
-        display: block;
-        text-align: center;
-    }
-    .iconos .usuario{
-        display: block;
-    }
-    .iconos .fa-search{
-        padding-right: 20px;
-        font-size: 30px;
-        margin-top: 0px;
-    }
-    .usuario a{
-        color: black;
-    }
-    .iconos-search{
-        margin-top: 30px;
-        margin-left: 30px;
-    }
+.oferta img{
+    width:59%;
+}
+
+.loMasVendido h1{
+    color:white ;
+}
+.loMasVendido{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+    background: linear-gradient(180deg,#e90d0d 0%, #F52B0F 100%);
+    margin:3px;
+    cursor: pointer
+}
+
+.lanzamiento h1{
+    color:white ;
+}
+.lanzamiento{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+    background: linear-gradient(180deg,#e90d0d 0%, #F52B0F 100%);
+    margin:3px;
+    cursor: pointer
+}
+.zapatillas{
+    display:flex ;
+    justify-content: space-evenly;
+  
     
-    .search div{
-        
-        top: 137px;
-        right:-100%;
-        transition: all .5s;
+
+}
+.zapatilla-img1{
+    width: 100%;
+}
+.zapatilla-img{
+    border: 1px solid black;
+    width: 45%;
+    margin-bottom: 5px;
+
+}
+.ofertasZapatillaPrecio{
+    text-align: center;
+}
+
+.ignorar{
+    display: none;
+} 
+
+
+.ignorarPC{
+    display: none;
+}
+
+.CompraPorMarca h1{
+    color:white ;
+}
+.CompraPorMarca{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+    background: linear-gradient(180deg,#e90d0d 0%, #F52B0F 100%);
+    margin:3px;
+    cursor: pointer 
+}
+
+.marcas{
+    width: 84%;
+}
+.marcas-img{
+    /*border: 1px solid black;*/
+    width: 30%;
+    margin-bottom: 5px;
+    /*display: inline-block*/
+}
+.contenedorMarcas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.botonVerMas{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8px;
+    
+}
+.botonVerMas button{
+      color: black;
+      FONT-WEIGHT: BOLD;
+      border: none;
+      background-color: white;
+}
+.marcasImgIgnorarTab{
+    display: none ;
+}
+.marcasImgIgnorarPC{
+    display: none;
+}
+
+
+/*tablet*/
+
+@media(min-width:769px){
+    
+    .zapatilla-img{
+        width: 32%;
     }
-    .logo-iconos nav ul{
+    .banner1{
+    display: none;
+    }
+    .padreImg{
+    display: block;
+    }
+    .ignorarPC{
+    display: none;
+    }
+    .banner2{
         display: block;
-        position: fixed;
+    }
+    .products{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+    }
+    .padreHombre h5 {
+        
+        color: white;
+        font-size: 26px;
+        padding-left: 36px;
+    }
+    .padreHombre{
+        width: 49%;
+    }
+    .padreMujer h5 {
+        
+        color: white;
+        font-size: 26px;
+        padding-left: 36px;
+    }
+    .padreMujer{
+        width: 49%;
+        justify-content: space-evenly;
+    }
+    .of{
         width: 100%;
-        height: 100vh;
-        background: linear-gradient(180deg, #F52B0F 0%, #210DE9 100%);
-        top: 137px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-    
+        
     }
-    
+    .oferta img {
+        width: 20%;
+    }
+    .marcas{
+        width: 100%;
+    }
+    .ignorar{
+        display: block;
+    }
+    .loMasVendido h1{
+        font-size: 30px;
+    }
+    .lanzamiento h1{
+        font-size: 30px;
+    }
+    .CompraPorMarca h1{
+        font-size: 30px;
+    }
+    .marcasImgIgnorar{
+        display: none;
+        }
+    .marcasImgIgnorarTab{
+        display: block ;
+    }
+    .marcasImgIgnorarPC{
+        display: none;
+    }
+
 }
 @media (min-width:1024px){
-    header{
-        flex-direction: column;
+    
+    .zapatilla-img{
+        width: 24%;
     }
+    
 
-    .datos{
-        display: flex;
-        justify-content: space-between;
+    .padreHombre{
+        width: 33%;
+        
+        flex-direction:column ;
+    }
+    .padreMujer{
+        width: 33%;
+        flex-direction:column ;
+    }
+    .padreMujer h5{
+        width: 47%;
+        font-size: 36px;
+    }
+    .oferta{
+        margin-top: 0px;
+    }
+    .oferta img{
+        width: 54%;
+    }
+    .of{
+        width: 33%;
+       
+    }
+    .padre-img{
         width: 100%;
-        background-color: var(--gris);
-        padding-left: 10px;
-        padding-right: 10px;
+        height: 150px;
     }
-
-    .datos span{
+    .padreHombre h5{
+        width: 47%;
+        font-size: 36px;
+    }
+    .oferta{
+        width: 100%;
+    }
+    .ignorarPC{
         display: block;
-        font-size: 18px;
     }
-    .menu{
+    .loMasVendido h1{
+      font-size:51px;
+    }
+    .lanzamiento h1{
+      font-size: 51px;
+    }
+    .CompraPorMarca h1{
+      font-size: 51px;
+    }
+    .botonN{
+      display: block;
+    }
+    .marcasImgIgnorar{
         display: none;
     }
-    .logo-iconos{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        
+    .marcasImgIgnorarTab{
+        display: none ;
     }
-    .logo-iconos nav{
-        display: none;
-    }
-    
-    
-    .logo{
-        margin: 0;
-    }
-    .iconos{
-        display: flex;
-        margin:0;
-        margin-right: 10px;
-    }
-    .iconos .fa-shopping-cart{
-        font-size: 22px;
-    }
-    .fa-search{
-        margin:0;
-        font-size: 22px;
-        vertical-align: middle;
-        background-color: var(--azul-claro);
-        color:white;
-        padding: 5px;
-
-    }
-    .iconos-search{
-        margin-top: 0;
-        
-    }
-    .iconos-search a span{
-        display: inline-block;
-        font-size: 18px;
-    }
-    
-    .datos div span{
-        display: inline-block;
-        font-size: 18px;
-    }
-    .iconos .ocultar{
-        display:none;
-    }
-    .usuario .fa-user{
-        font-size: 22px;
-    }
-    .buscar{
+    .marcasImgIgnorarPC{
         display: block;
-        
-    }
-    .buscar input{
-        width: 341px;
-        height: 32px;
-        font-size: 19px;
-    }
-    .menu-principal{
-        display: flex;
-        width: 100%;
-        height: 50px;
-        background-color: var(--rojo);
-        justify-content: space-evenly;
-    }
-    .menu-principal ul{
-        list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        font-size: 28px;
-        width: 100%;
-
-    }
-    .menu-principal ul li a{
-        color:white;
-    }
-    .menu-principal ul li a:hover{
-        color:rgba(255, 255, 255,.7)
     }
 
 }
 
-/*********  FOOTER *******************/
 
-footer{
-    background-color: var(--gris);
-}
-.footer-banner{
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-    background: linear-gradient(180deg, #F52B0F 0%, #210DE9 100%);
-}
-.footer-banner h2{
-    padding-top: 10px;
-    color: white;
-}
-.footer-banner img{
-    margin-top: 20px;
-    width: 100%;
-}
 
-.secciones div li{
-    list-style: none;
-    
 
-}
-.secciones-usuario p,
-.secciones-usuario nav li,
-.secciones-usuario nav li a{
-    color: var(--gris-oscuro);
-}
 
-.secciones{
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    
-}
-.secciones :nth-child(3){
-    order: -2;
-}
-.secciones :nth-child(2){
-    order: -1;
-}
-.secciones div{
-    width:49% ;
-    margin-top: 20px;
-}
 
-.copy{
-    
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
-}
-
-@media (min-width:769px){
-    .footer-banner{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    .footer-banner h2{
-        font-size: 1.8rem;
-        color: white;
-    }
-    .footer-banner img{
-        margin-top: 20px;
-        width: 80%;
-    }
-}
-    @media (min-width:1024px){
-        .secciones{
-            flex-wrap: nowrap;
-        }
-        .secciones-usuario{
-            width: 22%;
-        }
-    }
