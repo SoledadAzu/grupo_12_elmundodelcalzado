@@ -30,31 +30,31 @@
     grid-area: banner;
 }
 /********************* ZAPATILLAS **********************/
-.detalleProducto .zapatillas{
+.detalleProducto .zapatillas1{
     grid-area:zapas;
 }
-.detalleProducto .zapatillas-articulos{
+.detalleProducto .zapatillas1-articulos{
     display: flex;
     flex-direction: column;
 }
 .detalleProducto .zapatilla-principal{
     border: 1px solid var(--gris);
 }
-.detalleProducto .zapatillas .zapatillas-colores{
+.detalleProducto .zapatillas1 .zapatillas1-colores{
     display: flex;
     justify-content: space-between;
     padding-top: 5px;
 }
 
-.detalleProducto .zapatillas .zapatillas-colors_eleccion{
+.detalleProducto .zapatillas1 .zapatillas1-colors_eleccion{
     width: 24%;
     border:1px solid var(--gris);
     cursor:pointer;
 }
-.detalleProducto .zapatillas .zapatillas-colors_eleccion:hover{
+.detalleProducto .zapatillas1 .zapatillas1-colors_eleccion:hover{
     border: 1px solid var(--gris-oscuro);
 }
-.detalleProducto .zapatillas .zapatillas-colors_eleccion img{
+.detalleProducto .zapatillas1 .zapatillas1-colors_eleccion img{
     width: 100%;
 }
 
@@ -199,17 +199,17 @@
        display: none;
    }
    /************ ZAPATILLAS ************/
-   .detalleProducto .zapatillas-articulos{
+   .detalleProducto .zapatillas1-articulos{
        flex-direction: row;
    }
-   .detalleProducto .zapatillas .zapatillas-colores{
+   .detalleProducto .zapatillas1 .zapatillas1-colores{
        order: -1;
        flex-direction: column;
        width: 40%;
        padding-top: 0;
 
    }
-   .detalleProducto .zapatillas .zapatillas-colors_eleccion{
+   .detalleProducto .zapatillas1 .zapatillas1-colors_eleccion{
        width: 100%;
        border: none;
    }
