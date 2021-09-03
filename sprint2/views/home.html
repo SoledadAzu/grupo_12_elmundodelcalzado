@@ -13,13 +13,13 @@
     <header>
         <div class="datos">
             <div >
-                <span class='comunicacion'><i class="far fa-envelope"></i> CONTACTENOS</span>
-                <span class='comunicacion'><i class="fas fa-phone"></i> 0800 222 MUNDO(68636)</span>
+                <span><i class="far fa-envelope"></i> CONTACTENOS</span>
+                <span><i class="fas fa-phone"></i> 0800 222 MUNDO(68636)</span>
                 
             </div>
             <div>
-                <span class='comunicacion'><i class="fab fa-whatsapp"></i>  +54123456789</span>
-                <span class='comunicacion'><i class="fas fa-map-marker-alt"></i> SUCURSALES</span>
+                <span><i class="fab fa-whatsapp"></i>  +54123456789</span>
+                <span><i class="fas fa-map-marker-alt"></i> SUCURSALES</span>
             </div>
         </div>
         <div class="logo-iconos">
@@ -36,7 +36,7 @@
                 </ul>
             </nav>
     
-            <div class="logo">
+                <div class="logo">
                     <img src="/imagenes/logo.png" alt="logo">
                 </div>
                 <form action="" class="buscar">
@@ -45,13 +45,21 @@
             <div class="iconos">
                 <div class="usuario">
                     <i class="fas fa-user"></i>
-                    <a href="#">Ingresa</a>
-                    <a href="#">o Registrate</a>
+                    <a href="/login">Ingresa</a>
+                    <a href="/register">o Registrate</a>
                 </div>
-                
-                <i class="fas fa-search ocultar"></i>
-                <a href="#" class="fas fa-shopping-cart"><span class='comunicacion'> Mi Compra</span></a>
-                
+                <div class="iconos-search">
+                    <div class="search">
+                        <input type="checkbox" id="search">
+                        <label for="search">
+                            <i class="fas fa-search ocultar"></i>
+                        </label>
+                        <div class="busqueda-input">
+                            <input type="search" placeholder="ingresa tu busqueda">
+                        </div>   
+                    </div>
+                    <a href="#" class="fas fa-shopping-cart"><span> Mi Compra</span></a>
+                </div>
             </div>
     
         </div>
@@ -65,9 +73,11 @@
         </nav>
     
     </header>
+
     <main>
 
     </main>
+    
     <footer>
         <div class="footer-banner">
             <h2>TODAS LAS TARJETAS BANCARIAS</h2>
