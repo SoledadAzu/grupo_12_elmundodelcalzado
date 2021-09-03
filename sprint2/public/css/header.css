@@ -251,6 +251,9 @@ header{
     .ocultar{
         display:none;
     }
+    .iconos-search .search label i{
+        display: none;
+    }
     .usuario .fa-user{
         font-size: 22px;
     }

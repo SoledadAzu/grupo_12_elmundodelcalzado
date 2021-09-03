@@ -3,19 +3,23 @@ main.login{
     flex-direction: column;
     align-content: center;
     margin: auto;
-}
-body{
     background: linear-gradient(rgb(228,228,228),white);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100%;
-   /* padding: 6rem 1rem;*/
+    padding: 6rem 1rem;
 }
-h1{
+body{
+    /* background: linear-gradient(rgb(228,228,228),white);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    padding: 6rem 1rem; */
+}
+.login h1{
    margin-bottom: 1rem; 
    text-align: center;
 
 }
-h2{
+.login .caja h2{
     margin-top: 10px;
     text-align: left;
 }
@@ -26,28 +30,28 @@ hr{
         width: 100%;
 }
 
-form {
+.login .caja1 form {
     display: flex;
     flex-direction: column;
 }
-.email input{
+.login .caja1 .email input{
         margin-bottom: 5px;
         margin-top: 5px;
         width: 100%;
         
 }
-.password input{
+.login .caja1 .password input{
     
         margin-bottom: 5px;
         margin-top: 5px;
         width: 100%;
 }
-article{
+.login .caja1 article{
     text-align: right;
     display: block;
 }
 
- .bttn{
+ .login .caja1 .bttn{
     background-color: red;
     color: white;
     align-content: center;
@@ -57,11 +61,11 @@ article{
     margin-bottom: 10px;
     margin-top: 30px;
 }
-h3{
+.login .caja2 h3{
     margin-top: 10px;
     margin-bottom: 5px;
 }
-button.form{
+.login .caja2 .form{
     background-color: rgb(25, 38, 155);
     color: white;
     align-content: center;
@@ -86,25 +90,25 @@ button.form{
     }
 
     
-.email input{
+.login .caja1 .email input{
            display: block;
             margin-bottom: 8px;
             margin-top: 8px;
             width: 80%;
             }
     
-.password input{
-    display: block;
+.login .caja1 .password input{
+        display: block;
         margin-bottom: 8px;
         margin-top: 8px;
         width: 80%;
 }
- article{
+ .login .caja1 article{
      display: inline-block;
     text-align: center;
 
 }
- .bttn{
+ .login .caja1 .bttn{
     background-color: red;
     color: white;
     align-content: center;
@@ -114,11 +118,11 @@ button.form{
     margin-bottom: 15px;
     margin-top: 10px;
 }
-h3{
+.login .caja2 h3{
     margin-top: 10px;
     margin-bottom: 5px;
 }
-button.form{
+.login .caja2 .form{
     background-color: rgb(25, 38, 155);
     color: white;
     align-content: center;
