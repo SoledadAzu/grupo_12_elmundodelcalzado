@@ -1,5 +1,10 @@
 
 /***main***/
+.body{
+   
+    padding: 0;
+    
+}
 .home{
     margin: 0%;
     padding: 0%;
@@ -194,6 +199,7 @@
 /*tablet*/
 
 @media(min-width:769px){
+    
     .zapatilla-img{
         width: 32%;
     }
@@ -235,6 +241,7 @@
     }
     .of{
         width: 100%;
+        
     }
     .oferta img {
         width: 20%;
@@ -266,6 +273,7 @@
 
 }
 @media (min-width:1024px){
+    
     .zapatilla-img{
         width: 24%;
     }
@@ -288,7 +296,7 @@
         margin-top: 0px;
     }
     .oferta img{
-        width: 52%;
+        width: 54%;
     }
     .of{
         width: 33%;
@@ -309,13 +317,13 @@
         display: block;
     }
     .loMasVendido h1{
-      font-size:38px;
+      font-size:51px;
     }
     .lanzamiento h1{
-      font-size: 38px;
+      font-size: 51px;
     }
     .CompraPorMarca h1{
-      font-size: 38px;
+      font-size: 51px;
     }
     .botonN{
       display: block;

@@ -8,7 +8,7 @@ body{
     background: linear-gradient(rgb(228,228,228),white);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100%;
-    padding: 6rem 1rem;
+   /* padding: 6rem 1rem;*/
 }
 h1{
    margin-bottom: 1rem; 
