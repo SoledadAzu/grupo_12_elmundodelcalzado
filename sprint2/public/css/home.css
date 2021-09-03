@@ -121,9 +121,9 @@
     margin:3px;
     cursor: pointer
 }
-.zapatillas{
+ .zapatillas{
     display:flex ;
-    justify-content: space-evenly;
+    justify-content: space-evenly; 
   
     
 
