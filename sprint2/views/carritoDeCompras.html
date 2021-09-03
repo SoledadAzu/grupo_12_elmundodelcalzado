@@ -12,13 +12,13 @@
     <header>
         <div class="datos">
             <div >
-                <span class="informacion"><i class="far fa-envelope"></i> CONTACTENOS</span>
-                <span class="informacion"><i class="fas fa-phone"></i> 0800 222 MUNDO(68636)</span>
+                <span><i class="far fa-envelope"></i> CONTACTENOS</span>
+                <span><i class="fas fa-phone"></i> 0800 222 MUNDO(68636)</span>
                 
             </div>
             <div>
-                <span class="informacion"><i class="fab fa-whatsapp"></i>  +54123456789</span>
-                <span class="informacion"><i class="fas fa-map-marker-alt"></i> SUCURSALES</span>
+                <span><i class="fab fa-whatsapp"></i>  +54123456789</span>
+                <span><i class="fas fa-map-marker-alt"></i> SUCURSALES</span>
             </div>
         </div>
         <div class="logo-iconos">
@@ -35,7 +35,7 @@
                 </ul>
             </nav>
     
-            <div class="logo">
+                <div class="logo">
                     <img src="/imagenes/logo.png" alt="logo">
                 </div>
                 <form action="" class="buscar">
@@ -47,10 +47,18 @@
                     <a href="/login">Ingresa</a>
                     <a href="/register">o Registrate</a>
                 </div>
-                
-                <i class="fas fa-search ocultar"></i>
-                <a href="#" class="fas fa-shopping-cart"><span> Mi Compra</span></a>
-                
+                <div class="iconos-search">
+                    <div class="search">
+                        <input type="checkbox" id="search">
+                        <label for="search">
+                            <i class="fas fa-search ocultar"></i>
+                        </label>
+                        <div class="busqueda-input">
+                            <input type="search" placeholder="ingresa tu busqueda">
+                        </div>   
+                    </div>
+                    <a href="#" class="fas fa-shopping-cart"><span> Mi Compra</span></a>
+                </div>
             </div>
     
         </div>
@@ -205,56 +213,56 @@
 
  <!-- /****************** footer ******************/ -->  
  
-    <footer>
-        <div class="footer-banner">
-            <h2>TODAS LAS TARJETAS BANCARIAS</h2>
-            <img src="/imagenes/footer.svg" alt="banner tarjetas">
+ <footer>
+    <div class="footer-banner">
+        <h2>TODAS LAS TARJETAS BANCARIAS</h2>
+        <img src="/imagenes/footer.svg" alt="banner tarjetas">
+    </div>
+    <section class="secciones">
+        <div class="secciones-usuario">
+            <h4>Nosotros</h4>
+            <nav>
+                <li><a href="#"> > Acerca de Nosotros</a></li>
+                <li><a href="#"> > Nuestras Sucursales</a></li>
+            </nav>
+            <h4>Clientes</h4>
+            <nav>
+                <li><a href="#"> > Registrate</a></li>
+                <li><a href="#"> > Mi Cuenta</a></li>
+            </nav>
         </div>
-        <section class="secciones">
-            <div class="secciones-usuario">
-                <h4>Nosotros</h4>
+        <div class="secciones-usuario">
+            <h4>Contacto</h4>
                 <nav>
-                    <li><a href="#"> > Acerca de Nosotros</a></li>
-                    <li><a href="#"> > Nuestras Sucursales</a></li>
+                    <li><i class="fas fa-phone"></i> 0800 222 MUNDO (68636)</li>
+                    
+                    <li><i class="fab fa-whatsapp"></i> +54123456789</li>
                 </nav>
-                <h4>Clientes</h4>
-                <nav>
-                    <li><a href="#"> > Registrate</a></li>
-                    <li><a href="#"> > Mi Cuenta</a></li>
-                </nav>
-            </div>
-            <div class="secciones-usuario">
-                <h4>Contacto</h4>
-                    <nav>
-                        <li><i class="fas fa-phone"></i> 0800 222 MUNDO (68636)</li>
-                        
-                        <li><i class="fab fa-whatsapp"></i> +54123456789</li>
-                    </nav>
-                
-                <h4>CENTRO DE ATENCION TELEFONICA</h4>
-                
-                    <p>lunes a Viernes de 8:30 a 18:30hs - Sabados de 9 a 17:30hs</p>
-            </div>
-                <div class="secciones-usuario">
-                    <h4>INFORMACION</h4>
-                    <nav>
-                        <li><a href="/comprar"> > Como comprar</a></li>
-                        <li><a href="#"> > Costos y formas de envios</a></li>
-                        <li><a href="#"> > Garantias</a></li>
-                        <li><a href="#"> > Politicas de Cambios</a></li>
-                        <li><a href="#"> > Politicas de privacidad</a></li>
-                        <li><a href="#"> > Defensa al consumidor</a></li>
-                    </nav>
-                </div>
-                <div class="secciones-usuario">
-                        <h4>COMPRA 100% SEGURA </h4>
-                        <p>Nuestro sitio posee toda la seguridad para tu compra</p>
-                </div>
-        </section>
-        <section class="copy">
             
-            <p> ©️ Copyright 2021 El mundo del Calzado SRL </p>
-        </section>
-    </footer> 
+            <h4>CENTRO DE ATENCION TELEFONICA</h4>
+            
+                <p>lunes a Viernes de 8:30 a 18:30hs - Sabados de 9 a 17:30hs</p>
+        </div>
+            <div class="secciones-usuario">
+                <h4>INFORMACION</h4>
+                <nav>
+                    <li><a href="/extras/comprar"> > Como comprar</a></li>
+                    <li><a href="#"> > Costos y formas de envios</a></li>
+                    <li><a href="#"> > Garantias</a></li>
+                    <li><a href="#"> > Politicas de Cambios</a></li>
+                    <li><a href="#"> > Politicas de privacidad</a></li>
+                    <li><a href="#"> > Defensa al consumidor</a></li>
+                </nav>
+            </div>
+            <div class="secciones-usuario">
+                    <h4>COMPRA 100% SEGURA </h4>
+                    <p>Nuestro sitio posee toda la seguridad para tu compra</p>
+            </div>
+    </section>
+    <section class="copy">
+        
+        <p> ©️ Copyright 2021 El mundo del Calzado SRL </p>
+    </section>
+</footer> 
 </body>
 </html>
