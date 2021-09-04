@@ -139,6 +139,7 @@ th {
 .alinear{
   padding-top: 40px;
 }
+
 .table2 tr:nth-child(even) {
   background-color: var(--gris-oscuro);
 }
