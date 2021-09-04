@@ -2,8 +2,8 @@ const express = require('express')
 const path = require('path')
 const router = express.Router()
 
-router.get('/productCart',(req,res)=>{
-    res.sendFile(path.join(__dirname,'..','views','carritoDeCompras.html'))
+router.get('/privacidad',(req,res)=>{
+    res.sendFile(path.join(__dirname,'..','..','extras','privacidad.html'))
 })
 
 
