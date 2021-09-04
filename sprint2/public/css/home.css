@@ -135,6 +135,7 @@
     border: 1px solid black;
     width: 45%;
     margin-bottom: 5px;
+    box-shadow: 10px 5px var(--gris-oscuro);
 
 }
 .ofertasZapatillaPrecio{
@@ -163,13 +164,11 @@
 }
 
 .marcas{
-    width: 84%;
+    width: 100%;
 }
 .marcas-img{
-    /*border: 1px solid black;*/
     width: 30%;
     margin-bottom: 5px;
-    /*display: inline-block*/
 }
 .contenedorMarcas{
     display: flex;
@@ -201,7 +200,7 @@
 @media(min-width:769px){
     
     .zapatilla-img{
-        width: 32%;
+        width: 30%;
     }
     .banner1{
     display: none;
@@ -275,7 +274,7 @@
 @media (min-width:1024px){
     
     .zapatilla-img{
-        width: 24%;
+        width: 22%;
     }
     
 

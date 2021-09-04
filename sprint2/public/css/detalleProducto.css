@@ -154,11 +154,12 @@
     padding-top: 20px;
 }
 .detalleProducto .ofertas-general .ofertas-zapatillas{
-    width: 49%;
+    width: 45%;
     border: 1px solid black;
     margin-top: 5px;
     padding-bottom: 20px;
     text-align: center;
+    box-shadow: 10px 5px var(--gris-oscuro);
 }
 .detalleProducto .ofertas-general .ofertas-zapatillas a{
     color:black;
@@ -239,7 +240,7 @@
     /******************OFERTAS **********************/
 
     .detalleProducto .ofertas-general .ofertas-zapatillas{
-        width: 33%;
+        width: 30%;
     }
 
 
@@ -273,7 +274,7 @@
         margin-bottom: 20px;
     }
     .detalleProducto .ofertas-general .ofertas-zapatillas{
-        width: 24%;
+        width: 22%;
     }
     .oculto{
         display: block;
