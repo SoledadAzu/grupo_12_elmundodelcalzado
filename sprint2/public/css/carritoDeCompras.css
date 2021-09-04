@@ -204,7 +204,6 @@ main .mercaderia article div p{
   main .mercaderia article {
     width: 30%;
     margin-bottom: 30px;
-    display: inline;
   }
   .art-4{
     display: none;
