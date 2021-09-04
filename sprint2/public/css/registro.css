@@ -1,18 +1,15 @@
 /*registro*********/
-main.register{
+main.register {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(rgb(228, 228, 228),white);  
+}
+div.register1 {
     margin: 0 auto;
     width: 350px;
-    background: linear-gradient(rgb(228, 228, 228),white);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100%;
     padding: 6rem 1rem;
 }
-/* main{
-background: linear-gradient(rgb(228, 228, 228),white);
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-height: 100%;
-padding: 6rem 1rem;
-} */
+
 
 .register h1{
     margin-bottom: 1rem;
