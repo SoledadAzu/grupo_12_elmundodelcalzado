@@ -15,7 +15,7 @@ header{
     width: 100%;
     height: 100vh;
     background: linear-gradient(180deg, #F52B0F 0%, #210DE9 100%);
-    top: 78px;
+    top: 76px;
     left: -100%;
     text-align: center;
     transition: all .5s;
@@ -52,10 +52,10 @@ header{
     font-size: 30px;
     color: white;
 }
-.logo-iconos nav ul li:hover{
-    background-color: var(--verde-claro) ;
-    color:white;
 
+.logo-iconos nav ul li:hover{
+    background-color: rgba(255, 255, 255, .3);
+    
 }
 .fa-bars{
     font-size: 35px;
