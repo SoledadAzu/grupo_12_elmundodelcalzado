@@ -70,10 +70,20 @@ footer{
     }
 }
     @media (min-width:1024px){
+        .footer-banner h2{
+            font-size: 2.5rem;
+            color: white;
+        }
+        .footer-banner img{
+            margin-top: 20px;
+            width: 65%;
+        }
+
         .secciones{
             flex-wrap: nowrap;
         }
         .secciones-usuario{
             width: 22%;
         }
+
     }
