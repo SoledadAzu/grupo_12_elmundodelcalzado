@@ -219,6 +219,10 @@ main .mercaderia article div p{
     width: 99%;
     margin-right: 5px;
   }
+  .tablaproducto a{
+    display: block;
+    text-align: end;
+  }
   .tablapago {
     margin-top: 40px;
     margin-left: 15px;
