@@ -247,6 +247,13 @@
 
 }
 @media (min-width:1024px){
+    .detalleProducto .zapatillas1 .zapatillas1-colors_eleccion{
+        text-align: center;
+    }
+    .detalleProducto .zapatillas1 .zapatillas1-colors_eleccion img{
+        max-width: 150px;
+        max-height: 150px;
+    }
     /******************** TALLES **********************/
     .detalleProducto .talles .talles-descripcion{
         line-height: 4rem;
