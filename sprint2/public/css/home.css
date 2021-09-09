@@ -284,6 +284,9 @@
         
         flex-direction:column ;
     }
+    .productsHombre{
+        width: 88%;
+    }
     .padreMujer{
         width: 33%;
         flex-direction:column ;
@@ -292,11 +295,14 @@
         width: 47%;
         font-size: 36px;
     }
+    .productsMujer{
+        width: 88%;
+    }
     .oferta{
         margin-top: 0px;
     }
     .oferta img{
-        width: 54%;
+        width: 75%;
     }
     .of{
         width: 33%;
