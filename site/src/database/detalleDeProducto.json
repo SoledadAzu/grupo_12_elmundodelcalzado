@@ -1,5 +1,30 @@
 [
     {
-        "id":1
+        "id":1,
+        "title":"ZAPATILLAS GALAXAR RUN",
+        "subtitle":"ZAPATILLAS DE RUNNING ESTABLES HECHAS CON MATERIALES RECICLADOS",
+        "desciption":"Cuando empezás a correr por primera vez, no se trata de ganar maratones. Se trata de sentirse bien para que los kilómetros se conviertan en algo que deseás con ansias. Las zapatillas adidas Galaxar Run fueron creadas pensando en los nuevos corredores. El exterior de malla sin costuras es cómodo para correr distancias largas y la mediasuela Bounce agrega amortiguación a tus pies. Este producto está hecho con Primegreen, una serie de materiales reciclados de alto desempeño..",
+        "detalle1":"Horma clásica",
+        "detalle2":"Exterior de malla elástica sin consturas",
+        "detalle3":"Suela de caucho",
+        "detalle4":"Forro interno textil",
+        "price":"8000",
+        "color1":"NEGRO",
+        "color2":"GRIS",
+        "color3":"NEGRO",
+        "talle1":"34",
+        "talle2":"35",
+        "talle3":"36",
+        "talle4":"37",
+        "talle5":"38",
+        "talle6":"39",
+        "talle7":"40",
+        "imgPrimary":"zpatilla.jpg",
+        "img1":"zapatilla-azul.jpg",
+        "img2":"zapatilla-rosa.jpg",
+        "img3":"zapatilla-negro-marron.jpg",
+        "img4":"zapatilla-azul.jpg"
+
+
     }
 ]
