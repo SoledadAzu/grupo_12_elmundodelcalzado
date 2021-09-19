@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Roboto&display=swap');
+
+:root{
+    --rojo:#f50f39;
+    --azul:#210de9;
+    --azul-claro:#2a3ef3;
+    --gris:#c4c4c4;
+    --gris-oscuro:#8F8989;
+    --celeste:#99e2f9;
+    --verde-claro:#3dc563;
+    --violeta:#501996;
+    --blanco: #FFFFFF;
+    --rojo-claro:#fff2f2;
+    
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    /* font-family: 'Abhaya Libre', serif; */
+    font-family: 'Roboto', sans-serif;
+
+}
+a{
+    text-decoration: none;
+    
+}

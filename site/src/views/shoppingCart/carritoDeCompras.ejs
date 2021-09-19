@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<%- include('../partials/head') %> 
+<!-- HEAD -->
+
+<body>
+    
+    <!-- HEADER -->
+    <%- include('../partials/header') %> 
+    <!-- HEADER -->
+
+<!-- /**************** main *********************/ -->
+
+    <main class="maincarrito">
+        <div class="">
+            <ul class="items">
+                            <li class="item Inicio">
+                                    <a href="/" title="Inicio">
+                            Inicio > </a>
+                                </li>
+                            <li class="item Carrito de Compras">
+                                   <strong class="carrito">Carrito de Compras</strong> 
+                                </li>
+                    </ul>
+        </div>
+        <div class="titulo">
+        <h1>CARRITO DE COMPRAS</h1></div>
+<div class= 'table-flex'>
+    <div class="tablescroll">
+<div class='tablaproducto'>
+<table class="table1">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Producto</th>
+        <th class='compu'>Precio</th>
+        <th class= 'cantidad'>Cantidad</th>
+        <th class='compu'>Subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><button class='eliminar'></a><img class='eliminar' src="/images/icono x.png" alt=""></button></td>
+        <td><img class="imgcarrito" src="/images/Zapatillas_SL_Andridge_Gris_FU7134_01_standard.png
+            " alt=""><ul>
+                <li>Zapatillas SL Andridge</li>
+                <li>Talles: 37</li>
+                <li class='precioCell'>Precio:$13.999</li>
+            </ul></td>
+        <td class='compu alinear' ><strong>$13.999</strong></td>
+        <td class="cantidad"><input type="number" id="number" name="number" min="1" max="100"></td>
+        <td class='compu alinear'><strong>$13.999</strong></td>
+      </tr>
+      <tr>
+        <td><button class='eliminar'><img class='eliminar' src="/images/icono x.png" alt=""></button></td>
+        <td><img class="imgcarrito" src="/images/Zapatillas_Marathon_Tech_Azul_EF4394_01_standard.jpg" alt=""><ul>
+            <li>Zapatillas Marathon Tech</li>
+            <li>Talles: 41</li>
+            <li class='precioCell'>Precio: $17.999</li>
+        </ul></td>
+        <td class='compu alinear'><strong>$17.999</strong></td>
+        <td class="cantidad"><input type="number" id="number" name="number"min="1"max="100"></td>   
+        <td class='compu alinear'><strong>$17.999</strong></td>
+      </tr>
+
+      <tr>
+        <td><button class='eliminar'><img class='eliminar' src="/images/icono x.png" alt=""></button></td>
+        <td><img class="imgcarrito" src="/images/Zapatillas_Stan_Smith_(UNISEX)_Blanco_M20324_01_standard.png" alt="">
+            <ul>
+                <li>Zapatillas Stan Smith</li>
+                <li>Talles: 40</li>
+                <li class='precioCell'>Precio: $13.999</li>
+            </ul>
+        </td>
+        <td class='compu alinear'><strong>$13.999</strong></td>
+        <td class="cantidad"><input type="number" id="number" name="number" min="1" max="100" width: 25px></td>   
+        <td class='compu alinear'><strong>$13.999</strong></td>
+      </tr>
+    </tbody> 
+    </table>
+    <a href="/">Continuar Comprando >>></a> 
+  </div>
+</div>
+  <div class= 'tablapago'>
+  <table class='table2'>
+      <tr>
+          <th colspan="2"><strong>RESUMEN DE COMPRA</strong></th>
+      </tr>
+      <tr class= 'subtotal'>
+          <td class='descrip'>SUBTOTAL</td>
+          <td class='valor'>$45.997</td>
+      </tr>
+      <tr class= 'total'>
+          <td class='descrip'>TOTAL</td>
+          <td class='valor'>$45.997</td>
+      </tr>
+      <tr>
+          <th colspan="2"><button><strong>INICIAR PAGO ></strong></button></th>
+      </tr>
+  </table>
+ 
+</div>
+
+</div>
+
+ <h2 class='oferta1'>APROVECHA LAS SUPER OFERTAS</h2>
+ <section class="mercaderia">
+     
+     <article>
+         <div>
+         <img src="/images/Zapatllas_Run_Falcon_2.0_Gris_H04519_01_standard.jpg" alt="">
+        </div>
+        <div>
+         <h4>Zapatillas Run Falcon 2.0</h4>
+         <strong>$14.690</strong>
+         <p>Cod: IE8231UY84</p>
+         </div>
+     </article>
+     <article>
+         <div>
+        <img src="/images/Zapatillas_adidas_Sleek_Super_Blanco_EH1389_01_standard.jpg" alt="">
+    </div>
+    <div>
+        <h4>Zapatillas Sleek Super</h4>
+        <strong>$13.999</strong>
+        <p>Cod: JH896GBL3N</p>
+        </div>
+    </article>
+    
+    
+    <article>
+        <div>
+        <img src="/images/Zapatillas_Multix_Azul_FZ3445_01_standard.png" alt="">
+    </div>
+    <div>
+        <h4>Zapatillas Multix sport</h4>
+        <strong>$10.599</strong>
+        <p>Cod: EICC7FWCT1</p>
+        </div>
+    </article>
+    <article class= "art-4" >
+        <div>
+        <img src="/images/Zapatillas_QT_Racer_Sport_Rosa_GW4843_01_standard.jpg" alt="">
+    </div>
+    <div>
+        <h4>Zapatillas QT Racer Sport</h4>
+        <strong>$12.999</strong>
+        <p> Cod: 745T74FG29</p>
+        </div>
+    </article>
+    
+ </section>
+<div class="button-vermas"><button class="vermas"><strong>Ver más ></strong></button></div>
+    </main>
+
+ <!-- /****************** footer ******************/ -->  
+ 
+<!-- FOOTER -->
+<%- include('../partials/footer') %> 
+<!-- FOOTER -->
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+.detalleProducto{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(6,auto);
+    grid-template-areas:
+     "ruta    ruta    ruta    ruta    ruta" 
+     "banner  banner  banner  banner  banner"
+     "zapas   zapas   zapas   talles  talles"
+     "descrp  descrp  descrp  descrp  descrp"
+     "ofertas ofertas ofertas ofertas ofertas"
+     "ver     ver     ver     ver     ver";
+}
+
+.detalleProducto .ruta a,
+.detalleProducto .ruta .ruta-span{
+    color: var(--gris-oscuro);
+}
+.detalleProducto .bannerProducto img,
+.detalleProducto .zapatilla-principal img{
+    width: 100%;
+}
+/*******************RUTA **********************/
+.detalleProducto .ruta{
+    grid-area: ruta;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.detalleProducto .bannerProducto{
+    grid-area: banner;
+}
+/********************* ZAPATILLAS **********************/
+.detalleProducto .zapatillas1{
+    grid-area:zapas;
+}
+.detalleProducto .zapatillas1-articulos{
+    display: flex;
+    flex-direction: column;
+}
+.detalleProducto .zapatilla-principal{
+    border: 1px solid var(--gris);
+}
+.detalleProducto .zapatillas1 .zapatillas1-colores{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+
+.detalleProducto .zapatillas1 .zapatillas1-colors_eleccion{
+    width: 24%;
+    border:1px solid var(--gris);
+    cursor:pointer;
+}
+.detalleProducto .zapatillas1 .zapatillas1-colors_eleccion:hover{
+    border: 1px solid var(--gris-oscuro);
+}
+.detalleProducto .zapatillas1 .zapatillas1-colors_eleccion img{
+    width: 100%;
+}
+
+
+/******************** TALLES DEL PRODUCTO********************/
+.detalleProducto .talles{
+    grid-area:talles;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.detalleProducto .talles .talles-descripcion{
+    padding-top: 10px;
+    text-align: center;
+    line-height: 3rem;
+}
+
+.detalleProducto .talles .talles-datos h3{
+    width: 100%;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.detalleProducto .talles .talles-datos-numero{
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 0 auto;
+    
+    
+}
+.detalleProducto .talles .talles-datos-numero div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: aquamarine;
+    margin-right: 3px;
+    margin-bottom: 5px;
+    
+}
+.detalleProducto .talles .talles-datos label{
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.detalleProducto .talles .talles-datos input{
+    display: none;
+}
+.detalleProducto .talles .talles-datos .boton{
+    display: block;
+    margin: 6px auto 0;
+    width: 95%;
+    padding: 8px;
+    font-size: .8rem;
+    cursor: pointer;
+}
+.detalleProducto .talles-datos-numero input[type="checkbox"]:checked ~ label{
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+}
+/************************ DESCRIPCIONES DEL PRODUCTO **********/
+.detalleProducto .descripciones{
+    grid-area: descrp;
+    width: 95%;
+    margin: 20px auto 20px;
+
+}
+.detalleProducto .descripciones-texto,
+.detalleProducto .descripciones-detalles{
+    padding-top: 20px;
+}
+.detalleProducto .descripciones-texto h5{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.detalleProducto .descripciones-texto p{
+    padding-bottom: 20px;
+}
+
+
+
+/******************* OFERTAS ****************************/
+.detalleProducto .ofertas{
+    grid-area: ofertas;
+    display: flex;
+    flex-direction: column;
+}
+.detalleProducto .ofertas h5{
+    text-align: center;
+}
+.detalleProducto .ofertas .ofertas-general{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+.detalleProducto .ofertas-general .ofertas-zapatillas{
+    width: 45%;
+    border: 1px solid black;
+    margin-top: 5px;
+    padding-bottom: 20px;
+    text-align: center;
+    box-shadow: 10px 5px var(--gris-oscuro);
+}
+.detalleProducto .ofertas-general .ofertas-zapatillas a{
+    color:black;
+}
+.detalleProducto .ofertas-general .ofertas-zapatillas img{
+    width: 100%;
+}
+
+.detalleProducto .verMas{
+    grid-area: ver;
+    text-align: center;
+    margin: 10px auto 10px;
+    
+}
+.detalleProducto .verMas button{
+    font-weight: bold;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/********************** MEDIAS QUERIS *****************************/
+
+@media (min-width:769px){
+    .detalleProducto .ruta{
+        display: none;
+    }
+   .detalleProducto{
+    grid-template-areas:
+    "banner  banner  banner  banner  banner" 
+    "banner  banner  banner  banner  banner"
+    "zapas   zapas   zapas   talles  talles"
+    "descrp  descrp  descrp  descrp  descrp"
+    "ofertas ofertas ofertas ofertas ofertas"
+    "ver     ver     ver     ver     ver";
+   }
+   .oculto{
+       display: none;
+   }
+   /************ ZAPATILLAS ************/
+   .detalleProducto .zapatillas1-articulos{
+       flex-direction: row;
+   }
+   .detalleProducto .zapatillas1 .zapatillas1-colores{
+       order: -1;
+       flex-direction: column;
+       width: 40%;
+       padding-top: 0;
+
+   }
+   .detalleProducto .zapatillas1 .zapatillas1-colors_eleccion{
+       width: 100%;
+       border: none;
+   }
+   .detalleProducto .talles .talles-descripcion h3,
+   .detalleProducto .talles .talles-descripcion h5{
+        font-size: 1.5rem;
+   }
+   .detalleProducto .talles .talles-descripcion h4{
+    font-size: 1.5rem;
+    }
+    .detalleProducto .talles .talles-datos h3{
+        font-size: 1.6rem;
+    }
+    .detalleProducto .talles .talles-datos label{
+        font-size: 1.6rem;
+        cursor: pointer;
+        padding: 8px;
+    }
+    .detalleProducto .talles .talles-datos .boton{
+        display: block;
+        margin: 6px auto 0;
+        width: 95%;
+        padding: 15px;
+        font-size: 1rem;
+    }
+    /************************************************/
+    /******************OFERTAS **********************/
+
+    .detalleProducto .ofertas-general .ofertas-zapatillas{
+        width: 30%;
+    }
+
+
+
+}
+@media (min-width:1024px){
+    .detalleProducto .zapatillas1 .zapatillas1-colors_eleccion{
+        text-align: center;
+    }
+    .detalleProducto .zapatillas1 .zapatillas1-colors_eleccion img{
+        max-width: 150px;
+        max-height: 150px;
+    }
+    /******************** TALLES **********************/
+    .detalleProducto .talles .talles-descripcion{
+        line-height: 4rem;
+    }
+
+    .detalleProducto .talles .talles-descripcion h3,
+    .detalleProducto .talles .talles-descripcion h5{
+        font-size: 2.5rem;
+    }
+    .detalleProducto .talles .talles-datos h3{
+        font-size: 2.6rem;
+    }
+    .detalleProducto .talles .talles-datos label{
+        font-size: 2.6rem;
+        padding: 14px;
+    }
+    .detalleProducto .talles .talles-datos .boton{
+        padding: 30px;
+        font-size: 1.3rem;
+    }
+    
+
+    /******************* OFERTAS ****************/
+    .detalleProducto .ofertas .ofertas-general{
+        margin-bottom: 20px;
+    }
+    .detalleProducto .ofertas-general .ofertas-zapatillas{
+        width: 22%;
+    }
+    .oculto{
+        display: block;
+    }
+    .detalleProducto .verMas{
+        display: none;
+        
+    }
+}

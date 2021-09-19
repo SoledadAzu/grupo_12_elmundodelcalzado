@@ -1,0 +1,114 @@
+/*registro*********/
+main.register {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(rgb(228, 228, 228),white);  
+}
+div.register1 {
+    margin: 0 auto;
+    width: 350px;
+    height: 100%;
+    padding: 6rem 1rem;
+}
+
+
+.register h1{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.register hr{
+    background: linear-gradient(rgb(228, 228, 228), white);
+    height: 10px;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+.register .form {
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+
+.register .nombre input{
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    width: 100%;
+    
+}
+.register .apellido input{
+    display:block;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    width: 100%;
+}
+.register .email input{
+    display:block;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    width: 100%;
+}
+.register .password input{
+    display:block;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.register form.input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+    border-radius: 10px;
+    
+}
+
+.register .obligatorio{
+color: red;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+
+.register form.input.check{
+    display: flex;
+}
+
+.register.terminos{
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-align: justify;
+ text-decoration:lightgrey ;
+}
+.register .terminos label a{
+    color: darkblue;
+}
+
+.register .btn{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+}
+.register .btn button{
+    border-radius: 10px;
+    width: 100%;
+    background-color:red;
+    color: white;
+}
+
+.register .btton{
+     margin-bottom: 15px;
+    margin-top: 15px;
+    text-align: center;
+    padding: 10px;
+    
+}
+.register .btton button{
+    border-radius: 10px;
+    width: 100%;
+    background-color: blue;
+    color: white;
+}
+/*reg******/
