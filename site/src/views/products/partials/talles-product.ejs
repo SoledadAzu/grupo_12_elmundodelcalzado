@@ -1,0 +1,27 @@
+<aside class="talles">
+    <div class="talles-descripcion">
+        <h3><%=idProduct.title%> </h3>
+        <h4><% idProduct.colors.forEach(e => { %>
+            <span>
+                <%=e%> 
+            </span>
+            
+        <% }); %>
+        
+        </h4>
+        <h5>$<%=idProduct.price%></h5>
+    </div>
+
+    <form class="talles-datos">
+        <h3>TALLES</h3>
+        <div class="talles-datos-numero">
+            <% idProduct.talles.forEach(e => { %>
+                <div>
+                    <input type="checkbox" name="34" id="<%= e %>">
+                    <label for="talle<%= e %>"><%= e %> </label>
+                </div>
+            <% }); %> 
+        <input class="boton" type="submit" value="AGREGAR A CARRITO">
+
+    </form>
+</aside>

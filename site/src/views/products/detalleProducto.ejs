@@ -15,108 +15,26 @@
     <main class="detalleProducto">
         <!-- ruta -->
         <section class="ruta oculto">
-            <a href="/home">INICIO ></a>
+            <a href="/">INICIO ></a>
             <span class="ruta-span">Nombre del Producto</span>
         </section>
 
         <!-- banner del producto -->
         <section class="bannerProducto">
-            <img src="/images/detalleProducto/bannerdetalleprod.png" alt="banner de una persona deportista corriendo">
+            <img src="/images/hombre/bannerdetalleprod.png" alt="banner de una persona deportista corriendo">
         </section>
 
         <!-- seccion de zapatillas -->
-        <section class="zapatillas1">
-            <article class="zapatillas1-articulos">
-                <div class="zapatilla-principal">
-                    <img src="/images/detalleProducto/zpatilla.jpg" alt="zapatilla adiddas">
-                </div>
-                <div class="zapatillas1-colores">
-                    <div class="zapatillas1-colors_eleccion">
-                        <img src="/images/detalleProducto/zapatilla-azul.jpg" alt="zapatilla azul">
-                    </div>
-                    <div class="zapatillas1-colors_eleccion">
-                        <img src="/images/detalleProducto/zapatilla-rosa.jpg" alt="zapatilla rosa">
-                    </div>
-                    <div class="zapatillas1-colors_eleccion">
-                        <img src="/images/detalleProducto/zapatilla-negro-marron.jpg" alt="zapatilla negra">
-                    </div>
-                    <div class="zapatillas1-colors_eleccion">
-                        <img src="/images/detalleProducto/zapatilla-azul.jpg" alt="zapatilla azul">
-                    </div>
-                </div>
-            </article>
-        </section>
+
+        <%- include('./partials/zapatilla-articulo') %>
+
         <!-- talles del producto -->
-        <aside class="talles">
-            <div class="talles-descripcion">
-                <h3>Zapatillas Adiddas</h3>
-                <h4>NEGRO/GRIS/NEGRO</h4>
-                <h5>$8000</h5>
-            </div>
-
-            <form class="talles-datos">
-                <h3>TALLES</h3>
-                <div class="talles-datos-numero">
-                    <div>
-                        <input type="checkbox" name="34" id="talle34">
-                        <label for="talle34">34</label>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" name="35" id="talle35">
-                        <label for="talle35">35</label>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" name="36" id="talle36">
-                        <label for="talle36">36</label>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" name="37" id="talle37">
-                        <label for="talle37">37</label>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" name="38" id="talle38">
-                        <label for="talle38">38</label>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" name="39" id="talle39">
-                        <label for="talle39">39</label>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" name="40" id="talle40">
-                        <label for="talle40">40</label>
-                    </div>
-                </div>
-                <input class="boton" type="submit" value="AGREGAR A CARRITO">
-
-            </form>
-        </aside>
+        
+        <%- include('./partials/talles-product') %>
 
         <!-- seccion de descripciones sobre el producto -->
-        <section class="descripciones">
-            <h3>Descripcion</h3>
-            <div class="descripciones-texto">
-                <h4>ZAPATILLAS GALAXAR RUN</h4>
-                <h5>ZAPATILLAS DE RUNNING ESTABLES HECHAS CON MATERIALES RECICLADOS</h5>
-                <p>Cuando empezás a correr por primera vez, no se trata de ganar maratones. Se trata de sentirse bien
-                    para que los kilómetros se conviertan en algo que deseás con ansias. Las zapatillas adidas Galaxar
-                    Run fueron creadas pensando en los nuevos corredores. El exterior de malla sin costuras es cómodo
-                    para correr distancias largas y la mediasuela Bounce agrega amortiguación a tus pies. Este producto
-                    está hecho con Primegreen, una serie de materiales reciclados de alto desempeño..</p>
-            </div>
-            <h3>Detalles del producto</h3>
-            <nav class="descripciones-detalles">
-                <li>Horma clásica</li>
-                <li>Exterior de malla elástica sin costuras</li>
-                <li>Suela de caucho</li>
-                <li>Forro interno textil</li>
-            </nav>
-        </section>
+        
+        <%- include('./partials/description-product') %>
 
         <!-- seccion de ofertas sobre el producto -->
         <section class="ofertas">
@@ -125,7 +43,7 @@
                 <article class="ofertas-zapatillas">
                     <a href="#">
                         <div class="ofertas-zapatilla_img">
-                            <img src="/images/detalleProducto/topper.png" alt="zapatilla topper">
+                            <img src="/images/hombre/topper.png" alt="zapatilla topper">
                         </div>
 
                         <div class="ofertas-zapatilla-precio">
@@ -139,7 +57,7 @@
                 <article class="ofertas-zapatillas">
                     <a href="#">
                         <div class="ofertas-zapatilla_img">
-                            <img src="/images/detalleProducto/nike.png" alt="zapatilla nike">
+                            <img src="/images/hombre/nike.png" alt="zapatilla nike">
                         </div>
 
                         <div class="ofertas-zapatilla-precio">
@@ -153,7 +71,7 @@
                 <article class="ofertas-zapatillas">
                     <a href="#">
                         <div class="ofertas-zapatilla_img">
-                            <img src="/images/detalleProducto/fila.png" alt="zapatilla Fila">
+                            <img src="/images/hombre/fila.png" alt="zapatilla Fila">
                         </div>
 
                         <div class="ofertas-zapatilla-precio">
@@ -167,7 +85,7 @@
                 <article class="ofertas-zapatillas oculto">
                     <a href="#">
                         <div class="ofertas-zapatilla_img">
-                            <img src="/images/detalleProducto/botinNike.png" alt="Botines Nike Verdes claro">
+                            <img src="/images/hombre/botinNike.png" alt="Botines Nike Verdes claro">
                         </div>
 
                         <div class="ofertas-zapatilla-precio">

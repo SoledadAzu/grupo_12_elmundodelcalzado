@@ -1,0 +1,18 @@
+<section class="zapatillas1">
+    <article class="zapatillas1-articulos">
+            
+            <div class="zapatilla-principal">
+                <img src="/images/hombre/adiddas/galaxarRun/<%=idProduct.imgP %>" alt="<%= idProduct.title %>">
+            </div>
+
+            <div class="zapatillas1-colores">
+                <% idProduct.img.forEach(e=>{ %>
+                    <div class="zapatillas1-colors_eleccion">
+                        <img src="/images/hombre/adiddas/galaxarRun/<%= e %>  " alt="<%= idProduct.title %> ">
+                    </div>
+                 <% }) %> 
+                  
+            </div>
+          
+    </article>
+</section>
