@@ -1,0 +1,89 @@
+[
+    {
+        "id":1,
+        "img":"nike.jpg", 
+        "price":12.499,
+        "modelo":"Zapatillas",
+        "nombre":"Nike Revolution 5",
+        "caracteristica":"Runinng",
+        "masVendido":true
+      
+    },
+    
+    {
+        "id":2,
+        "img":"zap-newBalance.jpg", 
+        "price":14299,
+        "modelo":"Zapatillas",
+        "nombre":"MS327SA",
+        "caracteristica":"NEW BALANCE",
+        "masVendido":true
+      
+    },
+    
+    {
+        "id":3,
+        "img":"zap-nikkemuj.jfif", 
+        "price":14299,
+        "modelo":"Zapatillas",
+        "nombre":"Nike Air Zoom",
+        "caracteristica":"Pegasus 38",
+        "masVendido":true
+      
+    },
+    
+    {
+        "id":4,
+        "img":"zap-reves.jpg", 
+        "price":9.390,
+        "modelo":"Botines de hockey",
+        "nombre":"Reves venlo TF",
+        "caracteristica":"Purpura",
+        "masVendido":true
+      
+    },
+    
+    {
+        "id":5,
+        "img":"zap-topper.jpg", 
+        "price":6.099,
+        "modelo":"Botines",
+        "nombre":"Stingray Mach 1",
+        "caracteristica":"Fg",
+        "masVendido":false
+      
+    },
+    
+    {
+        "id":6,
+        "img":"zap-puma.jpg", 
+        "price":14299,
+        "modelo":"Zapatillas",
+        "nombre":"WILD RIDER ROLLIN",
+        "caracteristica":"PUMA",
+        "masVendido":false
+      
+    },
+    
+    {
+        "id":7,
+        "img":"zap-nike.jpg", 
+        "price":9.390,
+        "modelo":"Botines de hockey",
+        "nombre":"Reves venlo TF",
+        "caracteristica":"Mujer purpura",
+        "masVendido":false
+      
+    },
+    
+    {
+        "id":8,
+        "img":"zap-new-balanceNiña.jpg", 
+        "price":6.900,
+        "modelo":"New balance",
+        "nombre":"574 S4 niño niña",
+        "caracteristica":"Turquesa",
+        "masVendido":false
+      
+    }
+]
