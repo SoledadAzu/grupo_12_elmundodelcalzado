@@ -1,0 +1,15 @@
+[
+    {
+        "img":"hombre.png",
+        "title":"HOMBRE"
+    },
+    {
+        "img":"mujer.png",
+        "title":"MUJER"
+
+    },
+    {
+        "img":"ofertas.png"
+    }
+
+]
