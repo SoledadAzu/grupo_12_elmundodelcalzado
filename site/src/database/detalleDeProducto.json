@@ -1,5 +1,19 @@
 [
     {
-        "id":1
+        "id":1,
+        "title":"a",
+        "subtitle":"a",
+        "description":"a",
+        "price":1,
+        "detalles":[],
+        "colors":[],
+        "talles":[],
+        "imgP":"",
+        "marca":"",
+        "genero":"hombre",
+        "outlet":true,
+        "temporada":false
+
+
     }
 ]
