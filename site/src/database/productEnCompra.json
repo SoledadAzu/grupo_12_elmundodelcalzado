@@ -2,7 +2,7 @@
     {
         "id": 1,
         "img":"Zapatillas_SL_Andridge_Gris_FU7134_01_standard.png",
-        "Nombre": "Zapatillas SL Andridge",
+        "nombre": "Zapatillas SL Andridge",
         "talles": 37,
         "price":13.999
 
@@ -10,9 +10,9 @@
     {
         "id": 2,
         "img":"Zapatillas_Marathon_Tech_Azul_EF4394_01_standard.jpg",
-        "Nombre": "Zapatillas Marathon Tech",
+        "nombre": "Zapatillas Marathon Tech",
         "talles": 41,
-        "price": 17.999   
+        "price": 17.999  
     },
     {
         "id": 3,
