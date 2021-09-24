@@ -1,3 +1,4 @@
+const productHome=require("../database/productosHome.json")
 const detalle = require('../database/hombreProducto.json');
 const controller={
     product:(req,res)=>{
@@ -5,7 +6,7 @@ const controller={
         let idProduct = detalle.find(e=>{
             return e.id === +id
         })
-        res.render('products/detalleProducto',{idProduct})
+        res.render('products/detalleProducto',{idProduct,productHome})
     },
 }
 module.exports=controller;
