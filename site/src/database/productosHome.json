@@ -39,7 +39,9 @@
         "modelo":"Botines de hockey",
         "nombre":"Reves venlo TF",
         "caracteristica":"Purpura",
-        "masVendido":true
+        "masVendido":true,
+        "oculto":"ignorarPC"
+        
       
     },
     
@@ -83,7 +85,9 @@
         "modelo":"New balance",
         "nombre":"574 S4 niño niña",
         "caracteristica":"Turquesa",
-        "masVendido":false
+        "masVendido":false,
+        "oculto":"ignorarPC"
+
       
     }
 ]
