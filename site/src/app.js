@@ -9,6 +9,7 @@ const indexRouter = require('./routes/main');
 const userRouter = require('./routes/user');
 const productRouter = require('./routes/productDetail');
 const carritoRouter = require('./routes/carritoDeCompras');
+const adminRouter = require('./routes/admin')
 
 /*****************************REQUERIMIENTOS DE LOS ARCHIVOS EN EXTRAS******************************** */
 const comprarRouter= require('./routes/extras/comprar')
@@ -35,6 +36,7 @@ app.use('/',indexRouter);
 app.use('/',productRouter);
 app.use('/',userRouter);
 app.use('/',carritoRouter);
+app.use('/admin',adminRouter)
 
 /**************************EXTRAS*********************************** */
 app.use('/',comprarRouter)
