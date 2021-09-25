@@ -6,11 +6,13 @@
             </div>
 
             <div class="zapatillas1-colores">
-                
+                    <% idProduct.imgG.map(e=>{ %>
+
+                    
                     <div class="zapatillas1-colors_eleccion">
-                        <img src="/images/wireframe/" alt=" ">
+                        <img src="/images/wireframe/<%= e %> " alt="<%= e.nombre %> ">
                     </div>
-                 
+               <% }) %> 
                   
             </div>
           

@@ -1,14 +1,16 @@
 <section class="descripciones">
     <h3>Descripcion</h3>
     <div class="descripciones-texto">
-        <h4></h4>
-        <h5></h5>
-        <p></p>
+        <h4><%=idProduct.nombre  %> </h4>
+        <h5><%=idProduct.subtitle  %></h5>
+        <p><%=idProduct.description  %></p>
     </div>
     <h3>Detalles del producto</h3>
     <nav class="descripciones-detalles">
-        
-            <li></li>
+        <% idProduct.detalles.map(e=>{ %>
+            <li><%= e %> </li>
+        <% }) %> 
+            
          
         
     </nav>
