@@ -1,0 +1,7 @@
+<%login.map(element=>{%>
+    <div class="<%= element.class %> ">
+        <label for="<%= element.nombre %>"><%= element.nombre %> <strong class="obligatorio">*</strong></label>
+        <input type="text" name="<%= element.nombre %>" id="<%= element.nombre %>" placeholder="<%= element.nombre %>">
+    </div>
+    
+ <%}) %>

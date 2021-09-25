@@ -1,11 +1,13 @@
-
+const registro= require("../database/registro.json")
+const btnregistro=require("../database/btnregistro.json")
+const login=require("../database/login.json")
 const controller ={
     login:(req,res)=>{
-        res.render('users/login')
+        res.render('users/login',{login})
     },
 
     register:(req,res)=>{
-        res.render('users/registro')
+        res.render('users/registro',{registro,btnregistro})
     }
 }
 module.exports=controller
