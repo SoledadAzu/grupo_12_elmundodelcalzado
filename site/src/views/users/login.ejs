@@ -22,7 +22,12 @@
         
                         <p>Ingresa los datos de tu cuenta, El Mundo del Calzado</p>
                         <form action="">
-                            <div class="email">
+                            <%login.map(element=>{%>
+                                <div class="<%=element.class%>">
+                                    <button type="<%=element.tipo %> " placeholder="<%=element.nombre %> "><%=element.nombre%></button>
+                             
+
+                            <!-- <div class="email">
                                 <label for="email">Tu Email</label>
                                 <input type="email" name="tu email" id="tu email" placeholder="tu email">
                             </div>
@@ -30,12 +35,12 @@
                             <div class="password">
                                 <label for="pasword">Tu Contraseña</label>
                                 <input type="password" name="tu contraseña" id="password" placeholder="tu contraseña">
-                            </div>
-                            <article>
+                            </div>-->
+                            <article> 
                     <a href=""><i class="fas fa-eye-slash"></i>mostrar</a>
                             </article>
 
-                            <div class="checkbox">
+                            <!-- <div class="checkbox">
                         
                                 <input type="checkbox" name="checkbox" id="checkbox">
                                 <label for="checkbox"> <a href="">¿olvidaste tu contraseña?</a></label>
@@ -43,7 +48,7 @@
                             </div>
                             <div>
                                 <button class="bttn" type="submit" placeholder="submit">INGRESÁ</button>
-                            </div>
+                            </div> -->
                         </form>
                     </div>
 

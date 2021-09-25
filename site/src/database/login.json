@@ -1,0 +1,24 @@
+[
+    {
+        "id":1,
+        "nombre": "Email",
+        "class":"email"
+        
+    },
+    {
+        "id":2,
+        "nombre": "Password",
+        "class":"password"
+    },
+    {
+        "id":3,
+        "nombre": "checkbox",
+        "class": "¿olvidaste tu contraseña"
+    },
+    {
+        "id":4,
+        "nombre": "submit",
+        "class":"ingresá"
+        
+    }
+] 
