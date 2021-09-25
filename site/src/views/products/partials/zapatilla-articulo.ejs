@@ -1,0 +1,20 @@
+<section class="zapatillas1">
+    <article class="zapatillas1-articulos">
+            
+            <div class="zapatilla-principal">
+                <img src="/images/wireframe/<%=idProduct.img %>" alt="">
+            </div>
+
+            <div class="zapatillas1-colores">
+                    <% idProduct.imgG.map(e=>{ %>
+
+                    
+                    <div class="zapatillas1-colors_eleccion">
+                        <img src="/images/wireframe/<%= e %> " alt="<%= e.nombre %> ">
+                    </div>
+               <% }) %> 
+                  
+            </div>
+          
+    </article>
+</section>

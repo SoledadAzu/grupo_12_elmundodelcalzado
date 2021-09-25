@@ -1,0 +1,27 @@
+[
+    {
+        "id":1,
+        "imag":"Zapatllas_Run_Falcon_2.0_Gris_H04519_01_standard.jpg",
+        "nombre":"Zapatillas Run Falcon 2.0",
+        "price":14.699
+    },
+    {
+        "id":2,
+        "imag":"Zapatillas_adidas_Sleek_Super_Blanco_EH1389_01_standard.jpg",
+        "nombre":"Zapatillas Sleek Super",
+        "price":13.999
+    },
+    {
+        "id":3,
+        "imag":"Zapatillas_Multix_Azul_FZ3445_01_standard.png",
+        "nombre":"Zapatillas Multix sport",
+        "price":10.599
+    },
+    {
+        "id":4,
+        "imag":"Zapatillas_QT_Racer_Sport_Rosa_GW4843_01_standard.jpg",
+        "nombre":"Zapatillas QT Racer Sport",
+        "price":12.999,
+        "class":"oculto"
+    }
+]
