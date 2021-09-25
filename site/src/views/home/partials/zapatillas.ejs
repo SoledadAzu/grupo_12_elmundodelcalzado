@@ -1,7 +1,7 @@
-<section class="zapatillas">
-    <%  zapatillas.map(e=>{%>
 
-    <article class="zapatilla-img">
+    <%  zapatillas.map(e=>{%>
+     <%if(e.id===4){%>
+    <article class="zapatilla-img <%= e.oculto %>">
         <a href="/productDetail/<%= e.id %> ">
         <div>
             <img class="zapatilla-img1" src="/images/wireframe/<%= e.img %> " alt="zapatilla-img1">
@@ -14,6 +14,23 @@
         </div>
     </a> 
     </article>
+    <% }else{ %> 
+        <article class="zapatilla-img ">
+            <a href="/productDetail/<%=e.id %> ">
+            <div>
+                <img class="zapatilla-img1" src="/images/wireframe/<%= e.img %> " alt="zapatilla-img1">
+            </div>  
+            <div class="ofertasZapatillaPrecio">
+               
+               <h5>$<%= e.price %> </h5>
+                <p><%= e.modelo %>  </p>
+                <p><%= e.nombre %> </p>
+                <p><%= e.caracteristica %> </p> 
+            </div> 
+        
+         </a>
+        </article>
+    <% } %>
     <% }) %> 
    
-</section> 
+ 
