@@ -1,17 +1,36 @@
 <h2 class='oferta1'>APROVECHA LAS SUPER OFERTAS</h2>
- <section class="mercaderia">
-   <% productOferta.map(e=>{ %>
-    <article><a href="/productDetail/<%= e.id %> ">
-        <div>
-        <img src="/images/<%= e.imag %>" alt="">
-       </div>
-       <div>
-        <h4><%= e.nombre %> </h4>
-        <strong>$<%= e.price %> </strong>
-        </div></a>
-    </article>
-    <% }) %>  
-    
-    
- </section>
+<section class="mercaderia">
+  <% productOferta.map(e=>{ %>
+    <%if(e.class==="oculto"){%>
+      <article class="<%= e.class %>"><a href="/productDetail/<%= e.id %> ">
+          <div>
+            <img src="/images/<%= e.imag %>" alt="">
+          </div>
+          <div>
+            <h4>
+              <%= e.nombre %>
+            </h4>
+            <strong>$<%= e.price %> </strong>
+          </div>
+        </a>
+      </article>
+
+      <% }else{ %>
+        <article><a href="/productDetail/<%= e.id %> ">
+            <div>
+              <img src="/images/<%= e.imag %>" alt="">
+            </div>
+            <div>
+              <h4>
+                <%= e.nombre %>
+              </h4>
+              <strong>$<%= e.price %> </strong>
+            </div>
+          </a>
+        </article>
+          <% } %>
+            <% }) %>
+
+
+</section>
 <div class="button-vermas"><button class="vermas"><strong>Ver más ></strong></button></div>

@@ -21,6 +21,7 @@
         "id":4,
         "imag":"Zapatillas_QT_Racer_Sport_Rosa_GW4843_01_standard.jpg",
         "nombre":"Zapatillas QT Racer Sport",
-        "price":12.999
+        "price":12.999,
+        "class": "oculto"
     }
 ]
