@@ -33,9 +33,9 @@ app.use(express.static(path.join(__dirname,'..','public'))); //public estatico
 
 /******************* MUESTRA DE LAS RUTAS********************** */
 app.use('/',indexRouter);
-app.use('/',productRouter);
+app.use('/productDetail',productRouter);
 app.use('/',userRouter);
-app.use('/',carritoRouter);
+app.use('/carritoDeCompras',carritoRouter);
 app.use('/admin',adminRouter)
 
 /**************************EXTRAS*********************************** */
