@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<%- include('../partials/head') %> 
+<!-- HEAD -->
+
+<body>
+
+    <!-- HEADER -->
+    <%- include('../partials/header') %> 
+    <!-- HEADER -->
+    
+
+    <main class="detalleProducto">
+        <!-- ruta -->
+        <section class="ruta oculto">
+            <a href="/">INICIO ></a>
+            <span class="ruta-span">Nombre del Producto</span>
+        </section>
+
+        <!-- banner del producto -->
+        <section class="bannerProducto">
+            <img src="/images/hombre/bannerdetalleprod.png" alt="banner de una persona deportista corriendo">
+        </section>
+
+        <!-- seccion de zapatillas -->
+
+        <section class="zapatillas1">
+            <article class="zapatillas1-articulos">
+                    
+                    <div class="zapatilla-principal">
+                        <img src="/images/wireframe/<%=idProduct.img %>" alt="">
+                    </div>
+        
+                    <div class="zapatillas1-colores">
+                            <% idProduct.imgG.map(e=>{ %>
+        
+                            
+                            <div class="zapatillas1-colors_eleccion">
+                                <img src="/images/wireframe/<%= e %> " alt="<%= e.nombre %> ">
+                            </div>
+                       <% }) %> 
+                          
+                    </div>
+                  
+            </article>
+        </section>
+
+        <!-- talles del producto -->
+        
+        <aside class="talles">
+            <div class="talles-descripcion">
+                <h3><%= idProduct.nombre %>  </h3>
+                <h4>
+                    <% idProduct.colors.map(e=>{ %>
+                    <span>
+                       <%= e %> 
+        
+                        
+                    </span>
+                    <%}) %> 
+             
+                
+                </h4>
+                <h5>$<%= idProduct.price %> </h5>
+            </div>
+        
+            <form class="talles-datos" action="/carritoDeCompras">
+                <h3>TALLES</h3>
+                <div class="talles-datos-numero">
+                    <% idProduct.talles.map(e=>{ %>
+                        <div>
+                            <input type="checkbox" name="<%= e %> " id="talle<%= e %>">
+                            <label for="talle<%= e %>"> <%= e %></label>
+                        </div>
+                   <% }) %> 
+                        
+                  
+                    <input class="boton" type="submit" value="AGREGAR A CARRITO">
+                  
+            </form>
+        </aside>
+
+        <!-- seccion de descripciones sobre el producto -->
+        
+        <section class="descripciones">
+            <h3>Descripcion</h3>
+            <div class="descripciones-texto">
+                <h4><%=idProduct.nombre  %> </h4>
+                <h5><%=idProduct.subtitle  %></h5>
+                <p><%=idProduct.description  %></p>
+            </div>
+            <h3>Detalles del producto</h3>
+            <nav class="descripciones-detalles">
+                <% idProduct.detalles.map(e=>{ %>
+                    <li><%= e %> </li>
+                <% }) %> 
+                    
+                 
+                
+            </nav>
+        </section>
+
+        <!-- seccion de ofertas sobre el producto -->
+
+        <section class="ofertas">
+            <h5>Tambien puede interesarte estas ofertas</h5>
+            <section class="ofertas-general">
+        
+                <% oferta.map(e=>{ %>
+        
+                    <%if(e.class==="oculto"){%>
+                        <article class="ofertas-zapatillas <%= e.class %> ">
+                    <a href="/productDetail/<%= e.id %> ">
+                        <div class="ofertas-zapatilla_img">
+                            <img src="/images/<%= e.imag%>" alt="<%=e.nombre%>">
+                        </div>
+        
+                        <div class="ofertas-zapatilla-precio">
+                            <h5>$7.500</h5>
+                            <p>Zapatillas</p>
+                            <p>Topper</p>
+                            <p>String Pace Plus</p>
+                        </div>
+                    </a>
+                </article>
+                   <% } else{ %>
+                    <article class="ofertas-zapatillas">
+                    <a href="/productDetail/<%= e.id %> ">
+                        <div class="ofertas-zapatilla_img">
+                            <img src="/images/<%= e.imag%>" alt="<%=e.nombre%>">
+                        </div>
+        
+                        <div class="ofertas-zapatilla-precio">
+                            <h5>$7.500</h5>
+                            <p>Zapatillas</p>
+                            <p>Topper</p>
+                            <p>String Pace Plus</p>
+                        </div>
+                    </a>
+                </article>
+        
+                    <%} %> 
+                    
+        
+                <% }) %> 
+                
+                
+            </section>
+        </section> 
+       
+        <section class="verMas">
+            <button>Ver Mas</button>
+        </section>
+    </main>
+
+<!-- FOOTER -->
+<%- include('../partials/footer') %> 
+<!-- FOOTER -->
+
+    
+    
+</body>
+
+</html>
