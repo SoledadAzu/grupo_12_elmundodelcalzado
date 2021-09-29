@@ -29,20 +29,103 @@
                     <h1>CARRITO DE COMPRAS</h1>
                 </div>
                 <div class='table-flex'>
-                    
-
-                        <%- include("./partials/artDeCompra") %>
-                    
-
-
-                    
-
-                        <%- include("./partials/tablaPago") %>
-
-                    
+                    <div class="tablescroll">
+                    <div class='tablaproducto'>
+                        <table class="table1">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Producto</th>
+                                    <th class='compu'>Precio</th>
+                                    <th class='cantidad'>Cantidad</th>
+                                    <th class='compu'>Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% productEnCompra.map(e=>{%>
+                                    <tr>
+                                        <td><button class='eliminar'></a><img class='eliminar' src="/images/icono x.png"
+                                                    alt=""></button>
+                                        </td>
+                                        <td><img class="imgcarrito" src="/images/<%= e.img %>
+          " alt="">
+                                            <ul>
+                                                <li>
+                                                    <%= e.nombre %>
+                                                </li>
+                                                <li>Talles: <%= e.talles %>
+                                                </li>
+                                                <li class='precioCell'>Precio:$<%= e.price %>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class='compu alinear'><strong>$<%= e.price %> </strong></td>
+                                        <td class="cantidad"><input type="number" id="number" name="number" min=1
+                                                max=100 value="1"></td>
+                                        <td class='compu alinear'><strong>$<%= e.price %></strong></td>
+                                    </tr>
+                                    <%})%>
+                            </tbody>
+                        </table>
+                        <a href="/">Continuar Comprando >>></a>
+                    </div>
+                </div>
+                <div class='tablapago'>
+                    <table class='table2'>
+                        <tr>
+                            <th colspan="2"><strong>RESUMEN DE COMPRA</strong></th>
+                        </tr>
+                        <tr class='subtotal'>
+                            <td class='descrip'>SUBTOTAL</td>
+                            <td class='valor'>$45.997</td>
+                        </tr>
+                        <tr class='total'>
+                            <td class='descrip'>TOTAL</td>
+                            <td class='valor'>$45.997</td>
+                        </tr>
+                        <tr>
+                            <th colspan="2"><a href="/"><button><strong>INICIAR PAGO ></strong></button></a></th>
+                        </tr>
+                    </table>
+                </div>
                 </div>
 
-                <%- include("partials/ofertasDeCarritos") %>
+                <h2 class='oferta1'>APROVECHA LAS SUPER OFERTAS</h2>
+                <section class="mercaderia">
+                  <% productOferta.map(e=>{ %>
+                    <%if(e.class==="oculto"){%>
+                      <article class="<%= e.class %>"><a href="/productDetail/<%= e.id %> ">
+                          <div>
+                            <img src="/images/<%= e.imag %>" alt="">
+                          </div>
+                          <div>
+                            <h4>
+                              <%= e.nombre %>
+                            </h4>
+                            <strong>$<%= e.price %> </strong>
+                          </div>
+                        </a>
+                      </article>
+                
+                      <% }else{ %>
+                        <article><a href="/productDetail/<%= e.id %> ">
+                            <div>
+                              <img src="/images/<%= e.imag %>" alt="">
+                            </div>
+                            <div>
+                              <h4>
+                                <%= e.nombre %>
+                              </h4>
+                              <strong>$<%= e.price %> </strong>
+                            </div>
+                          </a>
+                        </article>
+                          <% } %>
+                            <% }) %>
+                
+                
+                </section>
+                <div class="button-vermas"><button class="vermas"><strong>Ver más ></strong></button></div>
 
             </main>
 
