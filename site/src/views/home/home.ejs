@@ -52,7 +52,7 @@
      <%  zapatillas.map(e=>{%>
         <%if(e.id===4){%>
        <article class="zapatilla-img <%= e.oculto %>">
-           <a href="/productDetail/<%= e.id %> ">
+           <a href="/products/productDetail/<%= e.id %> ">
            <div>
                <img class="zapatilla-img1" src="/images/wireframe/<%= e.img %> " alt="zapatilla-img1">
            </div>  
@@ -66,7 +66,7 @@
        </article>
        <% }else{ %> 
            <article class="zapatilla-img ">
-               <a href="/productDetail/<%=e.id %> ">
+               <a href="/products/productDetail/<%=e.id %> ">
                <div>
                    <img class="zapatilla-img1" src="/images/wireframe/<%= e.img %> " alt="zapatilla-img1">
                </div>  
@@ -99,7 +99,7 @@
             <%if(e.id===8){%>
        
               <article class="zapatilla-img <%= e.oculto %> ">
-                   <a href="/productDetail/<%=e.id %> ">
+                   <a href="/products/productDetail/<%=e.id %> ">
                    <div>
                        <img class="zapatilla-img1" src="/images/wireframe/<%= e.img %> " alt="zapatilla-img1">
                    </div>  
@@ -115,7 +115,7 @@
                </article>
            <% }else{ %> 
                <article class="zapatilla-img ">
-                   <a href="/productDetail/<%=e.id %> ">
+                   <a href="/products/productDetail/<%=e.id %> ">
                    <div>
                        <img class="zapatilla-img1" src="/images/wireframe/<%= e.img %> " alt="zapatilla-img1">
                    </div>  

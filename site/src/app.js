@@ -7,8 +7,7 @@ const logger = require('morgan');
 /***********************REQUERIMIENTOS DE LOS ARCHIVO DE LAS RUTAS PRINCIPALES**************************/
 const indexRouter = require('./routes/main');
 const userRouter = require('./routes/user');
-const productRouter = require('./routes/productDetail');
-const carritoRouter = require('./routes/carritoDeCompras');
+const productRouter = require('./routes/products');
 const adminRouter = require('./routes/admin')
 const informacionRotuer = require('./routes/extras/information')
 /*****************************REQUERIMIENTOS DE LOS ARCHIVOS EN EXTRAS******************************** */
@@ -29,9 +28,8 @@ app.use(express.static(path.join(__dirname,'..','public'))); //public estatico
 
 /******************* MUESTRA DE LAS RUTAS********************** */
 app.use('/',indexRouter);
-app.use('/productDetail',productRouter);
-app.use('/',userRouter);
-app.use('/carritoDeCompras',carritoRouter);
+app.use('/products',productRouter);
+app.use('/user',userRouter);
 app.use('/admin',adminRouter)
 
 /**************************EXTRAS*********************************** */

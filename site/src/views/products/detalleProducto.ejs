@@ -30,15 +30,15 @@
             <article class="zapatillas1-articulos">
                     
                     <div class="zapatilla-principal">
-                        <img src="/images/wireframe/<%=idProduct.img %>" alt="">
+                        <img src="/images/articulos/<%=idProduct.imgP %>" alt="">
                     </div>
         
                     <div class="zapatillas1-colores">
-                            <% idProduct.imgG.map(e=>{ %>
+                            <% idProduct.img.map(e=>{ %>
         
                             
                             <div class="zapatillas1-colors_eleccion">
-                                <img src="/images/wireframe/<%= e %> " alt="<%= e.nombre %> ">
+                                <img src="/images/articulos/<%= e %> " alt="<%= e.nombre %> ">
                             </div>
                        <% }) %> 
                           
@@ -66,7 +66,7 @@
                 <h5>$<%= idProduct.price %> </h5>
             </div>
         
-            <form class="talles-datos" action="/carritoDeCompras">
+            <form class="talles-datos" action="/products/carritoDeCompras">
                 <h3>TALLES</h3>
                 <div class="talles-datos-numero">
                     <% idProduct.talles.map(e=>{ %>

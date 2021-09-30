@@ -19,8 +19,29 @@
                 <hr>
                 <form action="">
 
-                   <%-include("./partials/form")%> 
-                    <%-include("./partials/btnregistro") %> 
+                    <%registro.map(element=>{%>
+                        <div class="<%= element.class %> ">
+                            <label for="<%= element.nombre %>"><%= element.nombre %> <strong class="obligatorio">*</strong></label>
+                            <input type="text" name="<%= element.nombre %>" id="<%= element.nombre %>" placeholder="<%= element.nombre %>">
+                        </div>
+                        
+                     <%}) %>
+                     <small class="obligatorio">*Campo Obligatorio</small>
+                     <div class="terminos">
+                         <input type="checkbox" name="terminos" id="terminos">
+                         <label for="terminos"> He leido y acepto los <a href="">términos y condiciones</a> y las <a href="">politicas de
+                                 privacidad</a> del Mundo del Calzado.</label>
+                     </div>
+                     
+                     
+                     <%btnregistro.map(element=>{%>
+                         <div class="<%=element.class%>">
+                             <button type="<%=element.tipo %> " placeholder="<%=element.nombre %> "><%=element.nombre%></button>
+                     
+                         </div>
+                         <p><%=element.parrafo %> </p>
+                     <%})  %>
+                     
                    
                 </form>
             </div>

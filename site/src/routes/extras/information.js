@@ -4,11 +4,11 @@ const{ compra,defensa,envio,garantia,privacidad, politicaDeCambio }=require('../
 
 
 router.get('/comprar',compra)
-router.get('/defensa',defensa)
+router.get('/defensaAlConsumidor',defensa)
 router.get('/envio',envio)
-router.get('/garantia',garantia)
+router.get('/garantias',garantia)
 router.get('/privacidad',privacidad)
-router.get('/politicaDeCambio',politicaDeCambio)
+router.get('/politicaDeCambios',politicaDeCambio)
 
 
 module.exports = router
