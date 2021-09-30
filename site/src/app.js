@@ -9,7 +9,12 @@ const indexRouter = require('./routes/main');
 const userRouter = require('./routes/user');
 const productRouter = require('./routes/products');
 const adminRouter = require('./routes/admin')
+<<<<<<< HEAD
 const informacionRotuer = require('./routes/extras/information')
+=======
+const productosRouter=require("./routes/productos")
+
+>>>>>>> 23aaa6869aa5b896a595d36b3ca1a871f0513679
 /*****************************REQUERIMIENTOS DE LOS ARCHIVOS EN EXTRAS******************************** */
 
 

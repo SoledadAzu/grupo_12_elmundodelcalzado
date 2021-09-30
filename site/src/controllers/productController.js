@@ -1,4 +1,4 @@
-const productHome=require("../database/productosHome.json")
+const productHome=require("../database/productosHome.json");
 const oferta = require('../database/productOferta.json');
 const productos = require('../database/productos.json')
 const controller={
