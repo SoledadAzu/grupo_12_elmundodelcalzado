@@ -8,6 +8,9 @@ const controller={
     },
     edit:(req,res)=>{
         res.render('admin/edit')
+    },
+    del:(req,res)=>{
+        res.render('admin/eliminar')
     }
 
 }

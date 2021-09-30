@@ -2,12 +2,13 @@ const express = require('express')
 const router = express.Router()
 const{ compra,defensa,envio,garantia,privacidad, politicaDeCambio }=require('../../controllers/extras/informationController')
 
-router.get('/',compra)
-router.get('/',defensa)
-router.get('/',envio)
-router.get('/',garantia)
-router.get('/',privacidad)
-router.get('/',politicaDeCambio)
+
+router.get('/comprar',compra)
+router.get('/defensa',defensa)
+router.get('/envio',envio)
+router.get('/garantia',garantia)
+router.get('/privacidad',privacidad)
+router.get('/politicaDeCambio',politicaDeCambio)
 
 
 module.exports = router

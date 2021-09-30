@@ -10,14 +10,9 @@ const userRouter = require('./routes/user');
 const productRouter = require('./routes/productDetail');
 const carritoRouter = require('./routes/carritoDeCompras');
 const adminRouter = require('./routes/admin')
-
+const informacionRotuer = require('./routes/extras/information')
 /*****************************REQUERIMIENTOS DE LOS ARCHIVOS EN EXTRAS******************************** */
-const comprarRouter= require('./routes/extras/information')
-const defensaRouter= require('./routes/extras/information')
-const envioRouter= require('./routes/extras/information')
-const garantiaRouter= require('./routes/extras/information')
-const privacidadRouter= require('./routes/extras/information')
-const politicaDeCambioRouter= require('./routes/extras/information')
+
 
 const app = express();
 
@@ -40,12 +35,8 @@ app.use('/carritoDeCompras',carritoRouter);
 app.use('/admin',adminRouter)
 
 /**************************EXTRAS*********************************** */
-app.use('/comprar',comprarRouter)
-app.use('/defensaAlConsumidor',defensaRouter)
-app.use('/envio',envioRouter)
-app.use('/garantias',garantiaRouter)
-app.use('/privacidad',privacidadRouter)
-app.use('/politicaDeCambios',politicaDeCambioRouter)
+app.use('/informacion',informacionRotuer)
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
