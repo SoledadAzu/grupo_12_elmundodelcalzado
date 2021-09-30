@@ -10,6 +10,7 @@ const userRouter = require('./routes/user');
 const productRouter = require('./routes/productDetail');
 const carritoRouter = require('./routes/carritoDeCompras');
 const adminRouter = require('./routes/admin')
+const productosRouter=require("./routes/productos")
 
 /*****************************REQUERIMIENTOS DE LOS ARCHIVOS EN EXTRAS******************************** */
 const comprarRouter= require('./routes/extras/comprar')
@@ -36,7 +37,7 @@ app.use('/',indexRouter);
 app.use('/productDetail',productRouter);
 app.use('/',userRouter);
 app.use('/carritoDeCompras',carritoRouter);
-app.use('/admin',adminRouter)
+app.use('/admin',adminRouter);
 
 /**************************EXTRAS*********************************** */
 app.use('/',comprarRouter)
