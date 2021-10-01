@@ -5,3 +5,6 @@ Sprint 2
 Sprint 3
 
 ![retrospectiva2](https://user-images.githubusercontent.com/66876634/134588530-b50ba17c-ab6b-4cdc-9fb3-b5c8f27181ab.PNG)
+
+Sprint 4
+![sprint4](https://user-images.githubusercontent.com/66876634/135561936-744ebc02-6958-41f6-a30f-fcbe1ff8a31f.png)
