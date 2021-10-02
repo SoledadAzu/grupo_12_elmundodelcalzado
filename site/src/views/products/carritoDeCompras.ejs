@@ -93,7 +93,7 @@
                 <section class="mercaderia">
                     <% let contadorM=0 %>
                   <% ofertas.map(e=>{ %>
-                    <% contador++ %> 
+                    <% contadorM++ %> 
                     <%if(contadorM<=4){%>
                       <article>
                           <a href="/products/productDetail/<%= e.id %> ">
@@ -108,8 +108,8 @@
                           </div>
                         </a>
                       </article>
-                          <% } %>
-                            <% }) %>
+                    <% } %>
+                <% }) %>
                 
                 
                 </section>

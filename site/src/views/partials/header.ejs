@@ -31,8 +31,8 @@
             
             </div>
         
-            <form action="" class="buscar">
-                <input  type="text" placeholder="¿Que estas buscando? " > <i class="fas fa-search"> </i>
+            <form action="/products/general" class="buscar" method="GET">
+                <input  type="text" name="keywords" placeholder="¿Que estas buscando? " > <i class="fas fa-search"> </i>
             </form>
         <div class="iconos">
             <div class="usuario">
@@ -47,7 +47,7 @@
                         <i class="fas fa-search ocultar"></i>
                     </label>
                     <div class="busqueda-input">
-                        <input type="search" placeholder="ingresa tu busqueda">
+                        <input type="search" name="keywords" placeholder="ingresa tu busqueda">
                     </div>
                 </div>
                 <a href="/products/carritoDeCompras" class="fas fa-shopping-cart "><span>Mi Compra</span></a>

@@ -9,6 +9,7 @@ const zapatillas=vendidos.filter(e=>{
 const controller ={
     index:(req,res)=>{
         res.render('home/home',{lanzamiento,zapatillas})
-    }
+    },
+    
 }
 module.exports= controller;
