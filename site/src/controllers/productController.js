@@ -1,4 +1,3 @@
-const productHome=require("../database/productosHome.json");
 const oferta = require('../database/productOferta.json');
 const productos = require('../database/productos.json')
 const controller={
@@ -10,7 +9,7 @@ const controller={
         res.render('products/detalleProducto',{idProduct,oferta})
     },
     carrito:(req,res)=>{
-        res.render('products/carritoDeCompras',{productHome,oferta})
+        res.render('products/carritoDeCompras',{oferta})
     },
     general:(req,res)=>{
         res.render('products/productosGeneral',{productos})
