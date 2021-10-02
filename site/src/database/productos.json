@@ -38,7 +38,8 @@
     "marca": "adidas",
     "genero": "mujer",
     "outlet": true,
-    "temporada": false
+    "temporada": false,
+    "vendidos":true
   },
   {
     "id": 2,
@@ -77,7 +78,8 @@
     "marca": "adidas",
     "genero": "mujer",
     "outlet": true,
-    "temporada": false
+    "temporada": false,
+    "vendidos":true
   },
   {
     "id": 3,
@@ -116,7 +118,8 @@
     "marca": "adidas",
     "genero": "mujer",
     "outlet": false,
-    "temporada": true
+    "temporada": true,
+    "vendidos":true
   },
   {
     "id": 4,
@@ -155,7 +158,8 @@
     "marca": "adidas_original",
     "genero": "mujer",
     "outlet": true,
-    "temporada": false
+    "temporada": false,
+    "vendidos":true
   },
   {
     "id": 5,
@@ -195,7 +199,8 @@
     "marca": "adidas_original",
     "genero": "mujer",
     "outlet": false,
-    "temporada": true
+    "temporada": true,
+    "vendidos":true
   },
   {
     "id": 6,
@@ -236,7 +241,8 @@
     "marca": "adidas_original",
     "genero": "mujer",
     "outlet": false,
-    "temporada": true
+    "temporada": true,
+    "vendidos":true
   },
   {
     "id": 7,
@@ -1064,7 +1070,8 @@
     "marca":"adiddas",
     "genero":"hombre",
     "outlet":true,
-    "temporada":false
+    "temporada":false,
+    "vendidos":true
 },
 {
     "id":29,
@@ -1080,7 +1087,8 @@
     "marca":"adiddas",
     "genero":"hombre",
     "outlet":true,
-    "temporada":false
+    "temporada":false,
+    "vendidos":true
 },
 {
     "id":30,
@@ -1096,7 +1104,8 @@
     "marca":"adiddas",
     "genero":"hombre",
     "outlet":true,
-    "temporada":false
+    "temporada":false,
+    "vendidos":true
 },
 {
     "id":31,
@@ -1112,7 +1121,8 @@
     "marca":"adiddasOrginial",
     "genero":"hombre",
     "outlet":true,
-    "temporada":false
+    "temporada":false,
+    "vendidos":true
 },
 {
     "id":32,
@@ -1128,7 +1138,8 @@
     "marca":"adiddasOrginial",
     "genero":"hombre",
     "outlet":true,
-    "temporada":false
+    "temporada":false,
+    "vendidos":true
 },
 {
     "id":33,
@@ -1144,7 +1155,8 @@
     "marca":"adiddasOrginial",
     "genero":"hombre",
     "outlet":true,
-    "temporada":false
+    "temporada":false,
+    "vendidos":true
 },
 {
     "id":34,
@@ -1172,7 +1184,7 @@
     "colors":["Cloud White ","Core Black ","Cloud White"],
     "talles":["34","35","36","37","39","38","40"],
     "imgP":"zapatillaRevolutionPortada.jpg",
-    "img":["zapatillaRevolution1.jpg","zapatillaRevolution2.jpg","zapatillaRevolution3.png","zapatillaRevolution4.jpg"],
+    "img":["zapatillaRevolution1.jpg","zapatillaRevolution2.jpg","zapatillaRevolution3.jpg","zapatillaRevolution4.jpg"],
     "marca":"nike",
     "genero":"hombre",
     "outlet":true,
@@ -1188,7 +1200,7 @@
     "colors":["Cloud White ","Core Black ","Cloud White"],
     "talles":["34","35","36","37","39","38","40"],
     "imgP":"zapatillaAirPortada.jpg",
-    "img":["zapatillaAir1.jpg","zapatillaAir2.jpg","zapatillaAir3.png","zapatillaAir4.jpg"],
+    "img":["zapatillaAir1.jpg","zapatillaAir2.jpg","zapatillaAir3.jpg","zapatillaAir4.jpg"],
     "marca":"nike",
     "genero":"hombre",
     "outlet":true,
