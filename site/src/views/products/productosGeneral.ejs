@@ -12,32 +12,35 @@
     <!-- HEADER -->
 
     <!-- MAIN -->
-    <section class="zapatillas">
+    <main>
+        <h1>TODOS LOS PRODUCTOS</h1>
+        <br>
+    <section class="mercaderia">
     <%  productos.map(e=>{%>
         <%if(e.temporada=== false){%>
        <article class="zapatilla-img <%= e.oculto %>">
            <a href="/products/productDetail/<%= e.id %> ">
            <div>
-               <img class="zapatilla-img1" src="/images/articulos/<%= e.imgP %> " alt="zapatilla-img1">
+               <img  src="/images/articulos/<%= e.imgP %> " alt="zapatilla-img1">
            </div>  
            <div class="ofertasZapatillaPrecio">
-               <h5>$<%= e.price %> </h5>
+               <h4>$<%= e.price %> </h4>
                <p><%= e.marca %>  </p>
                <p><%= e.title%></p>
            </div>
        </a> 
        </article>
        <% }else{ %> 
-           <article class="zapatilla-img ">
+           <article class=>
                <a href="/products/productDetail/<%=e.id %> ">
                <div>
-                   <img class="zapatilla-img1" src="/images/articulos/<%= e.imgP %> " alt="zapatilla-img1">
+                   <img src="/images/articulos/<%= e.imgP %> " alt="zapatilla-img1">
                </div>  
                <div class="ofertasZapatillaPrecio">
                   
-                  <h5>$<%= e.price %> </h5>
+                  <h4>$<%= e.price %> </h4>
                    <p><%= e.marca %>  </p>
-                   <p><%= e.tile %> </p>
+                   <p><%= e.title %> </p>
                   
                </div> 
            
@@ -46,6 +49,7 @@
        <% } %>
        <% }) %>
     </section>
+</main>
     <!-- MAIN -->
             
         <!-- FOOTER -->
