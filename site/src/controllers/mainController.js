@@ -1,11 +1,12 @@
 const productosHome=require("../database/productosHome.json")
 const imagenesPublicidad=require("../database/imagenesPublicidad.json")
+const vendidos = require('../database/productos.json')
 
 const lanzamiento=productosHome.filter(e=>{
    return e.masVendido===false
 })
-const zapatillas=productosHome.filter(e=>{
-    return e.masVendido===true
+const zapatillas=vendidos.filter(e=>{
+    return e.vendidos===true
 })
 const controller ={
     index:(req,res)=>{
