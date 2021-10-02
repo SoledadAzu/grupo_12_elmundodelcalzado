@@ -1,5 +1,3 @@
-const productosHome=require("../database/productosHome.json")
-const imagenesPublicidad=require("../database/imagenesPublicidad.json")
 const vendidos = require('../database/productos.json')
 
 const lanzamiento=vendidos.filter(e=>{
@@ -10,7 +8,7 @@ const zapatillas=vendidos.filter(e=>{
 })
 const controller ={
     index:(req,res)=>{
-        res.render('home/home',{lanzamiento,zapatillas,imagenesPublicidad})
+        res.render('home/home',{lanzamiento,zapatillas})
     }
 }
 module.exports= controller;

@@ -42,17 +42,17 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <% productHome.map(e=>{%>
+                                <% oferta.map(e=>{%>
                                     <tr>
                                         <td><button class='eliminar'></a><img class='eliminar' src="/images/icono x.png"
                                                     alt=""></button>
                                         </td>
-                                        <td><img class="imgcarrito" src="/images/wireframe/<%= e.img %>" alt="">
+                                        <td><img class="imgcarrito" src="/images/<%= e.imag %>" alt="">
                                             <ul>
                                                 <li>
                                                     <%= e.nombre %>
                                                 </li>
-                                                <li>Talles: <%= e.talles %>
+                                                <li>Talles: <%=  %>
                                                 </li>
                                                 <li class='precioCell'>Precio:$<%= e.price %>
                                                 </li>
@@ -91,34 +91,23 @@
 
                 <h2 class='oferta1'>APROVECHA LAS SUPER OFERTAS</h2>
                 <section class="mercaderia">
-                  <% oferta.map(e=>{ %>
-                    <%if(e.class==="oculto"){%>
-                      <article class="<%= e.class %>"><a href="/productDetail/<%= e.id %> ">
-                          <div>
-                            <img src="/images/<%= e.imag %>" alt="">
-                          </div>
-                          <div>
+                    <% let contadorM=0 %>
+                  <% ofertas.map(e=>{ %>
+                    <% contador++ %> 
+                    <%if(contadorM<=4){%>
+                      <article>
+                          <a href="/products/productDetail/<%= e.id %> ">
+                            <div>
+                                <img src="/images/articulos/<%= e.imgP %>" alt="">
+                            </div>
+                            <div>
                             <h4>
-                              <%= e.nombre %>
+                              <%= e.title %>
                             </h4>
                             <strong>$<%= e.price %> </strong>
                           </div>
                         </a>
                       </article>
-                
-                      <% }else{ %>
-                        <article><a href="/productDetail/<%= e.id %> ">
-                            <div>
-                              <img src="/images/<%= e.imag %>" alt="">
-                            </div>
-                            <div>
-                              <h4>
-                                <%= e.nombre %>
-                              </h4>
-                              <strong>$<%= e.price %> </strong>
-                            </div>
-                          </a>
-                        </article>
                           <% } %>
                             <% }) %>
                 
