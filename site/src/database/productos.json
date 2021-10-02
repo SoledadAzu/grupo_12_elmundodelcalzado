@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title":"ZAPATILLAS QT RACER SPORT",
+    "title":"QT RACER SPORT",
     "subtitle": "ZAPATILLAS LISTAS PARA LAS PISTAS Y LAS CALLES",
     "description": "Estas zapatillas adidas te acompañan con comodidad durante todo el día, cuando corrés en la mañana, en tus actividades de la tarde y en tus reuniones nocturnas. La mediasuela Lightmotion ofrece amortiguación liviana que notarás mientras pasan las horas. Este producto está hecho con Primeblue, un material reciclado de alto rendimiento creado en parte con Parley Ocean Plastic.",
     "price": 8999,
@@ -43,7 +43,7 @@
   },
   {
     "id": 2,
-    "title": "ZAPATILLAS ZX 1K BOOST",
+    "title": "ZX 1K BOOST",
     "subtitle": "ZAPATILLAS EN UNA MEZCLA DE MATERIALES PARA UNA COMODIDAD TOTAL",
     "description": "Cuando estás cargado y activado, nada puede interponerse en tu camino. Al menos, nada DEBERÍA interponerse en tu camino. La comodidad es clave y estas zapatillas adidas ZX 1K Boost la ofrecen por montones gracias a su mediasuela que es mitad Boost y mitad EVA (también conocida como la combinación ganadora). Salí a las calles. Divertíte. Estas zapatillas están listas para todo el recorrido.",
     "price": 13999,
@@ -72,7 +72,7 @@
     "img": [
       "Zapatillas_ZX_1K_Boost_Blanco_FX6864_01_standard.jpg",
       "Zapatillas_ZX_1K_Boost_Naranja_FY3629_01_standard.jpg",
-      "ZX_1K_Boost_Shoes_Blanco_FY5654_01_standard",
+      "ZX_1K_Boost_Shoes_Blanco_FY5654_01_standard.jpg",
       "Zapatillas_ZX_1K_Boost_Blanco_H69037_01_standard.jpg"
     ],
     "marca": "adidas",
@@ -83,7 +83,7 @@
   },
   {
     "id": 3,
-    "title":"ZAPATILLAS ZX 2K FLORINE",
+    "title":"ZX 2K FLORINE",
     "subtitle": "ZAPATILLAS INSPIRADAS EN EL DEPORTE CON UN ESTILO MODERNO Y COLORIDO",
     "description": "Las zapatillas adidas ZX 2K Florine fueron creadas especialmente para mujeres. Mujeres de vanguardia y amantes de la moda. Aquellas que conocen la tecnología y tienen mentalidad digital. Las que aprecian el estilo vintage pero se inspiran en lo moderno.",
     "price":13999,
@@ -150,7 +150,7 @@
     ],
     "imgP": "SUPERSTAR_W_Blanco_FX3600_01_standard.jpg",
     "img": [
-      "Zapatillas_Superstar_Violeta_FV3631_01_standard.jpg",
+      "Zapatillas_Superstar_Violeta_FV3631_01_standard.jpg", 
       "Zapatillas_Superstar_Negro_FV3327_01_standard.jpg",
       "Zapatillas_Superstar_Blanco_FW2526_01_standard.jpg",
       "Zapatillas_Superstar_Blanco_FW2502_01_standard.jpg"
@@ -163,7 +163,7 @@
   },
   {
     "id": 5,
-    "title": "ZAPATILLAS ADIDAS SLEEK SUPER",
+    "title": "ADIDAS SLEEK SUPER",
     "subtitle": "ESTAS ZAPATILLAS EN SATÉN CON PLATAFORMA LLAMAN LA ATENCIÓN",
     "description": "¿A quién no le gusta el satén? Es suave, elegante y está presente en estas zapatillas adidas Sleek Super. Amarrá los cordones con punta de metal y sentí que formás parte de una comunidad única y alegre. La suela con plataforma agrega unos centímetros a tu altura.",
     "price": 13999,
@@ -204,7 +204,7 @@
   },
   {
     "id": 6,
-    "title":"ZAPATILLAS SL ANDRIDGE",
+    "title":"SL ANDRIDGE",
     "subtitle": "ZAPATILLAS INSPIRADAS EN EL RUNNING DE LOS 70, REDISEÑADAS CON TOQUES FEMENINOS Y PROPORCIONES MODERNAS",
     "description": "Lo sencillo puede ser hermoso cuando se hacen las cosas bien. Estas zapatillas adidas SL Andridge presentan un diseño con nylon satinado, cuero de charol y gamuza, además de una mediasuela brillante con acabado perlado. Traen una suela con plataforma que te proporciona un toque extra de altura y un estilo a la moda.",
     "price": 13999,
@@ -234,8 +234,8 @@
     "imgP": "Zapatillas_SL_Andridge_Blanco_FX8106_01_standard.png",
     "img": [
       "Zapatillas_SL_Andridge_Gris_FU7134_01_standard.png",
-      "Zapatillas_SL_Andridge_Negro_EG6845_01_standard.png",
-      "Zapatillas_SL_Andridge_Blanco_EG6846_01_standard.png",
+      "Zapatillas_SL_Andridge_Negro_EG6845_01_standard.jpg",
+      "Zapatillas_SL_Andridge_Blanco_EG6846_01_standard.jpg",
       "Zapatillas_SL_Andridge_Blanco_FX8105_01_standard.png"
     ],
     "marca": "adidas_original",
@@ -246,7 +246,7 @@
   },
   {
     "id": 7,
-    "title":"ZAPATILLAS NIKE JOYRIDE DUAL RUN FLYKNIT",
+    "title":"NIKE JOYRIDE DUAL RUN FLYKNIT",
     "subtitle": "AMORTIGUACDIÓN PERSONALIZADA DONDE MÁS LO NECESITÁS PARA DISFRUTAR TU CORRIDA",
     "description": "Ganale al asfalto no importa la distancia, las Zapatillas Nike Joyride Run Flyknit son similares a un bean bag para tu pie, por lo que no se parece en absoluto a nada que hayas visto. Su construcción en tejido Fly knit las hace frescas y transpirables, las microesferas del talón se reacomodan entre cada pisada para mayor suavidad y amortiguación; su suela de goma y con ranuras mejoran la flexibilidad desde el talón hasta la punta del pie, dándote mejores resultados en velocidad y comodidad al correr.",
     "price": 34.999,
@@ -318,7 +318,7 @@
   },
   {
     "id": 9,
-    "title":"ZAPATILLAS NIKE AIR MAZ EXCEE",
+    "title":"NIKE AIR MAZ EXCEE",
     "subtitle": "AMORTIGUA YU ABSORBE EL IMPACTO EN LA PISADA.",
     "description": "Para corredoras que valoran cada minuto y la velocidad es primordial, las nuevas Zapatillas Nike Air Max Excee son perfectas porque combinan una estética minimalista clásica, el estilo urbano de la marca junto con su tecnología Air max que te brinda mejores y amortiguadas pisadas que te darán estabilidad y confianza a la hora de correr en cualquier lugar donde vayas.",
     "price": 31.999,
@@ -356,7 +356,7 @@
   },
   {
     "id": 10,
-    "title": "ZAPATILLAS PUMA LQDCELL METHOD UNLIMITED FLORAL",
+    "title": "PUMA LQDCELL METHOD UNLIMITED FLORAL",
     "subtitle": "LA SOLUCION DE PIMA PARA UNA AMORTIGUACIÓN ESTABLE",
     "description": "La tecnología LQDCELL de PUMA te proporcionará una base sólida en tu próxima sesión de entrenamiento. Las funciones de alta tecnología de las zapatillas de entrenamiento LQDCELL Method Unlimited Floral para mujer te acompañarán en todos tus entrenamientos de agilidad, para que te sientas fresca y veloz a la vez.",
     "price": 11999,
@@ -393,7 +393,7 @@
   },
   {
     "id": 11,
-    "title": "ZAPATILLA PUMA CRUISE RIDER",
+    "title": "PUMA CRUISE RIDER",
     "subtitle": "PARA UNA SENSACIÓN CÓMODA Y LEGERA",
     "description": "Inspiradas en la belleza de las famosas Silk Road, estas zapatillas incluyen combinaciones de colores que crean un look muy original. La entresuela IMEVA te brinda liviandad y comodidad para que tus pies sean felices.",
     "price": 13799,
@@ -420,7 +420,7 @@
     ],
     "imgP": "Cruise-Rider-Aquamarine.jpg",
     "img": [
-      "Cruise-Rider-pink-yellow",
+      "Cruise-Rider-pink-yellow.jpg",
       "Cruise-Rider-black-white-ignite.jpg",
       "Cruise-Rider-Aquamarine.jpg",
       "Cruise-Rider-Aquamarine2.jpg"
@@ -473,7 +473,7 @@
   },
   {
     "id": 13,
-    "title": "ZAPATILLAS GEL-NIMBUS 22",
+    "title": "GEL-NIMBUS 22",
     "subtitle": "LA MÁXIMA AMORTIGUACIÓN, COMODIDAD Y MÁS CAPACIDAD DE RESPUESTA",
     "description": "Experimente la máxima comodidad con el modelo GEL-NIMBUS ™ 22 . Combinado con tecnologías para mejorar el rendimiento de los corredores neutrales, ofrece una combinación de máxima amortiguación y rendimiento, con tecnología de amortiguación GEL ™ ubicada en el talón con excelente absorción de impactos. La doble capa de tecnología FLYTEFOAM ™ y FLYTEFOAM ™ Propel en la entresuela proporciona más ligereza, comodidad y capacidad de respuesta. La tecnología TRUSSTIC ™ debajo del arco de tenis proporciona estabilidad, reduce el peso y ayuda a prolongar la vida útil del zapato. La parte superior liviana permite que sus pies sean transpirables, ofreciendo un ajuste de apoyo y adaptable. Diseñado con corredores de alto kilometraje, el GEL-NIMBUS ™ 22 implementa un nuevo diseño de entresuela para reducir la severidad del impacto. Además, la suela AHAR + reduce el nivel de desgaste de la goma, lo que le permite concentrarse en pasar más tiempo entrenando. Ya sea que sea un profesional experimentado o un principiante, el GEL-NIMBUS ™ 22 ha sido diseñado para ofrecer la máxima amortiguación, comodidad y más capacidad de respuesta.",
     "price": 25990,
@@ -513,7 +513,7 @@
   },
   {
     "id": 14,
-    "title":"ZAPATILLA GEL-KAYANO 27",
+    "title":"GEL-KAYANO 27",
     "subtitle": "FLEXIBILIDAD, ABSORCIÓN DE IMPACTO Y ESTABILIDAD",
     "description": "Disfruta de una comodidad excelente y un soporte avanzado con el modelo GEL-KAYANO® 27. La parte superior completamente rediseñada ayuda a mantener los pies frescos, mientras que la suela más flexible ayuda a promover un ciclo de zancada más natural durante las carreras. Esto se debe a que el talón tiene ranuras adicionales que dan como resultado una mayor flexibilidad y al mismo tiempo ofrecen absorción de impactos durante los pasos. Para ayudar a este movimiento natural, incorporamos la tecnología DYNAMIC DUOMAX® para aumentar la estabilidad de los corredores que utilizan el interior del pie (sobrepronación). La entresuela también integra la tecnología SPACE TRUSSTIC ™, que proporciona más estabilidad y reduce el peso total de las zapatillas, promoviendo una transición más suave. Finalmente, los detalles reflectantes en el talón ayudan a mantener los pasillos visibles con poca luz. El modelo GEL-KAYANO® 27 es una excelente opción para todos los corredores que buscan un zapato que combine comodidad con sujeción y protección.",
     "price": 25990,
@@ -551,7 +551,7 @@
   },
   {
     "id": 15,
-    "title": "ZAPATILLAS GEL-NAGOYA 2",
+    "title": "GEL-NAGOYA 2",
     "subtitle": "UNA VERSIÓN MÁS DURADERA",
     "description": "Las zapatillas ASICS GEL-Nagoya 2 brindan comodidad, durabilidad y versatilidad durante la semana. Su parte superior de malla permite una mayor transpirabilidad a los pies. La entresuela tiene la capa de EVA y la tecnología GEL icon en el talón maximizando la comodidad. Su interior también tuvo muchas mejoras añadiendo mayor acolchado y una plantilla más cómoda.",
     "price": 13990,
@@ -693,10 +693,10 @@
     ],
     "imgP": "168816C-1-black.jpg",
     "img": [
-      "168817C-1-white",
-      "Converse_360PDP_blue",
-      "Converse_360PDP_pink",
-      "Converse_360PDP_yellow"
+      "168817C-1-white.jpg",
+      "Converse_360PDP_blue.jpg",
+      "Converse_360PDP_pink.jpg",
+      "Converse_360PDP_yellow.jpg"
     ],
     "marca": "converse",
     "genero": "mujer",
@@ -849,9 +849,9 @@
     "imgP": "NEB-W413RP1--1-.jpg",
     "img": [
       "W413RG1_0.jpg",
+      "W413RK1_0.jpg",
       "W413RI1_0_5.jpg",
-      "NEB-W413RP1--1-.jpg",
-      "W413RK1_0.jpg"
+      "NEB-W413RP1--1-.jpg"
     ],
     "marca": "new balance",
     "genero": "mujer",
@@ -1010,7 +1010,8 @@
     "img": [
       "027152.jpg",
       "055800.jpg",
-      "181-0514_1.jpg"
+      "181-0514_1.jpg",
+      "55801-1.jpg"
       
     ],
     "marca": "topper",

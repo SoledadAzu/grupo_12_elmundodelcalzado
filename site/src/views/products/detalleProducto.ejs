@@ -119,27 +119,27 @@
 
                 <section class="ofertas">
                     <h5>Tambien puede interesarte estas ofertas</h5>
-                    <section class="ofertas-general">
+                    <section class="mercaderia">
                         <% let contador=0 %>
                             <% ofertas.map(e=>{ %>
                                 <% contador++ %>
                                     <%if(contador <= 4){%>
-                                        <article class="ofertas-zapatillas">
+                                        <article >
                                             <a href="/products/productDetail/<%= e.id %> ">
                                                 <div class="ofertas-zapatilla_img">
                                                     <img src="/images/articulos/<%= e.imgP%>" alt="<%=e.title%>">
                                                 </div>
 
                                                 <div class="ofertas-zapatilla-precio">
-                                                    <h5>
+                                                    <strong>
                                                         <%= e.price %>
-                                                    </h5>
+                                                    </strong>
                                                     <p>
                                                         <%=e.marca%>
                                                     </p>
-                                                    <p>
+                                                    <h4>
                                                         <%= e.title%>
-                                                    </p>
+                                                    </h4>
 
                                                 </div>
                                             </a>
