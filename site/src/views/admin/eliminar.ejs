@@ -9,46 +9,63 @@
         <%-include('./partials/header')  %>
     <!-- navegacion -->
 
-    <div class="container products-wrapper">
-      <div class="row">
-        <div class="col-12">
-          <h2 class="products-title">Estás eliminando: <i>PRODUCT NAME</i></h2>
+    <main class="adminForm">
+      <div >
+        <div >
+          <div >
+            <h2 class="">Estás eliminando: <i>PRODUCT NAME</i></h2>
+          </div>
         </div>
-      </div>
-      <div class="col-12">
-        <form action="¿?" method="___">
-          <div class="row product-detail">
-            <div class="">
-                          <div>
-                  <label for="name" class="form-label">Nombre del producto:</label>
-                  <input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input">
-                      </div> 
-                      <div>  
-              <label for="price" class="form-label">Precio del producto:</label>
-              <input type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input">
-                      </div> 
-                      <div>    
-                        <label for="discount" class="form-label">Marca:</label>
-              <input type="text" id="discount" name="discount" placeholder="Marca del producto" class="form-input">
-                      </div> 
-                      <div>
-              <label for="discount" class="form-label">Genero:</label>
-              <input type="text" id="discount" name="discount" placeholder="Ingrese el Genero" class="form-input">
-            </div>
-            
-              <label for="category" class="form-label">Categoría:</label>
-              <select name="category" id="category" class="form-input">
-                <option value="">Elegí</option>
-                <option value="in-sale">Outlet</option>
-                <option value="visited">Temporada</option>
-              </select>
-                      </div>
+        <div class="contenedor-form">
+          <form action="" method="">
+            <div class="contenedorLabel">
+
+              <div class="labelForm">
+                <label for="name" class="">Nombre del producto:</label>
+                <input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok"
+                  class="form-input">
+              </div>
+              <div class="labelForm">
+                <label for="price" class="">Precio del producto:</label>
+                <input type="text" id="price" name="price" placeholder="Ej: 5678"
+                  class="form-input">
+              </div>
+              <div class="labelForm">
+                <label for="discount" class="">Marca:</label>
+                <input type="text" id="discount" name="discount" placeholder="Marca del producto"
+                  class="form-input">
+              </div>
+              <div class="labelForm">
+                <label for="discount" class="l">Genero:</label>
+                <input type="text" id="discount" name="discount" placeholder="Ingrese el Genero"
+                  class="form-input">
+              </div>
+              
+              <div class="selection">
+                <div>
+                <label for="category" class="form-label">Temporada</label>
+                <select name="temporada" id="temporada" class="form-input">
+                  <option value="">Elegí</option>
+                  <option value="true">True</option>
+                  <option value="false">False</option>
+                </select>
+                </div>
+              <div>
+                <label for="category" class="form-label">Outlet</label>
+                <select name="outlet" id="outlet" class="form-input">
+                  <option value="">Elegí</option>
+                  <option value="true">True</option>
+                  <option value="false">False</option>
+                </select>
+              </div>
+              </div>
+              <div class="labelForm">
+                <label for="description" class="form-label">Descipción:</label>
+                <textarea name="description" id="description" class="form-input"></textarea>
+              </div>
+
             <div class="col-12">
-              <label for="description" class="form-label">Descipción:</label>
-              <textarea name="description" id="description" class="form-input"></textarea>
-            </div>
-            <div class="col-12">
-              <a href="/admin" class="btn btn-outline-success" tabindex="-1" role="button" aria-disabled="true">Editar Producto</a>
+              <a href="/admin" class="btn btn-outline-success" tabindex="-1" role="button" aria-disabled="true">Eliminar Producto</a>
             </div>
           </div>
         </form>
