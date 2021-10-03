@@ -1,3 +1,6 @@
+.navFijo{
+position:fixed;
+}
 .crearForm{
     background-color: rgba(191, 188, 193, 0.43);    
 }
