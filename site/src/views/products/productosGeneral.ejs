@@ -23,9 +23,15 @@
                <img src="/images/articulos/<%= e.imgP %> " alt="zapatilla-img1">
            </div>  
            <div class="ofertasZapatillaPrecio">
-               <h4>$<%= e.price %> </h4>
-               <p><%= e.marca %>  </p>
-               <p><%= e.title%></p>
+            <strong>
+                <%= e.price %>
+            </strong>
+            <p>
+                <%=e.marca%>
+            </p>
+            <h4>
+                <%= e.title%>
+            </h4>
            </div>
         </a>   
        </article>
