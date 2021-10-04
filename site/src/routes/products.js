@@ -7,7 +7,7 @@ const{product,carrito,general,mercaderia,hombre,mujer,temporada,ofertas}=require
 router.get('/productDetail/:id',product)
 router.get('/carritoDeCompras',carrito)
 router.get('/general',general)
-router.get("/productos",mercaderia)
+router.get("/",mercaderia)
 router.get("/hombre",hombre)
 router.get("/mujer",mujer)
 router.get("/temporada",temporada)
