@@ -7,6 +7,6 @@ router.get('/edit',edit)
 router.get('/eliminar',del)
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create/',create); 
-router.post('/',store); 
+// router.post('/',store); 
 
 module.exports = router
