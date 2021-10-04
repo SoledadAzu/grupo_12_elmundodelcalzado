@@ -2,42 +2,51 @@
 <html lang="en">
 
 <!-- HEAD -->
-<%- include('../partials/head') %> 
-<!-- HEAD -->
+<%- include('../partials/head') %>
+    <!-- HEAD -->
 
-<body>
+    <body>
 
-    <!-- HEADER -->
-    <%- include('../partials/header') %> 
-    <!-- HEADER -->
-    
-    </header>
-        
+        <!-- HEADER -->
+        <%- include('../partials/header') %>
+            <!-- HEADER -->
+
+            </header>
+
             <main class="login">
                 <h1>BIENVENIDOS</h1>
                 <hr>
                 <div class="caja">
                     <div class="caja1">
                         <h2> INICIAR SESIÓN</h2>
-        
-                        <p>Ingresa los datos de tu cuenta, El Mundo del Calzado</p>
-                        
-                        <form action="">
-                            <%-include("./partials/loginform") %> 
-                            <article> 
-                    <a href=""><i class="fas fa-eye-slash"></i>mostrar</a>
-                            </article>
 
-                            <div class="checkbox">
-                        
-                                <input type="checkbox" name="checkbox" id="checkbox">
-                                <label for="checkbox"> <a href="">¿olvidaste tu contraseña?</a></label>
-                        
-                            </div>
-                            <div>
-                                <button class="bttn" type="submit" placeholder="submit">INGRESÁ</button>
-                            </div> 
-                        
+                        <p>Ingresa los datos de tu cuenta, El Mundo del Calzado</p>
+
+                          <form action="">
+                            <form action="">
+                                <div class="email">
+                                    <label for="email">Tu Email</label>
+                                    <input type="email" name="tu email" id="tu email" placeholder="tu email">
+                                </div>
+                    
+                                <div class="password">
+                                    <label for="pasword">Tu Contraseña</label>
+                                    <input type="password" name="tu contraseña" id="password" placeholder="tu contraseña">
+                                </div>
+                                <article>
+                        <a href=""><i class="fas fa-eye-slash"></i>mostrar</a>
+                                </article>
+    
+                                <div class="checkbox">
+                            
+                                    <input type="checkbox" name="checkbox" id="checkbox">
+                                    <label for="checkbox"> <a href="">¿olvidaste tu contraseña?</a></label>
+                                </div>
+                                <div>
+                                    <button class="bttn" type="submit" placeholder="submit">INGRESÁ</button>
+                                </div>
+    
+                         </form>      
                     </div>
 
                     <div class="caja2">
@@ -47,25 +56,27 @@
                             <li> Recibi nuestras mejores ofertas y promociones.</li>
                         </ul>
                         <h3>NO TENGO CUENTA</h3>
-                        
+
                         <div>
-                            <button class="form" type="register" placeholder="register">QUIERO REGISTRARME<a href="/register"></a></button>
+                            <button class="form" type="register" placeholder="register">QUIERO REGISTRARME<a
+                                    href="/register"></a></button>
                         </div>
-                            <H4>INFORMACIÓN IMPORTANTE</H4>
-                            <P class="description">
-                                    Por favor ingrese una dirección de email válida y a la que 
-                                    usted tenga acceso, esta dirección es fundamental para la comunicación
-                                    post venta, envio de factura electrónica y coordinación de entrega de pedido. 
-                            </P>
+                        <H4>INFORMACIÓN IMPORTANTE</H4>
+                        <P class="description">
+                            Por favor ingrese una dirección de email válida y a la que
+                            usted tenga acceso, esta dirección es fundamental para la comunicación
+                            post venta, envio de factura electrónica y coordinación de entrega de pedido.
+                        </P>
                     </div>
-                    
+
                 </div>
             </main>
-        
-    
-    <!-- FOOTER -->
-        <%- include('../partials/footer') %> 
-    <!-- FOOTER -->
 
-</body>
+
+            <!-- FOOTER -->
+            <%- include('../partials/footer') %>
+                <!-- FOOTER -->
+
+    </body>
+
 </html>

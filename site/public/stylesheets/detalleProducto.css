@@ -69,7 +69,7 @@
 .detalleProducto .talles .talles-descripcion{
     padding-top: 10px;
     text-align: center;
-    line-height: 3rem;
+    line-height: 1.5rem;
 }
 
 .detalleProducto .talles .talles-datos h3{
@@ -200,13 +200,17 @@
        display: none;
    }
    /************ ZAPATILLAS ************/
+   .detalleProducto .zapatilla-principal{
+    border: 1px solid var(--gris);
+    width: 100%;
+}
    .detalleProducto .zapatillas1-articulos{
        flex-direction: row;
    }
    .detalleProducto .zapatillas1 .zapatillas1-colores{
        order: -1;
        flex-direction: column;
-       width: 40%;
+       width: 24%;
        padding-top: 0;
 
    }
@@ -214,12 +218,17 @@
        width: 100%;
        border: none;
    }
+   .detalleProducto .talles .talles-descripcion{
+    padding-top: 10px;
+    text-align: center;
+    line-height: 2rem;
+}
    .detalleProducto .talles .talles-descripcion h3,
    .detalleProducto .talles .talles-descripcion h5{
         font-size: 1.5rem;
    }
    .detalleProducto .talles .talles-descripcion h4{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     }
     .detalleProducto .talles .talles-datos h3{
         font-size: 1.6rem;
@@ -250,10 +259,7 @@
     .detalleProducto .zapatillas1 .zapatillas1-colors_eleccion{
         text-align: center;
     }
-    .detalleProducto .zapatillas1 .zapatillas1-colors_eleccion img{
-        max-width: 150px;
-        max-height: 150px;
-    }
+    
     /******************** TALLES **********************/
     .detalleProducto .talles .talles-descripcion{
         line-height: 4rem;
@@ -289,5 +295,29 @@
     .detalleProducto .verMas{
         display: none;
         
+    }
+}
+@media (min-width:1350px){
+    /******************** TALLES **********************/
+    .detalleProducto .talles .talles-descripcion{
+        line-height: 5rem;
+    }
+    .detalleProducto .talles .talles-descripcion h4{
+        font-size: 2rem;
+    }
+    .detalleProducto .talles .talles-descripcion h3,
+    .detalleProducto .talles .talles-descripcion h5{
+        font-size: 3.5rem;
+    }
+    .detalleProducto .talles .talles-datos h3{
+        font-size: 3.6rem;
+    }
+    .detalleProducto .talles .talles-datos label{
+        font-size: 3.6rem;
+        padding: 14px;
+    }
+    .detalleProducto .talles .talles-datos .boton{
+        padding: 30px;
+        font-size: 1.3rem;
     }
 }

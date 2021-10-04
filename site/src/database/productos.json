@@ -1,0 +1,2088 @@
+[
+  {
+    "id": 1,
+    "title": "QT RACER SPORT",
+    "subtitle": "ZAPATILLAS LISTAS PARA LAS PISTAS Y LAS CALLES",
+    "description": "Estas zapatillas adidas te acompañan con comodidad durante todo el día, cuando corrés en la mañana, en tus actividades de la tarde y en tus reuniones nocturnas. La mediasuela Lightmotion ofrece amortiguación liviana que notarás mientras pasan las horas. Este producto está hecho con Primeblue, un material reciclado de alto rendimiento creado en parte con Parley Ocean Plastic.",
+    "price": 8999,
+    "detalles": [
+      "Sistema de atado de cordones",
+      "Exterior textil",
+      "Amortiguación muy liviana",
+      "Mediasuela Lightmotion",
+      "Forro interno textil",
+      "Suela sintética",
+      "Primeblue"
+    ],
+    "colors": [
+      "Vapour",
+      "Pink Vapour",
+      "Pink / Screaming Orange"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "Zapatillas_QT_Racer_Sport_Rosa_GW4843_01_standard.jpg",
+    "img": [
+      "Zapatillas_QT_Racer_Sport_Rosa_GW4843_01_standard.jpg",
+      "Zapatillas_QT_Racer_Sport_Negro_FY5678_01_standard.jpg",
+      "Zapatillas_QT_Racer_Sport_Blanco_FY5679_01_standard.jpg",
+      "Zapatillas_QT_Racer_Sport_Blanco_FY5677_01_standard.jpg"
+    ],
+    "marca": "adidas",
+    "genero": "mujer",
+    "outlet": true,
+    "temporada": false,
+    "vendidos": true
+  },
+  {
+    "id": 2,
+    "title": "ZX 1K BOOST",
+    "subtitle": "ZAPATILLAS EN UNA MEZCLA DE MATERIALES PARA UNA COMODIDAD TOTAL",
+    "description": "Cuando estás cargado y activado, nada puede interponerse en tu camino. Al menos, nada DEBERÍA interponerse en tu camino. La comodidad es clave y estas zapatillas adidas ZX 1K Boost la ofrecen por montones gracias a su mediasuela que es mitad Boost y mitad EVA (también conocida como la combinación ganadora). Salí a las calles. Divertíte. Estas zapatillas están listas para todo el recorrido.",
+    "price": 13999,
+    "detalles": [
+      "Sistema de atado de cordones",
+      "Exterior de gamuza sintética y tejido antidesgarre",
+      "Diseño que ofrece una mayor estabilidad",
+      "Mediasuela híbrida Boost y EVA",
+      "Suela de caucho"
+    ],
+    "colors": [
+      "Cloud White",
+      "Hazy Sky",
+      "Hazy Blue"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "Zapatillas_ZX_1K_Boost_Blanco_FX6864_01_standard.jpg",
+    "img": [
+      "Zapatillas_ZX_1K_Boost_Blanco_FX6864_01_standard.jpg",
+      "Zapatillas_ZX_1K_Boost_Naranja_FY3629_01_standard.jpg",
+      "ZX_1K_Boost_Shoes_Blanco_FY5654_01_standard.jpg",
+      "Zapatillas_ZX_1K_Boost_Blanco_H69037_01_standard.jpg"
+    ],
+    "marca": "adidas",
+    "genero": "mujer",
+    "outlet": true,
+    "temporada": false,
+    "vendidos": true
+  },
+  {
+    "id": 3,
+    "title": "ZX 2K FLORINE",
+    "subtitle": "ZAPATILLAS INSPIRADAS EN EL DEPORTE CON UN ESTILO MODERNO Y COLORIDO",
+    "description": "Las zapatillas adidas ZX 2K Florine fueron creadas especialmente para mujeres. Mujeres de vanguardia y amantes de la moda. Aquellas que conocen la tecnología y tienen mentalidad digital. Las que aprecian el estilo vintage pero se inspiran en lo moderno.",
+    "price": 13999,
+    "detalles": [
+      "Horma específica para mujer",
+      "Sistema de atado de cordones",
+      "Exterior de malla",
+      "Zapatillas deportivas con amortiguación",
+      "Mediasuela Adiprene X de doble densidad",
+      "Suela de caucho"
+    ],
+    "colors": [
+      "Cloud White",
+      "Night Indigo",
+      "emi Flash Red"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "Zapatillas_ZX_2K_Florine_Blanco_FV9499_01_standard.jpg",
+    "img": [
+      "Zapatillas_ZX_2K_Florine_Blanco_FV9499_01_standard.jpg",
+      "Zapatillas_ZX_2K_Florine_Blanco_FW0089_01_standard.jpg",
+      "Zapatillas_ZX_2K_Florine_Negro_FW0088_01_standard.jpg"
+    ],
+    "marca": "adidas",
+    "genero": "mujer",
+    "outlet": false,
+    "temporada": true,
+    "vendidos": true
+  },
+  {
+    "id": 4,
+    "title": "SUPERSTAR W",
+    "subtitle": "ESTA ZAPATILLA ES UN CLASICO QUE NO DEJA DE SORPRENDER ",
+    "description": "Las zapatillas Adidas Superstar no necesitan mucha presentación. Su historia hizo que dejen de ser un calzado para ser un ícono de la moda. Nacidas en los 70's para el básquet, fueron recorriendo el mundo urbano de la mano del skateboarding y principalmente el hip-hop. Estilo de sobra con el detalle de las tres tiras (three-stripes) típicas de la marca y su característica puntera de caucho.",
+    "price": 15999,
+    "detalles": [
+      "Cuero Vacuno Descarne",
+      "Suela de goma",
+      "Cierre de cordones",
+      "Parte superior de piel",
+      "Zapatilla emblemática confeccionada en piel"
+    ],
+    "colors": [
+      "ftwr white",
+      "core black",
+      "ftwr white"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "SUPERSTAR_W_Blanco_FX3600_01_standard.jpg",
+    "img": [
+      "Zapatillas_Superstar_Violeta_FV3631_01_standard.jpg",
+      "Zapatillas_Superstar_Negro_FV3327_01_standard.jpg",
+      "Zapatillas_Superstar_Blanco_FW2526_01_standard.jpg",
+      "Zapatillas_Superstar_Blanco_FW2502_01_standard.jpg"
+    ],
+    "marca": "adidas_original",
+    "genero": "mujer",
+    "outlet": true,
+    "temporada": false,
+    "vendidos": true
+  },
+  {
+    "id": 5,
+    "title": "ADIDAS SLEEK SUPER",
+    "subtitle": "ESTAS ZAPATILLAS EN SATÉN CON PLATAFORMA LLAMAN LA ATENCIÓN",
+    "description": "¿A quién no le gusta el satén? Es suave, elegante y está presente en estas zapatillas adidas Sleek Super. Amarrá los cordones con punta de metal y sentí que formás parte de una comunidad única y alegre. La suela con plataforma agrega unos centímetros a tu altura.",
+    "price": 13999,
+    "detalles": [
+      "Horma estrecha específica para mujer",
+      "Sistema de atado de cordones",
+      "Exterior de satén",
+      "Tacto suave",
+      "Zapatillas con altura adicional",
+      "Suela de caucho"
+    ],
+    "colors": [
+      "Ash Grey",
+      "Copper Metallic",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "Zapatillas_adidas_Sleek_Super_Blanco_EH1389_01_standard.jpg",
+    "img": [
+      "Zapatillas_adidas_Sleek_Super_Azul_EF4949_01_standard.jpg",
+      "Zapatillas_adidas_Sleek_Super_Blanco_EF8858_01_standard.jpg",
+      "Zapatillas_adidas_Sleek_Super_Negro_EG7881_01_standard.jpg",
+      "Zapatillas_adidas_Sleek_Super_Rosa_EG6771_01_standard.jpg"
+    ],
+    "marca": "adidas_original",
+    "genero": "mujer",
+    "outlet": false,
+    "temporada": true,
+    "vendidos": true
+  },
+  {
+    "id": 6,
+    "title": "SL ANDRIDGE",
+    "subtitle": "ZAPATILLAS INSPIRADAS EN EL RUNNING DE LOS 70, REDISEÑADAS CON TOQUES FEMENINOS Y PROPORCIONES MODERNAS",
+    "description": "Lo sencillo puede ser hermoso cuando se hacen las cosas bien. Estas zapatillas adidas SL Andridge presentan un diseño con nylon satinado, cuero de charol y gamuza, además de una mediasuela brillante con acabado perlado. Traen una suela con plataforma que te proporciona un toque extra de altura y un estilo a la moda.",
+    "price": 13999,
+    "detalles": [
+      "Horma clásica",
+      "Sistema de atado de cordones",
+      "Exterior de cuero de charol, nylon satinado y gamuza",
+      "Forro interno de felpa cómoda",
+      "Zapatillas brillantes inspiradas en el pasado",
+      "Mediasuela de EVA y TPU",
+      "Suela de caucho"
+    ],
+    "colors": [
+      "Core Black",
+      "Cloud White",
+      "Core Black"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "Zapatillas_SL_Andridge_Blanco_FX8106_01_standard.png",
+    "img": [
+      "Zapatillas_SL_Andridge_Gris_FU7134_01_standard.png",
+      "Zapatillas_SL_Andridge_Negro_EG6845_01_standard.jpg",
+      "Zapatillas_SL_Andridge_Blanco_EG6846_01_standard.jpg",
+      "Zapatillas_SL_Andridge_Blanco_FX8105_01_standard.png"
+    ],
+    "marca": "adidas_original",
+    "genero": "mujer",
+    "outlet": false,
+    "temporada": true,
+    "vendidos": true
+  },
+  {
+    "id": 7,
+    "title": "NIKE JOYRIDE DUAL RUN FLYKNIT",
+    "subtitle": "AMORTIGUACDIÓN PERSONALIZADA DONDE MÁS LO NECESITÁS PARA DISFRUTAR TU CORRIDA",
+    "description": "Ganale al asfalto no importa la distancia, las Zapatillas Nike Joyride Run Flyknit son similares a un bean bag para tu pie, por lo que no se parece en absoluto a nada que hayas visto. Su construcción en tejido Fly knit las hace frescas y transpirables, las microesferas del talón se reacomodan entre cada pisada para mayor suavidad y amortiguación; su suela de goma y con ranuras mejoran la flexibilidad desde el talón hasta la punta del pie, dándote mejores resultados en velocidad y comodidad al correr.",
+    "price": 34.999,
+    "detalles": [
+      " Mix de materiales Hi con tecnologia",
+      "Sintetico y Mesh",
+      "Suela Caucho"
+    ],
+    "colors": [
+      "gray",
+      "pink",
+      "gray/pink",
+      "black",
+      "white"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "NI_AQ2730-008-1.jpg",
+    "img": [
+      "NI_AQ2730-011-1.jpg",
+      "NI_AQ2731-006-1.jpg",
+      "NI_CD4365-001-1.jpg",
+      "NI_CD4365-001-1.jpg"
+    ],
+    "marca": "nike",
+    "genero": "mujer",
+    "outlet": false,
+    "temporada": true
+  },
+  {
+    "id": 8,
+    "title": "NIKE REACT INFINITY RUN",
+    "subtitle": "DISEÑADAS PARA AYUDAR A REDUCIR LESIONES",
+    "description": "Diseñamos las Nike React Infinity Run para ayudar a reducir lesiones y seguir corriendo. En uno de nuestros estudios independientes más grandes, estas zapatillas ayudaron a los participantes a correr mientras entrenaban para una media maratón.",
+    "price": 31.999,
+    "detalles": [
+      "Mix de materiales low",
+      "Malla y Sintético",
+      "Suela de Goma"
+    ],
+    "colors": [],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "NI_CD4372-004-1.jpg",
+    "img": [
+      "NI_CD4372-002-1.jpg",
+      "NI_CD4371-004-1.jpg",
+      "NI_CK6360-001-1.jpg",
+      "NI_CD4372-004-1.jpg"
+    ],
+    "marca": "nike",
+    "genero": "mujer",
+    "outlet": false,
+    "temporada": true
+  },
+  {
+    "id": 9,
+    "title": "NIKE AIR MAZ EXCEE",
+    "subtitle": "AMORTIGUA YU ABSORBE EL IMPACTO EN LA PISADA.",
+    "description": "Para corredoras que valoran cada minuto y la velocidad es primordial, las nuevas Zapatillas Nike Air Max Excee son perfectas porque combinan una estética minimalista clásica, el estilo urbano de la marca junto con su tecnología Air max que te brinda mejores y amortiguadas pisadas que te darán estabilidad y confianza a la hora de correr en cualquier lugar donde vayas.",
+    "price": 31.999,
+    "detalles": [
+      "Mix de materiales low",
+      "Sintético",
+      "Suela de Goma"
+    ],
+    "colors": [
+      "white/lilac",
+      "coral",
+      "white/pink",
+      "gray"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "NI_CD6894-003-1.jpg",
+    "img": [
+      "NI_CD6894-102-1.jpg",
+      "NI_CD5432-602-1.jpg",
+      "NI_CD5432-600-1.jpg",
+      "NI_CD5432-113-1.jpg"
+    ],
+    "marca": "nike",
+    "genero": "mujer",
+    "outlet": false,
+    "temporada": true
+  },
+  {
+    "id": 10,
+    "title": "PUMA LQDCELL METHOD UNLIMITED FLORAL",
+    "subtitle": "LA SOLUCION DE PIMA PARA UNA AMORTIGUACIÓN ESTABLE",
+    "description": "La tecnología LQDCELL de PUMA te proporcionará una base sólida en tu próxima sesión de entrenamiento. Las funciones de alta tecnología de las zapatillas de entrenamiento LQDCELL Method Unlimited Floral para mujer te acompañarán en todos tus entrenamientos de agilidad, para que te sientas fresca y veloz a la vez.",
+    "price": 11999,
+    "detalles": [
+      "Caña baja",
+      "Empeine de mesh con revestimientos",
+      "Entresuela acolchada para una gran comodidad",
+      "Suela exterior de goma para un buen agarre"
+    ],
+    "colors": [
+      " Black-Metallic Silver",
+      "Georgia Peach-Puma White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "LQDCELL-Method-Unlimited-Floral-coral.jpg",
+    "img": [
+      "LQDCELL-Method-Unlimited-Floral-coral.jpg",
+      "LQDCELL-Method-Unlimited-Floral-coral2.jpg",
+      "LQDCELL-Method-Unlimited-Floral-negro.jpg",
+      "LQDCELL-Method-Unlimited-Floral-negro2.jpg"
+    ],
+    "marca": "puma",
+    "genero": "mujer",
+    "outlet": false,
+    "temporada": true
+  },
+  {
+    "id": 11,
+    "title": "PUMA CRUISE RIDER",
+    "subtitle": "PARA UNA SENSACIÓN CÓMODA Y LEGERA",
+    "description": "Inspiradas en la belleza de las famosas Silk Road, estas zapatillas incluyen combinaciones de colores que crean un look muy original. La entresuela IMEVA te brinda liviandad y comodidad para que tus pies sean felices.",
+    "price": 13799,
+    "detalles": [
+      "Caña baja",
+      "Empeine de mesh y Nylon con revestimientos de ante",
+      "Entresuela IMEVA",
+      "Suela exterior de goma",
+      "Forro tejido"
+    ],
+    "colors": [
+      "Pink Lady-Yellow Pear",
+      "Viridian Green-Aquamarine",
+      "Puma Black-Puma White-Ignite Pink"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "Cruise-Rider-Aquamarine.jpg",
+    "img": [
+      "Cruise-Rider-pink-yellow.jpg",
+      "Cruise-Rider-black-white-ignite.jpg",
+      "Cruise-Rider-Aquamarine.jpg",
+      "Cruise-Rider-Aquamarine2.jpg"
+    ],
+    "marca": "puma",
+    "genero": "mujer",
+    "outlet": false,
+    "temporada": true
+  },
+  {
+    "id": 12,
+    "title": "MAGNIFY NITRO DE RUNNING",
+    "subtitle": "UNA AMORTIGUACIÓN INSTANTANEA Y UNA ADAPTACIÓN CONSTANTE AL TERRENO",
+    "description": "¿Qué ofrecen estas zapatillas de running? Una amortiguación y una comodidad máximas en cada carrera. Además, gracias a la entresuela con NITRO FOAM, experimentarás una capacidad de respuesta y una amortiguación superiores que, además, es muy ligera. La suela exterior incorpora el compuesto de goma PUMAGRIP, que proporciona tracción en todo tipo de superficies. Son unas zapatillas creadas para durar, confeccionadas para rendir y diseñadas pensando en el estilo.",
+    "price": 20899,
+    "detalles": [
+      "Caña baja",
+      "Exterior de mesh técnica de calidad con una horma lineal",
+      "Entresuela con NITRO FOAM",
+      "EVA ProFoam Lite de alto rebote",
+      "Gran cantidad de goma, que aporta durabilidad",
+      "Nueva tecnología de talón moldeado"
+    ],
+    "colors": [
+      "Sunblaze-Puma White",
+      "Puma Black-Sunblaze",
+      "Sunblaze-Pink",
+      "Puma black"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "Magnify Nitro Sunblaze-pink.jpg",
+    "img": [
+      "Magnify Nitro Sunblaze--Puma White.jpg",
+      "Magnify Nitro Black.jpg",
+      "Magnify Nitro Sunblaze-pink.jpg",
+      "Magnify Nitro Black-Sunblaze.jpg"
+    ],
+    "marca": "puma",
+    "genero": "mujer",
+    "outlet": false,
+    "temporada": true
+  },
+  {
+    "id": 13,
+    "title": "GEL-NIMBUS 22",
+    "subtitle": "LA MÁXIMA AMORTIGUACIÓN, COMODIDAD Y MÁS CAPACIDAD DE RESPUESTA",
+    "description": "Experimente la máxima comodidad con el modelo GEL-NIMBUS ™ 22 . Combinado con tecnologías para mejorar el rendimiento de los corredores neutrales, ofrece una combinación de máxima amortiguación y rendimiento, con tecnología de amortiguación GEL ™ ubicada en el talón con excelente absorción de impactos. La doble capa de tecnología FLYTEFOAM ™ y FLYTEFOAM ™ Propel en la entresuela proporciona más ligereza, comodidad y capacidad de respuesta. La tecnología TRUSSTIC ™ debajo del arco de tenis proporciona estabilidad, reduce el peso y ayuda a prolongar la vida útil del zapato. La parte superior liviana permite que sus pies sean transpirables, ofreciendo un ajuste de apoyo y adaptable. Diseñado con corredores de alto kilometraje, el GEL-NIMBUS ™ 22 implementa un nuevo diseño de entresuela para reducir la severidad del impacto. Además, la suela AHAR + reduce el nivel de desgaste de la goma, lo que le permite concentrarse en pasar más tiempo entrenando. Ya sea que sea un profesional experimentado o un principiante, el GEL-NIMBUS ™ 22 ha sido diseñado para ofrecer la máxima amortiguación, comodidad y más capacidad de respuesta.",
+    "price": 25990,
+    "detalles": [
+      "Pisada: Neutra",
+      "Capellada: Textil Poliéster, Poliuretano",
+      "Forro: Textil Nylon",
+      "Suela: Caucho"
+    ],
+    "colors": [
+      "BLACK",
+      "WHITE",
+      "GRAY",
+      "WHITE-YELLOW"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "1012A587_004_1.jpg",
+    "img": [
+      "1011B074_100_1.jpg",
+      "1012A587_004_1.jpg",
+      "1012A766_100_1.jpg",
+      "1011A680_404_1.jpg"
+    ],
+    "marca": "asics",
+    "genero": "mujer",
+    "outlet": false,
+    "temporada": true
+  },
+  {
+    "id": 14,
+    "title": "GEL-KAYANO 27",
+    "subtitle": "FLEXIBILIDAD, ABSORCIÓN DE IMPACTO Y ESTABILIDAD",
+    "description": "Disfruta de una comodidad excelente y un soporte avanzado con el modelo GEL-KAYANO® 27. La parte superior completamente rediseñada ayuda a mantener los pies frescos, mientras que la suela más flexible ayuda a promover un ciclo de zancada más natural durante las carreras. Esto se debe a que el talón tiene ranuras adicionales que dan como resultado una mayor flexibilidad y al mismo tiempo ofrecen absorción de impactos durante los pasos. Para ayudar a este movimiento natural, incorporamos la tecnología DYNAMIC DUOMAX® para aumentar la estabilidad de los corredores que utilizan el interior del pie (sobrepronación). La entresuela también integra la tecnología SPACE TRUSSTIC ™, que proporciona más estabilidad y reduce el peso total de las zapatillas, promoviendo una transición más suave. Finalmente, los detalles reflectantes en el talón ayudan a mantener los pasillos visibles con poca luz. El modelo GEL-KAYANO® 27 es una excelente opción para todos los corredores que buscan un zapato que combine comodidad con sujeción y protección.",
+    "price": 25990,
+    "detalles": [
+      "Pisada: Sobrepronadora",
+      "Capellada: Textil, Poliéster, Sintético",
+      "Forro: Textil Poliéster",
+      "Suela: Caucho"
+    ],
+    "colors": [
+      "WHITE/CORAL",
+      "BLACK/PINK",
+      "BLACK/PLATINUM"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "1012A941_600_1.jpg",
+    "img": [
+      "1012A649_003_1.jpg",
+      "1012A941_600_1.jpg",
+      "1012B015_001_1.jpg",
+      "1012B015_001_4.jpg"
+    ],
+    "marca": "asics",
+    "genero": "mujer",
+    "outlet": false,
+    "temporada": true
+  },
+  {
+    "id": 15,
+    "title": "GEL-NAGOYA 2",
+    "subtitle": "UNA VERSIÓN MÁS DURADERA",
+    "description": "Las zapatillas ASICS GEL-Nagoya 2 brindan comodidad, durabilidad y versatilidad durante la semana. Su parte superior de malla permite una mayor transpirabilidad a los pies. La entresuela tiene la capa de EVA y la tecnología GEL icon en el talón maximizando la comodidad. Su interior también tuvo muchas mejoras añadiendo mayor acolchado y una plantilla más cómoda.",
+    "price": 13990,
+    "detalles": [
+      "Capellada: Textil, Poliéster, Sintético",
+      "Forro: Textil, Poliéster",
+      "Suela: Sintética"
+    ],
+    "colors": [
+      "BLUE/YELLOW",
+      "BLACK/PINK",
+      "BLACK/YELLOW",
+      "BLUE/WHITE"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "1012B113_002_1.jpg",
+    "img": [
+      "1012B113_401_1.jpg",
+      "1011B265_002_1.jpg",
+      "1012B113_002_1.jpg",
+      "1011B265_401_1.jpg"
+    ],
+    "marca": "asics",
+    "genero": "mujer",
+    "outlet": false,
+    "temporada": true
+  },
+  {
+    "id": 16,
+    "title": "CONVERSE G4",
+    "subtitle": "¿QUÉ HACE UNA CIUDAD?",
+    "description": "Una ciudad emite energía eléctrica. Es diverso. Un crisol de cultura, arte, ideas, comida, vida nocturna, arquitectura. Pero, ¿qué lo hace latir? ¿El ruido? ¿Las luces? ¿El horizonte? ¿Ese ajetreo de timbre batidor? No ... somos nosotros. Somos el corazón de esta ciudad. Inspirado en los tribunales, la cultura callejera y la vida nocturna de París.Lleva tu corazón en tus pies con zapatillas inspiradas en ciudades icónicas",
+    "price": 21999,
+    "detalles": [
+      "Capellada combinada en mesh y suede con detalles sin costura",
+      "Entresuela rígida de TPU para mayor estabilidad.",
+      "Suela de goma cementada con tracción de espina de pescado.",
+      "Plantilla Ortholite.",
+      "Cuello espumado para soporte de tobillo."
+    ],
+    "colors": [
+      "GRAY",
+      "WHITE/MULTICOLORED",
+      "BLACK/MULTICOLORED"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "168792C_1-6-300x300.jpg",
+    "img": [
+      "168792C_1-2-300x300.jpg",
+      "168788C-6-300x300.jpg",
+      "168788C-2-300x300.jpg"
+    ],
+    "marca": "converse",
+    "genero": "mujer",
+    "outlet": false,
+    "temporada": true
+  },
+  {
+    "id": 17,
+    "title": "ALL STAR PRO BB EVO",
+    "subtitle": "",
+    "description": "El Converse All Star BB EVO es un fenómeno de media caña que aporta una amortiguación adicional en el talón para mayor protección. Una parte superior textil de malla mixta maximiza la contención y la transpirabilidad, y la entresuela Nike React amortigua y se impulsa durante el uso. El deslumbramiento deslumbrante de la celebración de mitad de temporada cobra vida a través de una parte superior en espiga con detalles iridiscentes.",
+    "price": 22999,
+    "detalles": [
+      "Capellada: Textil, Poliéster",
+      "Forro: Textil, Poliéster",
+      "Suela: Caucho"
+    ],
+    "colors": [
+      "violet",
+      "white/black/multicolored",
+      "black/white"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "170290C-1-300x300.jpg",
+    "img": [
+      "170298C-6-300x300.jpg",
+      "170290C-1-300x300.jpg",
+      "168788C-6-300x300.jpg",
+      "168788C-2-300x300.jpg"
+    ],
+    "marca": "converse",
+    "genero": "mujer",
+    "outlet": false,
+    "temporada": true
+  },
+  {
+    "id": 18,
+    "title": "RUN STAR HIKE",
+    "subtitle": "",
+    "description": "Una plataforma voluminosa y una suela de goma dentada dan un giro inesperado a tus Chucks de todos los días. Detalles como un diseño de lona y una puntera de goma la mantienen fiel a las originales. Cuenta además con una plataforma moldeada, una suela exterior de dos tonos y un talón redondeado para un look futurista.",
+    "price": 16999,
+    "detalles": [
+      "Capellada de canvas premium.",
+      "Costuras reforzadas.",
+      "Plantilla Ortholite para mayor comodidad y amortiguación.",
+      "Plataforma moldeada.",
+      "Suela dentada."
+    ],
+    "colors": [
+      "black",
+      "white",
+      "yellow",
+      "blue",
+      "pink"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "168816C-1-black.jpg",
+    "img": [
+      "168817C-1-white.jpg",
+      "Converse_360PDP_blue.jpg",
+      "Converse_360PDP_pink.jpg",
+      "Converse_360PDP_yellow.jpg"
+    ],
+    "marca": "converse",
+    "genero": "mujer",
+    "outlet": false,
+    "temporada": true
+  },
+  {
+    "id": 19,
+    "title": " FILA FLOAT JOGGER",
+    "subtitle": "EURO JOGGER RENOVADO",
+    "description": "Las Zapatillas Fila Float Jogger están confeccionadas en ante y textil fusionando un estilo casual y deportivo para brindarte un diseño auténtico. Además, tienen plantilla de EVA para proporcionarte toda la comodidad y seguridad que vos necesitas. Poseen un cierre mediante cordones. Y suela tratada en TPU engomado para ofrecerte mayor durabilidad y agarre al suelo. Su entresuela suave tiene tecnología Float, inspirada en compuestos orgánicos, que te permitirá mayor amortiguación y retorno de energía. Mantienen la esencia de las zapatillas de running de los años 90 y de las Euro Jogger obteniendo como resultado este calzado pensado para tu rutina diaria",
+    "price": 10490,
+    "detalles": [
+      "Capellada: Textil, Poliéster, Cuero Porcino Descarne",
+      "Forro: Textil, Poliéster",
+      "Suela: Caucho"
+    ],
+    "colors": [
+      "White/gray",
+      "pink/white",
+      "black/pink",
+      "gray/black/coral"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "L0041534729-a.jpg",
+    "img": [
+      "L0041534284-a.jpg",
+      "L0041534729-a.jpg",
+      "L0041534671-a.jpg",
+      "L0041524685-a.jpg"
+    ],
+    "marca": "fila",
+    "genero": "mujer",
+    "outlet": false,
+    "temporada": true
+  },
+  {
+    "id": 20,
+    "title": "FILA DISRUPTOR II",
+    "subtitle": "",
+    "description": "Variante nueva de Disruptor desarrollada en una capellada simulando un tejido, con una cadena decorativa que recorre la parte media y trasera del pie. Suela de caucho con entresuela de EVA.Su aspecto robusto está inspirado en la moda de los años 90.",
+    "price": 12999,
+    "detalles": [
+      "Capellada: Cuero Sintético",
+      "Forro: Textil, Poliéster",
+      "Suela: Caucho"
+    ],
+    "colors": [
+      "BLACK/PRINT",
+      "PINK/PRINT",
+      "RED",
+      "PINK",
+      "WHITE"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "5xm01293_013_00_1.jpg",
+    "img": [
+      "5xm01293_600_00_1.jpg",
+      "5xm01293_650_00_1.jpg",
+      "5xm01297_003_00.jpg",
+      "5xm01297_772_00.jpg"
+    ],
+    "marca": "fila",
+    "genero": "mujer",
+    "outlet": false,
+    "temporada": true
+  },
+  {
+    "id": 21,
+    "title": "FILA TREND 2.0",
+    "subtitle": "CONFORT Y ELASTIZIDAD",
+    "description": "El modelo Trend posee un sistema de ajuste Slip-On y su capellada está confeccionada con un tejido con tecnología Engineered-Mesh, también elástico en el lateral del pie y un contrafuerte reforzado de doble espuma. Entresuela monobloc con Energized Rubber de anatomía diferenciada. Plantilla de confort Super-Foam.",
+    "price": 7490,
+    "detalles": [
+      "Capellada: Textil, Poliéster",
+      "Suela: Sintética",
+      "Entresuela monobloc con Engineered-Mesh de anatomía diferenciada",
+      "Plantilla de confort Super-Foam"
+    ],
+    "colors": [
+      "BLACK/FUCHSIA",
+      "BLACK/GRAY",
+      "BLACK/RED",
+      "CORAL"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "fila_f02st004024_4642_00.jpg",
+    "img": [
+      "f02st004024_4643_00.jpg",
+      "fila_f01st004023_1645_00.jpg",
+      "fila_f02st004024_4642_00.jpg",
+      "fila_f02st004024_4641_00.jpg"
+    ],
+    "marca": "fila",
+    "genero": "mujer",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 22,
+    "title": "NEW BALANCE 413",
+    "subtitle": "LIGEREZA Y RENDIMIENTO",
+    "description": "Estate siempre lista para correr con nuestras New Balance 413. Estas zapatillas de running están fabricadas con tecnología optimizada para ofrecer una sensación de ligereza y un rendimiento cómodo. La parte superior está hecha de tejido sintético para una sensación suave e incluye soporte para un ajuste seguro. La almohadilla incorporada en el antepié proporciona soporte adicional para que puedas extender cada paso.",
+    "price": 8199,
+    "detalles": [
+      "Capellada de téjido sintético para mayor durabilidad y confort",
+      "Aplicación de material sin costuras",
+      "Suela de goma"
+    ],
+    "colors": [
+      "FUCHSIA",
+      "BLACK",
+      "GRAY",
+      "VIOLET"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "NEB-W413RP1--1-.jpg",
+    "img": [
+      "W413RG1_0.jpg",
+      "W413RK1_0.jpg",
+      "W413RI1_0_5.jpg",
+      "NEB-W413RP1--1-.jpg"
+    ],
+    "marca": "new balance",
+    "genero": "mujer",
+    "outlet": false,
+    "temporada": true
+  },
+  {
+    "id": 23,
+    "title": "FRESH FOAM 1080 V11",
+    "subtitle": "EQUILIBRIO Y ESTABILIDAD",
+    "description": "Nuestra Fresh Foam 1080v11 proporciona un confort de lujo en largas distancias. Esta suave zapatilla de running combina tenología Fresh Foam en la entresuela con una suave capellada de tejido elástico que ofrece una comodidad de 360 ​​grados para altos kilometrajes. Incluye la tecnología Ultra Heel que rodea el talón para un ajuste ceñido con excelente sujeción que envuelve el pie en puro confort.",
+    "price": 25199,
+    "detalles": [
+      "Capellada en sintético y mesh",
+      "La construcción tipo bootie y el diseño Ultra Heel en el talón",
+      "La amortiguación de la entresuela Fresh Foam",
+      "Plantilla Ortholite para mayor comodidad"
+    ],
+    "colors": [
+      "coral",
+      "fluorine",
+      "red",
+      "black/fuchsia",
+      "black/light blue"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "new-balance-fresh-foam-1080-v11 coral.jpg",
+    "img": [
+      "new-balance--fresh-foam-1080-v1 negro_fuccia.jpg",
+      "new-balance-fresh-foam-1080-v1 fluor.jpg",
+      "new-balance-fresh-foam-1080-v1 negro_celeste.jpg",
+      "new-balance-fresh-foam-1080-v11 red.jpg"
+    ],
+    "marca": "new balance",
+    "genero": "mujer",
+    "outlet": false,
+    "temporada": true
+  },
+  {
+    "id": 24,
+    "title": "NEW BALANCE 574",
+    "subtitle": "UN ESTILO CLASICO",
+    "description": "Clásicas, expresivas e inspiradoras. Creadas en 1988 combinando 2 calzados NB diferentes (nos gusta llamarlo el mashup original), las zapatillas de mujer New Balance 574 se han convertido en un símbolo de ingenio y originalidad",
+    "price": 11449,
+    "detalles": [
+      "Fabricada con cuero, caucho y revestimientos de tela.",
+      "Suela exterior de caucho",
+      "Mediasuela con tecnología ENCAP provee soporte y máxima durabilidad",
+      "Buena amortiguación"
+    ],
+    "colors": [
+      "FUCHSIA/ROSA",
+      "GRAY/VIOLET",
+      "BLACK/PINK",
+      "PINK",
+      "DARK GRAY/LILAC"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "zapatilla-new-balance-574-mujer-gris-500010190199160-1.jpg",
+    "img": [
+      "nb_ws574snf.jpg",
+      "zapatilla-new-balance-574-mujer-negra-500010190188564-1.jpg",
+      "zapatilla-new-balance-574-mujer-rosa-500010190188454-1.jpg",
+      "zapatillas-new-balance-574-lbg-mujer-azul-500010190228900-1.jpg"
+    ],
+    "marca": "new balance",
+    "genero": "mujer",
+    "outlet": false,
+    "temporada": true
+  },
+  {
+    "id": 25,
+    "title": "LADY TIE BREAK III",
+    "subtitle": "VUELVE EL MODELO TIE BREAK A LA CATEGORIA DE TENIS OFF COUR",
+    "description": "Zapatilla Topper Tie Break III Off Court.Un calzado ideal para el uso diario, confort y seguridad en cada pisada.Capellada en cuero sintetico y costuras para mayor mayor confort y durabilidad. mantiene el pie fresco y seco en el uso intensivo.Suela inyectada de pu, un material exclusivo de topper que otorga gran amortiguacion y confort.",
+    "price": 6499,
+    "detalles": [
+      "Capellada Cuero Sintético, Poliuretano",
+      "Forro Textil, Poliéster",
+      "Suela Poliuretano"
+    ],
+    "colors": [
+      "white/pink",
+      "black/white",
+      "white/blue",
+      "black/pink"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "29710-1004-Combinado_1.jpg",
+    "img": [
+      "800010029709001-1.jpg",
+      "29700-1004-Blanco_1.jpg",
+      "29701-1004-Negro_1.jpg",
+      "29701-1004-Negro_4.jpg"
+    ],
+    "marca": "topper",
+    "genero": "mujer",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 26,
+    "title": "SQUAT",
+    "subtitle": "",
+    "description": "Las zapatillas Topper Squat están confeccionadas en mesh para un calce más natural y anatómico, además de brindarte una mayor respirabilidad. La entresuela de EVA termoformada absorbe tus impactos y reduce la presión en cada paso. La suela de goma aumenta la resistencia al desgaste y mejora la durabilidad.",
+    "price": 7699,
+    "detalles": [
+      "Materiales del exterior Malla",
+      "Materiales del interior Poliéster",
+      "Materiales de la suela Goma",
+      "Tecnologías del calzado Skinnect",
+      "Tipos de ajuste Cordones",
+      "Materiales de la mediasuela Goma EVA"
+    ],
+    "colors": [
+      "pink",
+      "blue",
+      "gray",
+      "violet"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "181-0519_1.jpg",
+    "img": [
+      "027152.jpg",
+      "055800.jpg",
+      "181-0514_1.jpg",
+      "55801-1.jpg"
+    ],
+    "marca": "topper",
+    "genero": "mujer",
+    "outlet": false,
+    "temporada": true
+  },
+  {
+    "id": 27,
+    "title": "FAST",
+    "subtitle": "UNA GRAN ABSORCION DE IMPACTO",
+    "description": "Diseño y detalles únicos en un calzado de performance para quienes practican deporte y aman la moda.Suela con t-cushion para reducir la presión y mejorar la absorción del impacto. Diseño específico de la base de suela para un óptimo agarre. Diseñada para corredores con pisada neutra.",
+    "price": 6.699,
+    "detalles": [
+      "Material Mesh",
+      "Material del interior Poliéster",
+      "Suela de Caucho"
+    ],
+    "colors": [
+      "gray/pink",
+      "gray/yellow",
+      "black/pink",
+      "black/white"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "imgP": "29810-1004-Gris_1.jpg",
+    "img": [
+      "2298110-000-1.jpg",
+      "29771-1004-Gris_1.jpg",
+      "2515100-201.jpg",
+      "29810-1004-Gris_1.jpg"
+    ],
+    "marca": "topper",
+    "genero": "mujer",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 28,
+    "title": "ZAPATILLAS GALAXAR RUN",
+    "subtitle": "ZAPATILLAS DE RUNNING ESTABLES HECHAS CON MATERIALES RECICLADOS",
+    "description": "Cuando empezás a correr por primera vez, no se trata de ganar maratones. Se trata de sentirse bien para que los kilómetros se conviertan en algo que deseás con ansias. Las zapatillas adidas Galaxar Run fueron creadas pensando en los nuevos corredores. El exterior de malla sin costuras es cómodo para correr distancias largas y la mediasuela Bounce agrega amortiguación a tus pies. Este producto está hecho con Primegreen, una serie de materiales reciclados de alto desempeño..",
+    "price": 10999,
+    "detalles": [
+      "Horma clásica",
+      "Exterior de malla elástica sin consturas",
+      "Suela de caucho",
+      "Forro interno textil"
+    ],
+    "colors": [
+      "NEGRO",
+      "GRIS",
+      "NEGRO"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaGalaxarPortada.jpg",
+    "img": [
+      "zapatillaGalaxar1.jpg",
+      "zapatillaGalaxar2.png",
+      "zapatillaGalaxar3.jpg",
+      "zapatillaGalaxarPortada.jpg"
+    ],
+    "marca": "adiddas",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false,
+    "vendidos": true
+  },
+  {
+    "id": 29,
+    "title": "ZAPATILLAS TERREX EASTRAIL",
+    "subtitle": "ZAPATILLAS DE SENDERISMO CON AMORTIGUACIÓN Y TRACCIÓN PARA DESCUBRIR LO INEXPLORADO",
+    "description": "Acumulá kilómetros en la montaña gracias a la ligereza de estas zapatillas de senderismo. El diseño te proporciona mayor estabilidad y tracción en terrenos irregulares y mojados, mientras que la mediasuela con amortiguación aporta comodidad todo el día",
+    "price": 12999,
+    "detalles": [
+      "Horma clásica",
+      "Exterior de malla y material sintético",
+      "Sistema de atado de cordones",
+      "Suela de caucho Traxion para un agarre insuperable"
+    ],
+    "colors": [
+      "core black",
+      "Cloud White",
+      "Solar Yellow"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaSenderismoPortada.jpg",
+    "img": [
+      "zapatillaSenderismo1.png",
+      "zapatillaSenderismo2.png",
+      "zapatillaSenderismo3.jpg",
+      "zapatillaSenderismoPortada.jpg"
+    ],
+    "marca": "adiddas",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false,
+    "vendidos": true
+  },
+  {
+    "id": 30,
+    "title": "ZAPATILLAS KAPTIR SUPER",
+    "subtitle": "ZAPATILLAS MODERNAS QUE LUCEN LAS 3 TIRAS",
+    "description": "Un look tradicional de adidas recibe un toque de estilo urbano en estas zapatillas inspiradas en el running. Disfruá la energía sin límites en cada paso gracias a la mediasuela Boost de adidas. Desde tus salidas a correr, hasta una reunión casual en la noche, estarás listo para cualquier plan.",
+    "price": 13999,
+    "detalles": [
+      "Exterior textil",
+      "Mediasuela Boost",
+      "Forro interno textil",
+      "Suela de caucho"
+    ],
+    "colors": [
+      "Solar Yellow",
+      "Core Black ",
+      "White Black"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillasKaptirPortada.jpg",
+    "img": [
+      "zapatillasKaptir1.png",
+      "zapatillasKaptir2.jpg",
+      "zapatillasKaptir3.jpg",
+      "zapatillasKaptir4.jpg"
+    ],
+    "marca": "adiddas",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false,
+    "vendidos": true
+  },
+  {
+    "id": 31,
+    "title": "ZAPATILLAS BUSENITZ VULC II",
+    "subtitle": "UNA VERSIÓN MÁS ESTILIZADA Y RESISTENTE DE UN CLÁSICO",
+    "description": "Las zapatillas Busenitz Vulc II son una versión vulcanizada más estilizada de este icónico modelo de skate que retienen detalles claves del diseño original. La plantilla Adiprene moldeada y el cuello GEOFIT antideslizante les permite ofrecer el mismo ajuste del original con la flexibilidad y control de una suela vulcanizada. El exterior de gamuza y el refuerzo Adituff en la punta se encargan de brindar la resistencia al desgaste y la respuesta que esperás encontrar en unas zapatillas Busenitz.",
+    "price": 13999,
+    "detalles": [
+      "Refuerzo Adituff en la punta",
+      "Plantilla moldeada Adiprene",
+      "Cuello GEOFIT de sujeción",
+      "Suela vulcanizada GEOFLEX de gran agarre"
+    ],
+    "colors": [
+      "Core Black ",
+      "Cloud White ",
+      "Vivid Red"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaBusenitzPortada.jpg",
+    "img": [
+      "zapatillaBusenitz1.jpg",
+      "zapatillaBusenitz2.jpg",
+      "zapatillaBusenitz3.jpg",
+      "zapatillaBusenitz4.jpg"
+    ],
+    "marca": "adiddasOrginial",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false,
+    "vendidos": true
+  },
+  {
+    "id": 32,
+    "title": "ZAPATILLAS MARATHON TECH",
+    "subtitle": "ZAPATILLAS QUE COMBINAN EL PASADO Y EL FUTURO",
+    "description": "Un estilo retro mitad futuristas. Estas zapatillas Marathon Tech combinan detalles clásicos de adidas Originals como las 3 Tiras y un exterior de cuero con un diseño de talón modernizado que te devuelve la energía que invertís a cada paso.",
+    "price": 17999,
+    "detalles": [
+      "Sistema de atado de cordones",
+      "Exterior de cuero",
+      "Zapatillas vintage de trail running",
+      "Mediasuela Boost receptiva con estampado de malla cuadriculada"
+    ],
+    "colors": [
+      "Tech Indigo  ",
+      "Off White  ",
+      "Gum"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaMarathonPortada.jpg",
+    "img": [
+      "zapatillaMarathon1.jpg",
+      "zapatillaMarathon2.jpg",
+      "zapatillaMarathon3.jpg",
+      "zapatillaMarathon4.jpg"
+    ],
+    "marca": "adiddasOrginial",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false,
+    "vendidos": true
+  },
+  {
+    "id": 33,
+    "title": "ZAPATILLAS MULTIX",
+    "subtitle": "UNA VERSIÓN MODERNA DE UN MODELO DEPORTIVO CASUAL",
+    "description": "Lo informal no tiene que ser aburrido. Actualizá tu estilo con estas llamativas zapatillas adidas Multix. El exterior deportivo de malla mantiene tus pies cómodos sin importar lo que te depare el día",
+    "price": 10999,
+    "detalles": [
+      "Horma clásica",
+      "Sistema de atado de cordones",
+      "Exterior en malla",
+      "Mediasuela de EVA"
+    ],
+    "colors": [
+      "Cloud White ",
+      "Core Black ",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaMultixPortada.jpg",
+    "img": [
+      "zapatillaMultix1.jpg",
+      "zapatillaMultix2.jpg",
+      "zapatillaMultix3.jpg",
+      "zapatillaMultix4.jpg"
+    ],
+    "marca": "adiddasOrginial",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false,
+    "vendidos": true
+  },
+  {
+    "id": 34,
+    "title": "ZAPATILLAS NIKE PEGASUS",
+    "subtitle": "UN CLASICO BAJO UNA NUEVA OPTICA",
+    "description": "El modelo NIKE Air Max Excee, está inspirado en Nike Air Max 90, es una celebración de un clásico bajo una nueva óptica.Las líneas alargadas y las proporciones distorsionadas en la parte superior le dan un espacio nuevo y moderno al clásico look de los años 90 que tanto te gusta.La unidad Air es visible a través de 3 ventanas para darte un look actualizado.La entresuela de espuma y la suela brindan comodidad sin agregar peso.Las líneas de diseño alargadas rinden homenaje a las Air Max 90 a la vez que lo modernizan de una forma provocativa.Debido a la naturaleza de exclusiva calidad de la piel y el ante, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad.Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
+    "price": 15599,
+    "detalles": [
+      "Tecnología: Air Max",
+      "Cámara de aire que amortigua y absorbe el impacto en la pisada.",
+      "Malla/Sintético/ Suela: Goma",
+      "Mix de materiales Hi con tecnología"
+    ],
+    "colors": [
+      "Cloud White ",
+      "Core Black ",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "nikePegasusPortada.jpg",
+    "img": [
+      "nikePegasus1.jpg",
+      "nikePegasus2.jpg",
+      "nikePegasus3.png",
+      "nikePegasus1.jpg"
+    ],
+    "marca": "nike",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 35,
+    "title": "ZAPATILLAS NIKE REVOLUTION 5",
+    "subtitle": "ZAPATILLAS DE RAPIDEZ, LIGEREZA Y AMORTIGUACION",
+    "description": "Buscás zapatillas que te den rapidez, ligereza y amortiguación? Las Zapatillas Nike Free Revolution 5 son las indicadas, correrás los kilómetros que quieras con firmeza y estabilidad cuidando tus pies.",
+    "price": 16550,
+    "detalles": [
+      "Nylon mesh Hi con tecnologia",
+      "Amortiguación",
+      "Malla/Sintético/ Suela: Goma",
+      "Media Suela de eva"
+    ],
+    "colors": [
+      "Cloud White ",
+      "Core Black ",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaRevolutionPortada.jpg",
+    "img": [
+      "zapatillaRevolution1.jpg",
+      "zapatillaRevolution2.jpg",
+      "zapatillaRevolution3.jpg",
+      "zapatillaRevolution4.jpg"
+    ],
+    "marca": "nike",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 36,
+    "title": "ZAPATILLAS MAX EXCEE",
+    "subtitle": "UNA CELEBRACION DE UN CLASICO BAJO UNA NUEVA OPTICA",
+    "description": "El modelo NIKE Air Max Excee, está inspirado en Nike Air Max 90, es una celebración de un clásico bajo una nueva óptica.Las líneas alargadas y las proporciones distorsionadas en la parte superior le dan un espacio nuevo y moderno al clásico look de los años 90 que tanto te gusta.La unidad Air es visible a través de 3 ventanas para darte un look actualizado.La entresuela de espuma y la suela brindan comodidad sin agregar peso.Las líneas de diseño alargadas rinden homenaje a las Air Max 90 a la vez que lo modernizan de una forma provocativa.Debido a la naturaleza de exclusiva calidad de la piel y el ante, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad.Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
+    "price": 15556,
+    "detalles": [
+      "Nylon mesh Hi con tecnologia",
+      "Amortiguación",
+      "Malla/Sintético/ Suela: Goma",
+      "Media Suela de eva"
+    ],
+    "colors": [
+      "Cloud White ",
+      "Core Black ",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaAirPortada.jpg",
+    "img": [
+      "zapatillaAir1.jpg",
+      "zapatillaAir2.jpg",
+      "zapatillaAir3.jpg",
+      "zapatillaAir4.jpg"
+    ],
+    "marca": "nike",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 37,
+    "title": "ZAPATILLAS COMET ALT 2",
+    "subtitle": "SENSACION ULTRA ACOLCHADA",
+    "description": "Preparate para despegar con la sensación ultra acolchada de las Comet 2 Alt Beta.La espuma SOFTRIDE en el talón proporciona una amortiguación óptima.El sistema de cordones dinámico crea un ajuste ceñido y seguro para que estés cubierto sin importar a dónde te lleve el día.Diseñada para corredores con pisada neutra.",
+    "price": 7399,
+    "detalles": [
+      "hecha de textil poliester",
+      "Amortiguación",
+      "Suela de caucho",
+      "Sistema de atado de cordones"
+    ],
+    "colors": [
+      "Cloud White ",
+      "Core Black ",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaCometPortada.jpg",
+    "img": [
+      "zapatillaComet1.jpg",
+      "zapatillaComet2.jpg",
+      "zapatillaComet3.jpg",
+      "zapatillaComet4.jpg"
+    ],
+    "marca": "puma",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 38,
+    "title": "ZAPATILLAS SMASH V2",
+    "subtitle": "SENSACION ULTRA ACOLCHADA",
+    "description": "Las zapatillas Puma Smash V2 L ADP incorporan una amortiguación suave para combinar con cualquier outfit y brindarte un ajuste cómodo durante todo el día. Su diseño moderno y el estilo propio de la marca hacen de ella un calzado que debes tener entre tus preferidos. Combinalas con lo que quieras, ese no es su problema, sino su ventaja.",
+    "price": 6999,
+    "detalles": [
+      "FoamFuse",
+      "Amortiguación",
+      "Suela de Goma",
+      "Mix de Materiales low"
+    ],
+    "colors": [
+      "Cloud White ",
+      "Core Black ",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaSmashPortada.jpg",
+    "img": [
+      "zapatillaSmash1.jpg",
+      "zapatillaSmash2.jpg",
+      "zapatillaSmash1.jpg",
+      "zapatillaSmash2.jpg"
+    ],
+    "marca": "puma",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 39,
+    "title": "ZAPATILLAS PUMA R78",
+    "subtitle": "REDEFINI TU LOOK CON EL TOQUE UNICO DE LAS PUMAS R78",
+    "description": "Redefiní tu look con el toque único de las PUMA R78, su diseño clásico se actualiza con detalles que no pasan desapercibidos.La plantilla Softfoam, proporciona mayor amortiguación, durabilidad óptima y facilita la zancada.Debido a la naturaleza de exclusiva calidad de los materiales, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad.Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
+    "price": 9199,
+    "detalles": [
+      "FoamFuse",
+      "Amortiguación",
+      "Suela de Goma",
+      "Mix de Materiales low"
+    ],
+    "colors": [
+      "Cloud White ",
+      "Core Black ",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaR78Portada.jpg",
+    "img": [
+      "zapatillaR78-1.jpg",
+      "zapatillaR78-2.jpg",
+      "zapatillaR78-3.jpg",
+      "zapatillaR78-4.jpg"
+    ],
+    "marca": "puma",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 40,
+    "title": "ZAPATILLAS ASICS GEL",
+    "subtitle": "SALI A CORRER CON LAS ZAPATILLAS ASICS GEL-PACEMARKER 2",
+    "description": "Está confeccionada con material textil y forro acolchado que asegura la comodidad de la circulación del aire a tus pies durante el entrenamiento.El acolchado de gel proporciona una excelente absorción de impactos y la suela de goma proporciona una mayor durabilidad y adherencia al suelo.GEL™, nuestra tecnología icónica utilizada por ASICS desde 1986 protege tu cuerpo del impacto generado en cada paso, ayudando a reducir la fatiga muscular.La tecnología GEL™ se localiza principalmente en las zonas de mayor carga en el momento del impacto, en la zona del talón y en la articulación de la puntera. Diseñada para corredores con pisada neutra.",
+    "price": 14999,
+    "detalles": [
+      "FoamFuse",
+      "Amortiguación",
+      "Suela de sintentica",
+      "Mix de Materiales low"
+    ],
+    "colors": [
+      "Cloud White ",
+      "Core Black ",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaAscisPortada.jpg",
+    "img": [
+      "zapatillaAscis1.jpg",
+      "zapatillaAscis2.jpg",
+      "zapatillaAscis3.jpg",
+      "zapatillaAscis1.jpg"
+    ],
+    "marca": "asics",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 41,
+    "title": "ZAPATILLAS ASICS PATRIOT",
+    "subtitle": "DIESEÑADAS PARA AYUDAR A LOS CORREDORES A LLEGAR MAS LEJOS",
+    "description": "Estas zapatillas están confeccionadas con un empeine de malla transpirable que favorece una mejor circulación de aire y ayuda a que los pies se mantengan frescos durante el ejercicio.Todo ello se complementa con tecnología EVA en la entresuela para crear una respuesta de tipo resorte, proporcionando a estas zapatillas una excelente absorción de los impactos.Por último, la integración de una suela de goma moldeada y el refuerzo interno del talón proporcionan una sujeción adicional para que los pies se mantengan alineados en carreras de larga distancia.Diseñada para corredores con pisada neutra..",
+    "price": 8999,
+    "detalles": [
+      "FoamFuse",
+      "Amortiguación",
+      "Suela de goma moldeada",
+      "Mix de Materiales Sintentico"
+    ],
+    "colors": [
+      "Cloud White ",
+      "Core Black ",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaPatriotPortada.jpg",
+    "img": [
+      "zapatillaPatriot1.jpg",
+      "zapatillaPatriot2.jpg",
+      "zapatillaPatriot3.jpg",
+      "zapatillaPatriot1.jpg"
+    ],
+    "marca": "asics",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 42,
+    "title": "ZAPATILLAS ASICS TAKAI",
+    "subtitle": "OBTENE UNA GRAN COMODIDAD Y LIGEREZA AL CAMINAR",
+    "description": "Obtené una gran comodidad y ligereza al caminar con las zapatillas ASICS Taikai.Es un calzado para acompañarte en varios momentos, desde caminatas ligeras, gimnasio y día a día.Su parte superior textil permite una mejor transpiración de los pies, mientras que la suela de goma estriada estratégica ofrece el agarre necesario en el suelo y también una mayor durabilidad. Diseñada para corredores con pisada neutra.",
+    "price": 8999,
+    "detalles": [
+      "FoamFuse",
+      "Amortiguación",
+      "Suela de goma moldeada",
+      "Mix de Materiales Sintentico"
+    ],
+    "colors": [
+      "Cloud White ",
+      "Core Black ",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaZakaiPortada.jpg",
+    "img": [
+      "zapatillaZakai1.jpg",
+      "zapatillaZakai2.jpg",
+      "zapatillaZakai3.jpg",
+      "zapatillaZakai1.jpg"
+    ],
+    "marca": "asics",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 43,
+    "title": "ZAPATILLAS TOPPER CAPITAN",
+    "subtitle": "OBTENE UN LOOK URBANO Y LIGEREZA AL CAMINAR",
+    "description": "Conocé las Zapatillas Topper Capitan Tt, ideales para lograr un look urbano, cool y atemporal. Se trata de un clásico de la marca, pero totalmente renovado pensado para los nostálgicos. Confeccionadas en microfibra de alta calidad, tienen suela de goma moldeada con propiedades antideslizantes para hacer que tu día a día sea más fácil. Infaltables en tu guardarropa, te ayudan a completar todos los looks.",
+    "price": 8999,
+    "detalles": [
+      "Con Cordones",
+      "Urbano",
+      "Cuero sintetico",
+      "Suela de Caucho"
+    ],
+    "colors": [
+      "Cloud White ",
+      "Core Black ",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaTopperCapitanPortada.jpg",
+    "img": [
+      "zapatillaTopperCapitan1.jpg",
+      "zapatillaTopperCapitan2.jpg",
+      "zapatillaTopperCapitan3.jpg",
+      "zapatillaTopperCapitan4.jpg"
+    ],
+    "marca": "topper",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 44,
+    "title": "ZAPATILLAS TOPPER COSTA",
+    "subtitle": "ESTE ES UN CALZADO BIEN URBANO Y CANCHERO",
+    "description": "Renovamos nuestra familia de productos Tenis Retro con este calzado bien urbano y canchero.Debido a la naturaleza de exclusiva calidad de los materiales, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad.Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca",
+    "price": 7399,
+    "detalles": [
+      "Con Cordones",
+      "Urbano",
+      "Cuero sintetico",
+      "Suela de Caucho"
+    ],
+    "colors": [
+      "Cloud White ",
+      "Core Black ",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaCostaPortada.jpg",
+    "img": [
+      "zapatillaCosta1.jpg",
+      "zapatillaCosta2.jpg",
+      "zapatillaCosta3.jpg",
+      "zapatillaCosta1.jpg"
+    ],
+    "marca": "topper",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 45,
+    "title": "ZAPATILLAS TOPPER NOVA",
+    "subtitle": "UN AUTENTICO CLASICO SIEMPRE VUELVE",
+    "description": "Un auténtico clásico siempre vuelve. En el caso del modelo Nova Low de Topper, vuelve aún más hermoso y versátil. La capellada de algodón tiene el refuerzo de la lengüeta y el cuello acolchado para garantizar la comodidad del calce. La goma estable y adherente en toda la extensión de la suela brinda seguridad para caminar.",
+    "price": 5799,
+    "detalles": [
+      "Con Cordones",
+      "Urbano",
+      "forro textil y algodon",
+      "Suela de Goma vulcanizada"
+    ],
+    "colors": [
+      "Cloud White ",
+      "Core Black ",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaNovaPortada.jpg",
+    "img": [
+      "zapatillaNova1.jpg",
+      "zapatillaNova2.jpg",
+      "zapatillaNova3.jpg",
+      "zapatillaNova4.jpg"
+    ],
+    "marca": "topper",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 46,
+    "title": "ZAPATILLAS CONVERSE NET STAR",
+    "subtitle": "LAS NET START TIENEN UN CLASICO QUE NO PASA DE MODA",
+    "description": "Inspirada en los archivos de CONVERSE, las Net Star están pensadas para que destaques del resto con un estilo clásico que no pasa de moda.Debido a la naturaleza de exclusiva calidad de los materiales, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad.Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca",
+    "price": 8999,
+    "detalles": [
+      "Con Cordones",
+      "Urbano",
+      "forro textil y algodon",
+      "Suela de Goma vulcanizada"
+    ],
+    "colors": [
+      "Cloud White ",
+      "Core Black ",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaNetStarPortada.jpg",
+    "img": [
+      "zapatillaNetStar1.jpg",
+      "zapatillaNetStar2.jpg",
+      "zapatillaNetStar3.jpg",
+      "zapatillaNetStar1.jpg"
+    ],
+    "marca": "converse",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 47,
+    "title": "ZAPATILLAS CONVERSE ALL STAR",
+    "subtitle": "UN CLASICO QUE SE REVALORIZA CON EL TIEMPO",
+    "description": "Un clásico que se revaloriza con el tiempo, estas converse para unisex están diseñadas en piel, y en color Negro con el logo en Blanco  para que sean sencillas y combinables con todo.Perfectas para el día a dia, urbanas, deportivas y estéticamente muy interesantes. Son de piel e incorporan plantilla de Confort por lo que su resistencia es mayor que otros modelos de la marca.",
+    "price": 10995,
+    "detalles": [
+      "Con Cordones",
+      "Urbano",
+      "Cuero vacuno flor",
+      "Suela de Goma vulcanizada"
+    ],
+    "colors": [
+      "Cloud White ",
+      "Core Black ",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaAllStarPortada.jpg",
+    "img": [
+      "zapatillaAllStar1.jpg",
+      "zapatillaAllStar2.jpg",
+      "zapatillaAllStar3.jpg",
+      "zapatillaAllStar4.jpg"
+    ],
+    "marca": "converse",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 48,
+    "title": "ZAPATILLAS CONVERSE CHUCK",
+    "subtitle": "UN CLASICO QUE RINDE HOMENAJE AL ESTILO ORIGINAL",
+    "description": "Las Converse All Star Chuck ’70 en lona vintage se han rediseñado con detalles modernos que rinden homenaje al estilo original de las Chuck Taylor All Star de los 70. Cuentan con un ribete de goma algo más alto, una plantilla con amortiguación para una comodidad duradera y una puntera de goma más grande. También presentan otros detalles vintage como una costura en el lateral y una parte superior de lona vintage gruesa para una mayor comodidad y durabilidad.Además, incluyen detalles de las icónicas Chuck Taylor como el parche del tobillo con la estrella en el centro y la suela exterior de goma vulcanizada.",
+    "price": 9066,
+    "detalles": [
+      "Con Cordones",
+      "Urbano",
+      "forro de textil,algodon",
+      "Suela de Caucho"
+    ],
+    "colors": [
+      "Cloud White ",
+      "Core Black ",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaChuckPortada.jpg",
+    "img": [
+      "zapatillaChuck1.jpg",
+      "zapatillaChuck2.jpg",
+      "zapatillaChuck3.jpg",
+      "zapatillaChuck1.jpg"
+    ],
+    "marca": "converse",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 49,
+    "title": "ZAPATILLAS FILA JOGGER",
+    "subtitle": "MODELO DE TIPO RETRO DE DISEÑO INSPIRADO EN EL CLASICO EURO JOGGER",
+    "description": "Posee una entresuela con tecología FLOAT que garantiza una excelente amortiguación y retorno de energía.Suela de TPU engomado.Capellada confeccionada en cuero y materiales sintéticos de alta calidad.Debido a la naturaleza de exclusiva calidad de los materiales, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad.Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
+    "price": 10499,
+    "detalles": [
+      "Con Cordones",
+      "cuero vacuno descarne",
+      "forro de textil,poliester",
+      "Suela de Caucho"
+    ],
+    "colors": [
+      "Cloud White ",
+      "Core Black ",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaJoggerPortada.jpg",
+    "img": [
+      "zapatillaJogger1.jpg",
+      "zapatillaJogger2.jpg",
+      "zapatillaJogger3.jpg",
+      "zapatillaJogger4.jpg"
+    ],
+    "marca": "fila",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 50,
+    "title": "ZAPATILLAS FILA QUARK",
+    "subtitle": "INOVACION PARA QUIENES BUSCAN COMODIDAD Y ESTILO",
+    "description": "FILA presenta las zapatillas de deporte Quark, una innovación para quienes buscan comodidad y estilo durante la práctica, la carrera y las actividades cotidianas. El calzado tiene cuero hecho de tela con partes sintéticas y tiene una lengüeta integrada que, a su vez, lleva el ajuste por medio de cordones. En el interior, un acolchado textil fortalece la región del talón y una plantilla de EVA viene con acción antimicrobiana y se puede quitar, lo que facilita la higiene. Además, la suela y la entresuela están fabricadas con EVA y cuentan con la tecnología Energized Rubber, un innovador sistema de amortiguación. ",
+    "price": 6935,
+    "detalles": [
+      "Con Cordones",
+      "Horma clásica ",
+      "forro de textil,poliester",
+      "Suela sientetica"
+    ],
+    "colors": [
+      "Cloud White ",
+      "Core Black ",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaQuarkPortada.jpg",
+    "img": [
+      "zapatillaQuark1.jpg",
+      "zapatillaQuark2.jpg",
+      "zapatillaQuark3.jpg",
+      "zapatillaQuark1.jpg"
+    ],
+    "marca": "fila",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 51,
+    "title": "ZAPATILLAS FILA TREKKING",
+    "subtitle": "CALZADO DE DISEÑO MODERNO PARA ACTIVIDADES AL AIRE LIBRE",
+    "description": "Las zapatillas FILA Zermat son un calzado de diseño moderno para actividades al aire libre.Su capellada está confeccionada en Mesh y materiales sinteticos de alta frecuencia.Su suela de caucho de diseño tractorado mejoran la tracción en cualquier tipo de terreno.Diseñado para corredores de pisada neutra ",
+    "price": 9055,
+    "detalles": [
+      "Con Cordones",
+      "Horma clásica ",
+      "forro de textil",
+      "Suela de Caucho"
+    ],
+    "colors": [
+      "Cloud White ",
+      "Core Black ",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaTrekkingPortada.jpg",
+    "img": [
+      "zapatillaTrekking1.jpg",
+      "zapatillaTrekking2.jpg",
+      "zapatillaTrekking3.jpg",
+      "zapatillaTrekking1.jpg"
+    ],
+    "marca": "fila",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 52,
+    "title": "ZAPATILLAS NEW BALANCE 574",
+    "subtitle": "CALZADO DE DISEÑO MINIMALISTA CON DETALLES GEOMETRICOS",
+    "description": "Las zapatillas de hombre 574 cuentan con un diseño minimalista con detalles geométricos y un empeine ligero de ante y malla. Una entresuela con amortiguación Fresh Foam te proporcionará un soporte muy suave para que puedas moverte con facilidad entre los planes del día a día y las actividades de fin de semana.Debido a la naturaleza de exclusiva calidad de la piel y el ante, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad. Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
+    "price": 16939,
+    "detalles": [
+      "Con Cordones",
+      "cuero vacuno descarne ",
+      "forro de textil, poliester",
+      "Suela sintetica"
+    ],
+    "colors": [
+      "Cloud White ",
+      "Core Black ",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaFcbPortada.jpg",
+    "img": [
+      "zapatillaFcb1.jpg",
+      "zapatillaFcb2.jpg",
+      "zapatillaFcb3.jpg",
+      "zapatillaFcb1.jpg"
+    ],
+    "marca": "new balance",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 53,
+    "title": "ZAPATILLAS NEW BALANCE SO2",
+    "subtitle": "CALZADO HECHOS EN UNA COMBINACION ATEMPORAL DE MESH Y CUERO DESCARNE",
+    "description": "Las zapatillas NEW BALANCE 574 estan hechas en una combinación atemporal de mesh y cuero descarne, disponible en colores clásicos y sútiles.No importa donde vayas, estas zapatillas urbanas cuentan con tecnología ENCAP con una amortiguación suave de EVA en la entresuela que te brinda el soporte que necesitas.Debido a la naturaleza de exclusiva calidad de la piel y el ante, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad.Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
+    "price": 12999,
+    "detalles": [
+      "Con Cordones",
+      "cuero vacuno descarne ",
+      "forro de textil",
+      "Suela de caucho"
+    ],
+    "colors": [
+      "Cloud White ",
+      "Core Black ",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaS02Portada.jpg",
+    "img": [
+      "zapatillaS02-1.jpg",
+      "zapatillaS02-2.jpg",
+      "zapatillaS02-3.jpg",
+      "zapatillaS02-1.jpg"
+    ],
+    "marca": "new balance",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false
+  },
+  {
+    "id": 54,
+    "title": "ZAPATILLAS NEW BALANCE XAA",
+    "subtitle": "CELEBRA EL ESTILO ICONICO Y LOS MATERIALES PREMIUM DE LAS NB 574",
+    "description": "Creadas en 1988 de la combinación de dos zapatillas de NEW BALANCE, las zapatillas de hombre 574 se han convertido en una de nuestros modelos más emblemáticos.La tecnología ENCAP® de la entresuela proporciona soporte y máxima durabilidad. Debido a la naturaleza de exclusiva calidad de la piel y el ante, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad.Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
+    "price": 12999,
+    "detalles": [
+      "Con Cordones",
+      "cuero porcino ",
+      "forro de textil, poliester",
+      "Suela de caucho"
+    ],
+    "colors": [
+      "Cloud White ",
+      "Core Black ",
+      "Cloud White"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "zapatillaXaaPortada.jpg",
+    "img": [
+      "zapatillaXaa1.jpg",
+      "zapatillaXaa2.jpg",
+      "zapatillaXaa3.jpg",
+      "zapatillaXaa1.jpg"
+    ],
+    "marca": "new balance",
+    "genero": "hombre",
+    "outlet": true,
+    "temporada": false
+  }
+]

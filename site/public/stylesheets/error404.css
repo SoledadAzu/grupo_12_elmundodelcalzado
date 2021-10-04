@@ -1,0 +1,16 @@
+.errorMain .contenedor{
+    background-image: url('../images/error404.jpg');
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 120vh;
+    position: relative;
+}
+
+.iraInicio{
+    position: absolute;
+    right: 100px;
+    bottom: 80px;
+    background-color: blue;
+    width: 150px;
+    height: 100px;
+}

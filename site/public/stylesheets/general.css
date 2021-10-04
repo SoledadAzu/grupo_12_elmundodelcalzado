@@ -28,3 +28,9 @@ a{
     text-decoration: none;
     
 }
+.contenedorVideo{
+    display:flex;
+    background: var(--rojo);
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
