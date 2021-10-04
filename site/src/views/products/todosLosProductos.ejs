@@ -13,16 +13,18 @@
 
     <!-- MAIN -->
     <main>
-        <h1>TU BUSQUEDA ES :<%= search %> </h1>
+        
+        <h1>TODOS LOS PRODUCTOS</h1>
+        <br>
     <section class="mercaderia">
-    <%  result.map(e=>{%>
+    <%  productos.map(e=>{%>
  
-       <article class="zapatilla-img">
-        <a href="/products/productDetail/<%= e.id %> ">
+       <article>
+        <a href="/products/productDetail/<%= e.id %>">
            <div>
-               <img src="/images/articulos/<%= e.imgP %> " alt="zapatilla-img1">
+               <img src="/images/articulos/<%= e.imgP %>" alt="zapatilla-img1">
            </div>  
-           <div class="ofertasZapatillaPrecio">
+           <div>
             <strong>
                 <%= toThousand(e.price)%>
             </strong>

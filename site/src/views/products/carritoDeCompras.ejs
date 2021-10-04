@@ -54,14 +54,14 @@
                                                 </li>
                                                 <li>Talles: <%=  %>
                                                 </li>
-                                                <li class='precioCell'>Precio:$<%= e.price %>
+                                                <li class='precioCell'>Precio:$<%= toThousand(e.price)%>
                                                 </li>
                                             </ul>
                                         </td>
-                                        <td class='compu alinear'><strong>$<%= e.price %> </strong></td>
+                                        <td class='compu alinear'><strong>$<%= toThousand(e.price)%> </strong></td>
                                         <td class="cantidad"><input type="number" id="number" name="number" min=1
                                                 max=100 value="1"></td>
-                                        <td class='compu alinear'><strong>$<%= e.price %></strong></td>
+                                        <td class='compu alinear'><strong>$<%= toThousand(e.price)%></strong></td>
                                     </tr>
                                     <%})%>
                             </tbody>
@@ -90,30 +90,38 @@
                 </div>
 
                 <h2 class='oferta1'>APROVECHA LAS SUPER OFERTAS</h2>
-                <section class="mercaderia">
+               
+               
+                    <section class="mercaderia">
                     <% let contadorM=0 %>
                   <% ofertas.map(e=>{ %>
                     <% contadorM++ %> 
                     <%if(contadorM<=4){%>
-                      <article>
+                     <article>
                           <a href="/products/productDetail/<%= e.id %> ">
                             <div>
                                 <img src="/images/articulos/<%= e.imgP %>" alt="">
                             </div>
                             <div>
-                            <h4>
-                              <%= e.title %>
-                            </h4>
-                            <strong>$<%= e.price %> </strong>
+                                <strong>
+                                    <%= toThousand(e.price) %>
+                                </strong>
+                                <p>
+                                    <%=e.marca%>
+                                </p>
+                                <h4>
+                                    <%= e.title%>
+                                </h4>
                           </div>
                         </a>
                       </article>
                     <% } %>
                 <% }) %>
                 
-                
+                    
                 </section>
-                <div class="button-vermas"><button class="vermas"><strong>Ver más ></strong></button></div>
+            
+                <div class="button-vermas"><a href="./outlet"><button class="vermas"><strong>Ver más ></strong></button></a></div>
 
             </main>
 
