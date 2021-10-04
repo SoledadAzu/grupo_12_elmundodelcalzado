@@ -17,12 +17,12 @@
 						</div>
 					</div>
 					<div class="contenedor-form">
-						<form action="" method="">
+						<form action="/admin/create" method="POST">
 							<div class="contenedorLabel">
 
 								<div class="labelForm">
-									<label for="name" class="">Nombre del producto:</label>
-									<input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok"
+									<label for="title" class="">Nombre del producto:</label>
+									<input type="text" id="title" name="title" placeholder="Ej: Zapatillas Reebok"
 										class="form-input">
 								</div>
 								<div class="labelForm">
@@ -31,19 +31,19 @@
 										class="form-input">
 								</div>
 								<div class="labelForm">
-									<label for="discount" class="">Marca:</label>
-									<input type="text" id="discount" name="discount" placeholder="Marca del producto"
+									<label for="marca" class="">Marca:</label>
+									<input type="text" id="marca" name="marca" placeholder="Marca del producto"
 										class="form-input">
 								</div>
 								<div class="labelForm">
-									<label for="discount" class="l">Genero:</label>
-									<input type="text" id="discount" name="discount" placeholder="Ingrese el Genero"
+									<label for="genero" class="l">Genero:</label>
+									<input type="text" id="genero" name="genero" placeholder="Ingrese el Genero"
 										class="form-input">
 								</div>
 								
 								<div class="selection">
 									<div>
-									<label for="category" class="form-label">Temporada</label>
+									<label for="temporada" class="form-label">Temporada</label>
 									<select name="temporada" id="temporada" class="form-input">
 										<option value="">Elegí</option>
 										<option value="true">True</option>
@@ -64,8 +64,7 @@
 									<textarea name="description" id="description" class="form-input"></textarea>
 								</div>
 								<div class="">
-									<a href="/admin" class="btn btn-outline-success" tabindex="-1" role="button"
-										aria-disabled="true">Guardar Producto</a>
+									<button class="btn btn-outline-success"type="submit">Guardar Producto</button>
 								</div>
 							</div>
 						</form>

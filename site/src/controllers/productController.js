@@ -1,6 +1,6 @@
 const oferta = require('../database/productOferta.json')
 const productos = require('../database/productos.json')
-
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const ofertas=productos.filter(e=>{
     return e.outlet===true
 })
@@ -23,10 +23,10 @@ const controller={
         let idProduct = productos.find(e=>{
             return e.id === +id
         })
-        res.render('products/detalleProducto',{idProduct,ofertas})
+        res.render('products/detalleProducto',{idProduct,ofertas,toThousand})
     },
     carrito:(req,res)=>{
-        res.render('products/carritoDeCompras',{ofertas,oferta})
+        res.render('products/carritoDeCompras',{ofertas,oferta,toThousand})
     },
     general: (req, res) => {
 		const search = req.query.keywords.trim()
@@ -38,21 +38,21 @@ const controller={
 		}
 	},
     mercaderia: (req,res)=>{
-        res.render("products/todosLosProductos", {productos})
+        res.render("products/todosLosProductos", {productos,toThousand})
         
         
     },
     hombre: (req,res)=>{
-        res.render("products/hombre", {prodHombre})    
+        res.render("products/hombre", {prodHombre,toThousand})    
     },
     mujer: (req,res)=>{
-        res.render("products/mujer",{prodMujer})
+        res.render("products/mujer",{prodMujer,toThousand})
     },
     temporada: (req,res)=>{
-        res.render("products/temporada",{prodTemporada})
+        res.render("products/temporada",{prodTemporada,toThousand})
     },
     ofertas: (req,res)=>{
-        res.render("products/outlet",{ofertas})
+        res.render("products/outlet",{ofertas,toThousand})
     }
 }
 module.exports=controller
