@@ -69,7 +69,7 @@
 .detalleProducto .talles .talles-descripcion{
     padding-top: 10px;
     text-align: center;
-    line-height: 3rem;
+    line-height: 1.5rem;
 }
 
 .detalleProducto .talles .talles-datos h3{
@@ -200,13 +200,17 @@
        display: none;
    }
    /************ ZAPATILLAS ************/
+   .detalleProducto .zapatilla-principal{
+    border: 1px solid var(--gris);
+    width: 100%;
+}
    .detalleProducto .zapatillas1-articulos{
        flex-direction: row;
    }
    .detalleProducto .zapatillas1 .zapatillas1-colores{
        order: -1;
        flex-direction: column;
-       width: 40%;
+       width: 24%;
        padding-top: 0;
 
    }
@@ -214,12 +218,17 @@
        width: 100%;
        border: none;
    }
+   .detalleProducto .talles .talles-descripcion{
+    padding-top: 10px;
+    text-align: center;
+    line-height: 2rem;
+}
    .detalleProducto .talles .talles-descripcion h3,
    .detalleProducto .talles .talles-descripcion h5{
         font-size: 1.5rem;
    }
    .detalleProducto .talles .talles-descripcion h4{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     }
     .detalleProducto .talles .talles-datos h3{
         font-size: 1.6rem;
