@@ -259,10 +259,7 @@
     .detalleProducto .zapatillas1 .zapatillas1-colors_eleccion{
         text-align: center;
     }
-    .detalleProducto .zapatillas1 .zapatillas1-colors_eleccion img{
-        max-width: 150px;
-        max-height: 150px;
-    }
+    
     /******************** TALLES **********************/
     .detalleProducto .talles .talles-descripcion{
         line-height: 4rem;
@@ -298,5 +295,29 @@
     .detalleProducto .verMas{
         display: none;
         
+    }
+}
+@media (min-width:1350px){
+    /******************** TALLES **********************/
+    .detalleProducto .talles .talles-descripcion{
+        line-height: 5rem;
+    }
+    .detalleProducto .talles .talles-descripcion h4{
+        font-size: 2rem;
+    }
+    .detalleProducto .talles .talles-descripcion h3,
+    .detalleProducto .talles .talles-descripcion h5{
+        font-size: 3.5rem;
+    }
+    .detalleProducto .talles .talles-datos h3{
+        font-size: 3.6rem;
+    }
+    .detalleProducto .talles .talles-datos label{
+        font-size: 3.6rem;
+        padding: 14px;
+    }
+    .detalleProducto .talles .talles-datos .boton{
+        padding: 30px;
+        font-size: 1.3rem;
     }
 }
