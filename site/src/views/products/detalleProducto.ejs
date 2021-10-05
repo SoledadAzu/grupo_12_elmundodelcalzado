@@ -65,11 +65,11 @@
 
 
                         </h4>
-                        <h5>$<%= idProduct.price %>
+                        <h5>$<%= toThousand(idProduct.price) %>
                         </h5>
                     </div>
 
-                    <form class="talles-datos" action="/products/carritoDeCompras">
+                    <form class="talles-datos" action="/products/carritoDeCompras" method="GET">
                         <h3>TALLES</h3>
                         <div class="talles-datos-numero">
                             <% idProduct.talles.map(e=>{ %>

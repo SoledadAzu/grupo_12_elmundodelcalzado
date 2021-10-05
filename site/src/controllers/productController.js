@@ -1,5 +1,13 @@
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../database/productSeleccionado.json');
+
+let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 const oferta = require('../database/productOferta.json')
 const productos = require('../database/productos.json')
+
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const ofertas=productos.filter(e=>{
     return e.outlet===true
@@ -28,6 +36,7 @@ const controller={
     carrito:(req,res)=>{
         res.render('products/carritoDeCompras',{ofertas,oferta,toThousand})
     },
+    
     general: (req, res) => {
 		const search = req.query.keywords.trim()
 		if(search !==''){
