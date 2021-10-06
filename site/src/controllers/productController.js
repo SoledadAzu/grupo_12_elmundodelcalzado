@@ -68,7 +68,7 @@ const controller={
 		const search = req.query.keywords.trim()
 		if(search !==''){
 			const result = productos.filter(e=> e.title.toLowerCase().includes(search.toLowerCase()))
-            	res.render('products/productosGeneral',{result,search})
+            	res.render('products/productosGeneral',{result,search,toThousand})
 		}else{
 			res.redirect('/')
 		}
