@@ -115,7 +115,7 @@
       "Zapatillas_ZX_2K_Florine_Blanco_FW0089_01_standard.jpg",
       "Zapatillas_ZX_2K_Florine_Negro_FW0088_01_standard.jpg"
     ],
-    "marca": "adidas",
+    "marca":"adidas",
     "genero": "mujer",
     "outlet": false,
     "temporada": true,
@@ -123,10 +123,10 @@
   },
   {
     "id": 4,
-    "title": "SUPERSTAR W",
+    "title": "SUPERSTAR W  ",
     "subtitle": "ESTA ZAPATILLA ES UN CLASICO QUE NO DEJA DE SORPRENDER ",
     "description": "Las zapatillas Adidas Superstar no necesitan mucha presentación. Su historia hizo que dejen de ser un calzado para ser un ícono de la moda. Nacidas en los 70's para el básquet, fueron recorriendo el mundo urbano de la mano del skateboarding y principalmente el hip-hop. Estilo de sobra con el detalle de las tres tiras (three-stripes) típicas de la marca y su característica puntera de caucho.",
-    "price": 15999,
+    "price": "15.999  ",
     "detalles": [
       "Cuero Vacuno Descarne",
       "Suela de goma",
@@ -155,18 +155,18 @@
       "Zapatillas_Superstar_Blanco_FW2526_01_standard.jpg",
       "Zapatillas_Superstar_Blanco_FW2502_01_standard.jpg"
     ],
-    "marca": "adidas_original",
-    "genero": "mujer",
+    "marca":"adidasoriginal",
+    "genero": "mujer  ",
     "outlet": true,
-    "temporada": false,
+    "temporada": "true",
     "vendidos": true
   },
   {
     "id": 5,
-    "title": "ADIDAS SLEEK SUPER",
+    "title": "ADIDAS SLEEK SUPER ",
     "subtitle": "ESTAS ZAPATILLAS EN SATÉN CON PLATAFORMA LLAMAN LA ATENCIÓN",
     "description": "¿A quién no le gusta el satén? Es suave, elegante y está presente en estas zapatillas adidas Sleek Super. Amarrá los cordones con punta de metal y sentí que formás parte de una comunidad única y alegre. La suela con plataforma agrega unos centímetros a tu altura.",
-    "price": 13999,
+    "price": "13.999 ",
     "detalles": [
       "Horma estrecha específica para mujer",
       "Sistema de atado de cordones",
@@ -196,10 +196,10 @@
       "Zapatillas_adidas_Sleek_Super_Negro_EG7881_01_standard.jpg",
       "Zapatillas_adidas_Sleek_Super_Rosa_EG6771_01_standard.jpg"
     ],
-    "marca": "adidas_original",
-    "genero": "mujer",
+    "marca":"adidasoriginal",
+    "genero": "mujer ",
     "outlet": false,
-    "temporada": true,
+    "temporada": "false",
     "vendidos": true
   },
   {
@@ -238,7 +238,7 @@
       "Zapatillas_SL_Andridge_Blanco_EG6846_01_standard.jpg",
       "Zapatillas_SL_Andridge_Blanco_FX8105_01_standard.png"
     ],
-    "marca": "adidas_original",
+    "marca":"adidasoriginal",
     "genero": "mujer",
     "outlet": false,
     "temporada": true,
@@ -851,7 +851,7 @@
       "W413RI1_0_5.jpg",
       "NEB-W413RP1--1-.jpg"
     ],
-    "marca": "new balance",
+    "marca": "newbalance",
     "genero": "mujer",
     "outlet": false,
     "temporada": true
@@ -891,7 +891,7 @@
       "new-balance-fresh-foam-1080-v1 negro_celeste.jpg",
       "new-balance-fresh-foam-1080-v11 red.jpg"
     ],
-    "marca": "new balance",
+    "marca": "newbalance",
     "genero": "mujer",
     "outlet": false,
     "temporada": true
@@ -931,7 +931,7 @@
       "zapatilla-new-balance-574-mujer-rosa-500010190188454-1.jpg",
       "zapatillas-new-balance-574-lbg-mujer-azul-500010190228900-1.jpg"
     ],
-    "marca": "new balance",
+    "marca": "newbalance",
     "genero": "mujer",
     "outlet": false,
     "temporada": true
@@ -1086,7 +1086,7 @@
       "zapatillaGalaxar3.jpg",
       "zapatillaGalaxarPortada.jpg"
     ],
-    "marca": "adiddas",
+    "marca": "adidas",
     "genero": "hombre",
     "outlet": true,
     "temporada": false,
@@ -1125,7 +1125,7 @@
       "zapatillaSenderismo3.jpg",
       "zapatillaSenderismoPortada.jpg"
     ],
-    "marca": "adiddas",
+    "marca": "adidas",
     "genero": "hombre",
     "outlet": true,
     "temporada": false,
@@ -1164,7 +1164,7 @@
       "zapatillasKaptir3.jpg",
       "zapatillasKaptir4.jpg"
     ],
-    "marca": "adiddas",
+    "marca": "adidas",
     "genero": "hombre",
     "outlet": true,
     "temporada": false,
@@ -1203,7 +1203,7 @@
       "zapatillaBusenitz3.jpg",
       "zapatillaBusenitz4.jpg"
     ],
-    "marca": "adiddasOrginial",
+    "marca":"adidasoriginal",
     "genero": "hombre",
     "outlet": true,
     "temporada": false,
@@ -1242,7 +1242,7 @@
       "zapatillaMarathon3.jpg",
       "zapatillaMarathon4.jpg"
     ],
-    "marca": "adiddasOrginial",
+    "marca":"adidasoriginal",
     "genero": "hombre",
     "outlet": true,
     "temporada": false,
@@ -1281,7 +1281,7 @@
       "zapatillaMultix3.jpg",
       "zapatillaMultix4.jpg"
     ],
-    "marca": "adiddasOrginial",
+    "marca": "adidasoriginal",
     "genero": "hombre",
     "outlet": true,
     "temporada": false,
@@ -2004,7 +2004,7 @@
       "zapatillaFcb3.jpg",
       "zapatillaFcb1.jpg"
     ],
-    "marca": "new balance",
+    "marca": "newbalance",
     "genero": "hombre",
     "outlet": true,
     "temporada": false
@@ -2042,7 +2042,7 @@
       "zapatillaS02-3.jpg",
       "zapatillaS02-1.jpg"
     ],
-    "marca": "new balance",
+    "marca": "newbalance",
     "genero": "hombre",
     "outlet": true,
     "temporada": false
@@ -2080,7 +2080,7 @@
       "zapatillaXaa3.jpg",
       "zapatillaXaa1.jpg"
     ],
-    "marca": "new balance",
+    "marca": "newbalance",
     "genero": "hombre",
     "outlet": true,
     "temporada": false
