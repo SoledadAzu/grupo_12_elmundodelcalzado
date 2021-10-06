@@ -65,9 +65,7 @@
 .padreImg{
     width:100%;
 }
-/*.productsMujer{
-    width: 100%;
-}*/
+
 .padreMujer{
     display: flex;
     align-items: center;
@@ -180,7 +178,7 @@
 .contenedorMarcas{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content:space-around;
 }
 .botonVerMas{
     width: 100%;
@@ -194,13 +192,15 @@
       border: none;
       background-color: white;
 }
-.marcasImgIgnorarTab{
-    display: none ;
+
+@media(max-width:768px){
+.marcas_art{
+    width: 30%;
 }
-.marcasImgIgnorarPC{
+.marcas_ocultas{
     display: none;
 }
-
+}
 
 /*tablet*/
 
@@ -270,17 +270,15 @@
     .CompraPorMarca h1{
         font-size: 30px;
     }
-    .marcasImgIgnorar{
-        display: none;
-        }
-    .marcasImgIgnorarTab{
-        display: block ;
+    .marcas_art{
+        width: 20%;
     }
-    .marcasImgIgnorarPC{
-        display: none;
+    .marcas_art div{
+        width: 90%;
     }
-
-}
+    
+   }
+ 
 @media (min-width:1024px){
     
     .zapatilla-img{
@@ -343,15 +341,10 @@
     .botonN{
       display: block;
     }
-    .marcasImgIgnorar{
-        display: none;
+    .marcas_art{
+        width: 10%;
     }
-    .marcasImgIgnorarTab{
-        display: none ;
-    }
-    .marcasImgIgnorarPC{
-        display: block;
-    }
+    
 
 }
 
