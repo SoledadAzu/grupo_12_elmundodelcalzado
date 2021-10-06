@@ -143,10 +143,10 @@ th {
   padding-top:50%;
 }
 
+
 .table2 tr:nth-child(even) {
   background-color: var(--gris-oscuro);
 }
-
 .oferta1 {
   font-size: 22px;
   color: var(--blanco);

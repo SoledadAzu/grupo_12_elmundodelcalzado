@@ -16,6 +16,33 @@ const prodTemporada=productos.filter(e=>{
     return e.temporada ===true
    
 })
+const prodAdidas=productos.filter(e=>{
+    return e.marca ==="adidas"
+})
+const prodAdidasOriginal=productos.filter(e=>{
+    return e.marca ==="adidasoriginal"
+})
+const prodNike=productos.filter(e=>{
+    return e.marca ==="nike"
+})
+const prodTopper=productos.filter(e=>{
+    return e.marca ==="topper"
+})
+const prodPuma=productos.filter(e=>{
+    return e.marca ==="puma"
+})
+const prodAsics=productos.filter(e=>{
+    return e.marca ==="asics"
+})
+const prodFila=productos.filter(e=>{
+    return e.marca ==="fila"
+})
+const prodConverse=productos.filter(e=>{
+    return e.marca ==="converse"
+})
+const prodNewBalance=productos.filter(e=>{
+    return e.marca ==="newbalance"
+})
 
 const controller={
     product:(req,res)=>{
@@ -53,6 +80,33 @@ const controller={
     },
     ofertas: (req,res)=>{
         res.render("products/outlet",{ofertas,toThousand})
-    }
+    },
+    adidas:(req,res)=>{
+        res.render("products/adidas", {prodAdidas,toThousand})    
+    },
+    adidasoriginal:(req,res)=>{
+        res.render("products/adidasoriginal", {prodAdidasOriginal,toThousand})    
+    },
+    nike:(req,res)=>{
+        res.render("products/nike", {prodNike,toThousand})    
+    },
+    topper:(req,res)=>{
+        res.render("products/topper", {prodTopper,toThousand})    
+    },
+    puma:(req,res)=>{
+        res.render("products/puma", {prodPuma,toThousand})    
+    },
+    asics:(req,res)=>{
+        res.render("products/asics", {prodAsics,toThousand})    
+    },
+    converse:(req,res)=>{
+        res.render("products/converse", {prodConverse,toThousand})    
+    },
+    fila:(req,res)=>{
+        res.render("products/fila", {prodFila,toThousand})    
+    },
+    newbalance:(req,res)=>{
+        res.render("products/newbalance", {prodNewBalance,toThousand})    
+    },
 }
 module.exports=controller

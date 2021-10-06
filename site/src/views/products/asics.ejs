@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- HEAD -->
+  <%- include('../partials/head') %>
+  <!-- HEAD -->
+
+  <body>
+    <!-- HEADER -->
+    <%- include('../partials/header') %>
+    <!-- HEADER -->
+
+    <!-- MAIN -->
+    <main>
+      <img width="100%" src="/images/bannerlogomarcas/asics-banner.jpg" alt="">
+      <h1>PRODUCTOS DE MARCA: ASICS</h1>
+   
+      <section class="mercaderia">
+        <%  prodAsics.map(e=>{%>
+     
+           <article>
+            <a href="/products/productDetail/<%= e.id %>">
+               <div>
+                   <img src="/images/articulos/<%= e.imgP %>" alt="zapatilla-img1">
+               </div>  
+               <div>
+                <strong>
+                  <%= toThousand(e.price)%>
+                </strong>
+                <p>
+                    <%=e.marca%>
+                </p>
+                <h4>
+                    <%= e.title%>
+                </h4>
+               </div>
+            </a>   
+           </article>
+           <% }) %>
+        </section>
+    </main>
+    <!-- MAIN -->
+
+    <!-- FOOTER -->
+    <%- include('../partials/footer') %>
+    <!-- FOOTER -->
+  </body>
+</html>

@@ -32,9 +32,13 @@
 .products{
    display: flex;
    flex-direction: column;
+   
      
 }
-.padreIm{
+.productsMujer{
+    text-align: center;
+}
+.padreImg{
     width:100%;
     
 }
@@ -52,8 +56,9 @@
    
 }
 .padreHombre h5{
+    margin: 0 auto;
     width: 47%;
-    
+    text-align: center;
     color: white;
     font-size: 23px;
 }
@@ -77,7 +82,7 @@
 }
 .padreMujer h5{
     width: 47%;
-    
+    margin: 0 auto;
     color: white;
     font-size: 23px;
 }
@@ -221,20 +226,23 @@
         flex-wrap: wrap;
         justify-content:space-evenly;
     }
+    .productsHombre{
+        text-align: center;
+    }
     .padreHombre h5 {
-        
+        margin: 0 auto;
         color: white;
         font-size: 26px;
-        padding-left: 36px;
+       
     }
     .padreHombre{
         width: 49%;
     }
     .padreMujer h5 {
-        
+        margin: 0 auto;
         color: white;
         font-size: 26px;
-        padding-left: 36px;
+        
     }
     .padreMujer{
         width: 49%;

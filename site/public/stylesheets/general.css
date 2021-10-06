@@ -34,3 +34,6 @@ a{
     justify-content: space-around;
     flex-wrap: nowrap;
 }
+.table tr:nth-child(even) {
+    background-color: var(--rojo-claro);
+  }
