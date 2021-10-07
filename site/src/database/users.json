@@ -8,9 +8,16 @@
     },
     {
         "id":2,
-        "Nombre":"ramiro",
-        "Apellido":"rodriguez",
-        "Email":"ramiro@gmail.com",
-        "Contraseña":"a1234567"
+        "Nombre":"lucas",
+        "Apellido":"altamirano",
+        "Email":"lucas@gmail.com",
+        "Contraseña":"b1234567"
+    },
+    {
+        "id":3,
+        "Nombre":"mateo",
+        "Apellido":"lopez",
+        "Email":"mateo@gmail.com",
+        "Contraseña":"c1234567"
     }
 ]

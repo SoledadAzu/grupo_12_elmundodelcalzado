@@ -1,8 +1,34 @@
 const express = require('express');
 const router = express.Router();
 const {login,register} = require('../controllers/userController')
+const fs = require("fs")
+const path = require("path")
 
+//login user
 router.get('/login',login)
-router.get('/register',register)
 
+//create user
+router.get('/register',register)
+router.post('/register',(req, res)=>{
+  const ruta = path.join(__dirname,"..","data","user.json")
+  const usuariosRegistrados = fs.readFileSync(ruta,"utf-8")
+  let usuarios
+  if (usuariosRegistrados === ""){
+      usuarios = []
+
+  }else {
+      usuarios = JSON.parse(usuariosRegistrados)
+  }
+const usuario={
+nombre: req.body.nombre,
+apellido: req.body.apellido,
+email: req.body.email,
+password: req.body.password,
+}
+usuarios.push(usuario)
+fs.writeFileSync(ruta, JSON.stringify(usuarios, null, 3))
+res.redirect("/users/register")
+})
 module.exports = router
+
+

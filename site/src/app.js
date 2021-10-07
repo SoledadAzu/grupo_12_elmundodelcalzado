@@ -5,12 +5,13 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride =  require('method-override');
 
+
 /***********************REQUERIMIENTOS DE LOS ARCHIVO DE LAS RUTAS PRINCIPALES**************************/
 const indexRouter = require('./routes/main');
 const userRouter = require('./routes/user');
 const productRouter = require('./routes/products');
-const adminRouter = require('./routes/admin')
-const informacionRotuer = require('./routes/extras/information')
+const adminRouter = require('./routes/admin');
+const informacionRotuer = require('./routes/extras/information');
 
 /*****************************REQUERIMIENTOS DE LOS ARCHIVOS EN EXTRAS******************************** */
 
@@ -27,6 +28,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname,'..','public'))); //public estatico
 app.use(methodOverride('_method'));
+
 
 /******************* MUESTRA DE LAS RUTAS********************** */
 app.use('/',indexRouter);
