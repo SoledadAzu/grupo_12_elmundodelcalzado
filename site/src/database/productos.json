@@ -115,7 +115,7 @@
       "Zapatillas_ZX_2K_Florine_Blanco_FW0089_01_standard.jpg",
       "Zapatillas_ZX_2K_Florine_Negro_FW0088_01_standard.jpg"
     ],
-    "marca":"adidas",
+    "marca": "adidas",
     "genero": "mujer",
     "outlet": false,
     "temporada": true,
@@ -155,7 +155,7 @@
       "Zapatillas_Superstar_Blanco_FW2526_01_standard.jpg",
       "Zapatillas_Superstar_Blanco_FW2502_01_standard.jpg"
     ],
-    "marca":"adidasoriginal",
+    "marca": "adidasoriginal",
     "genero": "mujer  ",
     "outlet": true,
     "temporada": "true",
@@ -196,7 +196,7 @@
       "Zapatillas_adidas_Sleek_Super_Negro_EG7881_01_standard.jpg",
       "Zapatillas_adidas_Sleek_Super_Rosa_EG6771_01_standard.jpg"
     ],
-    "marca":"adidasoriginal",
+    "marca": "adidasoriginal",
     "genero": "mujer ",
     "outlet": false,
     "temporada": "false",
@@ -238,7 +238,7 @@
       "Zapatillas_SL_Andridge_Blanco_EG6846_01_standard.jpg",
       "Zapatillas_SL_Andridge_Blanco_FX8105_01_standard.png"
     ],
-    "marca":"adidasoriginal",
+    "marca": "adidasoriginal",
     "genero": "mujer",
     "outlet": false,
     "temporada": true,
@@ -1203,7 +1203,7 @@
       "zapatillaBusenitz3.jpg",
       "zapatillaBusenitz4.jpg"
     ],
-    "marca":"adidasoriginal",
+    "marca": "adidasoriginal",
     "genero": "hombre",
     "outlet": true,
     "temporada": false,
@@ -1242,7 +1242,7 @@
       "zapatillaMarathon3.jpg",
       "zapatillaMarathon4.jpg"
     ],
-    "marca":"adidasoriginal",
+    "marca": "adidasoriginal",
     "genero": "hombre",
     "outlet": true,
     "temporada": false,
@@ -2084,5 +2084,33 @@
     "genero": "hombre",
     "outlet": true,
     "temporada": false
+  },
+  {
+    "title": "new balance",
+    "price": "1500",
+    "colores": [
+      "rojo",
+      "verde",
+      "amarillo"
+    ],
+    "detalle": [
+      "cuero",
+      "zuela",
+      "cordones",
+      "capellada"
+    ],
+    "genero": "hombre",
+    "temporada": "true",
+    "outlet": "false",
+    "marca": "newbalance",
+    "talles": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44"
+    ],
+    "description": "la mejor zapa",
+    "id": 55
   }
 ]
