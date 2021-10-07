@@ -67,8 +67,10 @@ const controller={
     general: (req, res) => {
 		const search = req.query.keywords.trim()
 		if(search !==''){
-			const result = productos.filter(e=> e.title.toLowerCase().includes(search.toLowerCase()))
-            	res.render('products/productosGeneral',{result,search,toThousand})
+			const titulo = productos.filter(e=> e.title.toLowerCase().includes(search.toLowerCase()))
+			const marca = productos.filter(e=> e.marca.toLowerCase().includes(search.toLowerCase()))
+			const genero = productos.filter(e=> e.genero.toLowerCase().includes(search.toLowerCase()))
+            	res.render('products/productosGeneral',{titulo,marca,genero,search,toThousand})
 		}else{
 			res.redirect('/')
 		}
