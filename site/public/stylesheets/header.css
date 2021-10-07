@@ -1,3 +1,10 @@
+.admin_prod{
+    padding-top: 20%;
+}
+.headerFijo{
+    position: fixed;
+    width: 100%;
+}
 header{
     display: flex;
     justify-content: space-between;
@@ -124,6 +131,9 @@ header{
 }
 
 @media (min-width:769px){
+    .admin_prod{
+        padding-top: 12%;
+    }
     .logo{
         width: 200px;
         margin-right:-30px ;
@@ -183,6 +193,9 @@ header{
     
 }
 @media (min-width:1024px){
+    .admin_prod{
+        padding-top: 5%;
+    }
     header{
         flex-direction: column;
     }

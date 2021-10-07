@@ -28,9 +28,6 @@ a{
     text-decoration: none;
     
 }
-.contenedorVideo{
-    display:flex;
-    background: var(--rojo);
-    justify-content: space-around;
-    flex-wrap: nowrap;
+.table tr:nth-child(even) {
+    background-color: var(--rojo-claro);
 }

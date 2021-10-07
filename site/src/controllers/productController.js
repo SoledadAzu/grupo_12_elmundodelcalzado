@@ -1,5 +1,13 @@
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../database/productSeleccionado.json');
+
+let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 const oferta = require('../database/productOferta.json')
 const productos = require('../database/productos.json')
+
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const ofertas=productos.filter(e=>{
     return e.outlet===true
@@ -16,6 +24,33 @@ const prodTemporada=productos.filter(e=>{
     return e.temporada ===true
    
 })
+const prodAdidas=productos.filter(e=>{
+    return e.marca ==="adidas"
+})
+const prodAdidasOriginal=productos.filter(e=>{
+    return e.marca ==="adidasoriginal"
+})
+const prodNike=productos.filter(e=>{
+    return e.marca ==="nike"
+})
+const prodTopper=productos.filter(e=>{
+    return e.marca ==="topper"
+})
+const prodPuma=productos.filter(e=>{
+    return e.marca ==="puma"
+})
+const prodAsics=productos.filter(e=>{
+    return e.marca ==="asics"
+})
+const prodFila=productos.filter(e=>{
+    return e.marca ==="fila"
+})
+const prodConverse=productos.filter(e=>{
+    return e.marca ==="converse"
+})
+const prodNewBalance=productos.filter(e=>{
+    return e.marca ==="newbalance"
+})
 
 const controller={
     product:(req,res)=>{
@@ -28,11 +63,14 @@ const controller={
     carrito:(req,res)=>{
         res.render('products/carritoDeCompras',{ofertas,oferta,toThousand})
     },
+    
     general: (req, res) => {
 		const search = req.query.keywords.trim()
 		if(search !==''){
-			const result = productos.filter(e=> e.title.toLowerCase().includes(search.toLowerCase()))
-            	res.render('products/productosGeneral',{result,search})
+			const titulo = productos.filter(e=> e.title.toLowerCase().includes(search.toLowerCase()))
+			const marca = productos.filter(e=> e.marca.toLowerCase().includes(search.toLowerCase()))
+			const genero = productos.filter(e=> e.genero.toLowerCase().includes(search.toLowerCase()))
+            	res.render('products/productosGeneral',{titulo,marca,genero,search,toThousand})
 		}else{
 			res.redirect('/')
 		}
@@ -53,6 +91,33 @@ const controller={
     },
     ofertas: (req,res)=>{
         res.render("products/outlet",{ofertas,toThousand})
-    }
+    },
+    adidas:(req,res)=>{
+        res.render("products/adidas", {prodAdidas,toThousand})    
+    },
+    adidasoriginal:(req,res)=>{
+        res.render("products/adidasoriginal", {prodAdidasOriginal,toThousand})    
+    },
+    nike:(req,res)=>{
+        res.render("products/nike", {prodNike,toThousand})    
+    },
+    topper:(req,res)=>{
+        res.render("products/topper", {prodTopper,toThousand})    
+    },
+    puma:(req,res)=>{
+        res.render("products/puma", {prodPuma,toThousand})    
+    },
+    asics:(req,res)=>{
+        res.render("products/asics", {prodAsics,toThousand})    
+    },
+    converse:(req,res)=>{
+        res.render("products/converse", {prodConverse,toThousand})    
+    },
+    fila:(req,res)=>{
+        res.render("products/fila", {prodFila,toThousand})    
+    },
+    newbalance:(req,res)=>{
+        res.render("products/newbalance", {prodNewBalance,toThousand})    
+    },
 }
 module.exports=controller

@@ -4,13 +4,15 @@
         "Nombre":"ramiro",
         "Apellido":"rodriguez",
         "Email":"ramiro@gmail.com",
-        "Contraseña":"a1234567"
+        "Contraseña":"a1234567",
+        "permiso":"administrador"
     },
     {
         "id":2,
         "Nombre":"ramiro",
         "Apellido":"rodriguez",
         "Email":"ramiro@gmail.com",
-        "Contraseña":"a1234567"
+        "Contraseña":"a1234567",
+        "permiso":"usuario"
     }
 ]

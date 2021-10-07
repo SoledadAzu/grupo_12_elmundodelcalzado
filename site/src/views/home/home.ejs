@@ -2,171 +2,217 @@
 <html lang="en">
 
 <!-- HEAD -->
-<%- include('../partials/head') %> 
-<!-- HEAD -->
+<%- include('../partials/head') %>
+    <!-- HEAD -->
 
-<body>
-    
-    <!-- HEADER -->
-    <%- include('../partials/header') %> 
-    <!-- HEADER -->
+    <body>
 
-
-     <!--MAIN-->
-
-     <main class="home"> 
-
-       
-        <section class="banner">
-            <img class="banner1" src="/images/wireframe/movil.png"alt="banner" />
-            <img class="banner2" src="/images/wireframe/banner.png"alt="banner" />
-        </section>
-
-      <!-- PUBLICIDAD -->
-      <section class="products">
-           
-
-        <article class="padreHombre">
-             <div class="productsHombre">
-               <img class="padreImg" src="/images/wireframe/hombre.png" alt="hombre"/>
-         
-             </div> 
-             <h5>HOMBRE</h5>
-         </article>
-     
-         <article class="padreMujer" >
-
-             <div class="productsMujer">
-                <img class="padreImg" src="/images/wireframe/mujer.png" alt="mujer">
- 
-             </div>
-             <h5>MUJER</h5>
-         </article>
-
-          <article class="of">
-           <div class="oferta">
-         <img class="of-img" src="/images/wireframe/ofertas.png" alt="of">
-           </div> 
-         </article>
-        </section>
-
-      <!-- PUBLICIDAD -->
-   
-    <section>
-    <article class="loMasVendido" >
-        <h1>LO MÁS VENDIDO</h1>
-    </article>
-    </section>
-    
-    
-    <section class="zapatillas">
-     <!-- zapatillas -->
-     <% let contador=0 %> 
-     <%  zapatillas.map(e=>{%>
-       <% contador++ %> 
-        <%if(contador<=8){%>
-       <article class="zapatilla-img">
-           <a href="/products/productDetail/<%= e.id %> ">
-           <div>
-               <img class="zapatilla-img1" src="/images/articulos/<%= e.imgP %> " alt="zapatilla-img1">
-           </div>  
-           <div class="ofertasZapatillaPrecio">
-               <h4>$<%=toThousand(e.price) %> </h4>
-               <p><%= e.marca %>  </p>
-               <strong><%= e.title%></strong>
-           </div>
-       </a> 
-       </article>
-       <% } %>
-       <% }) %> 
-
-     <!-- zapatillas -->
-    </section>
-        <section>
-            <article class="lanzamiento" >
-                <h1>LANZAMIENTO</h1>
-            </article>
-        </section>
+        <!-- HEADER -->
+        <%- include('../partials/header') %>
+            <!-- HEADER -->
 
 
-   
-        <section class="zapatillas">
-        <!-- lanzamiento -->
-        <% let contadorL=0 %>
-        <%  lanzamiento.map(e=>{%>
-            <% contadorL++ %> 
-            <%if(contadorL<=8){%>
-       
-              <article class="zapatilla-img">
-                   <a href="/products/productDetail/<%=e.id %> ">
-                   <div>
-                       <img class="zapatilla-img1" src="/images/articulos/<%= e.imgP %> " alt="zapatilla-img1">
-                   </div>  
-                   <div class="ofertasZapatillaPrecio">
-                      
-                      <h4>$<%=toThousand(e.price) %> </h4>
-                       <p><%= e.marca %>  </p>
-                       <strong><%= e.title %> </strong>
-                   </div> 
-               
-                </a>
-               </article>
-           
-       <% } %>    
-    <% }) %> 
-          
-        <!-- lanzamiento -->
-       
-       </section>
-        <!--marcas-->
-        <section class="marcass">
-            <article class="CompraPorMarca" >
-                <h1>COMPRA POR MARCA</h1>
-            </article>
-        </section>
-        <!-- marcasZapatillas -->
-        <section class="contenedorMarcas">
-            <article class="marcasImgIgnorar ">
-                <div>
-                    <img class="marcas" src="/images/wireframe/LogosMasrcas/brand-adidas.png" alt="logodemarcas">
-                </div>  
-            </article>
-            <article class="marcasImgIgnorar">
-                <div>
-                    <img class="marcas" src="/images/wireframe/LogosMasrcas/nike_sport.png" alt="logodemarcas">
-                </div>  
-            </article>
-            <article class="marcasImgIgnorar">
-                <div>
-                    <img class="marcas" src="/images/wireframe/LogosMasrcas/puma.png" alt="logodemarcas">
-                </div>  
-            </article>
-            <!--marcasTab-->
-            <article class="marcasImgIgnorarTab">
-                <div>
-                    <img class="marcas" src="/images/wireframe/LogosMasrcas/Slice 1.png" alt="logodemarcas">
-                </div>  
-            </article>
-            <!--marcasPC--> 
-            <article class="marcasImgIgnorarPC">
-                <div>
-                    <img class="marcas" src="/images/wireframe/LogosMasrcas/Slice 1.png" alt="logodemarcas">
-                </div>  
-            </article>
-            
-            <article class="botonVerMas">
-                <button>Ver más ></button>
-            </article>
-            </section>
-        <!-- marcasZapatillas -->
+            <!--MAIN-->
+
+            <main class="home">
 
 
-    </main>
-   
-    <!--MAIN-->
- 
-    <!-- FOOTER -->
-        <%- include('../partials/footer') %> 
-    <!-- FOOTER -->
-</body>
+                <section class="banner">
+                    <img class="banner1" src="/images/wireframe/movil.png" alt="banner" />
+                    <img class="banner2" src="/images/wireframe/banner.png" alt="banner" />
+                </section>
+
+                <!-- PUBLICIDAD -->
+                <section class="products">
+
+                    <a class="padreHombre" href="/products/hombre">
+                        <article class="productsHombre">
+                            <div >
+                                <img class="padreImg" src="/images/wireframe/hombre.png" alt="hombre" />
+
+                            </div>
+                            <h5>HOMBRE</h5>
+                        </article>
+                    </a>
+
+                    <a class="padreMujer" href="/products/mujer">
+                        <article class="productsMujer">
+
+                            <div >
+                                <img class="padreImg" src="/images/wireframe/mujer.png" alt="mujer">
+
+                            </div>
+                            <h5>MUJER</h5>
+                        </article>
+                    </a>
+                    <a class="of" href="/products/outlet">
+
+                        <article>
+                            <div class="oferta">
+                                <img class="of-img" src="/images/wireframe/ofertas.png" alt="of">
+                            </div>
+                        </article>
+                    </a>
+                </section>
+
+                <!-- PUBLICIDAD -->
+
+                <section>
+                    <article class="loMasVendido">
+                        <h1>LO MÁS VENDIDO</h1>
+                    </article>
+                </section>
+
+
+                <section class="zapatillas">
+                    <!-- zapatillas -->
+                    <% let contador=0 %>
+                        <% zapatillas.map(e=>{%>
+                            <% contador++ %>
+                                <%if(contador<=8){%>
+                                    <article class="zapatilla-img">
+                                        <a href="/products/productDetail/<%= e.id %> ">
+                                            <div>
+                                                <img class="zapatilla-img1" src="/images/articulos/<%= e.imgP %> "
+                                                    alt="zapatilla-img1">
+                                            </div>
+                                            <div class="ofertasZapatillaPrecio">
+                                                <h4>$<%=toThousand(e.price) %>
+                                                </h4>
+                                                <p>
+                                                    <%= e.marca %>
+                                                </p>
+                                                <strong>
+                                                    <%= e.title%>
+                                                </strong>
+                                            </div>
+                                        </a>
+                                    </article>
+                                    <% } %>
+                                        <% }) %>
+
+                                            <!-- zapatillas -->
+                </section>
+                <section>
+                    <article class="lanzamiento">
+                        <h1>LANZAMIENTO</h1>
+                    </article>
+                </section>
+
+
+
+                <section class="zapatillas">
+                    <!-- lanzamiento -->
+                    <% let contadorL=0 %>
+                        <% lanzamiento.map(e=>{%>
+                            <% contadorL++ %>
+                                <%if(contadorL<=8){%>
+
+                                    <article class="zapatilla-img">
+                                        <a href="/products/productDetail/<%=e.id %> ">
+                                            <div>
+                                                <img class="zapatilla-img1" src="/images/articulos/<%= e.imgP %> "
+                                                    alt="zapatilla-img1">
+                                            </div>
+                                            <div class="ofertasZapatillaPrecio">
+
+                                                <h4>$<%=toThousand(e.price) %>
+                                                </h4>
+                                                <p>
+                                                    <%= e.marca %>
+                                                </p>
+                                                <strong>
+                                                    <%= e.title %>
+                                                </strong>
+                                            </div>
+
+                                        </a>
+                                    </article>
+
+                                    <% } %>
+                                        <% }) %>
+
+                                            <!-- lanzamiento -->
+
+                </section>
+                <!--marcas-->
+                <section class="marcass">
+                    <article class="CompraPorMarca">
+                        <h1>COMPRA POR MARCA</h1>
+                    </article>
+                </section>
+                <!-- marcasZapatillas -->
+                <section class="contenedorMarcas">
+                    <article class="marcas_art">
+                        <a href="/products/adidas">
+                        <div>
+                            <img class="marcas" src="/images/logosmarcas/adidas-performance.png"
+                                alt="logodemarcas">
+                        </div></a>
+                    </article>
+                <article class="marcas_art">
+                   <a href="/products/asics">
+                        <div>
+                            <img class="marcas" src="/images/logosmarcas/asics.png" alt="logodemarcas">
+                        </div>
+                    </article></a>
+                    <article  class="marcas_art">
+                        <a href="products/nike">
+                        <div>
+                           <img cass="marcas" src="/images/logosmarcas/nike_sport.png" alt="logodemarcas">
+                        </div></a>
+                    </article>
+                    <!--marcasPC-->
+                    <article  class="marcas_art marcas_ocultas">
+                        <a href="/products/fila">
+                        <div>
+                            <img class="marcas" src="/images/logosmarcas/fila.png" alt="logodemarcas">
+                        </div></a>
+                    </article >
+                    <article  class="marcas_art marcas_ocultas">
+                        <a href="/products/adidasoriginal">
+                        <div>
+                            <img class="marcas" src="/images/logosmarcas/adidas.png" alt="logodemarcas">
+                        </div></a>
+                    </article >
+                    <article  class="marcas_art marcas_ocultas">
+                        <a href="/products/converse">
+                        <div >
+                            <img class="marcas" src="/images/logosmarcas/logoconverse_new.png" alt="logodemarcas">
+                        </div></a>
+                    </article>
+                 <article  class="marcas_art marcas_ocultas">
+                            <a href="/products/puma">
+                        <div>
+                            <img class="marcas" src="/images/logosmarcas/puma.png" alt="logodemarcas">
+                        </div></a>
+                    </article>
+                    
+                    <article  class="marcas_art marcas_ocultas">
+                        <a href="/products/topper">
+                        <div>
+                            <img class="marcas" src="/images/logosmarcas/topper.png" alt="logodemarcas">
+                        </div></a>
+                    </article>
+                    <article  class="marcas_art marcas_ocultas">
+                        <a href="/products/newbalance">
+                        <div>
+                            <img class="marcas" src="/images/logosmarcas/new-balance.png" alt="logodemarcas">
+                        </div></a>
+                    </article>
+
+                    
+                </section>
+                <!-- marcasZapatillas -->
+
+
+            </main>
+
+            <!--MAIN-->
+
+            <!-- FOOTER -->
+            <%- include('../partials/footer') %>
+                <!-- FOOTER -->
+    </body>
+
 </html>

@@ -23,8 +23,9 @@ const controller={
     
     // Create -  Method to store
 	store: (req, res) => {
+	
 		const formCreate = req.body
-
+		console.log(formCreate)
 		formCreate.id = products.length + 1
 
 		products.push(formCreate);

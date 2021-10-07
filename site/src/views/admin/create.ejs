@@ -30,22 +30,42 @@
 									<input type="text" id="price" name="price" placeholder="Ej: 5678"
 										class="form-input">
 								</div>
-								<div class="labelForm">
-									<label for="marca" class="">Marca:</label>
-									<input type="text" id="marca" name="marca" placeholder="Marca del producto"
-										class="form-input">
+								<section class="seccion">
+								<div class="labelForm width">
+									<label for="colores" class="">colores:</label>
+									<input type="text" id="colores" name="colores" placeholder="Color primario"
+										class="form-input1">
+										<input type="text" id="colores" name="colores" placeholder="Color secundario"
+										class="form-input1">
+										<input type="text" id="colores" name="colores" placeholder="Color terciario"
+										class="form-input1">
 								</div>
-								<div class="labelForm">
-									<label for="genero" class="l">Genero:</label>
-									<input type="text" id="genero" name="genero" placeholder="Ingrese el Genero"
-										class="form-input">
+								<div class="labelForm width">
+									<label for="genero" class="l">Detalles:</label>
+									<input type="text" id="detalle" name="detalle" placeholder="Ingrese su detalle"
+										class="form-input1">
+									<input type="text" id="detalle" name="detalle" placeholder="Ingrese su detalle"
+										class="form-input1">
+									<input type="text" id="detalle" name="detalle" placeholder="Ingrese su detalle"
+										class="form-input1">
+									<input type="text" id="detalle" name="detalle" placeholder="Ingrese su detalle"
+										class="form-input1">
 								</div>
+							</section>
 								
 								<div class="selection">
 									<div>
+										<label for="genero" class="form-label">Genero</label>
+										<select name="genero" id="genero" class="form-input">
+											<option value="" hidden selected>Elegí</option>
+											<option value="hombre">Hombre</option>
+											<option value="mujer">Mujer</option>
+										</select>
+									</div>
+									<div>
 									<label for="temporada" class="form-label">Temporada</label>
 									<select name="temporada" id="temporada" class="form-input">
-										<option value="">Elegí</option>
+										<option value="" hidden selected>Elegí</option>
 										<option value="true">True</option>
 										<option value="false">False</option>
 									</select>
@@ -53,12 +73,74 @@
 								<div>
 									<label for="category" class="form-label">Outlet</label>
 									<select name="outlet" id="outlet" class="form-input">
-										<option value="">Elegí</option>
+										<option value="" hidden selected>Elegí</option>
 										<option value="true">True</option>
 										<option value="false">False</option>
 									</select>
 								</div>
+								<div>
+									<label for="marca" class="form-label">Marca</label>
+									<select name="marca" id="marca" class="form-input">
+										<option value="" hidden selected>Marca</option>
+										<option value="adiddas">Adiddas</option>
+										<option value="nike">Nike</option>
+										<option value="asics">Asics</option>
+										<option value="fila">Fila</option>
+										<option value="topper">Topper</option>
+										<option value="converse">Converse</option>
+										<option value="newbalance">New Balance</option>
+										<option value="puma">Puma</option>
+										<option value="adidasoriginal">Adidas Original</option>
+									</select>
+							    </div>
 								</div>
+								<div>
+									<label for="talles">Talles:</label>
+									<div class="container-talles">
+										<div>
+											<input type="checkbox" name="talles" id="35" value="35">
+											<label for="35">35</label>
+										</div>
+										<div>
+											<input type="checkbox" name="talles" id="36" value="36">
+											<label for="36">36</label>
+										</div>
+										<div>
+											<input type="checkbox" name="talles" id="37" value="37">
+											<label for="37">37</label>
+										</div>
+										<div>
+											<input type="checkbox" name="talles" id="38" value="38" >
+											<label for="38">38</label>
+										</div>
+										<div>
+											<input type="checkbox" name="talles" id="39" value="39">
+											<label for="39">39</label>
+										</div>
+										<div>
+											<input type="checkbox" name="talles" id="40" value="40">
+											<label for="40">40</label>
+										</div>
+										<div>
+											<input type="checkbox" name="talles" id="41" value="41">
+											<label for="41">41</label>
+										</div>
+										<div>
+											<input type="checkbox" name="talles" id="42" value="42">
+											<label for="42">42</label>
+										</div>
+										<div>
+											<input type="checkbox" name="talles" id="43" value="43">
+											<label for="43">43</label>
+										</div>
+										<div>
+											<input type="checkbox" name="talles" id="44" value="44">
+											<label for="44">44</label>
+										</div>
+									
+								</div>
+							</div>
+
 								<div class="labelForm">
 									<label for="description" class="form-label">Descripción:</label>
 									<textarea name="description" id="description" class="form-input"></textarea>
