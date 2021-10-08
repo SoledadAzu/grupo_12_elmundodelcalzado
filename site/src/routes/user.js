@@ -10,7 +10,7 @@ router.get('/login',login)
 //create user
 router.get('/register',register)
 router.post("/register",(req, res)=>{
-    const ruta =path.join(__dirname,"..", "data","users.json")
+    const ruta =path.join(__dirname,"..", "database","users.json")
     const usuariosRegistrados =fs.readFileSync(ruta,"utf-8")
     let usuarios
 
@@ -21,13 +21,16 @@ router.post("/register",(req, res)=>{
     }
 
     const usuario={
+    
         nombre:req.body.nombre,
         apellido:req.body.apellido,
         email:req.body.email,
         password:req.body.password
     }
      usuarios.push(usuario)
-     fs.writeFyleSync(ruta, JSON.readFileSync(usuarios, null,4))
-     res.redirect("users/register")
+     fs.writeFileSync(ruta, JSON.stringify(usuarios, null,4))
+     res.redirect("register")
 })
 
+ 
+module.exports=router

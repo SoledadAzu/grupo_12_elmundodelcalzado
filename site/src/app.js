@@ -13,13 +13,6 @@ const productRouter = require('./routes/products');
 const adminRouter = require('./routes/admin');
 const informacionRotuer = require('./routes/extras/information');
 
-/*****************************REQUERIMIENTOS DE LOS ARCHIVOS EN EXTRAS******************************** */
-const comprarRouter= require('./routes/extras/comprar')
-const defensaRouter= require('./routes/extras/defensaAlConsumidor')
-const envioRouter= require('./routes/extras/envios')
-const garantiaRouter= require('./routes/extras/garantias')
-const privacidadRouter= require('./routes/extras/privacidad');
-const userRegistered = require('./Middlewares/userRegistered');
 
 const app = express();
 

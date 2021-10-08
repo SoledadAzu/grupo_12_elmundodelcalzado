@@ -18,7 +18,7 @@
     <div class="register1">
         <h1>REGISTRATE</h1>
         <hr>
-        <form action="">
+        <form action="/user/register" method="POST">
 
             <div class="nombre">
                 <label for="nombre">Nombre <strong class="obligatorio">*</strong></label>
@@ -45,10 +45,12 @@
                 <button  type="create" placeholder="CREAR">CREAR</button>
             </div>
             <p>Si tiene una cuenta, inicie sesión con su dirección de correo electronico</p>
-            <div class="btton" >
-                <button  type="login" placeholder="INICIAR SESIÓN">INICIAR SESIÓN</button>
-            </div>
         </form>
+        
+            <div class="btton" >
+                <a href="/user/login"><button  type="login" placeholder="INICIAR SESIÓN">INICIAR SESIÓN</button></a>
+            </div>
+        
     </div>
 </main>
 <!-- MAIN -->
