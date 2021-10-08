@@ -8,5 +8,6 @@ const controller ={
     register:(req,res)=>{
         res.render('users/registro',{registro,btnregistro})
     }
+    
 }
 module.exports=controller

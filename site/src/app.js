@@ -15,7 +15,8 @@ const comprarRouter= require('./routes/extras/comprar')
 const defensaRouter= require('./routes/extras/defensaAlConsumidor')
 const envioRouter= require('./routes/extras/envios')
 const garantiaRouter= require('./routes/extras/garantias')
-const privacidadRouter= require('./routes/extras/privacidad')
+const privacidadRouter= require('./routes/extras/privacidad');
+const userRegistered = require('./Middlewares/userRegistered');
 
 const app = express();
 
@@ -28,7 +29,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname,'..','public'))); //public estatico
-
+/* app.user(userRegistered); */
 
 /******************* MUESTRA DE LAS RUTAS********************** */
 app.use('/', indexRouter);
