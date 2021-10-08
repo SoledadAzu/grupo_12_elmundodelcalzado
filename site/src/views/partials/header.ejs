@@ -1,12 +1,12 @@
 <header>
     <div class="datos">
-        <div >
+        <div>
             <span><i class="far fa-envelope"></i> CONTACTENOS</span>
             <span><i class="fas fa-phone"></i> 0800 222 MUNDO(68636)</span>
-            
+
         </div>
         <div>
-            <span><i class="fab fa-whatsapp"></i>  +54123456789</span>
+            <span><i class="fab fa-whatsapp"></i> +54123456789</span>
             <span><i class="fas fa-map-marker-alt"></i> SUCURSALES</span>
         </div>
     </div>
@@ -17,26 +17,28 @@
                 <i class="fas fa-bars"></i>
             </label>
             <ul>
-                <li><a href="/login">Login</a></li>
-                <li><a href="/register">Register</a></li>
-                <li><a href="#">Hombre</a></li>
-                <li><a href="#">Mujer</a></li>
-                <li><a href="#">temporada</a></li>
-                <li><a href="#">Outlet</a></li>
+                <li><a href="/user/login">Login</a></li>
+                <li><a href="/user/register">Register</a></li>
+                <li><a href="/products/hombre">Hombre</a></li>
+                <li><a href="/products/mujer">Mujer</a></li>
+                <li><a href="/products/temporada">temporada</a></li>
+                <li><a href="/products/outlet">Outlet</a></li>
             </ul>
         </nav>
-
+        
             <div class="logo">
-                <img src="/images/logo.png" alt="logo">
+                <a href="/"> <img src="/images/logo.png" alt="logo"></a>
+            
             </div>
-            <form action="" class="buscar">
-                <input  type="text" placeholder="¿Que estas buscando? " > <i class="fas fa-search"> </i>
+        
+            <form action="/products/general" class="buscar" method="GET">
+                <input  type="text" name="keywords" placeholder="¿Que estas buscando? " > <i class="fas fa-search"> </i>
             </form>
         <div class="iconos">
             <div class="usuario">
                 <i class="fas fa-user"></i>
-                <a href="/login">Ingresa</a>
-                <a href="/register">o Registrate</a>
+                <a href="/user/login">Ingresa</a>
+                <a href="/user/register">o Registrate</a>
             </div>
             <div class="iconos-search">
                 <div class="search">
@@ -45,21 +47,22 @@
                         <i class="fas fa-search ocultar"></i>
                     </label>
                     <div class="busqueda-input">
-                        <input type="search" placeholder="ingresa tu busqueda">
-                    </div>   
+                        <input type="search" name="keywords" placeholder="ingresa tu busqueda">
+                    </div>
                 </div>
-                <a href="/carritoDeCompras" class="fas fa-shopping-cart"><span> Mi Compra</span></a>
+                <a href="/products/carritoDeCompras" class="fas fa-shopping-cart "><span>Mi Compra</span></a>
             </div>
         </div>
 
     </div>
     <nav class="menu-principal">
         <ul>
-            <li><a href="#">HOMBRES</a></li>
-            <li><a href="#">MUJER</a></li>
-            <li><a href="#">TEMPORADA</a></li>
-            <li><a href="#">OUTLET</a></li>
+            <li><a href="/products/hombre">HOMBRES</a></li>
+            <li><a href="/products/mujer">MUJER</a></li>
+            <li><a href="/products/temporada">TEMPORADA</a></li>
+            <li><a href="/products/outlet">OUTLET</a></li>
         </ul>
+        
     </nav>
 
 </header>

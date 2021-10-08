@@ -1,7 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const {login,register} = require('../controllers/userController')
+const fs = require("fs")
+const path = require("path")
 
+//login user
 router.get('/login',login)
 
 //create user
@@ -28,4 +31,3 @@ router.post("/register",(req, res)=>{
      res.redirect("users/register")
 })
 
-module.exports = router

@@ -2,196 +2,166 @@
 <html lang="en">
 
 <!-- HEAD -->
-<%- include('../partials/head') %> 
-<!-- HEAD -->
+<%- include('../partials/head') %>
+    <!-- HEAD -->
 
-<body>
+    <body>
 
-    <!-- HEADER -->
-    <%- include('../partials/header') %> 
-    <!-- HEADER -->
-    
+        <!-- HEADER -->
+        <%- include('../partials/header') %>
+            <!-- HEADER -->
 
-    <main class="detalleProducto">
-        <!-- ruta -->
-        <section class="ruta oculto">
-            <a href="/home">INICIO ></a>
-            <span class="ruta-span">Nombre del Producto</span>
-        </section>
 
-        <!-- banner del producto -->
-        <section class="bannerProducto">
-            <img src="/images/detalleProducto/bannerdetalleprod.png" alt="banner de una persona deportista corriendo">
-        </section>
+            <main class="detalleProducto">
+                <!-- ruta -->
+                <section class="ruta oculto">
+                    <a href="/">INICIO ></a>
+                    <span class="ruta-span">Nombre del Producto</span>
+                </section>
 
-        <!-- seccion de zapatillas -->
-        <section class="zapatillas1">
-            <article class="zapatillas1-articulos">
-                <div class="zapatilla-principal">
-                    <img src="/images/detalleProducto/zpatilla.jpg" alt="zapatilla adiddas">
-                </div>
-                <div class="zapatillas1-colores">
-                    <div class="zapatillas1-colors_eleccion">
-                        <img src="/images/detalleProducto/zapatilla-azul.jpg" alt="zapatilla azul">
-                    </div>
-                    <div class="zapatillas1-colors_eleccion">
-                        <img src="/images/detalleProducto/zapatilla-rosa.jpg" alt="zapatilla rosa">
-                    </div>
-                    <div class="zapatillas1-colors_eleccion">
-                        <img src="/images/detalleProducto/zapatilla-negro-marron.jpg" alt="zapatilla negra">
-                    </div>
-                    <div class="zapatillas1-colors_eleccion">
-                        <img src="/images/detalleProducto/zapatilla-azul.jpg" alt="zapatilla azul">
-                    </div>
-                </div>
-            </article>
-        </section>
-        <!-- talles del producto -->
-        <aside class="talles">
-            <div class="talles-descripcion">
-                <h3>Zapatillas Adiddas</h3>
-                <h4>NEGRO/GRIS/NEGRO</h4>
-                <h5>$8000</h5>
-            </div>
+                <!-- banner del producto -->
+                <section class="bannerProducto">
+                    <img src="/images/hombre/bannerdetalleprod.png" alt="banner de una persona deportista corriendo">
+                </section>
 
-            <form class="talles-datos">
-                <h3>TALLES</h3>
-                <div class="talles-datos-numero">
-                    <div>
-                        <input type="checkbox" name="34" id="talle34">
-                        <label for="talle34">34</label>
-                    </div>
+                <!-- seccion de zapatillas -->
 
-                    <div>
-                        <input type="checkbox" name="35" id="talle35">
-                        <label for="talle35">35</label>
-                    </div>
+                <section class="zapatillas1">
+                    <article class="zapatillas1-articulos">
 
-                    <div>
-                        <input type="checkbox" name="36" id="talle36">
-                        <label for="talle36">36</label>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" name="37" id="talle37">
-                        <label for="talle37">37</label>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" name="38" id="talle38">
-                        <label for="talle38">38</label>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" name="39" id="talle39">
-                        <label for="talle39">39</label>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" name="40" id="talle40">
-                        <label for="talle40">40</label>
-                    </div>
-                </div>
-                <input class="boton" type="submit" value="AGREGAR A CARRITO">
-
-            </form>
-        </aside>
-
-        <!-- seccion de descripciones sobre el producto -->
-        <section class="descripciones">
-            <h3>Descripcion</h3>
-            <div class="descripciones-texto">
-                <h4>ZAPATILLAS GALAXAR RUN</h4>
-                <h5>ZAPATILLAS DE RUNNING ESTABLES HECHAS CON MATERIALES RECICLADOS</h5>
-                <p>Cuando empezás a correr por primera vez, no se trata de ganar maratones. Se trata de sentirse bien
-                    para que los kilómetros se conviertan en algo que deseás con ansias. Las zapatillas adidas Galaxar
-                    Run fueron creadas pensando en los nuevos corredores. El exterior de malla sin costuras es cómodo
-                    para correr distancias largas y la mediasuela Bounce agrega amortiguación a tus pies. Este producto
-                    está hecho con Primegreen, una serie de materiales reciclados de alto desempeño..</p>
-            </div>
-            <h3>Detalles del producto</h3>
-            <nav class="descripciones-detalles">
-                <li>Horma clásica</li>
-                <li>Exterior de malla elástica sin costuras</li>
-                <li>Suela de caucho</li>
-                <li>Forro interno textil</li>
-            </nav>
-        </section>
-
-        <!-- seccion de ofertas sobre el producto -->
-        <section class="ofertas">
-            <h5>Tambien puede interesarte estas ofertas</h5>
-            <section class="ofertas-general">
-                <article class="ofertas-zapatillas">
-                    <a href="#">
-                        <div class="ofertas-zapatilla_img">
-                            <img src="/images/detalleProducto/topper.png" alt="zapatilla topper">
+                        <div class="zapatilla-principal">
+                            <img src="/images/articulos/<%=idProduct.imgP %>" alt="">
                         </div>
 
-                        <div class="ofertas-zapatilla-precio">
-                            <h5>$7.500</h5>
-                            <p>Zapatillas</p>
-                            <p>Topper</p>
-                            <p>String Pace Plus</p>
-                        </div>
-                    </a>
-                </article>
-                <article class="ofertas-zapatillas">
-                    <a href="#">
-                        <div class="ofertas-zapatilla_img">
-                            <img src="/images/detalleProducto/nike.png" alt="zapatilla nike">
+                        <div class="zapatillas1-colores">
+                            <% idProduct.img.map(e=>{ %>
+
+
+                                <div class="zapatillas1-colors_eleccion">
+                                    <img src="/images/articulos/<%= e %> " alt="<%= e.nombre %> ">
+                                </div>
+                                <% }) %>
+
                         </div>
 
-                        <div class="ofertas-zapatilla-precio">
-                            <h5>$10.000</h5>
-                            <p>Zapatillas</p>
-                            <p>Nike</p>
-                            <p>Air Max Excee</p>
-                        </div>
-                    </a>
-                </article>
-                <article class="ofertas-zapatillas">
-                    <a href="#">
-                        <div class="ofertas-zapatilla_img">
-                            <img src="/images/detalleProducto/fila.png" alt="zapatilla Fila">
-                        </div>
+                    </article>
+                </section>
 
-                        <div class="ofertas-zapatilla-precio">
-                            <h5>$8.938</h5>
-                            <p>Zapatillas</p>
-                            <p>Fila</p>
-                            <p>Fore Jogger</p>
-                        </div>
-                    </a>
-                </article>
-                <article class="ofertas-zapatillas oculto">
-                    <a href="#">
-                        <div class="ofertas-zapatilla_img">
-                            <img src="/images/detalleProducto/botinNike.png" alt="Botines Nike Verdes claro">
-                        </div>
+                <!-- talles del producto -->
 
-                        <div class="ofertas-zapatilla-precio">
-                            <h5>$15.000</h5>
-                            <p>Botines Nike</p>
-                            <p>Phantom Vision</p>
-                            <p>Elite DfFg</p>
-                        </div>
-                    </a>
-                </article>
-            </section>
+                <aside class="talles">
+                    <div class="talles-descripcion">
+                        <h3>
+                            <%= idProduct.title %>
+                        </h3>
+                        <h4>
+                            <% idProduct.colors.map(e=>{ %>
+                                <span>
+                                    <%= e %>
 
-        </section>
-        <section class="verMas">
-            <button>Ver Mas</button>
-        </section>
-    </main>
 
-<!-- FOOTER -->
-<%- include('../partials/footer') %> 
-<!-- FOOTER -->
+                                </span>
+                                <%}) %>
 
-    
-    
-</body>
+
+                        </h4>
+                        <h5>$<%= toThousand(idProduct.price) %>
+                        </h5>
+                    </div>
+
+                    <form class="talles-datos" action="/products/carritoDeCompras" method="GET">
+                        <h3>TALLES</h3>
+                        <div class="talles-datos-numero">
+                            <% idProduct.talles.map(e=>{ %>
+                                <div>
+                                    <input type="checkbox" name="<%= e %> " id="talle<%= e %>">
+                                    <label for="talle<%= e %>">
+                                        <%= e %>
+                                    </label>
+                                </div>
+                                <% }) %>
+
+
+                                    <input class="boton" type="submit" value="AGREGAR A CARRITO">
+
+                    </form>
+                </aside>
+
+                <!-- seccion de descripciones sobre el producto -->
+
+                <section class="descripciones">
+                    <h3>Descripcion</h3>
+                    <div class="descripciones-texto">
+                        <h4>
+                            <%=idProduct.nombre %>
+                        </h4>
+                        <h5>
+                            <%=idProduct.subtitle %>
+                        </h5>
+                        <p>
+                            <%=idProduct.description %>
+                        </p>
+                    </div>
+                    <h3>Detalles del producto</h3>
+                    <nav class="descripciones-detalles">
+                        <% idProduct.detalles.map(e=>{ %>
+                            <li>
+                                <%= e %>
+                            </li>
+                            <% }) %>
+
+
+
+                    </nav>
+                </section>
+
+                <!-- seccion de ofertas sobre el producto -->
+
+                <section class="ofertas">
+                    <h5>Tambien puede interesarte estas ofertas</h5>
+                    <section class="mercaderia">
+                        <% let contador=0 %>
+                            <% ofertas.map(e=>{ %>
+                                <% contador++ %>
+                                    <%if(contador <= 4){%>
+                                        <article >
+                                            <a href="/products/productDetail/<%= e.id %> ">
+                                                <div class="ofertas-zapatilla_img">
+                                                    <img src="/images/articulos/<%= e.imgP%>" alt="<%=e.title%>">
+                                                </div>
+
+                                                <div class="ofertas-zapatilla-precio">
+                                                    <strong>
+                                                        <%= toThousand(e.price)%>
+                                                    </strong>
+                                                    <p>
+                                                        <%=e.marca%>
+                                                    </p>
+                                                    <h4>
+                                                        <%= e.title%>
+                                                    </h4>
+
+                                                </div>
+                                            </a>
+                                        </article>
+                                        <%}%> 
+                                    <% }) %>
+
+
+                    </section>
+                </section>
+
+                <section class="verMas">
+                    <button>Ver Mas</button>
+                </section>
+            </main>
+
+            <!-- FOOTER -->
+            <%- include('../partials/footer') %>
+                <!-- FOOTER -->
+
+
+
+    </body>
 
 </html>
