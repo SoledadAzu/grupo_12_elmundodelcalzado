@@ -6,12 +6,10 @@
     "description": "Estas zapatillas adidas te acompañan con comodidad durante todo el día, cuando corrés en la mañana, en tus actividades de la tarde y en tus reuniones nocturnas. La mediasuela Lightmotion ofrece amortiguación liviana que notarás mientras pasan las horas. Este producto está hecho con Primeblue, un material reciclado de alto rendimiento creado en parte con Parley Ocean Plastic.",
     "price": 8999,
     "detalles": [
-      "Sistema de atado de cordones",
       "Amortiguación muy liviana",
       "Mediasuela Lightmotion",
       "Forro interno textil",
       "Suela sintética"
-      
     ],
     "colors": [
       "Vapour",
@@ -36,9 +34,9 @@
     ],
     "marca": "adidas",
     "genero": "mujer",
-    "outlet": true,
-    "temporada": false,
-    "vendidos": true
+    "outlet": "true",
+    "temporada": "false",
+    "vendidos": "true"
   },
   {
     "id": 2,
@@ -75,9 +73,9 @@
     ],
     "marca": "adidas",
     "genero": "mujer",
-    "outlet": true,
-    "temporada": false,
-    "vendidos": true
+    "outlet": "true",
+    "temporada": "false",
+    "vendidos": "true"
   },
   {
     "id": 3,
@@ -113,9 +111,9 @@
     ],
     "marca": "adidas",
     "genero": "mujer",
-    "outlet": false,
-    "temporada": true,
-    "vendidos": true
+    "outlet": "true",
+    "temporada": "false",
+    "vendidos": "true"
   },
   {
     "id": 4,
@@ -151,10 +149,10 @@
       "Zapatillas_Superstar_Blanco_FW2502_01_standard.jpg"
     ],
     "marca": "adidasoriginal",
-    "genero": "mujer  ",
-    "outlet": true,
+    "genero": "mujer",
+    "outlet": "true",
     "temporada": "true",
-    "vendidos": true
+    "vendidos": "true"
   },
   {
     "id": 5,
@@ -190,10 +188,10 @@
       "Zapatillas_adidas_Sleek_Super_Rosa_EG6771_01_standard.jpg"
     ],
     "marca": "adidasoriginal",
-    "genero": "mujer ",
-    "outlet": false,
+    "genero": "mujer",
+    "outlet": "false",
     "temporada": "false",
-    "vendidos": true
+    "vendidos": "true"
   },
   {
     "id": 6,
@@ -230,9 +228,9 @@
     ],
     "marca": "adidasoriginal",
     "genero": "mujer",
-    "outlet": false,
-    "temporada": true,
-    "vendidos": true
+    "outlet": "false",
+    "temporada": "true",
+    "vendidos": "true"
   },
   {
     "id": 7,
@@ -243,22 +241,15 @@
     "detalles": [
       " Mix de materiales Hi con tecnologia",
       "Sintetico y Mesh",
-      "Suela Caucho"
+      "Suela Caucho",
+      "Sistema de Cordones "
     ],
     "colors": [
       "pink",
       "black",
       "white"
     ],
-    "talles": [
-      "34",
-      "35",
-      "36",
-      "37",
-      "38",
-      "39",
-      "40"
-    ],
+    "talles": "checked",
     "imgP": "NI_AQ2730-008-1.jpg",
     "img": [
       "NI_AQ2730-011-1.jpg",
@@ -268,8 +259,8 @@
     ],
     "marca": "nike",
     "genero": "mujer",
-    "outlet": false,
-    "temporada": true
+    "outlet": "false",
+    "temporada": "true"
   },
   {
     "id": 8,
@@ -278,6 +269,7 @@
     "description": "Diseñamos las Nike React Infinity Run para ayudar a reducir lesiones y seguir corriendo. En uno de nuestros estudios independientes más grandes, estas zapatillas ayudaron a los participantes a correr mientras entrenaban para una media maratón.",
     "price": 31.999,
     "detalles": [
+      "Caña baja",
       "Mix de materiales low",
       "Malla y Sintético",
       "Suela de Goma"
@@ -301,8 +293,8 @@
     ],
     "marca": "nike",
     "genero": "mujer",
-    "outlet": false,
-    "temporada": true
+    "outlet": "false",
+    "temporada": "true"
   },
   {
     "id": 9,
@@ -313,7 +305,8 @@
     "detalles": [
       "Mix de materiales low",
       "Sintético",
-      "Suela de Goma"
+      "Suela de Goma",
+      "Amortiguación muy liviana"
     ],
     "colors": [
       "white/lilac",
@@ -338,8 +331,8 @@
     ],
     "marca": "nike",
     "genero": "mujer",
-    "outlet": false,
-    "temporada": true
+    "outlet": "false",
+    "temporada": "true"
   },
   {
     "id": 10,
@@ -375,17 +368,16 @@
     ],
     "marca": "puma",
     "genero": "mujer",
-    "outlet": false,
-    "temporada": true
+    "outlet": "false",
+    "temporada": "true"
   },
   {
     "id": 11,
     "title": "PUMA CRUISE RIDER",
-    "subtitle": "PARA UNA SENSACIÓN CÓMODA Y LEGERA",
+    "subtitle": "PARA UNA SENSACIÓN CÓMODA Y LiGERA",
     "description": "Inspiradas en la belleza de las famosas Silk Road, estas zapatillas incluyen combinaciones de colores que crean un look muy original. La entresuela IMEVA te brinda liviandad y comodidad para que tus pies sean felices.",
     "price": 13799,
     "detalles": [
-      "Caña baja",
       "Empeine de mesh y Nylon con revestimientos de ante",
       "Entresuela IMEVA",
       "Suela exterior de goma",
@@ -414,8 +406,8 @@
     ],
     "marca": "puma",
     "genero": "mujer",
-    "outlet": false,
-    "temporada": true
+    "outlet": "false",
+    "temporada": "true"
   },
   {
     "id": 12,
@@ -424,12 +416,10 @@
     "description": "¿Qué ofrecen estas zapatillas de running? Una amortiguación y una comodidad máximas en cada carrera. Además, gracias a la entresuela con NITRO FOAM, experimentarás una capacidad de respuesta y una amortiguación superiores que, además, es muy ligera. La suela exterior incorpora el compuesto de goma PUMAGRIP, que proporciona tracción en todo tipo de superficies. Son unas zapatillas creadas para durar, confeccionadas para rendir y diseñadas pensando en el estilo.",
     "price": 20899,
     "detalles": [
-      "Caña baja",
       "Exterior de mesh técnica de calidad con una horma lineal",
       "Entresuela con NITRO FOAM",
       "EVA ProFoam Lite de alto rebote",
-      "Gran cantidad de goma, que aporta durabilidad",
-      "Nueva tecnología de talón moldeado"
+      "Gran cantidad de goma, que aporta durabilidad"
     ],
     "colors": [
       "Sunblaze-Puma White",
@@ -455,8 +445,8 @@
     ],
     "marca": "puma",
     "genero": "mujer",
-    "outlet": false,
-    "temporada": true
+    "outlet": "false",
+    "temporada": "true"
   },
   {
     "id": 13,
@@ -494,8 +484,8 @@
     ],
     "marca": "asics",
     "genero": "mujer",
-    "outlet": false,
-    "temporada": true
+    "outlet": "false",
+    "temporada": "true"
   },
   {
     "id": 14,
@@ -532,8 +522,8 @@
     ],
     "marca": "asics",
     "genero": "mujer",
-    "outlet": false,
-    "temporada": true
+    "outlet": "false",
+    "temporada": "true"
   },
   {
     "id": 15,
@@ -544,7 +534,8 @@
     "detalles": [
       "Capellada: Textil, Poliéster, Sintético",
       "Forro: Textil, Poliéster",
-      "Suela: Sintética"
+      "Suela: Sintética",
+      "Nueva tecnología de talón moldeado"
     ],
     "colors": [
       "BLUE/YELLOW",
@@ -570,8 +561,8 @@
     ],
     "marca": "asics",
     "genero": "mujer",
-    "outlet": false,
-    "temporada": true
+    "outlet": "false",
+    "temporada": "true"
   },
   {
     "id": 16,
@@ -583,7 +574,6 @@
       "Capellada combinada en mesh y suede con detalles sin costura",
       "Entresuela rígida de TPU para mayor estabilidad.",
       "Suela de goma cementada con tracción de espina de pescado.",
-      "Plantilla Ortholite.",
       "Cuello espumado para soporte de tobillo."
     ],
     "colors": [
@@ -608,8 +598,8 @@
     ],
     "marca": "converse",
     "genero": "mujer",
-    "outlet": false,
-    "temporada": true
+    "outlet": "false",
+    "temporada": "true"
   },
   {
     "id": 17,
@@ -620,7 +610,8 @@
     "detalles": [
       "Capellada: Textil, Poliéster",
       "Forro: Textil, Poliéster",
-      "Suela: Caucho"
+      "Suela: Caucho",
+      "Plantilla Ortholite."
     ],
     "colors": [
       "violet",
@@ -645,8 +636,8 @@
     ],
     "marca": "converse",
     "genero": "mujer",
-    "outlet": false,
-    "temporada": true
+    "outlet": "false",
+    "temporada": "true"
   },
   {
     "id": 18,
@@ -656,7 +647,6 @@
     "price": 16999,
     "detalles": [
       "Capellada de canvas premium.",
-      "Costuras reforzadas.",
       "Plantilla Ortholite para mayor comodidad y amortiguación.",
       "Plataforma moldeada.",
       "Suela dentada."
@@ -686,8 +676,8 @@
     ],
     "marca": "converse",
     "genero": "mujer",
-    "outlet": false,
-    "temporada": true
+    "outlet": "false",
+    "temporada": "true"
   },
   {
     "id": 19,
@@ -698,7 +688,8 @@
     "detalles": [
       "Capellada: Textil, Poliéster, Cuero Porcino Descarne",
       "Forro: Textil, Poliéster",
-      "Suela: Caucho"
+      "Suela: Caucho",
+      "Costuras reforzadas."
     ],
     "colors": [
       "White/gray",
@@ -724,8 +715,8 @@
     ],
     "marca": "fila",
     "genero": "mujer",
-    "outlet": false,
-    "temporada": true
+    "outlet": "false",
+    "temporada": "true"
   },
   {
     "id": 20,
@@ -736,7 +727,8 @@
     "detalles": [
       "Capellada: Cuero Sintético",
       "Forro: Textil, Poliéster",
-      "Suela: Caucho"
+      "Suela: Caucho",
+      "La amortiguación de la entresuela Fresh Foam"
     ],
     "colors": [
       "BLACK/PRINT",
@@ -763,8 +755,8 @@
     ],
     "marca": "fila",
     "genero": "mujer",
-    "outlet": false,
-    "temporada": true
+    "outlet": "false",
+    "temporada": "true"
   },
   {
     "id": 21,
@@ -802,8 +794,8 @@
     ],
     "marca": "fila",
     "genero": "mujer",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 22,
@@ -814,7 +806,8 @@
     "detalles": [
       "Capellada de téjido sintético para mayor durabilidad y confort",
       "Aplicación de material sin costuras",
-      "Suela de goma"
+      "Suela de goma",
+      "Plantilla Ortholite para mayor comodidad"
     ],
     "colors": [
       "FUCHSIA",
@@ -840,8 +833,8 @@
     ],
     "marca": "newbalance",
     "genero": "mujer",
-    "outlet": false,
-    "temporada": true
+    "outlet": "false",
+    "temporada": "true"
   },
   {
     "id": 23,
@@ -880,8 +873,8 @@
     ],
     "marca": "newbalance",
     "genero": "mujer",
-    "outlet": false,
-    "temporada": true
+    "outlet": "false",
+    "temporada": "true"
   },
   {
     "id": 24,
@@ -920,8 +913,8 @@
     ],
     "marca": "newbalance",
     "genero": "mujer",
-    "outlet": false,
-    "temporada": true
+    "outlet": "false",
+    "temporada": "true"
   },
   {
     "id": 25,
@@ -958,8 +951,8 @@
     ],
     "marca": "topper",
     "genero": "mujer",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 26,
@@ -999,8 +992,8 @@
     ],
     "marca": "topper",
     "genero": "mujer",
-    "outlet": false,
-    "temporada": true
+    "outlet": "false",
+    "temporada": "true"
   },
   {
     "id": 27,
@@ -1037,8 +1030,8 @@
     ],
     "marca": "topper",
     "genero": "mujer",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 28,
@@ -1075,9 +1068,9 @@
     ],
     "marca": "adidas",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false,
-    "vendidos": true
+    "outlet": "true",
+    "temporada": "false",
+    "vendidos": "true"
   },
   {
     "id": 29,
@@ -1114,9 +1107,9 @@
     ],
     "marca": "adidas",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false,
-    "vendidos": true
+    "outlet": "true",
+    "temporada": "false",
+    "vendidos": "true"
   },
   {
     "id": 30,
@@ -1153,9 +1146,9 @@
     ],
     "marca": "adidas",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false,
-    "vendidos": true
+    "outlet": "true",
+    "temporada": "false",
+    "vendidos": "true"
   },
   {
     "id": 31,
@@ -1192,9 +1185,9 @@
     ],
     "marca": "adidasoriginal",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false,
-    "vendidos": true
+    "outlet": "true",
+    "temporada": "false",
+    "vendidos": "true"
   },
   {
     "id": 32,
@@ -1231,9 +1224,9 @@
     ],
     "marca": "adidasoriginal",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false,
-    "vendidos": true
+    "outlet": "true",
+    "temporada": "false",
+    "vendidos": "true"
   },
   {
     "id": 33,
@@ -1270,9 +1263,9 @@
     ],
     "marca": "adidasoriginal",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false,
-    "vendidos": true
+    "outlet": "true",
+    "temporada": "false",
+    "vendidos": "true"
   },
   {
     "id": 34,
@@ -1309,8 +1302,8 @@
     ],
     "marca": "nike",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 35,
@@ -1347,8 +1340,8 @@
     ],
     "marca": "nike",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 36,
@@ -1385,8 +1378,8 @@
     ],
     "marca": "nike",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 37,
@@ -1423,8 +1416,8 @@
     ],
     "marca": "puma",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 38,
@@ -1461,8 +1454,8 @@
     ],
     "marca": "puma",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 39,
@@ -1499,8 +1492,8 @@
     ],
     "marca": "puma",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 40,
@@ -1537,8 +1530,8 @@
     ],
     "marca": "asics",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 41,
@@ -1575,8 +1568,8 @@
     ],
     "marca": "asics",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 42,
@@ -1613,8 +1606,8 @@
     ],
     "marca": "asics",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 43,
@@ -1651,8 +1644,8 @@
     ],
     "marca": "topper",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 44,
@@ -1689,8 +1682,8 @@
     ],
     "marca": "topper",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 45,
@@ -1727,8 +1720,8 @@
     ],
     "marca": "topper",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 46,
@@ -1765,8 +1758,8 @@
     ],
     "marca": "converse",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 47,
@@ -1803,8 +1796,8 @@
     ],
     "marca": "converse",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 48,
@@ -1841,8 +1834,8 @@
     ],
     "marca": "converse",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 49,
@@ -1879,8 +1872,8 @@
     ],
     "marca": "fila",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 50,
@@ -1917,8 +1910,8 @@
     ],
     "marca": "fila",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 51,
@@ -1955,8 +1948,8 @@
     ],
     "marca": "fila",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 52,
@@ -1993,8 +1986,8 @@
     ],
     "marca": "newbalance",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 53,
@@ -2031,8 +2024,8 @@
     ],
     "marca": "newbalance",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
     "id": 54,
@@ -2069,264 +2062,583 @@
     ],
     "marca": "newbalance",
     "genero": "hombre",
-    "outlet": true,
-    "temporada": false
+    "outlet": "true",
+    "temporada": "false"
   },
   {
-    "id":55,
-    "title":"BOTINES PUMA ULTRA",
-    "subtitle":"Botines Puma Ultra 4.3 FG/AG Jr",
-    "description":"Mejora tu juego con la velocidad adicional que te aportan estos botines de fútbol insuperables.Diseñados pensando en la velocidad, esta edición de los ULTRA está equipada con una serie de detalles funcionales imprescindibles como un empeine liviano y duradero, y una suela exterior SpeedUnit de TPU ultrarrápida e inspirada en los clavos de running, para proporcionarte la mejor mezcla de agilidad y estabilidad.Suela diseñada para canchas de césped natura",
-    "price":"7.799,00",
-    "detalles":["Uso en césped","Material sintético","TPU","Forro textil,ppolieter"],
-    "colors":["ROJO"],
-    "talles":["34","35","36","37","39","38","40"],
-    "imgP":"pumaPortadaH.jpg",
-    "img":["puma1H.jpg","puma2H.jpg"],
-    "marca":"puma",
-    "genero":"hombre",
-    "outlet":false,
-    "temporada":true
-},
-{
-    "id":56,
-    "title":"ZAPATILLAS PUMA",
-    "subtitle":"Zapatillas Puma Jada Sportstyle",
-    "description":"Un par que va con todo y lleva la inspiración tenística en su diseño, son las zapatillas PUMA Jada para mujeres que ofrece un diseño adecuado para usar diariamente, además de mezclar detalles elegantes en color bronce que las hace únicas.",
-    "price":"8.999,00",
-    "detalles":["Cuero Sintético","con cordón","atemporal"],
-    "colors":["negro"],
-    "talles":["34","35","36","37","39","38","40"],
-    "imgP":"pumaPortada.jpg",
-    "img":["puma1.jpg","puma2.jpg"],
-    "marca":"puma",
-    "genero":"mujer",
-    "outlet":false,
-    "temporada":true
-},
-{
-    "id":57,
-    "title":"ZAPATILLAS ADIDAS",
-    "subtitle":"Zapatillas Adidas X9000L4",
-    "description":"La cultura del skate reconoció su durabilidad y comodidad. Las calles apreciaron su estilo retroactivo y versátil. Debido a la naturaleza de exclusiva calidad de la piel y el ante, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad. Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
-    "price":"20.999,00",
-    "detalles":["Running","Poliéster","Con Cordón","Atemporal"],
-    "colors":["Negro"],
-    "talles":["34","35","36","37","39","38","40"],
-    "imgP":"adidasPortadaH.jpg",
-    "img":["adidas1h.jpg","adidas2h.jpg"],
-    "marca":"adidas",
-    "genero":"hombre",
-    "outlet":false,
-    "temporada":true
-},
-{
-    "id":58,
-    "title":"ZAPATILLAS ADIDAS",
-    "subtitle":"Zapatillas Adidas Ultraboost 20",
-    "description":"Zapatillas de alto rendimiento para correrAjuste ceñido y cómodo, tipo mediaExterior de tejido adidas Primeknit+Ajuste y sujeción gracias a la tecnología Tailored Fibre Placement",
-    "price":"26.999,00",
-    "detalles":["Running","Con Cordón","Atemporal","Caña baja"],
-    "colors":["Blanco"],
-    "talles":["34","35","36","37","39","38","40"],
-    "imgP":"adidasPortada.jpg",
-    "img":["adidas1.jpg","adidas2.jpg"],
-    "marca":"adidas",
-    "genero":"mujer",
-    "outlet":false,
-    "temporada":true
-},
-{
-    "id":59,
-    "title":"ZAPATILLA NIKE",
-    "subtitle":"Zapatillas Nike Court Vision Low Next Nature",
-    "description":"Para todos tus díasCamina suave y cómodamente con las Nike Court Vision Low para hombres. Estupendos para cualquier día de la semana y combinarlos con lo que sea. Una vez puestos, serán tus preferidos.",
-    "price":"12.499,00",
-    "detalles":["Cuero Sintético","Con Cordón","Atemporal","Caña baja"],
-    "colors":["Negro"],
-    "talles":["34","35","36","37","39","38","40"],
-    "imgP":"nikePortadaH.jpg",
-    "img":["nike1H.jpg","nike2H.jpg"],
-    "marca":"nike",
-    "genero":"hombre",
-    "outlet":false,
-    "temporada":true
-},
-{
-    "id":60,
-    "title":"ZAPATILLA NIKE",
-    "subtitle":"Zapatillas Nike Downshifter 11",
-    "description":"Las Nike Downshifter 11 ofrecen una sujeción ligera y flexible para que nada te detenga.Incorporan la misma amortiguación suave de la última versión, y añaden más soporte alrededor del mediopié para ofrecer comodidad después del entrenamiento.",
-    "price":"11.999,00",
-    "detalles":["Poliéster","Con Cordón","Atemporal","Running"],
-    "colors":["Violeta"],
-    "talles":["34","35","36","37","39","38","40"],
-    "imgP":"nikePortada.jpg",
-    "img":["nike1","","",""],
-    "marca":"nike",
-    "genero":"mujer",
-    "outlet":false,
-    "temporada":true
-},
-{
-    "id":61,
-    "title":"ZAPATILLAS ASICS",
-    "subtitle":"Zapatillas Asics Gel-Hypersonic 2",
-    "description":"Hechas de material de malla de alta calidad, estas zapatillas tienen todo lo que esperás en tecnología y rendimiento.Tiene un acolchado de gel que garantiza una excelente estabilidad y suavidad incluso en los terrenos más difíciles.",
-    "price":"14.990,00",
-    "detalles":["Running","Sintético","Textil"],
-    "colors":["Azul"],
-    "talles":["34","35","36","37","39","38","40"],
-    "imgP":"asicsPortadaH.jpg",
-    "img":["asics1H.jpg","asics2H.jpg"],
-    "marca":"asics",
-    "genero":"Unisex",
-    "outlet":false,
-    "temporada":true
-},
-{
-    "id":62,
-    "title":"ZAPATILLA ASICS",
-    "subtitle":"Zapatillas Asics Gel-H",
-    "description":"Obtené una gran comodidad y ligereza al caminar con las zapatillas ASICS.Es un calzado para acompañarte en varios momentos, desde caminatas ligeras, gimnasio y día a día.",
-    "price":"14.990,00",
-    "detalles":["Running","Poliéster","Con Cordón","atemporal"],
-    "colors":["Celeste"],
-    "talles":["34","35","36","37","39","38","40"],
-    "imgP":"asicsPortada.jpg",
-    "img":["asics1.jpg","asics2.jpg"],
-    "marca":"asics",
-    "genero":"mujer",
-    "outlet":false,
-    "temporada":true
-},
-{
-    "id":63,
-    "title":"ZAPATILLA TOPPER",
-    "subtitle":"Zapatillas Topper Capitan Canvas Lite",
-    "description":"Zapatillas topper urbanas •casuales •suela goma antideslizante •capellada cuero sintetico",
-    "price":"5.499,00",
-    "detalles":["Con Cordón","Atemporal","Caña baja","Lona"],
-    "colors":["Negro"],
-    "talles":["34","35","36","37","39","38","40"],
-    "imgP":"topperPortadam.jpg",
-    "img":["topper1m.jpg","topper2m.jpg"],
-    "marca":"topper",
-    "genero":"Unisex",
-    "outlet":false,
-    "temporada":true
-},
-{
-    "id":64,
-    "title":"ZAPATILLAS TOPPER",
-    "subtitle":"Zapatillas Topper Ultralight II",
-    "description":"Llega el Magnus en su segunda versión, un calzado hecho para los amantes de los deportes indoor.-Capellada: Liviana, de mesh con cuero sintético de alta resistencia que proporciona un buen ajuste del pie.-Suela: La amortiguación de la entresuela garantiza la absorción de impactos y protege las articulaciones.",
-    "price":"5.499,00",
-    "detalles":["Training","Con Cordón","Mesh","Atemporal","Caña baja"],
-    "colors":["Negro"],
-    "talles":["34","35","36","37","39","38","40"],
-    "imgP":"topperPortada.jpg",
-    "img":["topper1.jpg","topper2.jpg","",""],
-    "marca":"topper",
-    "genero":"Unisex",
-    "outlet":false,
-    "temporada":true
-},
-{
-    "id":65,
-    "title":"ZAPATILLA CONVERSE ",
-    "subtitle":"Zapatilla Converse Fastbreak Mid Crudo",
-    "description":"Ligera y respirable, los jugadores serios no aceptaron ningún otro calzado. En los años posteriores, los fanáticos vieron algo más en la silueta atlética y el inconfundible logotipo de Star Chevron ",
-    "price":"8.695",
-    "detalles":["Textil","Algodón","Cuero Vacuno"],
-    "colors":["Crudo"],
-    "talles":["34","35","36","37","39","38","40"],
-    "imgP":"conversePortadaH.JPG",
-    "img":["converse1H.jpg","converse2H.jpg","",""],
-    "marca":"converse",
-    "genero":"masculino",
-    "outlet":false,
-    "temporada":true
-},
-{
-    "id":66,
-    "title":"ZAPATILLAS CONVERSE",
-    "subtitle":"Zapatillas Converse Chuck Taylor All Star Plataforma Layer Ox Lona",
-    "description":"El peso del calzado puede variar según el número solicitado. Los talles corresponden a numeración de Argentina.",
-    "price":"7.699,00",
-    "detalles":["Con Cordón","Lona","Atemporal","Caña baja"],
-    "colors":["Blanco"],
-    "talles":["34","35","36","37","39","38","40"],
-    "imgP":"conversePortada.jpg",
-    "img":["converse1.jpg","converse2.jpg","",""],
-    "marca":"converse",
-    "genero":"mujer",
-    "outlet":false,
-    "temporada":true
-},
-{
-    "id":67,
-    "title":"ZAPATILLA FILA",
-    "subtitle":"Zapatillas Fila Iconic",
-    "description":"El peso del calzado puede variar según el número solicitado. Los talles corresponden a numeración de Argentina.",
-    "price":"7.490,00",
-    "detalles":["Con Cordón","Atemporal","Caña baja",""],
-    "colors":["Verde Oliva"],
-    "talles":["34","35","36","37","39","38","40"],
-    "imgP":"filaPortadaH.jpg",
-    "img":["fila1H.jpg","","",""],
-    "marca":"fila",
-    "genero":"hombre",
-    "outlet":false,
-    "temporada":true
-},
-{
-    "id":68,
-    "title":"ZAPATILLA FILA",
-    "subtitle":"Zapatillas Fila Styling",
-    "description":"Calzado moderno de moda con suela robusta de EVA con capellada en materiales sinteticos de alta calidad y detalles en los pasacordones.",
-    "price":"7.590,00",
-    "detalles":["Sintético","Con Cordón","Atemporal",""],
-    "colors":["Rosa"],
-    "talles":["34","35","36","37","39","38","40"],
-    "imgP":"filaPortada.jpg",
-    "img":["fila1","","",""],
-    "marca":"fila",
-    "genero":"Mujer",
-    "outlet":false,
-    "temporada":true
-},
-{
-    "id":69,
-    "title":"ZAPATILLAS NEW BALANCE",
-    "subtitle":"Zapatillas New Balance Fresh Foam Arishi V3",
-    "description":"Las zapatillas de mujer New Balance  estan hechas en una combinación atemporal de mesh y cuero descarne, disponible en colores clásicos y sútiles.No importa donde vayas, estas  zapatillas urbanas cuentan con tecnología ENCAP con una amortiguación suave de EVA en la entresuela que te brinda el soporte que necesitas",
-    "price":"10.049,00",
-    "detalles":["Fitness","Atemporal","Poliéster","Con Cordón"],
-    "colors":["Negro"],
-    "talles":["34","35","36","37","39","38","40"],
-    "imgP":"newPortadaH.jpg",
-    "img":["new1H.jpg","new2H.jpg","new3H.jpg"],
-    "marca":"New Balance",
-    "genero":"Hombre",
-    "outlet":false,
-    "temporada":true
-},
-{
-    "id":70,
-    "title":"ZAPATILLA NEW BALANCE",
-    "subtitle":"Zapatilla new balance 574 Swa",
-    "description":"Creadas en 1988 combinando dos calzados NEW BALANCE diferentes, las 574 se han convertido en el símbolo de ingenio y originalidad.Las 574 se inspiran en el clásico archivo del pasado NEW BALANCE.Siempre clásicas, siempre con onda",
-    "price":"12.589",
-    "detalles":["Cuero Sintético","Textil","Sintética"],
-    "colors":["rosa"],
-    "talles":["34","35","36","37","39","38","40"],
-    "imgP":"newPortada.jpg",
-    "img":["new1.jpg","new2.jpg","new3.jpg","new4.jpg"],
-    "marca":"new balance",
-    "genero":"mujer",
-    "outlet":false,
-    "temporada":true
-}
-
+    "id": 55,
+    "title": "BOTINES PUMA ULTRA",
+    "subtitle": "Botines Puma Ultra 4.3 FG/AG Jr",
+    "description": "Mejora tu juego con la velocidad adicional que te aportan estos botines de fútbol insuperables.Diseñados pensando en la velocidad, esta edición de los ULTRA está equipada con una serie de detalles funcionales imprescindibles como un empeine liviano y duradero, y una suela exterior SpeedUnit de TPU ultrarrápida e inspirada en los clavos de running, para proporcionarte la mejor mezcla de agilidad y estabilidad.Suela diseñada para canchas de césped natura",
+    "price": "7.799,00",
+    "detalles": [
+      "Uso en césped",
+      "Material sintético",
+      "TPU",
+      "Forro textil,ppolieter"
+    ],
+    "colors": [
+      "ROJO"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "pumaPortadaH.jpg",
+    "img": [
+      "puma1H.jpg",
+      "puma2H.jpg"
+    ],
+    "marca": "puma",
+    "genero": "hombre",
+    "outlet": "false",
+    "temporada": "true"
+  },
+  {
+    "id": 56,
+    "title": "ZAPATILLAS PUMA",
+    "subtitle": "Zapatillas Puma Jada Sportstyle",
+    "description": "Un par que va con todo y lleva la inspiración tenística en su diseño, son las zapatillas PUMA Jada para mujeres que ofrece un diseño adecuado para usar diariamente, además de mezclar detalles elegantes en color bronce que las hace únicas.",
+    "price": "8.999,00",
+    "detalles": [
+      "Cuero Sintético",
+      "con cordón",
+      "atemporal"
+    ],
+    "colors": [
+      "negro"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "pumaPortada.jpg",
+    "img": [
+      "puma1.jpg",
+      "puma2.jpg"
+    ],
+    "marca": "puma",
+    "genero": "mujer",
+    "outlet": "false",
+    "temporada": "true"
+  },
+  {
+    "id": 57,
+    "title": "ZAPATILLAS ADIDAS",
+    "subtitle": "Zapatillas Adidas X9000L4",
+    "description": "La cultura del skate reconoció su durabilidad y comodidad. Las calles apreciaron su estilo retroactivo y versátil. Debido a la naturaleza de exclusiva calidad de la piel y el ante, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad. Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
+    "price": "20.999,00",
+    "detalles": [
+      "Running",
+      "Poliéster",
+      "Con Cordón",
+      "Atemporal"
+    ],
+    "colors": [
+      "Negro"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "adidasPortadaH.jpg",
+    "img": [
+      "adidas1h.jpg",
+      "adidas2h.jpg"
+    ],
+    "marca": "adidas",
+    "genero": "hombre",
+    "outlet": "false",
+    "temporada": "true"
+  },
+  {
+    "id": 58,
+    "title": "ZAPATILLAS ADIDAS",
+    "subtitle": "Zapatillas Adidas Ultraboost 20",
+    "description": "Zapatillas de alto rendimiento para correrAjuste ceñido y cómodo, tipo mediaExterior de tejido adidas Primeknit+Ajuste y sujeción gracias a la tecnología Tailored Fibre Placement",
+    "price": "26.999,00",
+    "detalles": [
+      "Running",
+      "Con Cordón",
+      "Atemporal",
+      "Caña baja"
+    ],
+    "colors": [
+      "Blanco"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "adidasPortada.jpg",
+    "img": [
+      "adidas1.jpg",
+      "adidas2.jpg"
+    ],
+    "marca": "adidas",
+    "genero": "mujer",
+    "outlet": "false",
+    "temporada": "true"
+  },
+  {
+    "id": 59,
+    "title": "ZAPATILLA NIKE",
+    "subtitle": "Zapatillas Nike Court Vision Low Next Nature",
+    "description": "Para todos tus díasCamina suave y cómodamente con las Nike Court Vision Low para hombres. Estupendos para cualquier día de la semana y combinarlos con lo que sea. Una vez puestos, serán tus preferidos.",
+    "price": "12.499,00",
+    "detalles": [
+      "Cuero Sintético",
+      "Con Cordón",
+      "Atemporal",
+      "Caña baja"
+    ],
+    "colors": [
+      "Negro"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "nikePortadaH.jpg",
+    "img": [
+      "nike1H.jpg",
+      "nike2H.jpg"
+    ],
+    "marca": "nike",
+    "genero": "hombre",
+    "outlet": "false",
+    "temporada": "true"
+  },
+  {
+    "id": 60,
+    "title": "ZAPATILLA NIKE",
+    "subtitle": "Zapatillas Nike Downshifter 11",
+    "description": "Las Nike Downshifter 11 ofrecen una sujeción ligera y flexible para que nada te detenga.Incorporan la misma amortiguación suave de la última versión, y añaden más soporte alrededor del mediopié para ofrecer comodidad después del entrenamiento.",
+    "price": "11.999,00",
+    "detalles": [
+      "Poliéster",
+      "Con Cordón",
+      "Atemporal",
+      "Running"
+    ],
+    "colors": [
+      "Violeta"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "nikePortada.jpg",
+    "img": [
+      "nike1",
+      "",
+      "",
+      ""
+    ],
+    "marca": "nike",
+    "genero": "mujer",
+    "outlet": "false",
+    "temporada": "true"
+  },
+  {
+    "id": 61,
+    "title": "ZAPATILLAS ASICS",
+    "subtitle": "Zapatillas Asics Gel-Hypersonic 2",
+    "description": "Hechas de material de malla de alta calidad, estas zapatillas tienen todo lo que esperás en tecnología y rendimiento.Tiene un acolchado de gel que garantiza una excelente estabilidad y suavidad incluso en los terrenos más difíciles.",
+    "price": "14.990,00",
+    "detalles": [
+      "Running",
+      "Sintético",
+      "Textil"
+    ],
+    "colors": [
+      "Azul"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "asicsPortadaH.jpg",
+    "img": [
+      "asics1H.jpg",
+      "asics2H.jpg"
+    ],
+    "marca": "asics",
+    "genero": "Unisex",
+    "outlet": "false",
+    "temporada": "true"
+  },
+  {
+    "id": 62,
+    "title": "ZAPATILLA ASICS",
+    "subtitle": "Zapatillas Asics Gel-H",
+    "description": "Obtené una gran comodidad y ligereza al caminar con las zapatillas ASICS.Es un calzado para acompañarte en varios momentos, desde caminatas ligeras, gimnasio y día a día.",
+    "price": "14.990,00",
+    "detalles": [
+      "Running",
+      "Poliéster",
+      "Con Cordón",
+      "atemporal"
+    ],
+    "colors": [
+      "Celeste"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "asicsPortada.jpg",
+    "img": [
+      "asics1.jpg",
+      "asics2.jpg"
+    ],
+    "marca": "asics",
+    "genero": "mujer",
+    "outlet": "false",
+    "temporada": "true"
+  },
+  {
+    "id": 63,
+    "title": "ZAPATILLA TOPPER",
+    "subtitle": "Zapatillas Topper Capitan Canvas Lite",
+    "description": "Zapatillas topper urbanas •casuales •suela goma antideslizante •capellada cuero sintetico",
+    "price": "5.499,00",
+    "detalles": [
+      "Con Cordón",
+      "Atemporal",
+      "Caña baja",
+      "Lona"
+    ],
+    "colors": [
+      "Negro"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "topperPortadam.jpg",
+    "img": [
+      "topper1m.jpg",
+      "topper2m.jpg"
+    ],
+    "marca": "topper",
+    "genero": "Unisex",
+    "outlet": "false",
+    "temporada": "true"
+  },
+  {
+    "id": 64,
+    "title": "ZAPATILLAS TOPPER",
+    "subtitle": "Zapatillas Topper Ultralight II",
+    "description": "Llega el Magnus en su segunda versión, un calzado hecho para los amantes de los deportes indoor.-Capellada: Liviana, de mesh con cuero sintético de alta resistencia que proporciona un buen ajuste del pie.-Suela: La amortiguación de la entresuela garantiza la absorción de impactos y protege las articulaciones.",
+    "price": "5.499,00",
+    "detalles": [
+      "Training",
+      "Con Cordón",
+      "Mesh",
+      "Atemporal",
+      "Caña baja"
+    ],
+    "colors": [
+      "Negro"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "topperPortada.jpg",
+    "img": [
+      "topper1.jpg",
+      "topper2.jpg",
+      "",
+      ""
+    ],
+    "marca": "topper",
+    "genero": "Unisex",
+    "outlet": "false",
+    "temporada": "true"
+  },
+  {
+    "id": 65,
+    "title": "ZAPATILLA CONVERSE ",
+    "subtitle": "Zapatilla Converse Fastbreak Mid Crudo",
+    "description": "Ligera y respirable, los jugadores serios no aceptaron ningún otro calzado. En los años posteriores, los fanáticos vieron algo más en la silueta atlética y el inconfundible logotipo de Star Chevron ",
+    "price": "8.695",
+    "detalles": [
+      "Textil",
+      "Algodón",
+      "Cuero Vacuno"
+    ],
+    "colors": [
+      "Crudo"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "conversePortadaH.JPG",
+    "img": [
+      "converse1H.jpg",
+      "converse2H.jpg",
+      "",
+      ""
+    ],
+    "marca": "converse",
+    "genero": "masculino",
+    "outlet": "false",
+    "temporada": "true"
+  },
+  {
+    "id": 66,
+    "title": "ZAPATILLAS CONVERSE",
+    "subtitle": "Zapatillas Converse Chuck Taylor All Star Plataforma Layer Ox Lona",
+    "description": "El peso del calzado puede variar según el número solicitado. Los talles corresponden a numeración de Argentina.",
+    "price": "7.699,00",
+    "detalles": [
+      "Con Cordón",
+      "Lona",
+      "Atemporal",
+      "Caña baja"
+    ],
+    "colors": [
+      "Blanco"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "conversePortada.jpg",
+    "img": [
+      "converse1.jpg",
+      "converse2.jpg",
+      "",
+      ""
+    ],
+    "marca": "converse",
+    "genero": "mujer",
+    "outlet": "false",
+    "temporada": "true"
+  },
+  {
+    "id": 67,
+    "title": "ZAPATILLA FILA",
+    "subtitle": "Zapatillas Fila Iconic",
+    "description": "El peso del calzado puede variar según el número solicitado. Los talles corresponden a numeración de Argentina.",
+    "price": "7.490,00",
+    "detalles": [
+      "Con Cordón",
+      "Atemporal",
+      "Caña baja",
+      ""
+    ],
+    "colors": [
+      "Verde Oliva"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "filaPortadaH.jpg",
+    "img": [
+      "fila1H.jpg",
+      "",
+      "",
+      ""
+    ],
+    "marca": "fila",
+    "genero": "hombre",
+    "outlet": "false",
+    "temporada": "true"
+  },
+  {
+    "id": 68,
+    "title": "ZAPATILLA FILA",
+    "subtitle": "Zapatillas Fila Styling",
+    "description": "Calzado moderno de moda con suela robusta de EVA con capellada en materiales sinteticos de alta calidad y detalles en los pasacordones.",
+    "price": "7.590,00",
+    "detalles": [
+      "Sintético",
+      "Con Cordón",
+      "Atemporal",
+      ""
+    ],
+    "colors": [
+      "Rosa"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "filaPortada.jpg",
+    "img": [
+      "fila1",
+      "",
+      "",
+      ""
+    ],
+    "marca": "fila",
+    "genero": "Mujer",
+    "outlet": false,
+    "temporada": true
+  },
+  {
+    "id": 69,
+    "title": "ZAPATILLAS NEW BALANCE",
+    "subtitle": "Zapatillas New Balance Fresh Foam Arishi V3",
+    "description": "Las zapatillas de mujer New Balance  estan hechas en una combinación atemporal de mesh y cuero descarne, disponible en colores clásicos y sútiles.No importa donde vayas, estas  zapatillas urbanas cuentan con tecnología ENCAP con una amortiguación suave de EVA en la entresuela que te brinda el soporte que necesitas",
+    "price": "10.049,00",
+    "detalles": [
+      "Fitness",
+      "Atemporal",
+      "Poliéster",
+      "Con Cordón"
+    ],
+    "colors": [
+      "Negro"
+    ],
+    "talles": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "39",
+      "38",
+      "40"
+    ],
+    "imgP": "newPortadaH.jpg",
+    "img": [
+      "new1H.jpg",
+      "new2H.jpg",
+      "new3H.jpg"
+    ],
+    "marca": "New Balance",
+    "genero": "Hombre",
+    "outlet": "false",
+    "temporada": "true"
+  },
+  {
+    "id": 70,
+    "title": "ZAPATILLA NEW BALANCE",
+    "subtitle": "Zapatilla new balance 574 Swa",
+    "description": "Creadas en 1988 combinando dos calzados NEW BALANCE diferentes, las 574 se han convertido en el símbolo de ingenio y originalidad.Las 574 se inspiran en el clásico archivo del pasado NEW BALANCE.Siempre clásicas, siempre con onda",
+    "price": "12.589",
+    "detalles": [
+      "Cuero Sintético",
+      "Textil",
+      "Sintética"
+    ],
+    "colors": [
+      "rosa"
+    ],
+    "talles": "checked",
+    "imgP": "newPortada.jpg",
+    "img": [
+      "new1.jpg",
+      "new2.jpg",
+      "new3.jpg",
+      "new4.jpg"
+    ],
+    "marca": "new balance",
+    "genero": "mujer",
+    "outlet": "false",
+    "temporada": "true"
+  },
+  {
+    "title": "puma",
+    "price": "123456",
+    "colores": [
+      "verde",
+      "rojo",
+      "azul"
+    ],
+    "detalle": [
+      "cuero",
+      "base",
+      "capellada",
+      "amortigua"
+    ],
+    "genero": "mujer",
+    "temporada": "true",
+    "outlet": "false",
+    "marca": "puma",
+    "talles": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39"
+    ],
+    "description": "la mejor",
+    "id": 71
+  }
 ]
