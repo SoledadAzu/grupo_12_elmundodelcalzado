@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<%- include('../partials/head') %>
+    <!-- HEAD -->
+
+    <body>
+
+        <!-- HEADER -->
+        <%- include('../partials/header') %>
+            <!-- HEADER -->
+
+            <!-- /**************** main *********************/ -->
+
+            <main class="maincarrito">
+                <div class="">
+                    <ul class="items">
+                        <li class="item Inicio">
+                            <a href="/" title="Inicio">
+                                Inicio > </a>
+                        </li>
+                        <li class="item Carrito de Compras">
+                            <strong class="carrito">Carrito de Compras</strong>
+                        </li>
+                    </ul>
+                </div>
+                <div class="titulo">
+                    <h1>CARRITO DE COMPRAS</h1>
+                </div>
+                <div class='table-flex'>
+                    <div class="tablescroll">
+                    <div class='tablaproducto'>
+                        <table class="table1">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Producto</th>
+                                    <th class='compu'>Precio</th>
+                                    <th class='cantidad'>Cantidad</th>
+                                    <th class='compu'>Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% oferta.map(e=>{%>
+                                    <tr>
+                                        <td><button class='eliminar'></a><img class='eliminar' src="/images/icono x.png"
+                                                    alt=""></button>
+                                        </td>
+                                        <td><img class="imgcarrito" src="/images/<%= e.imag %>" alt="">
+                                            <ul>
+                                                <li>
+                                                    <%= e.nombre %>
+                                                </li>
+                                                <li>Talles: <%=  %>
+                                                </li>
+                                                <li class='precioCell'>Precio:$<%= toThousand(e.price)%>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class='compu alinear'><strong>$<%= toThousand(e.price)%> </strong></td>
+                                        <td class="cantidad"><input type="number" id="number" name="number" min=1
+                                                max=100 value="1"></td>
+                                        <td class='compu alinear'><strong>$<%= toThousand(e.price)%></strong></td>
+                                    </tr>
+                                    <%})%>
+                            </tbody>
+                        </table>
+                        <a href="/products">Continuar Comprando >>></a>
+                    </div>
+                </div>
+                <div class='tablapago'>
+                    <table class='table2'>
+                        <tr>
+                            <th colspan="2"><strong>RESUMEN DE COMPRA</strong></th>
+                        </tr>
+                        <tr class='subtotal'>
+                            <td class='descrip'>SUBTOTAL</td>
+                            <td class='valor'>$45.997</td>
+                        </tr>
+                        <tr class='total'>
+                            <td class='descrip'>TOTAL</td>
+                            <td class='valor'>$45.997</td>
+                        </tr>
+                        <tr>
+                            <th colspan="2"><a href="/"><button><strong>INICIAR PAGO ></strong></button></a></th>
+                        </tr>
+                    </table>
+                </div>
+                </div>
+
+                <h2 class='oferta1'>APROVECHA LAS SUPER OFERTAS</h2>
+               
+               
+                    <section class="mercaderia">
+                    <% let contadorM=0 %>
+                  <% ofertas.map(e=>{ %>
+                    <% contadorM++ %> 
+                    <%if(contadorM<=4){%>
+                     <article>
+                          <a href="/products/productDetail/<%= e.id %> ">
+                            <div>
+                                <img src="/images/articulos/<%= e.imgP %>" alt="">
+                            </div>
+                            <div>
+                                <strong>
+                                    <%= toThousand(e.price) %>
+                                </strong>
+                                <p>
+                                    <%=e.marca%>
+                                </p>
+                                <h4>
+                                    <%= e.title%>
+                                </h4>
+                          </div>
+                        </a>
+                      </article>
+                    <% } %>
+                <% }) %>
+                
+                    
+                </section>
+            
+                <div class="button-vermas"><a href="./outlet"><button class="vermas"><strong>Ver más ></strong></button></a></div>
+
+            </main>
+
+            <!-- /****************** footer ******************/ -->
+
+            <!-- FOOTER -->
+            <%- include('../partials/footer') %>
+                <!-- FOOTER -->
+
+    </body>
+
+</html>

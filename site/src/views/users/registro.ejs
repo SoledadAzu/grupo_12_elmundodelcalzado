@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+    
+
 
  <!-- HEAD -->
 <%- include('../partials/head') %> 
@@ -11,43 +13,49 @@
   <%- include('../partials/header') %> 
   <!-- HEADER -->
   
-      <main class="register">
-            <div class="register1">
-                <h1>REGISTRATE</h1>
-                <hr>
-                <form action="">
+  <!-- MAIN -->
+  <main class="register">
+    <div class="register1">
+        <h1>REGISTRATE</h1>
+        <hr>
+        <form action="/user/register" method="POST">
 
-                    <div class="nombre">
-                        <label for="nombre">Nombre <strong class="obligatorio">*</strong></label>
-                        <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-                    </div>
-                    <div class="apellido">
-                        <label for="apellido">Apellido <strong class="obligatorio">*</strong></label>
-                        <input type="text" name="apellido" id="apellido" placeholder="Apellido">
-                    </div>
-                    <div class="email">
-                        <label for="email">Email <strong class="obligatorio">*</strong></label>
-                        <input type="text" name="email" id="email" placeholder="Email">
-                    </div>
-                    <div class="password">
-                        <label for="password">Contraseña <strong class="obligatorio">*</strong></label>
-                        <input type="text" name="password" id="password" placeholder="Contraseña">
-                    </div>
-                    <small class="obligatorio">*Campo Obligatorio</small>
-                    <div class="terminos">
-                        <input type="checkbox" name="terminos" id="terminos">
-                        <label for="terminos"> He leido y acepto los <a href="">términos y condiciones</a> y las <a href="">politicas de privacidad</a> del Mundo del Calzado.</label>
-                    </div>
-                    <div class="btn" >
-                        <button  type="create" placeholder="CREAR">CREAR</button>
-                    </div>
-                    <p>Si tiene una cuenta, inicie sesión con su dirección de correo electronico</p>
-                    <div class="btton" >
-                        <button  type="login" placeholder="INICIAR SESIÓN">INICIAR SESIÓN</button>
-                    </div>
-                </form>
+            <div class="nombre">
+                <label for="nombre">Nombre <strong class="obligatorio">*</strong></label>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
             </div>
-        </main>
+            <div class="apellido">
+                <label for="apellido">Apellido <strong class="obligatorio">*</strong></label>
+                <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+            </div>
+            <div class="email">
+                <label for="email">Email <strong class="obligatorio">*</strong></label>
+                <input type="text" name="email" id="email" placeholder="Email">
+            </div>
+            <div class="password">
+                <label for="password">Contraseña <strong class="obligatorio">*</strong></label>
+                <input type="text" name="password" id="password" placeholder="Contraseña">
+            </div>
+            <small class="obligatorio">*Campo Obligatorio</small>
+            <div class="terminos">
+                <input type="checkbox" name="terminos" id="terminos">
+                <label for="terminos"> He leido y acepto los <a href="">términos y condiciones</a> y las <a href="">politicas de privacidad</a> del Mundo del Calzado.</label>
+            </div>
+            <div class="btn" >
+                <button  type="create" placeholder="CREAR">CREAR</button>
+            </div>
+            <p>Si tiene una cuenta, inicie sesión con su dirección de correo electronico</p>
+        </form>
+        
+            <div class="btton" >
+                <a href="/user/login"><button  type="login" placeholder="INICIAR SESIÓN">INICIAR SESIÓN</button></a>
+            </div>
+        
+    </div>
+</main>
+<!-- MAIN -->
+
+
             
         <!-- FOOTER -->
           <%- include('../partials/footer') %> 

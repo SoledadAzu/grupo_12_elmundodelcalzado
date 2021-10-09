@@ -1,0 +1,65 @@
+.navFijo{
+position:fixed;
+}
+.crearForm{
+    background-color: rgba(191, 188, 193, 0.43);    
+}
+   
+.adminForm{
+    text-align: center;
+    
+}
+.contenedor-form {
+    font-size: 24px;
+    background:#ff000040 ; 
+    text-align: center; 
+     width: 70%;
+     height: auto;
+     border: 5px solid var(--rojo); 
+     border-radius: 8px; 
+     margin: 0 auto;
+     box-shadow: 10px 5px 5px var(--gris-oscuro)
+
+}
+.labelForm label{
+    display: block;
+    font-size: 30px;  
+}
+.form-input{
+    width: 90%;
+    height: 40px;
+    
+}
+.labelForm textarea{
+    width: 90%;
+    height: 100px;
+    overflow:auto;
+    margin-bottom: 20px; 
+}
+.selection{
+    display:flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.form-input1{
+    width: 70%;
+}
+.seccion{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.width{
+    width: 500px;
+}
+.btn{
+    margin-bottom:10px ;
+}
+
+.container-talles{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-talles div{
+    width: 20%;
+}

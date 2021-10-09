@@ -28,3 +28,6 @@ a{
     text-decoration: none;
     
 }
+.table tr:nth-child(even) {
+    background-color: var(--rojo-claro);
+}
