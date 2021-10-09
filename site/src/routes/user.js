@@ -6,6 +6,31 @@ const path = require("path")
 
 //login user
 router.get('/login',login)
+router.post("/login",(req, res) =>{
+    const ruta =path.join(__dirname,"..", "database","users.json")
+    const usuariosRegistrados =fs.readFileSync(ruta,"utf-8")
+
+    const usuarios = JSON.parse(usuariosRegistrados)
+   const encontrado= usuarios.find(element=>{
+    return element.email===req.body.email  
+       
+   })
+
+
+
+ if(encontrado ){
+if(encontrado.password === req.body.password) {
+    res.redirect("/")
+}
+    
+}else { 
+    res.redirect("register")
+    console.log(encontrado)
+}  
+
+})
+
+    
 
 //create user
 router.get('/register',register)
