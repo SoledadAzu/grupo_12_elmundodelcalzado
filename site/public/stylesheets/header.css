@@ -129,8 +129,14 @@ header{
 #search:checked ~ div{
     right: 0;
 }
+.administrador{
+    display: none;
+}
 
 @media (min-width:769px){
+    .administrador{
+        display: none;
+    }
     .admin_prod{
         padding-top: 12%;
     }
@@ -193,6 +199,16 @@ header{
     
 }
 @media (min-width:1024px){
+    .administrador{
+        margin-right: 30px;
+        display: block;
+    }
+    .administrador a{
+        text-decoration: none;
+    }
+    .administrador a h3{
+        color: var(--rojo);
+    }
     .admin_prod{
         padding-top: 5%;
     }

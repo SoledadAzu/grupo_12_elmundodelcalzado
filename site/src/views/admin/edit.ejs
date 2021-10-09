@@ -32,23 +32,19 @@
               <section class="seccion">
               <div class="labelForm width">
                 <label for="colors" class="" >Colores:</label>
-                <input type="text" id="colors" name="colors" placeholder="Color primario"
+                <% colores.map(e=> {%>    
+                <input type="text" id="colors" name="colors" value="<%= e %>"
                   class="form-input1" >
-                  <input type="text" id="colors" name="colors" placeholder="Color secundario"
-                  class="form-input1">
-                  <input type="text" id="colors" name="colors" placeholder="Color terciario"
-                  class="form-input1">
+                <%}) %> 
+                 
               </div>
               <div class="labelForm width">
-                <label for="detalles" class="l">Detalles:</label>
-                <input type="text" id="detalles" name="detalles" placeholder="Ingrese su detalle"
-                  class="form-input1">
-                <input type="text" id="detalles" name="detalles" placeholder="Ingrese su detalle"
-                  class="form-input1">
-                <input type="text" id="detalles" name="detalles" placeholder="Ingrese su detalle"
-                  class="form-input1">
-                <input type="text" id="detalles" name="detalles" placeholder="Ingrese su detalle"
-                  class="form-input1">
+                <label for="detalles" class="1">Detalles:</label>
+<% detalles.map(e=> {%>
+<input type="text" id="detalles" name="detalles" value="<%= e %>" class="form-input1">
+<%}) %> 
+                
+                
               </div>
             </section>
               
@@ -98,11 +94,14 @@
               <div>
                 <label for="talles" >Talles:</label>
                 <div class="container-talles">
-                  <div>
-                    <input type="checkbox" name="talles" id="35" >
-                    <label for="35" >35</label>
-                  </div>
-                  <div>
+                 <%editartalles.map(e=> {%>
+                  <div> 
+                    <label><%= e %> <input style="width: 20px; height: 20px" type="checkbox" name="talles" id="<%= e %>" checked></label>
+                    
+                  </div> <%}) %>
+                  
+                  
+                 <!--  <div>
                     <input type="checkbox" name="talles" id="36" >
                     <label for="36" >36</label>
                   </div>
@@ -137,7 +136,7 @@
                   <div>
                     <input type="checkbox" name="talles" id="44" >
                     <label for="44">44</label>
-                  </div>
+                  </div> -->
                 
               </div>
             </div>

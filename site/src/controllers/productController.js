@@ -10,7 +10,7 @@ const productos = require('../database/productos.json')
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const ofertas=productos.filter(e=>{
-    return e.outlet===true
+    return e.outlet=== "true"
 })
 const prodHombre=productos.filter(e=>{
     return e.genero ==="hombre"
@@ -21,7 +21,7 @@ const prodMujer=productos.filter(e=>{
    
 })
 const prodTemporada=productos.filter(e=>{
-    return e.temporada ===true
+    return e.temporada ==="true"
    
 })
 const prodAdidas=productos.filter(e=>{

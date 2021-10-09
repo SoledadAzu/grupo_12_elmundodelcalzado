@@ -50,49 +50,38 @@
 
     <!-- TABLAS -->
     <main class="admin_prod">
-      <a href="/admin/create" class="btn btn-outline-primary m-3" role="button" aria-disabled="true">Crear</a>
+      <a href="/user/register" class="btn btn-outline-primary m-3" role="button" aria-disabled="true">Crear</a>
 
       <div class="">
-        <table class="table" style="width: 150%;">
+        <table class="table" style="width: 100%;">
           <thead>
             <tr style="background-color:#F1948A">
               <th scope="col">#</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Precios</th>
-              <th scope="col">Genero</th>
-              <th scope="col">Marca</th>
-              <th scope="col">Temporada</th>
-              <th scope="col"></th>
+              <th scope="col">Nombres</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Email</th>
+              <th scope="col">Password</th>
+             
+            
 
             </tr>
           </thead>
           <tbody>
-            <% products.map(e=>{%>
+            <% usuarios.map(e=>{%>
               <tr>
                 <th scope="row">
                   <%= e.id %>
                 </th>
                 <td>
-                  <%= e.title %>
+                  <%= e.Nombre %>
                 </td>
-                <td>$<%= toThousand(e.price) %>
-                </td>
-                <td>
-                  <%= e.genero %>
+                <td><%= e.Apellido %>
                 </td>
                 <td>
-                  <%= e.marca %>
+                  <%= e.email %>
                 </td>
                 <td>
-                  <%= e.temporada %>
-                </td>
-
-                <td>
-                  <a href="/admin/edit/<%= e.id %> " class="btn btn-outline-primary" role="button"
-                    aria-disabled="true">Editar</a>
-                  <form action="/admin/eliminar/<%= e.id %>?_method=DELETE " method="POST" style="display: inline-flex">
-                    <button type="submit" class="btn btn-outline-danger">ELIMINAR</button>
-                  </form>
+                  <%= e.password %>
                 </td>
               </tr>
               <%})%>
