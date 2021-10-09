@@ -1,9 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../database/productos.json');
-
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+let products = JSON.parse(fs.readFileSync( path.join(__dirname, '../database/productos.json'), 'utf-8'));
+const usuarios = JSON.parse(fs.readFileSync( path.join(__dirname, '../database/users.json'), 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller={
@@ -19,8 +18,12 @@ const controller={
 			return e.id === +id
 			
 		})
-        res.render('admin/edit',{idFind,toThousand})
-		console.log(idFind)
+		const detalles = idFind.detalles.map(e=>e)
+		const colores = idFind.colors.map(e=>e)
+		const editartalles = idFind.talles.map(e=> e)
+	
+        res.render('admin/edit',{idFind,toThousand,detalles,colores,editartalles})
+		
     },
     
     // Create -  Method to store
@@ -39,7 +42,7 @@ const controller={
 
     update: (req, res) => {
 		const upDate = products.find(e=> e.id === +req.params.id)
-		console.log(upDate)
+	
 		if(upDate){
 			upDate.title = req.body.title
 			upDate.price = req.body.price
@@ -61,14 +64,9 @@ const controller={
 		fs.writeFileSync(productsFilePath,JSON.stringify(products,null,2))
 		res.redirect('/admin')
 	},
-	buscar: (req, res) => {
-		const search = req.query.keywords.trim()
-		if(search !==''){
-			const idprod = products.filter(e=> e.id.toLowerCase().includes(search.toLowerCase()))
-			res.render('admin/buscar',{idprod,search,toThousand})
-		}
-
+	usuarios:(req,res) => {
+		res.render("admin/usuariosRegistrados",{usuarios})
 	}
-
+	
 }
 module.exports=controller;
