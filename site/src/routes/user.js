@@ -46,12 +46,15 @@ router.post("/register",(req, res)=>{
     }
 
     const usuario={
-    
+
+        id:req.body.id,
         nombre:req.body.nombre,
         apellido:req.body.apellido,
         email:req.body.email,
         password:req.body.password
     }
+    usuario.id=usuarios.length + 1,
+
      usuarios.push(usuario)
      fs.writeFileSync(ruta, JSON.stringify(usuarios, null,4))
      res.redirect("register")
