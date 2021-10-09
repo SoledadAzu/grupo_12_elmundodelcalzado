@@ -29,8 +29,8 @@
     },
     {
         "id": 5,
-        "nombre": "mara",
-        "apellido": "ruis",
+        "Nombre": "mara",
+        "Apellido": "ruis",
         "email": "mara@gmail.com",
         "password": "q123456"
     }

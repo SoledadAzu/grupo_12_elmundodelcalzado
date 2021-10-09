@@ -4,7 +4,7 @@ const lanzamiento=vendidos.filter(e=>{
    return e.vendidos!==true
 })
 const outlet = vendidos.filter(e=>{
-    return e.outlet === true
+    return e.outlet === "true"
 })
 const controller ={
     index:(req,res)=>{
