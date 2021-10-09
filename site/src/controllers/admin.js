@@ -17,14 +17,17 @@ const controller={
         let id = req.params.id
 		let idFind=products.find(e=>{
 			return e.id === +id
+			
 		})
         res.render('admin/edit',{idFind,toThousand})
+		console.log(idFind)
     },
     
     // Create -  Method to store
 	store: (req, res) => {
+	
 		const formCreate = req.body
-
+		
 		formCreate.id = products.length + 1
 
 		products.push(formCreate);
@@ -36,6 +39,7 @@ const controller={
 
     update: (req, res) => {
 		const upDate = products.find(e=> e.id === +req.params.id)
+		console.log(upDate)
 		if(upDate){
 			upDate.title = req.body.title
 			upDate.price = req.body.price
@@ -43,6 +47,9 @@ const controller={
 			upDate.genero = req.body.genero
 			upDate.temporada = req.body.temporada
 			upDate.description = req.body.description
+			upDate.color = req.body.color
+			upDate.detalles = req.body.detalles
+			upDate.outlet = req.body.outlet
 
 			fs.writeFileSync(productsFilePath,JSON.stringify(products,null,2))
 			res.redirect(`/admin`)}
@@ -53,6 +60,14 @@ const controller={
 
 		fs.writeFileSync(productsFilePath,JSON.stringify(products,null,2))
 		res.redirect('/admin')
+	},
+	buscar: (req, res) => {
+		const search = req.query.keywords.trim()
+		if(search !==''){
+			const idprod = products.filter(e=> e.id.toLowerCase().includes(search.toLowerCase()))
+			res.render('admin/buscar',{idprod,search,toThousand})
+		}
+
 	}
 
 }
