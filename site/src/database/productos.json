@@ -2513,5 +2513,33 @@
     "genero": "mujer",
     "outlet": "false",
     "temporada": "true"
+  },
+  {
+    "title": "new",
+    "price": "5999",
+    "colores": [
+      "rojo",
+      "verde",
+      "naranja"
+    ],
+    "detalle": [
+      "cuero",
+      "mallado",
+      "zuela",
+      "cuero"
+    ],
+    "genero": "hombre",
+    "temporada": "false",
+    "outlet": "true",
+    "marca": "newbalance",
+    "talles": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39"
+    ],
+    "description": "",
+    "id": 71
   }
 ]
