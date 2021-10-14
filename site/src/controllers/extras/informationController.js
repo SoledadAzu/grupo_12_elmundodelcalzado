@@ -17,6 +17,9 @@ const controller ={
     },
     politicaDeCambio:(req,res)=>{
         res.render('extras/politicaDeCambios')
+    },
+    acercaDeNosotros:(req,res)=>{
+        res.render('extras/acercaDeNosotros')
     }
 }
 module.exports=controller;

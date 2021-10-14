@@ -3,7 +3,7 @@
 }
 .headerFijo{
     position: fixed;
-    width: 100%;
+    width: 67%;
 }
 header{
     display: flex;
@@ -92,11 +92,12 @@ header{
 }
 .logo{
     width: 110px;
-    
+       
 }
-
-.logo img{
+.logo a img{
     width: 100%;
+    margin-top: 5px;
+    margin-left: 5px;
 }
 .menu-principal{
     display: none;
@@ -134,6 +135,7 @@ header{
 }
 
 @media (min-width:769px){
+    
     .administrador{
         display: none;
     }
@@ -199,6 +201,9 @@ header{
     
 }
 @media (min-width:1024px){
+    .headerFijo{
+        width: 100%;
+    }
     .administrador{
         margin-right: 30px;
         display: block;
