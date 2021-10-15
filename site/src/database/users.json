@@ -4,34 +4,39 @@
         "Nombre": "ana",
         "Apellido": "naldo",
         "email": "ana@gmail.com",
-        "password": "a123456"
+        "password": "a123456",
+        "rol":"admin"
     },
     {
         "id": 2,
         "Nombre": "Juan",
         "Apellido": "Diaz",
         "email": "juan@gmail.com",
-        "password": "b123456"
+        "password": "b123456",
+        "rol":"admin"
     },
     {
         "id": 3,
         "Nombre": "marta",
         "Apellido": "lopez",
         "email": "marta@gmail.com",
-        "password": "c123456"
+        "password": "c123456",
+        "rol":"user"
     },
     {
         "id": 4,
         "Nombre": "lucas",
         "Apellido": "roja",
         "email": "lucas@gmail.com",
-        "password": "d123456"
+        "password": "d123456",
+        "rol":"user"
     },
     {
         "id": 5,
         "Nombre": "mara",
         "Apellido": "ruis",
         "email": "mara@gmail.com",
-        "password": "q123456"
+        "password": "q123456",
+        "rol":"user"
     }
 ]

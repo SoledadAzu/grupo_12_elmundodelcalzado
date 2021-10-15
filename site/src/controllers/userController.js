@@ -1,5 +1,7 @@
 const fs = require("fs")
 const path = require("path")
+const {validationResult} = require('express-validator')
+
 const controller ={
     login:(req,res)=>{
         res.render('users/login')
@@ -9,22 +11,43 @@ const controller ={
         const usuariosRegistrados =fs.readFileSync(ruta,"utf-8")
     
         const usuarios = JSON.parse(usuariosRegistrados)
-       const encontrado= usuarios.find(element=>{
-        return element.email===req.body.email  
-           
-       })
+        const errors = validationResult(req)
+
+        if(errors.isEmpty()){
+
+            const encontrado= usuarios.find(element=>{
+                return element.email===req.body.email  
+                   
+               })
+               if(encontrado ){
+                if(encontrado.password === req.body.password) {
+                    req.session.usuarioLogueado = encontrado.email
+                    res.redirect("/")
+                }else  if(encontrado.password !== req.body.password){
+                    let mensaje = "la contraseña es incorrecta"
+                    res.render("users/login",{
+                        mensaje,
+                        oldData:req.body})
+                    
+                }
+                    
+                }else { 
+                    res.redirect("register")
+                    
+                }  
+
+        }else{
+            res.render('users/login',{
+                errors:errors.mapped(),
+                oldData:req.body
+            })
+        }
+
+       
     
     
     
-     if(encontrado ){
-    if(encontrado.password === req.body.password) {
-        res.redirect("/")
-    }
-        
-    }else { 
-        res.redirect("register")
-        console.log(encontrado)
-    }  
+    
     
     },
 
