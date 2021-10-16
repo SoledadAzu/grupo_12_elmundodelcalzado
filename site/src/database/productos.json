@@ -2510,5 +2510,34 @@
     "genero": "mujer",
     "outlet": "false",
     "temporada": "true"
+  },
+  {
+    "title": "nueva zapa",
+    "price": "15999",
+    "colors": [
+      "rojo",
+      "gris",
+      "azul"
+    ],
+    "detalles": [
+      "cuero",
+      "zuela",
+      "otro",
+      "otro"
+    ],
+    "genero": "hombre",
+    "temporada": "true",
+    "outlet": "false",
+    "marca": "nike",
+    "talles": [
+      "35",
+      "36",
+      "37",
+      "40",
+      "41",
+      "42"
+    ],
+    "description": "buenas zapa",
+    "id": 71
   }
 ]
