@@ -27,6 +27,7 @@ const controller ={
                    
                 if(encontrado.password === req.body.password) {
                     req.session.usuarioLogueado = encontrado.email
+                    req.session.nameLogueado = encontrado.Nombre
                     req.session.rol = encontrado.rol
                     res.redirect('/')
                     

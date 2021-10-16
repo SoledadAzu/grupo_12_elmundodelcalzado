@@ -36,16 +36,24 @@
                 <input  type="text" name="keywords" placeholder="¿Que estas buscando? " > <i class="fas fa-search"> </i>
             </form>
         <div class="iconos">
+            <% if(locals.userAdmin){ %> 
             <div class="administrador">
-               
-                <a href="/admin"><h3>ADMIN</h3></a>
-                   
+               <a href="/admin"><h3>ADMIN</h3></a>
+               <a href="/admin/cerrar">Cerrar Session</a>
             </div>
+            <% } else if(locals.user){%> 
+                <div class="administrador">
+                    <a href="/"><h3>Bienvenida: <%= locals.user %></h3></a>
+                    <a href="/admin/cerrar">Cerrar Session</a>
+                 </div>
+                
+            <% } else {%>     
             <div class="usuario">
                 <i class="fas fa-user"></i>
                 <a href="/user/login">Ingresa</a>
                 <a href="/user/register">o Registrate</a>
             </div>
+            <%}%>
             <div class="iconos-search">
                 <div class="search">
                     <input type="checkbox" id="search">

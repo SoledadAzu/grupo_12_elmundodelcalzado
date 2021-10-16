@@ -9,6 +9,12 @@ const controller={
     admin:(req,res)=>{
         res.render('admin/admin',{products,toThousand})
     },
+	cerrar:(req,res)=>{
+		if(req.session.usuarioLogueado!== undefined){
+			req.session.destroy()
+			res.redirect('/')
+		}
+	},
     create:(req,res)=>{
         res.render('admin/create')
     },

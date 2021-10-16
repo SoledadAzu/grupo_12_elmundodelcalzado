@@ -15,7 +15,7 @@ const validatorlogin=[
         .notEmpty().withMessage('Este campo no puede estar vacio').bail()
         .isLength({min:6}).withMessage('La contraseña debe tener un minimo de 6 caracteres')
 ]
-
+// validando Register
 const validatorRegister=[
     body('nombre').notEmpty().withMessage('Este campo no puede estar vacio'),
     body('apellido').notEmpty().withMessage('Este campo no puede estar vacio'),

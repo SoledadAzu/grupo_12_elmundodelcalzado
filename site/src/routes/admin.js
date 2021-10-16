@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const {admin,create,edit,store,update,deleteprod,usuarios} = require('../controllers/admin');
+const {admin,create,edit,store,update,deleteprod,usuarios,cerrar} = require('../controllers/admin');
 
 
 
 
 router.get('/',admin)
+router.get('/cerrar',cerrar)
 router.get('/create',create); 
 router.post('/create',store);  
 router.get('/edit/:id',edit); 
