@@ -69,11 +69,11 @@ const controller ={
         
         if(errorsRegister.isEmpty()){
 
-        if(usuariosRegistrados ===""){
-            usuarios = []
-        }else{
-            usuarios = JSON.parse(usuariosRegistrados)
-        }
+            if(usuariosRegistrados ===""){
+                usuarios = []
+            }else{
+                usuarios = JSON.parse(usuariosRegistrados)
+            }
     
         const usuario={
     
@@ -92,7 +92,7 @@ const controller ={
          res.redirect("/")
     }else{
         res.render('users/registro',{
-            errors:errorsRegister.mapped(),
+            errorsRegister:errorsRegister.mapped(),
             oldData:req.body
         })
     }
