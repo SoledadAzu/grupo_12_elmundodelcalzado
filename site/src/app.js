@@ -11,7 +11,8 @@ const indexRouter = require('./routes/main');
 const userRouter = require('./routes/user');
 const productRouter = require('./routes/products');
 const adminRouter = require('./routes/admin');
-const informacionRotuer = require('./routes/extras/information');
+const informacionRouter = require('./routes/extras/information');
+
 
 
 const app = express();
@@ -32,10 +33,11 @@ app.use(methodOverride('_method'));
 app.use('/',indexRouter);
 app.use('/products',productRouter);
 app.use('/user',userRouter);
-app.use('/admin',adminRouter)
+app.use('/admin',adminRouter);
+
 
 /**************************EXTRAS*********************************** */
-app.use('/informacion',informacionRotuer)
+app.use('/informacion',informacionRouter)
 
 
 // catch 404 and forward to error handler

@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const {login,register} = require('../controllers/userController')
+const {login,register,perfiluser} = require('../controllers/userController')
 const fs = require("fs")
-const path = require("path")
+const path = require("path");
+const { get } = require('http');
 
 //login user
 router.get('/login',login)
@@ -59,6 +60,8 @@ router.post("/register",(req, res)=>{
      fs.writeFileSync(ruta, JSON.stringify(usuarios, null,4))
      res.redirect("register")
 })
+
+router.get("/perfiluser",perfiluser)
 
  
 module.exports=router

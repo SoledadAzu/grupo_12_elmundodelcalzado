@@ -1,4 +1,3 @@
-
 const controller ={
     login:(req,res)=>{
         res.render('users/login')
@@ -6,6 +5,9 @@ const controller ={
 
     register:(req,res)=>{
         res.render('users/registro')
+    },
+    perfiluser:(req,res)=>{
+        res.render("users/perfiluser")
     }
 }
 module.exports=controller
