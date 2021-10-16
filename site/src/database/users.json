@@ -45,7 +45,7 @@
         "apellido": "castro",
         "email": "cartillo@gmail.com",
         "password": "a1234567",
-        "rol":"user",
+        "rol": "user",
         "img": "default.jpg"
     },
     {
@@ -54,7 +54,7 @@
         "apellido": "morales",
         "email": "ana@gmail.com",
         "password": "a1234567",
-        "rol":"user",
+        "rol": "user",
         "img": "img-1634356725416.jpg"
     },
     {
@@ -63,6 +63,15 @@
         "apellido": "pereira",
         "email": "cartillo@gmail.com",
         "password": "a1234567",
+        "img": "default.jpg",
+        "rol": "user"
+    },
+    {
+        "id": 9,
+        "nombre": "mariano",
+        "apellido": "castro",
+        "email": "ana@gmail.com",
+        "password": "a123456",
         "img": "default.jpg",
         "rol": "user"
     }
