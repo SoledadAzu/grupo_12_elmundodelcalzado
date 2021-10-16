@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const{product,carrito,general,mercaderia,hombre,mujer,temporada,ofertas,adidas,adidasoriginal,nike,puma,topper,asics,converse,fila,newbalance}=require('../controllers/productController')
-const logeo=require('../middleware/logeo')
+
 
 
 

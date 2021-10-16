@@ -30,6 +30,7 @@ app.use(methodOverride('_method'));
 app.use(session({secret:"esto es un secreto!!"}))
 
 
+
 /******************* MUESTRA DE LAS RUTAS********************** */
 app.use('/',indexRouter);
 app.use('/products',productRouter);

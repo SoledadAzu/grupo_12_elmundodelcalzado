@@ -4,6 +4,7 @@ const {admin,create,edit,store,update,deleteprod,usuarios} = require('../control
 
 
 
+
 router.get('/',admin)
 router.get('/create',create); 
 router.post('/create',store);  
