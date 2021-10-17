@@ -1,6 +1,8 @@
 const fs = require("fs")
 const path = require("path")
 const {validationResult} = require('express-validator')
+const multer= require("multer")
+const upload = multer()
 
 const controller ={
     login:(req,res)=>{
@@ -14,7 +16,7 @@ const controller ={
 
         const errors = validationResult(req)
 
-        if(errors.isEmpty()){
+        if(errors.isEmpty){
 
             
 
@@ -51,12 +53,6 @@ const controller ={
             })
         }
 
-       
-    
-    
-    
-    
-    
     },
 
     register:(req,res)=>{

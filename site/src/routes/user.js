@@ -38,9 +38,9 @@ const storage = multer.diskStorage({
     }
 })
 // validar el formato
-const fileImg = function(req,res,next){
+const fileImg = function(req,file,callback){
     if(!file.originalname.match(/\.(jpg|jpeg|png|gif|webp)$/ )){
-        req.fileValidationError = "solo se permite imagenes";
+        req.fileValidationError = "solo se permiten imagenes"; // mensaje del error
         return callback(null,false,req.fileValidationError)
     }
     callback(null,true)
