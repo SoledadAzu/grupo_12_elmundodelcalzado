@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {login,register, upload, uploadRegister} = require('../controllers/userController')
+const {login,register,perfiluser, upload, uploadRegister} = require('../controllers/userController')
 const {body} = require('express-validator')
 const multer = require('multer')
 const path = require('path')

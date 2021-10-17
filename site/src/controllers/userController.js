@@ -1,6 +1,7 @@
 const fs = require("fs")
 const path = require("path")
 const {validationResult} = require('express-validator')
+const nodemon = require("nodemon")
 
 const controller ={
     login:(req,res)=>{
@@ -96,7 +97,11 @@ const controller ={
             oldData:req.body
         })
     }
+},
+perfiluser:(req,res)=>{
+    res.render('users/perfiluser')
 }
     
 }
+
 module.exports=controller
