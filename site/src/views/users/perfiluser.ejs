@@ -7,22 +7,25 @@
     <title>EL mundo del calzado</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  
 
 </head>
+  <!-- HEADER -->
+  <%- include('../partials/header') %>
+  <!-- HEADER -->
 
 <body>
+    <form action="" method="POST">
     <section class="seccion-perfil-usuario">
         <div class="perfil-usuario-header">
             <div class="perfil-usuario-portada">
                 <div class="perfil-usuario-avatar">
                     <img src="/images/img-avatar.png" alt="img-avatar">
-                    <button type="button" class="boton-avatar">
+                    <button type="button" class="boton-avatar"><input type="file" name="img_user" id="img_user" class= "boton-avatar2">
                         <i class="far fa-image"></i>
                     </button>
                 </div>
-                <button type="button" class="boton-portada">
-                    <i class="far fa-image"></i> Cambiar fondo
+               <button type="" class="boton-portada">
+                   <input type="file" name="img_portada" id="img_portada"class="boton-portada2"> <i class="far fa-image"></i> Cambiar fondo
                 </button>
             </div>
         </div>
@@ -47,7 +50,11 @@
             </div>
         </div>
     </section>
+</form>
     <!--====  End of html  ====-->
+     <!-- FOOTER -->
+     <%- include('../partials/footer') %>
+     <!-- FOOTER -->
 
 </body>
 
