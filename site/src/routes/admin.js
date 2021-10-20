@@ -1,17 +1,18 @@
 const express = require('express');
 const router = express.Router();
 const {admin,create,edit,store,update,deleteprod,usuarios,cerrar} = require('../controllers/admin');
+const permisoMiddleware = require('../middleware/permisoMiddleware')
 
 
 
 
-router.get('/',admin)
+router.get('/',permisoMiddleware,admin)
 router.get('/cerrar',cerrar)
-router.get('/create',create); 
-router.post('/create',store);  
-router.get('/edit/:id',edit); 
-router.put('/edit/:id',update);
-router.delete('/eliminar/:id',deleteprod) 
-router.get("/usuarios",usuarios)
+router.get('/create',permisoMiddleware,create); 
+router.post('/create',permisoMiddleware,store);  
+router.get('/edit/:id',permisoMiddleware,edit); 
+router.put('/edit/:id',permisoMiddleware,update);
+router.delete('/eliminar/:id',permisoMiddleware,deleteprod) 
+router.get("/usuarios",permisoMiddleware,usuarios)
 
 module.exports = router

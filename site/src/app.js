@@ -9,6 +9,7 @@ const logeo = require('./middleware/adminLogueado')
 const userlogeo = require('./middleware/userLogueado')
 
 
+
 /***********************REQUERIMIENTOS DE LOS ARCHIVO DE LAS RUTAS PRINCIPALES**************************/
 const indexRouter = require('./routes/main');
 const userRouter = require('./routes/user');
@@ -32,6 +33,7 @@ app.use(methodOverride('_method'));
 app.use(session({secret:"esto es un secreto!!"}))
 app.use(logeo)
 app.use(userlogeo)
+
 
 
 
