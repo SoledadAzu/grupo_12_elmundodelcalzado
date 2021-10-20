@@ -38,41 +38,5 @@
         "email": "mara@gmail.com",
         "password": "q123456",
         "rol": "user"
-    },
-    {
-        "id": 6,
-        "nombre": "jose",
-        "apellido": "castro",
-        "email": "cartillo@gmail.com",
-        "password": "a1234567",
-        "rol": "user",
-        "img": "default.jpg"
-    },
-    {
-        "id": 7,
-        "nombre": "mariano",
-        "apellido": "morales",
-        "email": "ana@gmail.com",
-        "password": "a1234567",
-        "rol": "user",
-        "img": "img-1634356725416.jpg"
-    },
-    {
-        "id": 8,
-        "nombre": "mariano",
-        "apellido": "pereira",
-        "email": "cartillo@gmail.com",
-        "password": "a1234567",
-        "img": "default.jpg",
-        "rol": "user"
-    },
-    {
-        "id": 9,
-        "nombre": "mariano",
-        "apellido": "castro",
-        "email": "ana@gmail.com",
-        "password": "a123456",
-        "img": "default.jpg",
-        "rol": "user"
     }
 ]

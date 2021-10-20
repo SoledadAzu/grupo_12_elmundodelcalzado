@@ -5,6 +5,9 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride =  require('method-override');
 const session = require('express-session') // requerimiento de express-session
+const logeo = require('./middleware/adminLogueado')
+const userlogeo = require('./middleware/userLogueado')
+
 
 
 /***********************REQUERIMIENTOS DE LOS ARCHIVO DE LAS RUTAS PRINCIPALES**************************/
@@ -28,6 +31,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname,'..','public'))); //public estatico
 app.use(methodOverride('_method'));
 app.use(session({secret:"esto es un secreto!!"}))
+app.use(logeo)
+app.use(userlogeo)
+
 
 
 

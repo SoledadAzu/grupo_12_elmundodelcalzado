@@ -9,6 +9,12 @@ const controller={
     admin:(req,res)=>{
         res.render('admin/admin',{products,toThousand})
     },
+	cerrar:(req,res)=>{
+		if(req.session.usuarioLogueado!== undefined){
+			req.session.destroy()
+			res.redirect('/')
+		}
+	},
     create:(req,res)=>{
         res.render('admin/create')
     },
@@ -21,7 +27,7 @@ const controller={
 		const detalles = idFind.detalles.map(e=>e)
 		const colores = idFind.colors.map(e=>e)
 		const editartalles = idFind.talles.map(e=> e)
-	
+		console.log(editartalles)
         res.render('admin/edit',{idFind,toThousand,detalles,colores,editartalles})
 		
     },
