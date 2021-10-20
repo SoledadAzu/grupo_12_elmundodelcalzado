@@ -94,11 +94,11 @@
               <div>
                 <label for="talles" >Talles:</label>
                 <div class="container-talles">
-                 <%editartalles.map(e=> {%>
+              
                   <div> 
-                    <label><%= e %> <input style="width: 20px; height: 20px" type="checkbox" name="talles" id="<%= e %>" checked></label>
+                    <label>35 <input type="checkbox" name="talles" id="35" <%= editartalles[0] === "35" ? "checked" : null %>></label>
                     
-                  </div> <%}) %>
+                  </div>
                   
                   
                  <!--  <div>
