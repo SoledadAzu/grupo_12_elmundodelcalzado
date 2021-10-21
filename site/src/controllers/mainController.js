@@ -6,7 +6,9 @@ const lanzamiento=vendidos.filter(e=>{
 const outlet = vendidos.filter(e=>{
     return e.outlet === "true"
 })
+
 const controller ={
+    // vista del home
     index:(req,res)=>{
 
         res.render('home/home',{lanzamiento,outlet,toThousand})

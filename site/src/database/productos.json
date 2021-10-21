@@ -2512,7 +2512,7 @@
     "temporada": "true"
   },
   {
-    "title": "nueva zapa ",
+    "title": "nueva zapa  ",
     "price": "15.999",
     "colors": [
       "rojo",
@@ -2541,8 +2541,8 @@
     "id": 71
   },
   {
-    "title": "adiddas",
-    "price": "17000",
+    "title": "adiddas                  ",
+    "price": "5.555",
     "colors": [
       "rojo",
       "rojo",
@@ -2557,14 +2557,14 @@
     "genero": "hombre",
     "temporada": "true",
     "outlet": "false",
-    "marca": "adiddas",
+    "marca": "",
     "talles": [
       "35",
-      "36",
       "37",
-      "40",
+      "38",
+      "39",
       "41",
-      "42"
+      "43"
     ],
     "file": [
       "",

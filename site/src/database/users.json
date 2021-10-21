@@ -38,5 +38,14 @@
         "email": "mara@gmail.com",
         "password": "q123456",
         "rol": "user"
+    },
+    {
+        "id": 6,
+        "nombre": "jose",
+        "apellido": "perez",
+        "email": "marta@gmail.com",
+        "password": "a123456",
+        "img": "default.jpg",
+        "rol": "user"
     }
 ]

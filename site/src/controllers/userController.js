@@ -35,7 +35,7 @@ const controller ={
                     } 
 
                     if(req.body.recordame != undefined){
-                        res.cookie('recordame',req.session.usuarioLogueado,{maxAge: 30000})
+                        res.cookie('recordame',req.session.usuarioLogueado,{maxAge: 60000})
                     }
 
                     // const {email} = req.body;

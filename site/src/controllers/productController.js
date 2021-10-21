@@ -53,6 +53,8 @@ const prodNewBalance=productos.filter(e=>{
 })
 
 const controller={
+
+    // vista del producto por ID
     product:(req,res)=>{
         let id = req.params.id;
         let idProduct = productos.find(e=>{
@@ -60,10 +62,12 @@ const controller={
         })
         res.render('products/detalleProducto',{idProduct,ofertas,toThousand})
     },
+    // vista del carrito por ID
     carrito:(req,res)=>{
         res.render('products/carritoDeCompras',{ofertas,oferta,toThousand})
     },
     
+    // vista del search y aplicacion del mismo
     general: (req, res) => {
 		const search = req.query.keywords.trim()
 		if(search !==''){
@@ -75,47 +79,61 @@ const controller={
 			res.redirect('/')
 		}
 	},
+    // vista de todos los productos
     mercaderia: (req,res)=>{
         res.render("products/todosLosProductos", {productos,toThousand})
         
         
     },
+    // vista de todos los productos de hombre
     hombre: (req,res)=>{
         res.render("products/hombre", {prodHombre,toThousand})    
     },
+    // vista de todos los productos de mujer
     mujer: (req,res)=>{
         res.render("products/mujer",{prodMujer,toThousand})
     },
+    // vista de todos los productos de temporada
     temporada: (req,res)=>{
         res.render("products/temporada",{prodTemporada,toThousand})
     },
+    // vista de todos los productos de outlet
     ofertas: (req,res)=>{
         res.render("products/outlet",{ofertas,toThousand})
     },
+    // vista de todos los productos de adiddas
     adidas:(req,res)=>{
         res.render("products/adidas", {prodAdidas,toThousand})    
     },
+    // vista de todos los productos de adiddasOriginal
     adidasoriginal:(req,res)=>{
         res.render("products/adidasoriginal", {prodAdidasOriginal,toThousand})    
     },
+    // vista de todos los productos de nike
     nike:(req,res)=>{
         res.render("products/nike", {prodNike,toThousand})    
     },
+    // vista de todos los productos de tooper
     topper:(req,res)=>{
         res.render("products/topper", {prodTopper,toThousand})    
     },
+    // vista de todos los productos de puma
     puma:(req,res)=>{
         res.render("products/puma", {prodPuma,toThousand})    
     },
+    // vista de todos los productos de asics
     asics:(req,res)=>{
         res.render("products/asics", {prodAsics,toThousand})    
     },
+    // vista de todos los productos de converse
     converse:(req,res)=>{
         res.render("products/converse", {prodConverse,toThousand})    
     },
+    // vista de todos los productos de fila
     fila:(req,res)=>{
         res.render("products/fila", {prodFila,toThousand})    
     },
+    // vista de todos los productos de newBalance
     newbalance:(req,res)=>{
         res.render("products/newbalance", {prodNewBalance,toThousand})    
     },
