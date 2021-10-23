@@ -4,6 +4,7 @@ const productsFilePath =  path.join(__dirname, '../database/productos.json')
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const usuarios = JSON.parse(fs.readFileSync( path.join(__dirname, '../database/users.json'), 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const bcrypt = require('bcryptjs');
 
 const controller={
 

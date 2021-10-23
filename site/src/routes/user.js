@@ -30,30 +30,27 @@ const validatorRegister=[
 
 // creando el destino y el nombre del archivo
 const storage = multer.diskStorage({
-    destination:(req,file,callback)=>{
+    destination: (req,file,callback) => {
         callback(null,path.join(__dirname,'..','..','public','images','users'))
     },
-    filename:(req,file,callback)=>{
+    filename: (req,file,callback) => {
         const name = 'img-' + Date.now() + path.extname(file.originalname)
         callback(null,name)
+    },
+});
+
+const fileFilter = function(req, file,callback) {
+    if(!file.originalname.match(/\.(jpg|jpeg|png|gif|webp)$/)){
+        req.fileValidationError = "Solo se permite imágenes JPG,JPEG,PNG,GIF,WEBP";
+        return callback(null,false,req.fileValidationError);
     }
-})
-//validar el formato
-const fileImg = function(req,file,callback){
-    if(!file.originalname.match(/\.(jpg|jpeg|png|gif|webp)$/ )){
-        req.fileValidationError = "solo se permiten imagenes"; // mensaje del error
-        return callback(null,false,req.fileValidationError)
-    }
-    callback(null,true)
+    callback(null,true);
 }
 
-// ejecutar el storage y la funcion de validacion
 const imgUpload = multer({
     storage,
-    fileImg
-
+    fileFilter
 })
-
 
 //login user
 router.get('/login',login)

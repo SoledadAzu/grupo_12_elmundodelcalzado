@@ -1,69 +1,10 @@
 [
     {
         "id": 1,
-        "Nombre": "ana",
-        "Apellido": "naldo",
+        "nombre": "ana",
+        "apellido": "naldo",
         "email": "ana@gmail.com",
-        "password": "a123456",
-        "rol": "admin"
-    },
-    {
-        "id": 2,
-        "Nombre": "Juan",
-        "Apellido": "Diaz",
-        "email": "juan@gmail.com",
-        "password": "b123456",
-        "rol": "admin"
-    },
-    {
-        "id": 3,
-        "Nombre": "marta",
-        "Apellido": "lopez",
-        "email": "marta@gmail.com",
-        "password": "c123456",
-        "rol": "user"
-    },
-    {
-        "id": 4,
-        "Nombre": "lucas",
-        "Apellido": "roja",
-        "email": "lucas@gmail.com",
-        "password": "d123456",
-        "rol": "user"
-    },
-    {
-        "id": 5,
-        "Nombre": "mara",
-        "Apellido": "ruis",
-        "email": "mara@gmail.com",
-        "password": "q123456",
-        "rol": "user"
-    },
-    {
-        "id": 6,
-        "nombre": "jose",
-        "apellido": "perez",
-        "email": "marta@gmail.com",
-        "password": "a123456",
-        "img": "default.jpg",
-        "rol": "user"
-    },
-    {
-        "id": 7,
-        "nombre": "claudia",
-        "apellido": "gimenez",
-        "email": "claudia@gmail.com",
-        "password": "$2a$10$TkUc.bLrQ2XsPI/4KTWqhuQshdcbHaSVNEmG70IT4oxBh7DqWKzge",
-        "img": "default.jpg",
-        "rol": "user"
-    },
-    {
-        "id": 8,
-        "nombre": "juanito",
-        "apellido": "diaz",
-        "email": "juanitoDiaz@gmail.com",
         "password": "$2a$10$vc0dpn75UpfWJrAn5NFb7OiuC6zSDXI0vNjRkG4HCl1mlQUk2HAhS",
-        "img": "default.jpg",
-        "rol": "user"
+        "rol": "admin"
     }
 ]
