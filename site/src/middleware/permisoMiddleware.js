@@ -6,12 +6,7 @@ function permiso(req,res,next){
     }else{
         res.redirect("/../../informacion/denegado")
     }
-    // req.session.usuarioLogueado ={
-    //     email:encontrado.email,
-    //     nombre: encontrado.Nombre,
-    //     rol:encontrado.rol
-    // } 
-    
+      
 }
 
 module.exports= permiso

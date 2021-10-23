@@ -2,165 +2,212 @@
 <html lang="en">
 
 <!-- head -->
-<%-include('./partials/head') %> 
-<!-- head -->
-<body class="crearForm">
+<%-include('./partials/head') %>
+  <!-- head -->
+
+  <body class="crearForm">
     <!-- navegacion -->
-        <%-include('./partials/header')  %>
-    <!-- navegacion -->
-    <main class="adminForm">
-      <div class="">
+    <%-include('./partials/header') %>
+      <!-- navegacion -->
+      <main class="adminForm">
         <div class="">
           <div class="">
-            <h2 class="">Estás editando: <i><%= idFind.title %> </i</h2>
+            <div class="">
+              <h2 class="">Estás editando: <i>
+                  <%= idFind.title %>
+                    </i< /h2>
+            </div>
           </div>
-        </div>
-        <div class="contenedor-form">
-          <form action="/admin/edit/<%= idFind.id %>?_method=PUT " method="POST">
-            <div class="contenedorLabel">
+          <div class="contenedor-form">
+            <form action="/admin/edit/<%= idFind.id %>?_method=PUT " method="POST">
+              <div class="contenedorLabel">
 
-              <div class="labelForm">
-                <label for="title" class="">Nombre del producto:</label>
-                <input type="text" id="title" name="title" placeholder="Ej: Zapatillas Reebok"
-                  class="form-input" value="<%= idFind.title %> ">
-              </div>
-              <div class="labelForm">
-                <label for="price" class="">Precio del producto:</label>
-                <input type="text" id="price" name="price" placeholder="Ej: 5678"
-                  class="form-input" value="<%= toThousand(idFind.price) %>">
-              </div>
-              <section class="seccion">
-              <div class="labelForm width">
-                <label for="colors" class="" >Colores:</label>
-                <% colores.map(e=> {%>    
-                <input type="text" id="colors" name="colors" value="<%= e %>"
-                  class="form-input1" >
-                <%}) %> 
-                 
-              </div>
-              <div class="labelForm width">
-                <label for="detalles" class="1">Detalles:</label>
-<% detalles.map(e=> {%>
-<input type="text" id="detalles" name="detalles" value="<%= e %>" class="form-input1">
-<%}) %> 
-                
-                
-              </div>
-            </section>
-              
-              <div class="selection">
-                <div>
-                  <label for="genero" class="form-label" value="<%= idFind.genero %>">Genero</label>
-                  <select name="genero" id="genero" class="form-input">
-                    <option value="" hidden selected>Elegí</option>
-                    <option value="hombre" <%= idFind.genero === "hombre" ? "selected" : null %>>Hombre</option>
-                    <option value="mujer" <%= idFind.genero === "mujer" ? "selected" : null %>>Mujer</option>
-                  </select>
+                <div class="labelForm">
+                  <label for="title" class="">Nombre del producto:</label>
+                  <input type="text" id="title" name="title" placeholder="Ej: Zapatillas Reebok" class="form-input"
+                    value="<%= idFind.title %> ">
+                </div>
+                <div class="labelForm">
+                  <label for="price" class="">Precio del producto:</label>
+                  <input type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input"
+                    value="<%= toThousand(idFind.price) %>">
+                </div>
+                <section class="seccion">
+                  <div class="labelForm width">
+                    <label for="colors" class="">Colores:</label>
+                    <% colores.map(e=> {%>
+                      <input type="text" id="colors" name="colors" value="<%= e %>" class="form-input1">
+                      <%}) %>
+
+                  </div>
+                  <div class="labelForm width">
+                    <label for="detalles" class="1">Detalles:</label>
+                    <% detalles.map(e=> {%>
+                      <input type="text" id="detalles" name="detalles" value="<%= e %>" class="form-input1">
+                      <%}) %>
+
+
+                  </div>
+                </section>
+
+                <div class="selection">
+                  <div>
+                    <label for="genero" class="form-label" value="<%= idFind.genero %>">Genero</label>
+                    <select name="genero" id="genero" class="form-input">
+                      <option value="" hidden selected>Elegí</option>
+                      <option value="hombre" <%=idFind.genero==="hombre" ? "selected" : null %>>Hombre</option>
+                      <option value="mujer" <%=idFind.genero==="mujer" ? "selected" : null %>>Mujer</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="temporada" class="form-label" value="<%= idFind.temporada %>">Temporada</label>
+                    <select name="temporada" id="temporada" class="form-input">
+                      <option value="" hidden selected>Elegí</option>
+                      <option value="true" <%=idFind.temporada==="true" ? "selected" : null %>>True</option>
+                      <option value="false" <%=idFind.temporada==="false" ? "selected" : null %>>False</option>
+
+                    </select>
+                  </div>
+                  <div>
+                    <label for="outlet" class="form-label" value="<%= idFind.outlet %>">Outlet</label>
+                    <select name="outlet" id="outlet" class="form-input">
+                      <option value="" hidden selected>Elegí</option>
+                      <option value="true" <%=idFind.outlet==="true" ? "selected" : null %>>True</option>
+                      <option value="false" <%=idFind.outlet==="false" ? "selected" : null %>>False</option>
+
+                    </select>
+                  </div>
+                  <div>
+                    <label for="marca" class="form-label">Marca</label>
+                    <select name="marca" id="marca" class="form-input">
+                      <option value="" hidden selected>Marca</option>
+                      <option value="adidas" <%=idFind.marca==="adidas" ? "selected" : null %>>Adidas</option>
+                      <option value="nike" <%=idFind.marca==="nike" ? "selected" : null %>>Nike</option>
+                      <option value="asics" <%=idFind.marca==="asics" ? "selected" : null %>>Asics</option>
+                      <option value="fila" <%=idFind.marca==="fila" ? "selected" : null %>>Fila</option>
+                      <option value="topper" <%=idFind.marca==="topper" ? "selected" : null %>>Topper</option>
+                      <option value="converse" <%=idFind.marca==="converse" ? "selected" : null %>>Converse</option>
+                      <option value="newbalance" <%=idFind.marca==="newbalance" ? "selected" : null %>>New Balance
+                      </option>
+                      <option value="puma" <%=idFind.marca==="puma" ? "selected" : null %>>Puma</option>
+                      <option value="adidasoriginal" <%=idFind.marca==="adidasoriginal" ? "selected" : null %>>Adidas
+                        Original</option>
+                    </select>
+                  </div>
                 </div>
                 <div>
-                <label for="temporada" class="form-label" value="<%= idFind.temporada %>">Temporada</label>
-                <select name="temporada" id="temporada" class="form-input">
-                  <option value="" hidden selected>Elegí</option>
-                  <option value="true" <%= idFind.temporada === "true" ? "selected" : null %>>True</option>
-                  <option value="false"<%= idFind.temporada === "false" ? "selected" : null %>>False</option>
+                  <label for="talles">Talles:</label>
+                  <div class="container-talles">
 
-                </select>
+                    <div>
+                      <label>
+                        <input type="checkbox" name="talles" id="35" value="35"<% editartalles.filter(element=> {%>
+                        <%= element==="35" ? 'checked' : null%>
+                          <%})%>>
+                            35
+                      </label>
+                    </div>
+                    <div>
+                      <label>
+                        <input type="checkbox" name="talles" id="36" value="36"<% editartalles.filter(element=> {%>
+                        <%= element==="36" ? 'checked' : null%>
+                          <%})%>>
+                            36
+                      </label>
+                    </div>
+                    <div>
+                      <label>
+                        <input type="checkbox" name="talles" id="37" value="37"<% editartalles.filter(element=> {%>
+                        <%= element==="37" ? 'checked' : null%>
+                          <%})%>>
+                            37
+                      </label>
+                    </div>
+                    <div>
+                      <label>
+                        <input type="checkbox" name="talles" id="38" value="38"<% editartalles.filter(element=> {%>
+                        <%= element==="38" ? 'checked' : null%>
+                          <%})%>>
+                            38
+                      </label>
+                    </div>
+                    <div>
+                      <label>
+                        <input type="checkbox" name="talles" id="39" value="39"<% editartalles.filter(element=> {%>
+                        <%= element==="39" ? 'checked' : null%>
+                          <%})%>>
+                            39
+                      </label>
+                    </div>
+                    <div>
+                      <label>
+                        <input type="checkbox" name="talles" id="40" value="40"<% editartalles.filter(element=> {%>
+                        <%= element==="40" ? 'checked' : null%>
+                          <%})%>>
+                            40
+                      </label>
+                    </div>
+                    <div>
+                      <label>
+                        <input type="checkbox" name="talles" id="41" value="41"<% editartalles.filter(element=> {%>
+                        <%= element==="41" ? 'checked' : null%>
+                          <%})%>>
+                            41
+                      </label>
+                    </div>
+                    <div>
+                      <label>
+                        <input type="checkbox" name="talles" id="42" value="42"<% editartalles.filter(element=> {%>
+                        <%= element==="42" ? 'checked' : null%>
+                          <%})%>>
+                            42
+                      </label>
+                    </div>
+                    <div>
+                      <label>
+                        <input type="checkbox" name="talles" id="43" value="43"<% editartalles.filter(element=> {%>
+                        <%= element==="43" ? 'checked' : null%>
+                          <%})%>>
+                            43
+                      </label>
+                    </div>
+                    <div>
+                      <label>
+                        <input type="checkbox" name="talles" id="44" value="44"<% editartalles.filter(element=> {%>
+                        <%= element==="44" ? 'checked' : null%>
+                          <%})%>>
+                            44
+                      </label>
+                    </div>
+
+
+
+
+                  </div>
+
+
+
                 </div>
-              <div>
-                <label for="outlet" class="form-label" value="<%= idFind.outlet %>">Outlet</label>
-                <select name="outlet" id="outlet" class="form-input">
-                  <option value="" hidden selected>Elegí</option>
-                  <option value="true"<%= idFind.outlet === "true" ? "selected" : null %>>True</option>
-                  <option value="false"<%= idFind.outlet === "false" ? "selected" : null %>>False</option>
-
-                </select>
-              </div>
-              <div>
-                <label for="marca" class="form-label" >Marca</label>
-                <select name="marca" id="marca" class="form-input">
-                  <option value="" hidden selected>Marca</option>
-                  <option value="adidas" <%= idFind.marca === "adidas" ? "selected" : null %>>Adidas</option>
-                  <option value="nike" <%= idFind.marca === "nike" ? "selected" : null %>>Nike</option>
-                  <option value="asics" <%= idFind.marca === "asics" ? "selected" : null %>>Asics</option>
-                  <option value="fila" <%= idFind.marca === "fila" ? "selected" : null %>>Fila</option>
-                  <option value="topper" <%= idFind.marca === "topper" ? "selected" : null %>>Topper</option>
-                  <option value="converse" <%= idFind.marca === "converse" ? "selected" : null %>>Converse</option>
-                  <option value="newbalance" <%= idFind.marca === "newbalance" ? "selected" : null %>>New Balance</option>
-                  <option value="puma" <%= idFind.marca === "puma" ? "selected" : null %>>Puma</option>
-                  <option value="adidasoriginal" <%= idFind.marca === "adidasoriginal" ? "selected" : null %>>Adidas Original</option>
-                </select>
+                <div class="labelForm">
+                  <label for="description" class="form-label" value="">Descripción:</label>
+                  <textarea name="description" id="description" class="form-input"><%= idFind.description %></textarea>
+                </div>
+                <div class="">
+                  <button class="btn btn-outline-success" type="submit">Editar Producto</button>
                 </div>
               </div>
-              <div>
-                <label for="talles" >Talles:</label>
-                <div class="container-talles">
-              
-                  <div> 
-                    <label>35 <input type="checkbox" name="talles" id="35" <%= editartalles[0] === "35" ? "checked" : null %>></label>
-                    
-                  </div>
-                  
-                  
-                 <!--  <div>
-                    <input type="checkbox" name="talles" id="36" >
-                    <label for="36" >36</label>
-                  </div>
-                  <div>
-                    <input type="checkbox" name="talles" id="37" >
-                    <label for="37">37</label>
-                  </div>
-                  <div>
-                    <input type="checkbox" name="talles" id="38" >
-                    <label for="38">38</label>
-                  </div>
-                  <div>
-                    <input type="checkbox" name="talles" id="39" >
-                    <label for="39">39</label>
-                  </div>
-                  <div>
-                    <input type="checkbox" name="talles" id="40" >
-                    <label for="40">40</label>
-                  </div>
-                  <div>
-                    <input type="checkbox" name="talles" id="41" >
-                    <label for="41">41</label>
-                  </div>
-                  <div>
-                    <input type="checkbox" name="talles" id="42" >
-                    <label for="42">42</label>
-                  </div>
-                  <div>
-                    <input type="checkbox" name="talles" id="43" >
-                    <label for="43">43</label>
-                  </div>
-                  <div>
-                    <input type="checkbox" name="talles" id="44" >
-                    <label for="44">44</label>
-                  </div> -->
-                
-              </div>
-            </div>
+            </form>
+          </div>
 
-              <div class="labelForm">
-                <label for="description" class="form-label" value="">Descripción:</label>
-                <textarea name="description" id="description" class="form-input" ><%= idFind.description %></textarea>
-              </div>
-              <div class="">
-                <button class="btn btn-outline-success"type="submit">Editar Producto</button>
-              </div>
-            </div>
-          </form>
         </div>
 
-      </div>
 
 
 
-
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
-    </main>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+          crossorigin="anonymous"></script>
+      </main>
+  </body>
 
 </html>

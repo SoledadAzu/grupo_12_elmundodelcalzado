@@ -1,8 +1,8 @@
 const fs = require("fs")
 const path = require("path")
 const {validationResult} = require('express-validator')
-const multer= require("multer")
-const upload = multer()
+const bcrypt = require('bcryptjs');
+
 
 const controller ={
     login:(req,res)=>{
@@ -15,88 +15,44 @@ const controller ={
         const usuarios = JSON.parse(usuariosRegistrados)
 
         const errors = validationResult(req)
+        
 
         if(errors.isEmpty){
 
             
-
             const encontrado= usuarios.find(element=>{
                 return element.email===req.body.email  
                    
                })
                
-               if(encontrado ){
-                   
-                if(encontrado.password === req.body.password) {
+               if(encontrado && bcrypt.compareSync(req.body.password,encontrado.password) ){
+                    
                     req.session.usuarioLogueado ={
                         email:encontrado.email,
-                        nombre: encontrado.Nombre,
+                        nombre: encontrado.nombre,
                         rol:encontrado.rol
                     } 
 
                     if(req.body.recordame != undefined){
-                        res.cookie('recordame',req.session.usuarioLogueado,{maxAge: 30000})
+                        res.cookie('recordame',req.session.usuarioLogueado,{maxAge: 60000})
                     }
-
-                    // const {email} = req.body;
-                    // let usuario = usuarios.find(usuario => usuario.email === email);
-                    //     req.session.userLogin = {
-                    //         id : usuario.id,
-                    //         nombre : usuario.nombre,
-                    //         rol : usuario.rol
-                    //         }
-                    //     if (recordar) {
-                    //         res.cookie('Veterinaria', req.session.user, {
-                    //             maxAge: 1000 * 60 * 60 * 24 * 100000
-                    //         })
-
-                    //         req.session.userL = {
-                    //             id: user.id,
-                    //             name: user.name,
-                    //             lastName: user.apellido,
-                    //             email: user.email,
-                    //             img: user.avatar,
-                    //             admin: user.admin
-                    //         }
-                    //         if (recordar) {
-                    //             res.cookie('LaBodega', req.session.userL, {
-                    //                 maxAge: 1000 * 60 * 60 * 24 * 100000
-                    //             })
-                    //         }
-                    //         return res.redirect('/session/profile')
-        
-
-
-
-
-            // }
-            // return res.redirect('/users/profile')
-
-
-
-
-
                     res.redirect('/')
                     
-                }else  if(encontrado.password !== req.body.password){
+                }else{
                     let mensaje = "la contraseña es incorrecta"
                     res.render("users/login",{
                         mensaje:mensaje,
                         oldData:req.body})
-                    
+                    }
+                     
                 }
-                    
-                }else { 
-                    res.redirect("register")
-                    
-                }  
-
-        }else{
-            res.render('users/login',{
+        
+                
+                res.render('users/login',{
                 errors:errors.mapped(),
                 oldData:req.body
             })
-        }
+        
 
     },
 
@@ -107,23 +63,33 @@ const controller ={
         const ruta =path.join(__dirname,"..", "database","users.json")
         const usuariosRegistrados =fs.readFileSync(ruta,"utf-8")
         let usuarios
-        const errorsRegister = validationResult(req)
+        const errors = validationResult(req)
+       
+        if(req.fileValidationError){
+
+            let img = {
+                param:"img",
+                msg:req.fileValidationError,
+
+            }
+            errors.errors.push(img)
+        }
         
-        if(errorsRegister.isEmpty()){
+        if(errors.isEmpty()){
 
             if(usuariosRegistrados ===""){
                 usuarios = []
             }else{
                 usuarios = JSON.parse(usuariosRegistrados)
             }
-    
+            
         const usuario={
     
             id:req.body.id,
             nombre:req.body.nombre,
             apellido:req.body.apellido,
             email:req.body.email,
-            password:req.body.password,
+            password: bcrypt.hashSync(req.body.password,10),
             img: req.file ? req.file.filename : 'default.jpg',
             rol:"user"
         }
@@ -131,10 +97,15 @@ const controller ={
     
          usuarios.push(usuario)
          fs.writeFileSync(ruta, JSON.stringify(usuarios, null,4))
+         req.session.usuarioLogueado ={
+            email:req.body.email,
+            nombre: req.body.nombre,
+            rol:"user"
+        } 
          res.redirect("/")
     }else{
         res.render('users/registro',{
-            errorsRegister:errorsRegister.mapped(),
+            errors:errors.mapped(),
             oldData:req.body
         })
     }
