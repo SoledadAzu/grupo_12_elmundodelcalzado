@@ -4,7 +4,7 @@ function permiso(req,res,next){
     }else if(req.cookies.recordame && req.cookies.recordame.rol === "admin"){
         next()
     }else{
-        res.send("esta pagina solo sirve para administradores, vola de aca")
+        res.redirect("/../../informacion/denegado")
     }
     // req.session.usuarioLogueado ={
     //     email:encontrado.email,

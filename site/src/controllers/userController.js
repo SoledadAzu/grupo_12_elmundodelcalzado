@@ -1,12 +1,8 @@
 const fs = require("fs")
 const path = require("path")
 const {validationResult} = require('express-validator')
-<<<<<<< HEAD
-const nodemon = require("nodemon")
-=======
 const multer= require("multer")
 const upload = multer()
->>>>>>> develop
 
 const controller ={
     login:(req,res)=>{

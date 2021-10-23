@@ -20,6 +20,9 @@ const controller ={
     },
     acercaDeNosotros:(req,res)=>{
         res.render('extras/acercaDeNosotros')
+    },
+    denegado:(req,res)=>{
+        res.render("extras/denegado")
     }
 }
 module.exports=controller;
