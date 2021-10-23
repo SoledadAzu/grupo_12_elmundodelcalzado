@@ -47,5 +47,23 @@
         "password": "a123456",
         "img": "default.jpg",
         "rol": "user"
+    },
+    {
+        "id": 7,
+        "nombre": "claudia",
+        "apellido": "gimenez",
+        "email": "claudia@gmail.com",
+        "password": "$2a$10$TkUc.bLrQ2XsPI/4KTWqhuQshdcbHaSVNEmG70IT4oxBh7DqWKzge",
+        "img": "default.jpg",
+        "rol": "user"
+    },
+    {
+        "id": 8,
+        "nombre": "juanito",
+        "apellido": "diaz",
+        "email": "juanitoDiaz@gmail.com",
+        "password": "$2a$10$vc0dpn75UpfWJrAn5NFb7OiuC6zSDXI0vNjRkG4HCl1mlQUk2HAhS",
+        "img": "default.jpg",
+        "rol": "user"
     }
 ]

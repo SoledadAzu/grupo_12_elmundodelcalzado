@@ -25,6 +25,7 @@ const validatorRegister=[
     body('password')
         .notEmpty().withMessage('Este campo no puede estar vacio').bail()
         .isLength({min:6}).withMessage('La contraseña debe tener un minimo de 6 caracteres')
+        
 ]
 
 // creando el destino y el nombre del archivo
@@ -37,7 +38,7 @@ const storage = multer.diskStorage({
         callback(null,name)
     }
 })
-// validar el formato
+//validar el formato
 const fileImg = function(req,file,callback){
     if(!file.originalname.match(/\.(jpg|jpeg|png|gif|webp)$/ )){
         req.fileValidationError = "solo se permiten imagenes"; // mensaje del error
@@ -62,7 +63,7 @@ router.post("/login",validatorlogin,upload)
 
 //create user
 router.get('/register',register)
-router.post("/register",imgUpload.single('file'),validatorRegister,uploadRegister)
+router.post("/register",imgUpload.single('img'),validatorRegister,uploadRegister)
 
  
 module.exports=router
