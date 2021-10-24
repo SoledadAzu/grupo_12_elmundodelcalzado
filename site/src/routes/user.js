@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {login,register,perfiluser, upload, uploadRegister} = require('../controllers/userController')
+const {login,register,perfiluser, upload, uploadRegister,deleteUser} = require('../controllers/userController')
 const {body} = require('express-validator')
 const multer = require('multer')
 const path = require('path')
@@ -63,6 +63,7 @@ router.get('/register',register)
 router.post("/register",imgUpload.single('img'),validatorRegister,uploadRegister)
 
 router.get("/perfiluser",perfiluser)
+router.delete('/eliminar/:id',deleteUser)
 
  
 module.exports= router

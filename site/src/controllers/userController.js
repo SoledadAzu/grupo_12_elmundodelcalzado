@@ -2,6 +2,9 @@ const fs = require("fs")
 const path = require("path")
 const {validationResult} = require('express-validator')
 const bcrypt = require('bcryptjs');
+const usuariosFilePath =  path.join(__dirname, '../database/users.json')
+let usuarios = JSON.parse(fs.readFileSync( path.join(__dirname, '../database/users.json'), 'utf-8'));
+
 
 
 const controller ={
@@ -97,6 +100,7 @@ const controller ={
     
          usuarios.push(usuario)
          fs.writeFileSync(ruta, JSON.stringify(usuarios, null,4))
+
          req.session.usuarioLogueado ={
             email:req.body.email,
             nombre: req.body.nombre,
@@ -112,6 +116,13 @@ const controller ={
 },
 perfiluser:(req,res)=>{
     res.render('users/perfiluser')
+},
+deleteUser : (req, res) => {
+    
+    usuarios=usuarios.filter(e=> e.id !== +req.params.id)
+
+    fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
+    res.render("admin/usuariosRegistrados",{usuarios})
 }
     
 }
