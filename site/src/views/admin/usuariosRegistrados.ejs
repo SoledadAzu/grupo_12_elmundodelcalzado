@@ -87,8 +87,8 @@
                 
                 <td>
                   <select name="acceso" id="acceso" class="form-input" style="width: 120px;">
-										<option value="admin">admin</option>
-										<option value="user"><%= e.rol %></option>
+										<option value="admin"<%= e.rol==="admin" ? "selected" : null %>>Admin</option>
+										<option value="user"<%= e.rol==="user" ? "selected" : null %>>User</option>
 									
 									</select>
                   

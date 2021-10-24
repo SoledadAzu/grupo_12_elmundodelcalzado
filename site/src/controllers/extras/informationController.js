@@ -27,6 +27,9 @@ const controller ={
     nuestrasSucursales:(req,res)=>{
         res.render("extras/nuestrasSucursales")
     },
+    webEnContruccion:(req,res)=>{
+        res.render("extras/webEnContruccion")
+    },
     
 
 }
