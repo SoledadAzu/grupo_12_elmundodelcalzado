@@ -6,5 +6,23 @@
         "email": "ana@gmail.com",
         "password": "$2a$10$vc0dpn75UpfWJrAn5NFb7OiuC6zSDXI0vNjRkG4HCl1mlQUk2HAhS",
         "rol": "admin"
+    },
+    {
+        "id": 2,
+        "nombre": "juan",
+        "apellido": "perez",
+        "email": "marta@gmail.com",
+        "password": "$2a$10$CPK2d87.ta2s2t4JonfLZuPJdSSYfZ1eBpEltlHlKtcHdgRLqHTyW",
+        "img": "default.jpg",
+        "rol": "user"
+    },
+    {
+        "id": 3,
+        "nombre": "adriana",
+        "apellido": "castro",
+        "email": "adriana@gmail.com",
+        "password": "$2a$08$zTZZYv3N57Kl6MmLO0.XbukYJ.J6GhGW5CjBbVtvoirhhRGgZr6dm",
+        "img": "default.jpg",
+        "rol": "user"
     }
 ]

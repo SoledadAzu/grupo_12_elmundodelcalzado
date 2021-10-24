@@ -56,12 +56,14 @@
         <table class="table" style="width: 100%;">
           <thead>
             <tr style="background-color:#F1948A">
+              <th scope="col">solicitud</th>
               <th scope="col">#</th>
               <th scope="col">Nombres</th>
               <th scope="col">Apellido</th>
               <th scope="col">Email</th>
-              <th scope="col">Password</th>
               <th scope="col">Rol</th>
+              <th class="col">Password</th>
+              
              
             
 
@@ -70,6 +72,12 @@
           <tbody>
             <% usuarios.map(e=>{%>
               <tr>
+                <td>
+                  <form action="/admin/eliminar/<%= e.id %>?_method=DELETE " method="POST" style="display: inline-flex">
+                    <button type="submit" class="btn btn-outline-danger">ELIMINAR</button>
+                  </form>
+                
+              </td>
                 <th scope="row">
                   <%= e.id %>
                 </th>
@@ -81,12 +89,20 @@
                 <td>
                   <%= e.email %>
                 </td>
+                
                 <td>
-                  <%= e.password %>
+                  <select name="acceso" id="acceso" class="form-input" style="width: 120px;">
+										<option value="admin">admin</option>
+										<option value="user"><%= e.rol %></option>
+									
+									</select>
+                  
                 </td>
+                
                 <td>
-                  <%= e.rol %>
-                  <%= e.rol %>
+                 
+                    <%= e.password %>
+                  
                 </td>
               </tr>
               <%})%>
