@@ -32,3 +32,17 @@
 .denegado div img{
     margin-left: 5%;
 }
+
+@media (max-width: 1024px){
+    .denegado div article{
+    height: 100px;
+    width: 70%;
+}
+.art_redirect h2{
+    display:none
+}
+.art_redirect a button{
+font-size: 18px;
+margin-top: 10px;
+}
+}

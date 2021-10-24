@@ -24,7 +24,7 @@
                             
                                 <div class="email">
                                     <label for="email">Tu Email</label>
-                                    <input type="email" name="email" id="email" placeholder="tu email" value="<%= locals.oldData && oldData.email ? oldData.email : null %> ">
+                                    <input type="email" name="email" id="email" placeholder="Email" value="<%= locals.oldData && oldData.email ? oldData.email : null %> ">
                                     <% if(locals.errors && errors.email){ %>
                                         <p style="color: red;"><%= errors.email.msg %> </p>
                                         <% } %> 
@@ -32,7 +32,7 @@
                     
                                 <div class="password">
                                     <label for="pasword"> Tu Contraseña</label>
-                                    <input type="password" name="password" id="password" placeholder="tu contraseña">
+                                    <input type="password" name="password" id="password" placeholder="Contraseña">
                                     <% if(locals.errors && errors.password){ %>
                                         <p style="color: red;"><%= errors.password.msg %> </p>
                                         <% } else if(locals.mensaje){%>

@@ -23,6 +23,11 @@ const controller ={
     },
     denegado:(req,res)=>{
         res.render("extras/denegado")
-    }
+    },
+    nuestrasSucursales:(req,res)=>{
+        res.render("extras/nuestrasSucursales")
+    },
+    
+
 }
 module.exports=controller;
