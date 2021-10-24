@@ -73,7 +73,7 @@
             <% usuarios.map(e=>{%>
               <tr>
                 <td>
-                  <form action="/admin/eliminar/<%= e.id %>?_method=DELETE " method="POST" style="display: inline-flex">
+                  <form action="/user/eliminar/<%= e.id %>?_method=DELETE " method="POST" style="display: inline-flex">
                     <button type="submit" class="btn btn-outline-danger">ELIMINAR</button>
                   </form>
                 

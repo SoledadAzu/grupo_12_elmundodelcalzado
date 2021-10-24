@@ -1,28 +1,82 @@
 [
-    {
-        "id": 1,
-        "nombre": "ana",
-        "apellido": "naldo",
-        "email": "ana@gmail.com",
-        "password": "$2a$10$vc0dpn75UpfWJrAn5NFb7OiuC6zSDXI0vNjRkG4HCl1mlQUk2HAhS",
-        "rol": "admin"
-    },
-    {
-        "id": 2,
-        "nombre": "juan",
-        "apellido": "perez",
-        "email": "marta@gmail.com",
-        "password": "$2a$10$CPK2d87.ta2s2t4JonfLZuPJdSSYfZ1eBpEltlHlKtcHdgRLqHTyW",
-        "img": "default.jpg",
-        "rol": "user"
-    },
-    {
-        "id": 3,
-        "nombre": "adriana",
-        "apellido": "castro",
-        "email": "adriana@gmail.com",
-        "password": "$2a$08$zTZZYv3N57Kl6MmLO0.XbukYJ.J6GhGW5CjBbVtvoirhhRGgZr6dm",
-        "img": "default.jpg",
-        "rol": "user"
-    }
+  {
+    "id": 1,
+    "nombre": "ana",
+    "apellido": "naldo",
+    "email": "ana@gmail.com",
+    "password": "$2a$10$vc0dpn75UpfWJrAn5NFb7OiuC6zSDXI0vNjRkG4HCl1mlQUk2HAhS",
+    "rol": "admin"
+  },
+  {
+    "id": 2,
+    "nombre": "jaime",
+    "apellido": "losada",
+    "email": "jaime@gmail.com",
+    "password": "$2a$10$6VZIFPiWDH4XW9GaCTTR4.nfHOz5TSYTNRr8vi1gnPzL5PpbSTLzO",
+    "img": "default.jpg",
+    "rol": "user"
+  },
+  {
+    "id": 3,
+    "nombre": "sandra",
+    "apellido": "cruz",
+    "email": "sandra@gmail.com",
+    "password": "$2a$10$WFtaNKVUwUzTjxs4EDJhpeb/eN0L7UXXoOpsbRcrDswMu.izgJ3cW",
+    "img": "default.jpg",
+    "rol": "user"
+  },
+  {
+    "id": 4,
+    "nombre": "lucas",
+    "apellido": "pereira",
+    "email": "lucas@gmail.com",
+    "password": "$2a$10$bqPfTTCdfOh1J7GNWiDole8zhQWo4KL5IGmSj979ewjHyMQpZ1jmS",
+    "img": "default.jpg",
+    "rol": "user"
+  },
+  {
+    "id": 5,
+    "nombre": "esteban",
+    "apellido": "banquito",
+    "email": "esteban@gmail.com",
+    "password": "$2a$10$wtpXLrL0b.QNYpjLcuevLel4VlpuXw4IstHD6XLD20HYfX8gPDTW6",
+    "img": "default.jpg",
+    "rol": "user"
+  },
+  {
+    "id": 6,
+    "nombre": "mauricio",
+    "apellido": "luna",
+    "email": "mauricio@gmail.com",
+    "password": "$2a$10$UbE./DYQB4P1V/GdeEEPX.HBstUiImdltc0U35Y9vzkZQni4sbLMm",
+    "img": "default.jpg",
+    "rol": "user"
+  },
+  {
+    "id": 7,
+    "nombre": "miguel",
+    "apellido": "capo",
+    "email": "miguel@gmail.com",
+    "password": "$2a$10$rESFdZoQpralg1KhvLxv8.pDNhDXfnfvYCjqZmkxZQSwYvjr8lQwu",
+    "img": "default.jpg",
+    "rol": "user"
+  },
+  {
+    "id": 8,
+    "nombre": "shakira",
+    "apellido": "hernandez",
+    "email": "shakira@gmail.com",
+    "password": "$2a$10$b20OooqQsuILiFwePUdGGu.68mBsGfvZLHeYz2w51k4V0WotZLdGi",
+    "img": "default.jpg",
+    "rol": "user"
+  },
+  {
+    "id": 9,
+    "nombre": "monica",
+    "apellido": "argento",
+    "email": "monica@gmail.com",
+    "password": "$2a$10$ZLj/P7ZpW2yt9GW9e51dCOv34Mbr7UyDFYwWGAw70g4t0W/nL6VX2",
+    "img": "default.jpg",
+    "rol": "user"
+  }
 ]
