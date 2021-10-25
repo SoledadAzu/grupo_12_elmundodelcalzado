@@ -1,0 +1,26 @@
+.bt_modif{
+font-size: 20px;
+margin-left: 5px;
+box-shadow: green 3px 3px;
+background: white;
+color: green;
+border-color: green;
+width: 100px;
+height: 38px;
+border-radius: 4px;
+}
+.bt_modif:hover{
+    background: green;
+    color:white;
+}
+.td_password{
+    font-size: 22px;
+}
+.tuser .btn{
+    box-shadow: red 3px 3px;
+    margin-bottom: 15px;
+   
+}
+.tuser .td_rol{
+    padding: 20px;
+}

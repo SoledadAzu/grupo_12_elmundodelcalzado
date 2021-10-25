@@ -64,7 +64,7 @@
 
             </tr>
           </thead>
-          <tbody>
+          <tbody class="tuser">
             <% usuarios.map(e=>{%>
               <tr>
                 <td>
@@ -85,16 +85,17 @@
                   <%= e.email %>
                 </td>
                 
-                <td>
-                  <select name="acceso" id="acceso" class="form-input" style="width: 120px;">
-										<option value="admin"<%= e.rol==="admin" ? "selected" : null %>>Admin</option>
+                <td class="td_rol" style="display:flex">
+                  <select name="acceso" id="acceso" class="form-input" style="width: 90px; font-size: 22px;">
+										<option  value="admin"<%= e.rol==="admin" ? "selected" : null %>>Admin</option>
 										<option value="user"<%= e.rol==="user" ? "selected" : null %>>User</option>
 									
 									</select>
+                  <button type="submit" class="bt_modif">Modificar</button>
                   
                 </td>
                 
-                <td>
+                <td class="td_password">
                  
                     <%= e.password %>
                   
@@ -108,5 +109,4 @@
             crossorigin="anonymous"></script>
     </main>
   </body>
-
 </html>

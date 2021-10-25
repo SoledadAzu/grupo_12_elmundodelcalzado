@@ -69,14 +69,5 @@
     "password": "$2a$10$b20OooqQsuILiFwePUdGGu.68mBsGfvZLHeYz2w51k4V0WotZLdGi",
     "img": "default.jpg",
     "rol": "user"
-  },
-  {
-    "id": 9,
-    "nombre": "Monica",
-    "apellido": "Argento",
-    "email": "monica@gmail.com",
-    "password": "$2a$10$ZLj/P7ZpW2yt9GW9e51dCOv34Mbr7UyDFYwWGAw70g4t0W/nL6VX2",
-    "img": "default.jpg",
-    "rol": "user"
   }
 ]
