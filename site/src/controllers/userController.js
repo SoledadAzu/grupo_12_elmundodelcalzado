@@ -33,7 +33,8 @@ const controller ={
                     req.session.usuarioLogueado ={
                         email:encontrado.email,
                         nombre: encontrado.nombre,
-                        rol:encontrado.rol
+                        rol:encontrado.rol,
+                        id:encontrado.id
                     } 
 
                     if(req.body.recordame != undefined){
@@ -114,17 +115,46 @@ const controller ={
         })
     }
 },
-perfiluser:(req,res)=>{
-    res.render('users/perfiluser')
+    perfiluser:(req,res)=>{
+        userPerfil=usuarios.find(e=> e.id === +req.params.id)
+        
+    res.render('users/perfiluser',{userPerfil})
 },
-deleteUser : (req, res) => {
+    deleteUser : (req, res) => {
     
     usuarios=usuarios.filter(e=> e.id !== +req.params.id)
 
     fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
-    res.render("admin/usuariosRegistrados",{usuarios})
-}
+    res.redirect("admin/usuariosRegistrados")
+},
+    updateUser:(req,res)=>{
     
+        
+        let id = req.params.id
+		let idFind=usuarios.find(e=>{
+			return e.id === +id
+			
+		})
+       
+         if(idFind){
+                idFind.rol= req.body.rol
+    
+    
+                fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
+                res.render('admin/usuariosRegistrados',{usuarios})
+         }
+      
+},
+    editePerfil:(req,res)=>{
+        if(req.session && req.session.rol === "user"){
+            if(idFind){
+                idFind.email= req.body.email
+                idFind.password = req.body.password
+                
+            }
+         }
+    }
+     
 }
 
 module.exports=controller

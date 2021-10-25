@@ -36,10 +36,13 @@
                 <input  type="text" name="keywords" placeholder="¿Que estas buscando? " > <i class="fas fa-search"> </i>
             </form>
         <div class="iconos">
-            <% if(locals.userAdmin){ %> 
+            <% if(locals.userAdmin && locals.idAdmin){ %> 
             <div class="administrador">
                <a href="/admin"><h3>ADMIN</h3></a>
-               <a href="/user/perfiluser"><h3>Hola:<%= locals.userAdmin %></h3></a>
+              
+                <a href="/user/perfiluser/<%= locals.idAdmin %>"><h3>Hola:<%= locals.userAdmin %></h3>
+            
+               
                <a href="/admin/cerrar">Cerrar Session</a>
             </div>
             <% } else if(locals.user){%> 

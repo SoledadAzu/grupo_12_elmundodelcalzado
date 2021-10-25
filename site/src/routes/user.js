@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {login,register,perfiluser, upload, uploadRegister,deleteUser} = require('../controllers/userController')
+const {login,register,perfiluser, upload, uploadRegister,deleteUser,updateUser,editePerfil} = require('../controllers/userController')
 const {body} = require('express-validator')
 const multer = require('multer')
 const path = require('path')
@@ -62,8 +62,14 @@ router.post("/login",validatorlogin,upload)
 router.get('/register',register)
 router.post("/register",imgUpload.single('img'),validatorRegister,uploadRegister)
 
-router.get("/perfiluser",perfiluser)
+// perfil de usuario
+router.get("/perfiluser/:id",perfiluser)
+router.put('/updatePerfil/:id',editePerfil)
+
+// tabla admin usuarios
 router.delete('/eliminar/:id',deleteUser)
+router.put('/update/:id',updateUser)
+
 
  
 module.exports= router

@@ -7,6 +7,7 @@ function adminLog(req,res,next){
     }else if(req.session.usuarioLogueado!== undefined&& req.session.usuarioLogueado.rol === "admin"){
        
         res.locals.userAdmin = req.session.usuarioLogueado.nombre
+        res.locals.idAdmin = req.session.usuarioLogueado.id
             
     }
     next()
