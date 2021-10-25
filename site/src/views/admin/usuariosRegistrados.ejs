@@ -51,12 +51,13 @@
         <table class="table" style="width: 100%;">
           <thead>
             <tr style="background-color:#F1948A">
-              <th scope="col">solicitud</th>
+              
               <th scope="col">#</th>
               <th scope="col">Nombres</th>
               <th scope="col">Apellido</th>
               <th scope="col">Email</th>
               <th scope="col">Rol</th>
+              <th scope="col">solicitud</th>
               <th class="col">Password</th>
               
              
@@ -67,12 +68,7 @@
           <tbody class="tuser">
             <% usuarios.map(e=>{%>
               <tr>
-                <td>
-                  <form action="/user/eliminar/<%= e.id %>?_method=DELETE " method="POST" style="display: inline-flex">
-                    <button type="submit" class="btn btn-outline-danger">ELIMINAR</button>
-                  </form>
                 
-              </td>
                 <th scope="row">
                   <%= e.id %>
                 </th>
@@ -86,14 +82,23 @@
                 </td>
                 
                 <td class="td_rol" style="display:flex">
-                  <select name="acceso" id="acceso" class="form-input" style="width: 90px; font-size: 22px;">
-										<option  value="admin"<%= e.rol==="admin" ? "selected" : null %>>Admin</option>
-										<option value="user"<%= e.rol==="user" ? "selected" : null %>>User</option>
+                  <form action="/user/update/<%= e.id %>?_method=PUT " method="POST" style="display: inline-flex">
+                    <select name="rol" id="rol" class="form-input" style="width: 90px; font-size: 22px;">
+										  <option  value="admin"<%= e.rol==="admin" ? "selected" : null %>>Admin</option>
+										  <option value="user"<%= e.rol==="user" ? "selected" : null %>>User</option>
 									
-									</select>
-                  <button type="submit" class="bt_modif">Modificar</button>
+									  </select>
+                      <button type="submit" class="bt_modif">Modificar</button>
+                  </form>
+                  <!-- <button type="submit" class="bt_modif">Modificar</button> -->
                   
                 </td>
+                <td>
+                  <form action="/user/eliminar/<%= e.id %>?_method=DELETE " method="POST" style="display: inline-flex">
+                    <button type="submit" class="btn btn-outline-danger">ELIMINAR</button>
+                  </form>
+                
+              </td>
                 
                 <td class="td_password">
                  
