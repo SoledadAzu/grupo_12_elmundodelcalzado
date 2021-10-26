@@ -28,6 +28,17 @@ const validatorRegister=[
         
 ]
 
+const validatorPerfil=[
+    body('nombre').notEmpty().withMessage('Este campo no puede estar vacio'),
+    body('apellido').notEmpty().withMessage('Este campo no puede estar vacio'),
+    body('email')
+        .notEmpty().withMessage('Este campo no puede estar vacio').bail()
+        .isEmail().withMessage('Debe ingresar un correo valido'),
+    body('password')
+        .notEmpty().withMessage('Este campo no puede estar vacio').bail()
+        .isLength({min:6}).withMessage('La contraseña debe tener un minimo de 6 caracteres')
+]
+
 // creando el destino y el nombre del archivo
 const storage = multer.diskStorage({
     destination: (req,file,callback) => {
@@ -64,7 +75,7 @@ router.post("/register",imgUpload.single('img'),validatorRegister,uploadRegister
 
 // perfil de usuario
 router.get("/perfiluser/:id",perfiluser)
-router.put('/updatePerfil/:id',editePerfil)
+router.post('/updatePerfil/:id',imgUpload.single('img'),validatorPerfil,editePerfil)
 
 // tabla admin usuarios
 router.delete('/eliminar/:id',deleteUser)

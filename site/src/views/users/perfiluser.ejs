@@ -9,14 +9,14 @@
   <!-- HEADER -->
 
 <body>
-    <form>
+    <form action="/user/updatePerfil/<%= userPerfil.id %> " method="POST">
     <section class="seccion-perfil-usuario">
         <div class="perfil-usuario-header">
             <div class="perfil-usuario-portada">
                 <div class="perfil-usuario-avatar">
-                    <img src="/images/img-avatar.png" alt="img-avatar">
+                    <img src="/images/users/<%= userPerfil.img %> " alt="img-avatar">
                     <button type="button" class="boton-avatar">
-                        <input type="file" name="img_user" id="img_user" class= "boton-avatar2">
+                        <input type="file" name="img" id="img" class= "boton-avatar2">
                         <i class="far fa-image"></i>
                     </button>
                 </div>
@@ -25,7 +25,11 @@
         </div>
         <div class="perfil-usuario-body">
             <div class="perfil-usuario-bio">
-                <h2 class="titulo"><%= userPerfil.nombre %> <%= userPerfil.apellido %>  </h2>
+                <h2 class="titulo">
+                    
+                    <input type="text" name="nombre" id="nombre" value="<%= userPerfil.nombre %>"> 
+                    <input type="text" name="apellido" id="apellido" value="<%= userPerfil.apellido %>">  
+                </h2>
                 
             </div>
             <div class="perfil-usuario-footer">
