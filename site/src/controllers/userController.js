@@ -145,6 +145,11 @@ const controller ={
          }
       
 },
+    perfilEdit:(req,res)=>{
+        userPerfil=usuarios.find(e=> e.id === +req.params.id)
+        
+    res.render('users/perfilUserEdit',{userPerfil})
+},
     editePerfil:(req,res)=>{
        
         const errors = validationResult(req)
@@ -157,7 +162,7 @@ const controller ={
             }
             errors.errors.push(img)
         }
-        
+        console.log(req.fileValidationError)
         if(errors.isEmpty()){
 
           
@@ -178,7 +183,7 @@ const controller ={
                 nombre: req.body.nombre,
                 rol:upDateUser.rol
             } 
-            console.log(req.session.usuarioLogueado)
+            
             res.redirect(`/user/perfiluser/${req.params.id}`)
 			
         }
@@ -187,12 +192,13 @@ const controller ={
         
 
     }else{
-        res.render('users/perfiluser',{
+        res.render('users/perfilUserEdit',{
             errors:errors.mapped(),
             oldData:req.body
         })
     }
-    }
+    },
+    
      
 }
 

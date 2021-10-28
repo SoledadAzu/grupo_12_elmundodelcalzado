@@ -5,6 +5,7 @@ function userLog(req,res,next){
     }else if(req.session.usuarioLogueado!== undefined&& req.session.usuarioLogueado.rol === "user"){
        
         res.locals.user = req.session.usuarioLogueado.nombre
+        res.locals.idUser = req.session.usuarioLogueado.id
             
     }
     next()
