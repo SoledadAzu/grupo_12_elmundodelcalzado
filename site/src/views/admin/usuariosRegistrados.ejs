@@ -23,12 +23,7 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="/admin">Administrador</a>
               </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link" href="#">Outlet</a>
-              </li>-->
-              <li class="nav-item dropdown">
-                <a class="nav-link" href="/admin/usuarios">Usuarios</a>
-              </li> 
+            
               <li class="nav-item">
                 <a class="nav-link disabled"></a>
               </li>
@@ -39,7 +34,7 @@
             </form>
           </div>
           <div style="margin-left: 5px;">
-            <a href="/admin/cerrar">
+            <a href="/">
               <button class="btn btn-outline-success">CERRAR SESION</button></a>
           </div>
         </div>
@@ -50,49 +45,65 @@
 
     <!-- TABLAS -->
     <main class="admin_prod">
-      <a href="/admin/create" class="btn btn-outline-primary m-3" role="button" aria-disabled="true">Crear</a>
+      <a href="/user/register" class="btn btn-outline-primary m-3" role="button" aria-disabled="true">Crear</a>
 
       <div class="">
-        <table class="table" style="width: 150%;">
+        <table class="table" style="width: 100%;">
           <thead>
             <tr style="background-color:#F1948A">
+              
               <th scope="col">#</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Precios</th>
-              <th scope="col">Genero</th>
-              <th scope="col">Marca</th>
-              <th scope="col">Temporada</th>
-              <th scope="col"></th>
+              <th scope="col">Nombres</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Email</th>
+              <th scope="col">Rol</th>
+              <th scope="col">solicitud</th>
+              <th class="col">Password</th>
+              
+             
+            
 
             </tr>
           </thead>
-          <tbody>
-            <% products.map(e=>{%>
+          <tbody class="tuser">
+            <% usuarios.map(e=>{%>
               <tr>
+                
                 <th scope="row">
                   <%= e.id %>
                 </th>
-                <td>
-                  <%= e.title %>
-                </td>
-                <td>$<%= toThousand(e.price) %>
-                </td>
-                <td>
-                  <%= e.genero %>
+                <td >
+                  <%= e.nombre %>
+                </td >
+                <td><%= e.apellido %>
                 </td>
                 <td>
-                  <%= e.marca %>
+                  <%= e.email %>
+                </td>
+                
+                <td class="td_rol" style="display:flex">
+                  <form action="/user/update/<%= e.id %>?_method=PUT " method="POST" style="display: inline-flex">
+                    <select name="rol" id="rol" class="form-input" style="width: 90px; font-size: 22px;">
+										  <option  value="admin"<%= e.rol==="admin" ? "selected" : null %>>Admin</option>
+										  <option value="user"<%= e.rol==="user" ? "selected" : null %>>User</option>
+									
+									  </select>
+                      <button type="submit" class="bt_modif">Modificar</button>
+                  </form>
+                  <!-- <button type="submit" class="bt_modif">Modificar</button> -->
+                  
                 </td>
                 <td>
-                  <%= e.temporada %>
-                </td>
-
-                <td>
-                  <a href="/admin/edit/<%= e.id %> " class="btn btn-outline-primary" role="button"
-                    aria-disabled="true">Editar</a>
-                  <form action="/admin/eliminar/<%= e.id %>?_method=DELETE " method="POST" style="display: inline-flex">
+                  <form action="/user/eliminar/<%= e.id %>?_method=DELETE " method="POST" style="display: inline-flex">
                     <button type="submit" class="btn btn-outline-danger">ELIMINAR</button>
                   </form>
+                
+              </td>
+                
+                <td class="td_password">
+                 
+                    <%= e.password %>
+                  
                 </td>
               </tr>
               <%})%>
@@ -103,5 +114,4 @@
             crossorigin="anonymous"></script>
     </main>
   </body>
-
 </html>

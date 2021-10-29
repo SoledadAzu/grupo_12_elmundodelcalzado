@@ -7,7 +7,7 @@ div.register1 {
     margin: 0 auto;
     width: 350px;
     height: 100%;
-    padding: 6rem 1rem;
+    padding: 4rem 1rem;
 }
 
 
@@ -29,29 +29,44 @@ div.register1 {
 
 
 .register .nombre input{
+    font-size: 20px;
     display: block;
     margin-bottom: 8px;
     margin-top: 8px;
     width: 100%;
+    border: black 1px solid;
     
 }
 .register .apellido input{
+    font-size: 20px;
     display:block;
     margin-bottom: 8px;
     margin-top: 8px;
     width: 100%;
+    border: black 1px solid;
 }
 .register .email input{
+    font-size: 20px;
     display:block;
     margin-bottom: 8px;
     margin-top: 8px;
     width: 100%;
+    border: black 1px solid;
 }
-.register .password input{
+.register .select-img input{
+    font-size: 18px;
     display:block;
     margin-bottom: 8px;
     margin-top: 8px;
     width: 100%;
+}    
+.register .password input{
+    font-size: 20px;
+    display:block;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    width: 100%;
+border: black 1px solid;
 }
 
 .register form.input{
@@ -73,9 +88,9 @@ margin-bottom: 5px;
     display: flex;
 }
 
-.register.terminos{
-    margin-bottom: 30px;
-    margin-top: 30px;
+.register .terminos{
+    
+    margin-top: 20px;
     text-align: justify;
  text-decoration:lightgrey ;
 }
@@ -92,10 +107,12 @@ margin-bottom: 5px;
     
 }
 .register .btn button{
+    font-size: 20px;
     border-radius: 10px;
     width: 100%;
     background-color:red;
     color: white;
+    box-shadow: black 3px 3px;
 }
 
 .register .btton{
@@ -106,9 +123,15 @@ margin-bottom: 5px;
     
 }
 .register .btton button{
+    font-size: 20px;
     border-radius: 10px;
     width: 100%;
     background-color: blue;
     color: white;
+    box-shadow:black 3px 3px;
 }
+.name_label{
+    font-size: 20px;
+}
+
 /*reg******/

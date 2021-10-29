@@ -4,15 +4,19 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride =  require('method-override');
+const session = require('express-session') // requerimiento de express-session
+const logeo = require('./middleware/adminLogueado')
+const userlogeo = require('./middleware/userLogueado')
+
+
 
 /***********************REQUERIMIENTOS DE LOS ARCHIVO DE LAS RUTAS PRINCIPALES**************************/
 const indexRouter = require('./routes/main');
 const userRouter = require('./routes/user');
 const productRouter = require('./routes/products');
-const adminRouter = require('./routes/admin')
-const informacionRotuer = require('./routes/extras/information')
+const adminRouter = require('./routes/admin');
+const informacionRouter = require('./routes/extras/information');
 
-/*****************************REQUERIMIENTOS DE LOS ARCHIVOS EN EXTRAS******************************** */
 
 
 const app = express();
@@ -27,15 +31,22 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname,'..','public'))); //public estatico
 app.use(methodOverride('_method'));
+app.use(session({secret:"esto es un secreto!!"}))
+app.use(logeo)
+app.use(userlogeo)
+
+
+
 
 /******************* MUESTRA DE LAS RUTAS********************** */
 app.use('/',indexRouter);
 app.use('/products',productRouter);
 app.use('/user',userRouter);
-app.use('/admin',adminRouter)
+app.use('/admin',adminRouter);
+
 
 /**************************EXTRAS*********************************** */
-app.use('/informacion',informacionRotuer)
+app.use('/informacion',informacionRouter)
 
 
 // catch 404 and forward to error handler

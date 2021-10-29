@@ -35,16 +35,18 @@ hr{
     flex-direction: column;
 }
 .login .caja1 .email input{
+        font-size: 18px;
         margin-bottom: 5px;
         margin-top: 5px;
         width: 100%;
-        
+        height: auto;
 }
 .login .caja1 .password input{
-    
+        font-size: 18px;
         margin-bottom: 5px;
         margin-top: 5px;
         width: 100%;
+        height: auto;
 }
 .login .caja1 article{
     text-align: right;
