@@ -9,40 +9,52 @@
   <!-- HEADER -->
 
 <body>
-    <form>
+    <form action="/user/editPerfil/<%= userPerfil.id %> " method="GET">
     <section class="seccion-perfil-usuario">
         <div class="perfil-usuario-header">
             <div class="perfil-usuario-portada">
                 <div class="perfil-usuario-avatar">
-                    <img src="/images/img-avatar.png" alt="img-avatar">
-                    <button type="button" class="boton-avatar">
-                        <input type="file" name="img_user" id="img_user" class= "boton-avatar2">
+                    <img src="/images/users/<%= userPerfil.img %> " alt="img-avatar">
+                    <!-- <button type="button" class="boton-avatar">
+                        <input type="file" name="img" id="img" class= "boton-avatar2">
                         <i class="far fa-image"></i>
-                    </button>
+                    </button> -->
                 </div>
-              
+                
             </div>
         </div>
         <div class="perfil-usuario-body">
             <div class="perfil-usuario-bio">
-                <h2 class="titulo"><%= userPerfil.nombre %> <%= userPerfil.apellido %>  </h2>
+                <h2 class="titulo">
+                    
+                   <span><%= userPerfil.nombre %></span> 
+                    <span><%= userPerfil.apellido %></span>
+       
+                </h2>
+                
+                    
                 
             </div>
-            <div class="perfil-usuario-footer">
-                    <label for="email">
+
+            <div  class="perfil-usuario-footer">
+                <div>
+                   <h3>
                         <i class="fas fa-envelope"></i>
                         Email de usuario:
-                    </label>
-                    <input type="email" name="email" id="email" value="<%= userPerfil.email %>">
-                    <label for="password">
+                        <%= userPerfil.email %>
+                    </h3>
+                </div>        
+                <div style="margin-left: 10px;">
+                    <h3>
                         <i class="fas fa-key"></i>
-                        Password:
-                    </label>
-                    <input type="password" name="password" id="password" value="<%= userPerfil.password %>">   
-            </div>
+                        Password: **************
+                    
+                    </h3>
+                </div>
+            </div>    
         </div>
         <div class="editarBtn">
-            <button type="submit" class="bt_modif">Modificar</button>
+            <button type="submit" class="bt_modif">Editar</button>
             <button type="submit" class="bt_eliminar">Eliminar</button>
         </div>
     </section>

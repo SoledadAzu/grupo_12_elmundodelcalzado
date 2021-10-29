@@ -47,7 +47,7 @@
             </div>
             <% } else if(locals.user){%> 
                 <div class="administrador">
-                    <a href="/user/perfiluser"><h3>Hola:<%= locals.user %></h3></a>
+                    <a href="/user/perfiluser/<%=locals.idUser%> "><h3>Hola:<%= locals.user %></h3></a>
                     <a href="/admin/cerrar">Cerrar Session</a>
                  </div>
                 

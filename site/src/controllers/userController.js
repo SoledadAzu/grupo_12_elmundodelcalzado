@@ -145,15 +145,60 @@ const controller ={
          }
       
 },
+    perfilEdit:(req,res)=>{
+        userPerfil=usuarios.find(e=> e.id === +req.params.id)
+        
+    res.render('users/perfilUserEdit',{userPerfil})
+},
     editePerfil:(req,res)=>{
-        if(req.session && req.session.rol === "user"){
-            if(idFind){
-                idFind.email= req.body.email
-                idFind.password = req.body.password
-                
+       
+        const errors = validationResult(req)
+        if(req.fileValidationError){
+
+            let img = {
+                param:"img",
+                msg:req.fileValidationError,
+
             }
-         }
+            errors.errors.push(img)
+        }
+        console.log(req.fileValidationError)
+        if(errors.isEmpty()){
+
+          
+        const upDateUser = usuarios.find(e=> e.id === +req.params.id)
+	
+		if(upDateUser){
+			
+            upDateUser.nombre=req.body.nombre,
+            upDateUser.apellido=req.body.apellido,
+            upDateUser.email=req.body.email,
+            upDateUser.password=bcrypt.hashSync(req.body.password,10),
+            upDateUser.img=req.file ? req.file.filename : 'default.jpg',
+            
+
+			fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
+            req.session.usuarioLogueado ={
+                email:req.body.email,
+                nombre: req.body.nombre,
+                rol:upDateUser.rol
+            } 
+            
+            res.redirect(`/user/perfiluser/${req.params.id}`)
+			
+        }
+           
+             
+        
+
+    }else{
+        res.render('users/perfilUserEdit',{
+            errors:errors.mapped(),
+            oldData:req.body
+        })
     }
+    },
+    
      
 }
 

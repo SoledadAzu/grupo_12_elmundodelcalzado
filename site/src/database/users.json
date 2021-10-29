@@ -1,18 +1,19 @@
 [
   {
     "id": 1,
-    "nombre": "Ana",
-    "apellido": "Naldo",
-    "email": "ana@gmail.com",
-    "password": "$2a$10$vc0dpn75UpfWJrAn5NFb7OiuC6zSDXI0vNjRkG4HCl1mlQUk2HAhS",
+    "nombre": "mariano",
+    "apellido": "castro",
+    "email": "mariano99@gmail.com",
+    "password": "$2a$10$FQf41FpAXzucvPQmaGwqV.6V0qVG4LvIGEOkjCOsNWLObbDf3f7Py",
+    "img": "default.jpg",
     "rol": "admin"
   },
   {
     "id": 2,
-    "nombre": "Jaime",
-    "apellido": "Losada",
-    "email": "jaime@gmail.com",
-    "password": "$2a$10$6VZIFPiWDH4XW9GaCTTR4.nfHOz5TSYTNRr8vi1gnPzL5PpbSTLzO",
+    "nombre": "mariano",
+    "apellido": "castro",
+    "email": "mariano99@gmail.com",
+    "password": "$2a$10$mRe3Mf7JG8wRHxzgX6z39uz2I2tP8E1tyKWtN4Ew2D87J/.dtvYdS",
     "img": "default.jpg",
     "rol": "user"
   },

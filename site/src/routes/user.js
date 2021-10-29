@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {login,register,perfiluser, upload, uploadRegister,deleteUser,updateUser,editePerfil} = require('../controllers/userController')
+const {login,register,perfiluser, upload, uploadRegister,deleteUser,updateUser,editePerfil,perfilEdit} = require('../controllers/userController')
 const {body} = require('express-validator')
 const multer = require('multer')
 const path = require('path')
@@ -26,6 +26,17 @@ const validatorRegister=[
         .notEmpty().withMessage('Este campo no puede estar vacio').bail()
         .isLength({min:6}).withMessage('La contraseña debe tener un minimo de 6 caracteres')
         
+]
+
+const validatorPerfil=[
+    body('nombre').notEmpty().withMessage('Este campo no puede estar vacio'),
+    body('apellido').notEmpty().withMessage('Este campo no puede estar vacio'),
+    body('email')
+        .notEmpty().withMessage('Este campo no puede estar vacio').bail()
+        .isEmail().withMessage('Debe ingresar un correo valido'),
+    body('password')
+        .notEmpty().withMessage('Este campo no puede estar vacio').bail()
+        .isLength({min:6}).withMessage('La contraseña debe tener un minimo de 6 caracteres')
 ]
 
 // creando el destino y el nombre del archivo
@@ -63,8 +74,10 @@ router.get('/register',register)
 router.post("/register",imgUpload.single('img'),validatorRegister,uploadRegister)
 
 // perfil de usuario
-router.get("/perfiluser/:id",perfiluser)
-router.put('/updatePerfil/:id',editePerfil)
+router.get('/perfiluser/:id',perfiluser) // vista principal de usuario
+router.get('/editPerfil/:id',perfilEdit) // vista para editar
+router.post('/updatePerfil/:id',imgUpload.single('img'),validatorPerfil,editePerfil) // post de la pagina con validacion
+
 
 // tabla admin usuarios
 router.delete('/eliminar/:id',deleteUser)
