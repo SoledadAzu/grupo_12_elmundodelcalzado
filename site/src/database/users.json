@@ -3,13 +3,8 @@
     "id": 1,
     "nombre": "mariano",
     "apellido": "castro",
-<<<<<<< HEAD
-    "email": "mariano@gmail.com",
-    "password": "$2a$10$817OdSI1PtW9bS7TF0IrR.9EyKXXWtg4QIMm9BIMbQ6YfUTFP/bOK",
-=======
     "email": "marianoCastro@gmail.com",
     "password": "$2a$10$ung/m/oojJGMFsPTNi.W0.nkkpaZn1QXdgkKh2fO9gR2MYQaqPRGO",
->>>>>>> a27e5eb7c03b990d149dbc2e3d38b3732a5c79d5
     "img": "default.jpg",
     "rol": "admin"
   },
