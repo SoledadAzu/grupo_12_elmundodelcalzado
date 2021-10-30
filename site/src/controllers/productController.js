@@ -74,7 +74,7 @@ const controller={
 			const titulo = productos.filter(e=> e.title.toLowerCase().includes(search.toLowerCase()))
 			const marca = productos.filter(e=> e.marca.toLowerCase().includes(search.toLowerCase()))
 			const genero = productos.filter(e=> e.genero.toLowerCase().includes(search.toLowerCase()))
-            	res.render('products/productosGeneral',{titulo,marca,genero,search,toThousand})
+            	res.render('products/productosSearch',{titulo,marca,genero,search,toThousand})
 		}else{
 			res.redirect('/')
 		}

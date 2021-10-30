@@ -107,7 +107,13 @@ body {
     cursor: pointer;
     
 
-}.seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar .boton-avatar2{
+}
+.seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar div{
+    text-align: center;
+    margin-top: 10px;
+
+}
+.seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar .boton-avatar2{
     position: absolute;
     left: -2px;
     top: -2px;

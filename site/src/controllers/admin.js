@@ -5,12 +5,15 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const usuarios = JSON.parse(fs.readFileSync( path.join(__dirname, '../database/users.json'), 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const bcrypt = require('bcryptjs');
+const {validationResult} = require('express-validator')
 
 const controller={
 
 	// vista admin
     admin:(req,res)=>{
+		
         res.render('admin/admin',{products,toThousand})
+	
     },
 	// accion de cerrar session
 	cerrar:(req,res)=>{
@@ -42,16 +45,46 @@ const controller={
     
     // accion de crear el producto
 	store: (req, res) => {
-	
-		const formCreate = req.body
+
+		const errors = validationResult(req)
 		
+		if(req.fileValidationError){
+
+			let img ={
+				param:"img",
+				msg:req.fileValidationError,
+			}
+            
+			errors.errors.push(img)
+        }
+		
+		if(errors.isEmpty()){
+			const formCreate = req.body
+			let img = []
+			req.files.forEach(imagen=>{
+				img.push(imagen.filename)
+
+			})
+			formCreate.imgP = img[0]
+			let remove = img.shift()
+			formCreate.img = img
+			
+			
+
 		formCreate.id = products.length + 1
 
 		products.push(formCreate);
 
 		fs.writeFileSync(productsFilePath,JSON.stringify(products,null,2))
 
-		res.redirect('/admin')
+		res.redirect('/admin/create')
+		}else{
+			res.render('admin/create',{
+				errors:errors.mapped(),
+				oldData:req.body
+			})
+		}
+		
 	},
 
 	//accion de buscar el producto y editarlo

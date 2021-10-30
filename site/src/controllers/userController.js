@@ -153,6 +153,7 @@ const controller ={
     editePerfil:(req,res)=>{
        
         const errors = validationResult(req)
+        
         if(req.fileValidationError){
 
             let img = {
@@ -160,11 +161,13 @@ const controller ={
                 msg:req.fileValidationError,
 
             }
+            
             errors.errors.push(img)
         }
-        console.log(req.fileValidationError)
+       
+         
         if(errors.isEmpty()){
-
+            
           
         const upDateUser = usuarios.find(e=> e.id === +req.params.id)
 	
@@ -185,6 +188,7 @@ const controller ={
             } 
             
             res.redirect(`/user/perfiluser/${req.params.id}`)
+           
 			
         }
            

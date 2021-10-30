@@ -9,23 +9,32 @@
   <!-- HEADER -->
 
 <body>
-    <form action="/user/updatePerfil/<%= userPerfil.id %> " method="POST">
+    <form action="/user/updatePerfil/<%= userPerfil.id %> " method="POST" enctype="multipart/form-data">
     <section class="seccion-perfil-usuario">
         <div class="perfil-usuario-header">
             <div class="perfil-usuario-portada">
                 <div class="perfil-usuario-avatar">
                     <img src="/images/users/<%= userPerfil.img %> " alt="img-avatar">
-                    <button class="boton-avatar">
-                        <input type="file" name="img" id="img" class= "boton-avatar2">
+                    <label for="imge" class="boton-avatar">
+                        <input type="file" name="imge" id="imge" class= "boton-avatar2">
+                        <div>
                         <i class="far fa-image"></i>
-                    </button>
+                    </div>
+                    </label>
                 </div>
                
               
             </div>
         </div>
+       
         <div class="perfil-usuario-body">
+            
             <div class="perfil-usuario-bio">
+                <div style="margin: 0 auto;">
+                    <% if(locals.errors && errors.img){ %>
+                        <p style="color:red"><%= errors.img.msg %> </p>
+                        <% } %> 
+                    </div>
                 <h2 class="titulo">
                     <i class="fas fa-user"></i>
                     <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" value="<%= locals.oldData && oldData.nombre ? oldData.nombre : null %>"> 
@@ -68,12 +77,11 @@
         </div>
         <div class="editarBtn">
             <button type="submit" class="bt_modif">Aceptar</button>
+
             <a href="/user/perfiluser/<%= userPerfil.id %> "class="bt_eliminar">Cancelar</a>
         </div>
     </section>
-    <% if(locals.errors && errors.img){ %>
-        <p style="color:red"><%= errors.img.msg %> </p>
-        <% } %> 
+    
     
 </form>
 
