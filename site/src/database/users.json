@@ -3,8 +3,8 @@
     "id": 1,
     "nombre": "mariano",
     "apellido": "castro",
-    "email": "mariano99@gmail.com",
-    "password": "$2a$10$FQf41FpAXzucvPQmaGwqV.6V0qVG4LvIGEOkjCOsNWLObbDf3f7Py",
+    "email": "mariano@gmail.com",
+    "password": "$2a$10$817OdSI1PtW9bS7TF0IrR.9EyKXXWtg4QIMm9BIMbQ6YfUTFP/bOK",
     "img": "default.jpg",
     "rol": "admin"
   },
