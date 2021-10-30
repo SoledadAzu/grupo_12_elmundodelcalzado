@@ -88,8 +88,10 @@
                 </td>
 
                 <td>
+                  <div>
                   <a href="/admin/edit/<%= e.id %> " class="btn btn-outline-primary" role="button"
-                    aria-disabled="true">Editar</a>
+                    aria-disabled="true">EDITAR</a>
+                  </div>
                   <form action="/admin/eliminar/<%= e.id %>?_method=DELETE " method="POST" style="display: inline-flex">
                     <button type="submit" class="btn btn-outline-danger">ELIMINAR</button>
                   </form>

@@ -17,7 +17,9 @@
                     <img src="/images/users/<%= userPerfil.img %> " alt="img-avatar">
                     <label for="imge" class="boton-avatar">
                         <input type="file" name="imge" id="imge" class= "boton-avatar2">
+                        <div>
                         <i class="far fa-image"></i>
+                    </div>
                     </label>
                 </div>
                
@@ -75,6 +77,7 @@
         </div>
         <div class="editarBtn">
             <button type="submit" class="bt_modif">Aceptar</button>
+
             <a href="/user/perfiluser/<%= userPerfil.id %> "class="bt_eliminar">Cancelar</a>
         </div>
     </section>

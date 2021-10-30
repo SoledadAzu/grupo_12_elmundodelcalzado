@@ -24,6 +24,9 @@ border-radius: 4px;
     width: 100px;
     height: 38px;
     border-radius: 4px;
+    text-align: center;
+    padding-top: 5px;
+    border: solid 2px red;
     }
 .bt_eliminar:hover{
         background: red;

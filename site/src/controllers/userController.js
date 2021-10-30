@@ -153,7 +153,7 @@ const controller ={
     editePerfil:(req,res)=>{
        
         const errors = validationResult(req)
-        return res.send(req.file)
+        
         if(req.fileValidationError){
 
             let img = {
@@ -166,41 +166,41 @@ const controller ={
         }
        
          
-    //     if(errors.isEmpty()){
+        if(errors.isEmpty()){
             
           
-    //     const upDateUser = usuarios.find(e=> e.id === +req.params.id)
+        const upDateUser = usuarios.find(e=> e.id === +req.params.id)
 	
-	// 	if(upDateUser){
+		if(upDateUser){
 			
-    //         upDateUser.nombre=req.body.nombre,
-    //         upDateUser.apellido=req.body.apellido,
-    //         upDateUser.email=req.body.email,
-    //         upDateUser.password=bcrypt.hashSync(req.body.password,10),
-    //         upDateUser.img=req.file ? req.file.filename : 'default.jpg',
+            upDateUser.nombre=req.body.nombre,
+            upDateUser.apellido=req.body.apellido,
+            upDateUser.email=req.body.email,
+            upDateUser.password=bcrypt.hashSync(req.body.password,10),
+            upDateUser.img=req.file ? req.file.filename : 'default.jpg',
             
 
-	// 		fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
-    //         // req.session.usuarioLogueado ={
-    //         //     email:req.body.email,
-    //         //     nombre: req.body.nombre,
-    //         //     rol:upDateUser.rol
-    //         // } 
+			fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
+            req.session.usuarioLogueado ={
+                email:req.body.email,
+                nombre: req.body.nombre,
+                rol:upDateUser.rol
+            } 
             
-    //         res.redirect(`/user/perfiluser/${req.params.id}`)
-    //         // res.send("llegue aca")
+            res.redirect(`/user/perfiluser/${req.params.id}`)
+           
 			
-    //     }
+        }
            
              
         
 
-    // }else{
-    //     res.render('users/perfilUserEdit',{
-    //         errors:errors.mapped(),
-    //         oldData:req.body
-    //     })
-    // }
+    }else{
+        res.render('users/perfilUserEdit',{
+            errors:errors.mapped(),
+            oldData:req.body
+        })
+    }
     },
     
      

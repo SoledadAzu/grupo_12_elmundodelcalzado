@@ -4,10 +4,10 @@
 <!-- head -->
 <%-include('./partials/head') %>
 	<!-- head -->
-
+<%-include('./partials/header') %>
 	<body class="crearForm">
 		<!-- navegacion -->
-		<%-include('./partials/header') %>
+		
 			<!-- navegacion -->
 			<main class="adminForm">
 				<div class="">
@@ -17,32 +17,39 @@
 						</div>
 					</div>
 					<div class="contenedor-form">
-						<form action="/admin/create" method="POST" enctype="multipart/form-data">
+						<form action="/admin/create" enctype="multipart/form-data" method="POST">
 							<div class="contenedorLabel">
 
 								<div class="labelForm">
 									<label for="title" class="">Nombre del producto:</label>
-									<input type="text" id="title" name="title" placeholder="Ej: Zapatillas Reebok"
-										class="form-input">
+									<input type="text" id="title" name="title" value="<%= locals.oldData && oldData.title ? oldData.title : null %>" class="form-input">
+										<% if(locals.errors && errors.title){ %>
+											<p style="color : red"><%= errors.title.msg %> </p>
+											<% } %> 
 								</div>
 								<div class="labelForm">
 									<label for="price" class="">Precio del producto:</label>
-									<input type="text" id="price" name="price" placeholder="Ej: 5678"
-										class="form-input">
+									<input type="text" id="price" name="price" value="<%= locals.oldData && oldData.price ? oldData.price : null %>" class="form-input">
+										<% if(locals.errors && errors.price){ %>
+											<p style="color : red"><%= errors.price.msg %> </p>
+											<% } %> 
 								</div>
 								<section class="seccion">
 								<div class="labelForm width">
 									<label for="colores" class="">colores:</label>
-									<input type="text" id="colores" name="colors" placeholder="Color primario"
+									<input type="text" id="colores" name="colors" placeholder="Color Primario"
 										class="form-input1">
 										<input type="text" id="colores" name="colors" placeholder="Color secundario"
 										class="form-input1">
 										<input type="text" id="colores" name="colors" placeholder="Color terciario"
 										class="form-input1">
+										<% if(locals.errors && errors.colors){ %>
+											<p style="color : red"><%= errors.colors.msg %> </p>
+											<% } %> 
 								</div>
 								<div class="labelForm width">
 									<label for="genero" class="l">Detalles:</label>
-									<input type="text" id="detalle" name="detalles" placeholder="Ingrese su detalle"
+									<input type="text" id="detalle" name="detalles" placeholder="ingrese su detalle"
 										class="form-input1">
 									<input type="text" id="detalle" name="detalles" placeholder="Ingrese su detalle"
 										class="form-input1">
@@ -50,7 +57,11 @@
 										class="form-input1">
 									<input type="text" id="detalle" name="detalles" placeholder="Ingrese su detalle"
 										class="form-input1">
+										<% if(locals.errors && errors.detalles){ %>
+											<p style="color : red"><%= errors.detalles.msg %> </p>
+											<% } %> 
 								</div>
+								
 							</section>
 								
 								<div class="selection">
@@ -110,7 +121,7 @@
 											<label for="37">37</label>
 										</div>
 										<div>
-											<input type="checkbox" name="talles" id="38" value="38" >
+											<input type="checkbox" name="talles" id="38" value="38">
 											<label for="38">38</label>
 										</div>
 										<div>
@@ -137,21 +148,26 @@
 											<input type="checkbox" name="talles" id="44" value="44">
 											<label for="44">44</label>
 										</div>
-									
+										<% if(locals.errors && errors.talles){ %>
+											<p style="color : red"><%= errors.talles.msg %> </p>
+											<% } %> 
 								</div>
 							</div>
+			
 								<div class="labelForm">
-									<label for="file" class="">ingrese su imagen principal:</label>
-									<input type="file" id="file" name="file"class="form-input">
-								</div>
-								<div class="labelForm">
-									<label for="file" class="">ingrese sus imagenes secundarias:</label>
-									<input type="file" id="file" name="file"class="form-input">
+									<label for="img" class="" >ingrese sus imagenes:</label>
+									<input type="file" id="img" name="img"class="form-input" multiple>
+									<% if(locals.errors && errors.img){ %>
+										<p style="color:red"><%= errors.img.msg %> </p>
+										<% } %> 
 								</div>
 								<div class="labelForm">
 									<label for="description" class="form-label">Descripción:</label>
-									<textarea name="description" id="description" class="form-input"></textarea>
+									<textarea name="description" id="description" value="<%= locals.oldData && oldData.description ? oldData.description : null %>"class="form-input"></textarea>
 								</div>
+								<% if(locals.errors && errors.description){ %>
+									<p style="color : red"><%= errors.description.msg %> </p>
+									<% } %> 
 							
 								<div class="">
 									<button class="btn btn-outline-success"type="submit">Guardar Producto</button>

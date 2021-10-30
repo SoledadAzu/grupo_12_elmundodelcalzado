@@ -2476,39 +2476,5 @@
     "genero": "Hombre",
     "outlet": "false",
     "temporada": "true"
-  },
-  {
-    "id": 70,
-    "title": "ZAPATILLA NEW BALANCE",
-    "subtitle": "Zapatilla new balance 574 Swa",
-    "description": "Creadas en 1988 combinando dos calzados NEW BALANCE diferentes, las 574 se han convertido en el símbolo de ingenio y originalidad.Las 574 se inspiran en el clásico archivo del pasado NEW BALANCE.Siempre clásicas, siempre con onda",
-    "price": "12.589",
-    "detalles": [
-      "Cuero Sintético",
-      "Textil",
-      "Sintética"
-    ],
-    "colors": [
-      "rosa"
-    ],
-    "talles": [
-      "35",
-      "36",
-      "37",
-      "39",
-      "38",
-      "40"
-    ],
-    "imgP": "newPortada.jpg",
-    "img": [
-      "new1.jpg",
-      "new2.jpg",
-      "new3.jpg",
-      "new4.jpg"
-    ],
-    "marca": "new balance",
-    "genero": "mujer",
-    "outlet": "false",
-    "temporada": "true"
   }
 ]
