@@ -3,7 +3,7 @@
     "id": 1,
     "nombre": "mariano",
     "apellido": "castro",
-    "email": "marianoCastro@gmail.com",
+    "email": "ana@gmail.com",
     "password": "$2a$10$ung/m/oojJGMFsPTNi.W0.nkkpaZn1QXdgkKh2fO9gR2MYQaqPRGO",
     "img": "default.jpg",
     "rol": "admin"

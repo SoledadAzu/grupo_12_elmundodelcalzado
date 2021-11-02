@@ -4,21 +4,12 @@
 <!-- head -->
 <%-include('./partials/head') %>
 	<!-- head -->
-<<<<<<< HEAD
-
-	<!-- navegacion -->
-	<%-include('./partials/header') %>
-	<!-- navegacion -->
-	<body class="crearForm">
-	<main class="adminForm">
-=======
 <%-include('./partials/header') %>
 	<body class="crearForm">
 		<!-- navegacion -->
 		
 			<!-- navegacion -->
 			<main class="adminForm">
->>>>>>> a27e5eb7c03b990d149dbc2e3d38b3732a5c79d5
 				<div class="">
 					<div class="">
 						<div class="">
@@ -157,31 +148,18 @@
 											<input type="checkbox" name="talles" id="44" value="44">
 											<label for="44">44</label>
 										</div>
-<<<<<<< HEAD
-								
-=======
 										<% if(locals.errors && errors.talles){ %>
 											<p style="color : red"><%= errors.talles.msg %> </p>
 											<% } %> 
->>>>>>> a27e5eb7c03b990d149dbc2e3d38b3732a5c79d5
 								</div>
 							</div>
 			
 								<div class="labelForm">
-<<<<<<< HEAD
-									<label for="file" class="">ingrese su imagen principal:</label>
-									<input type="file" id="file" name="imgp"class="form-input">
-								</div>
-								<div class="labelForm">
-									<label for="file" class="">ingrese sus imagenes secundarias:</label>
-									<input type="file" id="file" name="img"class="form-input">
-=======
 									<label for="img" class="" >ingrese sus imagenes:</label>
 									<input type="file" id="img" name="img"class="form-input" multiple>
 									<% if(locals.errors && errors.img){ %>
 										<p style="color:red"><%= errors.img.msg %> </p>
 										<% } %> 
->>>>>>> a27e5eb7c03b990d149dbc2e3d38b3732a5c79d5
 								</div>
 								<div class="labelForm">
 									<label for="description" class="form-label">Descripción:</label>
