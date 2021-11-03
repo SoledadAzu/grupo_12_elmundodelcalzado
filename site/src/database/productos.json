@@ -2476,5 +2476,89 @@
     "genero": "Hombre",
     "outlet": "false",
     "temporada": "true"
+  },
+  {
+    "title": "zapatillas ",
+    "price": "15.999",
+    "colors": [
+      "rojo",
+      "marron",
+      "azul"
+    ],
+    "detalles": [
+      "cuero",
+      "cuero",
+      "cuero",
+      "cuero"
+    ],
+    "genero": "hombre",
+    "temporada": "false",
+    "outlet": "true",
+    "marca": "adidasoriginal",
+    "talles": [
+      "35",
+      "36",
+      "40"
+    ],
+    "description": "asdss",
+    "imgP": "img-1635905134497.jpg",
+    "img": [],
+    "id": 70
+  },
+  {
+    "title": "blue",
+    "price": "98999",
+    "colors": [
+      "rojo",
+      "marron",
+      "azul"
+    ],
+    "detalles": [
+      "cuero",
+      "cuero",
+      "cuero",
+      "cuero"
+    ],
+    "genero": "hombre",
+    "temporada": "true",
+    "outlet": "false",
+    "marca": "adidasoriginal",
+    "talles": [
+      "35",
+      "36",
+      "40",
+      "41"
+    ],
+    "description": "asdasda",
+    "img": [],
+    "id": 71
+  },
+  {
+    "title": "rebook",
+    "price": "6799",
+    "colors": [
+      "marron",
+      "celeste",
+      "rojo"
+    ],
+    "detalles": [
+      "zuero",
+      "madera",
+      "metal",
+      "goma"
+    ],
+    "genero": "hombre",
+    "temporada": "false",
+    "outlet": "true",
+    "marca": "adidasoriginal",
+    "talles": [
+      "35",
+      "36",
+      "40",
+      "44"
+    ],
+    "description": "asdasdasd",
+    "img": [],
+    "id": 72
   }
 ]

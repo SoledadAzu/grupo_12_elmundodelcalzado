@@ -12,37 +12,40 @@ const controller ={
         res.render('users/login')
     },
     upload:(req, res) =>{
-        const ruta =path.join(__dirname,"..", "database","users.json")
-        const usuariosRegistrados =fs.readFileSync(ruta,"utf-8")
-    
-        const usuarios = JSON.parse(usuariosRegistrados)
-
+        // Indico la ruta donde se encuentra el json de usuarios
+        // const ruta =path.join(__dirname,"..", "database","users.json")
+        // // hago lectura sobre la ruta y el archivo
+        // const usuariosRegistrados =fs.readFileSync(ruta,"utf-8")
+        // // se parsea el formato en texto a objeto
+        // const usuarios = JSON.parse(usuariosRegistrados)
+        // requiero errores
         const errors = validationResult(req)
         
+        
+        if(errors.isEmpty){ // consulta si esta vacio de errores
 
-        if(errors.isEmpty){
-
-            
+            // busco al usuario
             const encontrado= usuarios.find(element=>{
                 return element.email===req.body.email  
-                   
-               })
-               
+                })
+
+               //consulta si se encontro y valido la contraseñas
                if(encontrado && bcrypt.compareSync(req.body.password,encontrado.password) ){
-                    
+                    // se crea una session
                     req.session.usuarioLogueado ={
                         email:encontrado.email,
                         nombre: encontrado.nombre,
                         rol:encontrado.rol,
                         id:encontrado.id
                     } 
-
+                    // crea una cookie en el caso de que tilde la casilla RECORDAME
                     if(req.body.recordame != undefined){
                         res.cookie('recordame',req.session.usuarioLogueado,{maxAge: 60000})
                     }
                     res.redirect('/')
                     
                 }else{
+                    // en el caso de error de contraseña, se lo manda a la vista
                     let mensaje = "la contraseña es incorrecta"
                     res.render("users/login",{
                         mensaje:mensaje,
@@ -50,8 +53,7 @@ const controller ={
                     }
                      
                 }
-        
-                
+                //se manda ERRORES de los input
                 res.render('users/login',{
                 errors:errors.mapped(),
                 oldData:req.body

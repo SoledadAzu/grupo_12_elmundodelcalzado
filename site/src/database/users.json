@@ -10,10 +10,10 @@
   },
   {
     "id": 2,
-    "nombre": "soledad",
-    "apellido": "barrionuevo",
+    "nombre": "adriana",
+    "apellido": "pereira",
     "email": "soledadBarrionuevo@gmail.com",
-    "password": "$2a$10$mRe3Mf7JG8wRHxzgX6z39uz2I2tP8E1tyKWtN4Ew2D87J/.dtvYdS",
+    "password": "$2a$10$u60Dq3e7QwFHaAViYoINmOqlJ7xRiTfiOlond.B5RXGiM2Ec6nYnu",
     "img": "default.jpg",
     "rol": "user"
   },
