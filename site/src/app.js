@@ -5,8 +5,8 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride =  require('method-override');
 const session = require('express-session') // requerimiento de express-session
-const logeo = require('./middleware/adminLogueado')
-const userlogeo = require('./middleware/userLogueado')
+const logeo = require('./middleware/usuarioLogueado')
+const rememberMe=require('./middleware/RememberMeCookie')
 
 
 
@@ -31,9 +31,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname,'..','public'))); //public estatico
 app.use(methodOverride('_method'));
-app.use(session({secret:"esto es un secreto!!"}))
+app.use(session({
+  secret:"esto es un secreto!!",
+  resave:false,
+  saveUninitialized:true,
+}))
 app.use(logeo)
-app.use(userlogeo)
+app.use(rememberMe)
 
 
 

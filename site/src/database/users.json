@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "nombre": "mariano",
+    "nombre": "jose",
     "apellido": "castro",
     "email": "ana@gmail.com",
-    "password": "$2a$10$ung/m/oojJGMFsPTNi.W0.nkkpaZn1QXdgkKh2fO9gR2MYQaqPRGO",
+    "password": "$2a$10$ay419ClX//19HMgCrE9s6uswbr.y0mxNxHcLp40XR2v9WojPuWSM2",
     "img": "default.jpg",
     "rol": "admin"
   },
@@ -15,7 +15,7 @@
     "email": "soledadBarrionuevo@gmail.com",
     "password": "$2a$10$u60Dq3e7QwFHaAViYoINmOqlJ7xRiTfiOlond.B5RXGiM2Ec6nYnu",
     "img": "default.jpg",
-    "rol": "user"
+    "rol": "admin"
   },
   {
     "id": 3,

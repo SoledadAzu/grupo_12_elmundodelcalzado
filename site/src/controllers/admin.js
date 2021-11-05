@@ -16,7 +16,7 @@ const controller={
     },
 	// accion de cerrar session
 	cerrar:(req,res)=>{
-		if(req.session.usuarioLogueado!== undefined){
+		if(req.session.usuarioLogueado){
 			req.session.destroy()
 			res.redirect('/')
 		}
@@ -76,8 +76,6 @@ const controller={
 
 		fs.writeFileSync(productsFilePath,JSON.stringify(products,null,2))
 	
-		
-
 		res.redirect('/admin')
 		}else{
 			res.render('admin/create',{
@@ -103,9 +101,10 @@ const controller={
 			upDate.detalles = req.body.detalles
 			upDate.outlet = req.body.outlet
 			upDate.talles = req.body.talles
-
+		}
 			fs.writeFileSync(productsFilePath,JSON.stringify(products,null,2))
-			res.redirect('/admin')}
+			
+			res.redirect('/admin')
 	},
 	// accion de eliminar un producto encontrado por id
     deleteprod : (req, res) => {

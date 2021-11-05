@@ -2478,7 +2478,7 @@
     "temporada": "true"
   },
   {
-    "title": "zapatillas ",
+    "title": "zapatillas  celeste",
     "price": "15.999",
     "colors": [
       "rojo",
@@ -2506,8 +2506,8 @@
     "id": 70
   },
   {
-    "title": "blue",
-    "price": "98999",
+    "title": "blue PAPAS",
+    "price": "98.999",
     "colors": [
       "rojo",
       "marron",
@@ -2534,30 +2534,29 @@
     "id": 71
   },
   {
-    "title": "rebook",
-    "price": "6799",
+    "title": "zapatillas milanesas",
+    "price": "5.999",
     "colors": [
+      "rojo",
       "marron",
-      "celeste",
-      "rojo"
+      "marron"
     ],
     "detalles": [
-      "zuero",
-      "madera",
-      "metal",
-      "goma"
+      "cuero",
+      "cuero",
+      "cuero",
+      "cuero"
     ],
     "genero": "hombre",
-    "temporada": "false",
-    "outlet": "true",
+    "temporada": "true",
+    "outlet": "false",
     "marca": "adidasoriginal",
     "talles": [
-      "35",
-      "36",
-      "40",
+      "38",
+      "39",
       "44"
     ],
-    "description": "asdasdasd",
+    "description": "nuevo",
     "img": [],
     "id": 72
   }

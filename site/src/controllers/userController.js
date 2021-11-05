@@ -12,35 +12,29 @@ const controller ={
         res.render('users/login')
     },
     upload:(req, res) =>{
-        // Indico la ruta donde se encuentra el json de usuarios
-        // const ruta =path.join(__dirname,"..", "database","users.json")
-        // // hago lectura sobre la ruta y el archivo
-        // const usuariosRegistrados =fs.readFileSync(ruta,"utf-8")
-        // // se parsea el formato en texto a objeto
-        // const usuarios = JSON.parse(usuariosRegistrados)
-        // requiero errores
+      
         const errors = validationResult(req)
         
         
-        if(errors.isEmpty){ // consulta si esta vacio de errores
+        if(errors.isEmpty()){ // consulta si esta vacio de errores
 
             // busco al usuario
-            const encontrado= usuarios.find(element=>{
+            const userEncontrado= usuarios.find(element=>{
                 return element.email===req.body.email  
                 })
 
                //consulta si se encontro y valido la contraseñas
-               if(encontrado && bcrypt.compareSync(req.body.password,encontrado.password) ){
+               if(userEncontrado && bcrypt.compareSync(req.body.password,userEncontrado.password) ){
                     // se crea una session
                     req.session.usuarioLogueado ={
-                        email:encontrado.email,
-                        nombre: encontrado.nombre,
-                        rol:encontrado.rol,
-                        id:encontrado.id
+                        email:userEncontrado.email,
+                        nombre: userEncontrado.nombre,
+                        rol:userEncontrado.rol,
+                        id:userEncontrado.id
                     } 
                     // crea una cookie en el caso de que tilde la casilla RECORDAME
                     if(req.body.recordame != undefined){
-                        res.cookie('recordame',req.session.usuarioLogueado,{maxAge: 60000})
+                        res.cookie('rememberMe',req.session.usuarioLogueado,{maxAge: 60000})
                     }
                     res.redirect('/')
                     
@@ -129,6 +123,7 @@ const controller ={
     fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
     res.redirect("admin/usuariosRegistrados")
 },
+// guarda en usuarios registrados
     updateUser:(req,res)=>{
     
         
@@ -179,30 +174,20 @@ const controller ={
             upDateUser.apellido=req.body.apellido,
             upDateUser.email=req.body.email,
             upDateUser.password=bcrypt.hashSync(req.body.password,10),
-            upDateUser.img=req.file ? req.file.filename : 'default.jpg',
-            
-
-			fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
-            req.session.usuarioLogueado ={
-                email:req.body.email,
-                nombre: req.body.nombre,
-                rol:upDateUser.rol
-            } 
-            
-            res.redirect(`/user/perfiluser/${req.params.id}`)
-           
-			
+            upDateUser.img=req.file ? req.file.filename : 'default.jpg'
+      	
         }
-           
-             
         
+        fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
+        
+        res.redirect(`/user/perfiluser/${req.params.id}`)
 
     }else{
         res.render('users/perfilUserEdit',{
             errors:errors.mapped(),
             oldData:req.body
         })
-    }
+     }
     },
     
      
