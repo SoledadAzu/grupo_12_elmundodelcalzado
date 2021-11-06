@@ -16,11 +16,13 @@ const controller={
     },
 	// accion de cerrar session
 	cerrar:(req,res)=>{
-		if(req.session.usuarioLogueado){
-			req.session.destroy()
-			res.redirect('/')
+		if(req.session.usuarioLogueado || req.cookies.rememberMe){
+			req.session.destroy()	
+			res.cookie('rememberMe',"{ maxAge:-1}")
 		}
-	},
+		res.redirect('/')
+		},
+		
 
 	// vista de crear un producto
     create:(req,res)=>{

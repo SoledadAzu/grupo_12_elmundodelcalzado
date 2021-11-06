@@ -2506,18 +2506,18 @@
     "id": 70
   },
   {
-    "title": "blue PAPAS",
-    "price": "98.999",
+    "title": "adiddas  genial",
+    "price": "7.999",
     "colors": [
       "rojo",
-      "marron",
-      "azul"
+      "rojo",
+      "marron"
     ],
     "detalles": [
       "cuero",
+      "zuero",
       "cuero",
-      "cuero",
-      "cuero"
+      "zuero"
     ],
     "genero": "hombre",
     "temporada": "true",
@@ -2526,38 +2526,10 @@
     "talles": [
       "35",
       "36",
-      "40",
       "41"
     ],
-    "description": "asdasda",
+    "description": "buenas zapas",
     "img": [],
     "id": 71
-  },
-  {
-    "title": "zapatillas milanesas",
-    "price": "5.999",
-    "colors": [
-      "rojo",
-      "marron",
-      "marron"
-    ],
-    "detalles": [
-      "cuero",
-      "cuero",
-      "cuero",
-      "cuero"
-    ],
-    "genero": "hombre",
-    "temporada": "true",
-    "outlet": "false",
-    "marca": "adidasoriginal",
-    "talles": [
-      "38",
-      "39",
-      "44"
-    ],
-    "description": "nuevo",
-    "img": [],
-    "id": 72
   }
 ]

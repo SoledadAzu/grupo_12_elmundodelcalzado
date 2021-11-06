@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "nombre": "jose",
-    "apellido": "castro",
+    "nombre": "mariano",
+    "apellido": "morales",
     "email": "ana@gmail.com",
-    "password": "$2a$10$ay419ClX//19HMgCrE9s6uswbr.y0mxNxHcLp40XR2v9WojPuWSM2",
-    "img": "default.jpg",
+    "password": "$2a$10$nJ0DpPA0RO9nRHpW3b5e0eSaj8ZrKmaU2jJcbGzHg05AXga9H9DtC",
+    "img": "img-1636170709915.png",
     "rol": "admin"
   },
   {

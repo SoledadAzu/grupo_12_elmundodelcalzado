@@ -174,20 +174,28 @@ const controller ={
             upDateUser.apellido=req.body.apellido,
             upDateUser.email=req.body.email,
             upDateUser.password=bcrypt.hashSync(req.body.password,10),
-            upDateUser.img=req.file ? req.file.filename : 'default.jpg'
+            upDateUser.img=req.file ? req.file.filename 
+                : upDateUser.img ? upDateUser.img 
+                : null
       	
         }
-        
-        fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
-        
-        res.redirect(`/user/perfiluser/${req.params.id}`)
 
-    }else{
+        fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
+
+        if(req.session.usuarioLogueado || req.cookies.rememberMe){
+			req.session.destroy()	
+			res.cookie('rememberMe',"{ maxAge:-1}")
+		}
+
+        
+        res.redirect("/user/login")
+
+     }else{
         res.render('users/perfilUserEdit',{
             errors:errors.mapped(),
             oldData:req.body
         })
-     }
+      }
     },
     
      
