@@ -27,7 +27,7 @@
 
                     <a class="padreHombre" href="/products/hombre">
                         <article class="productsHombre">
-                            <div >
+                            <div>
                                 <img class="padreImg" src="/images/wireframe/hombre.png" alt="hombre" />
 
                             </div>
@@ -38,7 +38,7 @@
                     <a class="padreMujer" href="/products/mujer">
                         <article class="productsMujer">
 
-                            <div >
+                            <div>
                                 <img class="padreImg" src="/images/wireframe/mujer.png" alt="mujer">
 
                             </div>
@@ -58,20 +58,54 @@
                 <!-- PUBLICIDAD -->
 
                 <section>
-                    <article class="loMasVendido">
-                        <h1>LO MÁS VENDIDO</h1>
+                    <article class="lanzamiento">
+                        <h1>LANZAMIENTO</h1>
                     </article>
                 </section>
+                <section class="zapatillas">
+                    <!-- lanzamiento -->
+                    <% let contadorL=0 %>
+                        <% lanzamiento.map(e=>{%>
+                            <% contadorL++ %>
+                                <%if(contadorL<=8){%>
+                                    <article class="zapatilla-img">
+                                        <a href="/products/productDetail/<%=e.id %> ">
+                                            <div>
+                                                <img class="zapatilla-img1" src="/images/articulos/<%= e.imgP %> "
+                                                    alt="zapatilla-img1">
+                                            </div>
+                                            <div class="ofertasZapatillaPrecio">
 
+                                                <h4>$<%=toThousand(e.price) %>
+                                                </h4>
+                                                <p>
+                                                    <%= e.marca %>
+                                                </p>
+                                                <strong>
+                                                    <%= e.title%>
+                                                </strong>
+                                            </div>
+                                        </a>
+                                    </article>
+                                    <% } %>
+                                        <% }) %>
 
+                                            <!-- lanzamiento -->
+
+                </section>
+                <section>
+                    <article class="loMasVendido">
+                        <h1>OUTLET</h1>
+                    </article>
+                </section>
                 <section class="zapatillas">
                     <!-- zapatillas -->
                     <% let contador=0 %>
-                        <% zapatillas.map(e=>{%>
+                        <% outlet.map(e=>{%>
                             <% contador++ %>
                                 <%if(contador<=8){%>
                                     <article class="zapatilla-img">
-                                        <a href="/products/productDetail/<%= e.id %> ">
+                                        <a href="/products/productDetail/<%=e.id%> ">
                                             <div>
                                                 <img class="zapatilla-img1" src="/images/articulos/<%= e.imgP %> "
                                                     alt="zapatilla-img1">
@@ -93,48 +127,6 @@
 
                                             <!-- zapatillas -->
                 </section>
-                <section>
-                    <article class="lanzamiento">
-                        <h1>LANZAMIENTO</h1>
-                    </article>
-                </section>
-
-
-
-                <section class="zapatillas">
-                    <!-- lanzamiento -->
-                    <% let contadorL=0 %>
-                        <% lanzamiento.map(e=>{%>
-                            <% contadorL++ %>
-                                <%if(contadorL<=8){%>
-
-                                    <article class="zapatilla-img">
-                                        <a href="/products/productDetail/<%=e.id %> ">
-                                            <div>
-                                                <img class="zapatilla-img1" src="/images/articulos/<%= e.imgP %> "
-                                                    alt="zapatilla-img1">
-                                            </div>
-                                            <div class="ofertasZapatillaPrecio">
-
-                                                <h4>$<%=toThousand(e.price) %>
-                                                </h4>
-                                                <p>
-                                                    <%= e.marca %>
-                                                </p>
-                                                <strong>
-                                                    <%= e.title %>
-                                                </strong>
-                                            </div>
-
-                                        </a>
-                                    </article>
-
-                                    <% } %>
-                                        <% }) %>
-
-                                            <!-- lanzamiento -->
-
-                </section>
                 <!--marcas-->
                 <section class="marcass">
                     <article class="CompraPorMarca">
@@ -145,63 +137,70 @@
                 <section class="contenedorMarcas">
                     <article class="marcas_art">
                         <a href="/products/adidas">
-                        <div>
-                            <img class="marcas" src="/images/logosmarcas/adidas-performance.png"
-                                alt="logodemarcas">
-                        </div></a>
+                            <div>
+                                <img class="marcas" src="/images/logosmarcas/adidas-performance.png" alt="logodemarcas">
+                            </div>
+                        </a>
                     </article>
-                <article class="marcas_art">
-                   <a href="/products/asics">
-                        <div>
-                            <img class="marcas" src="/images/logosmarcas/asics.png" alt="logodemarcas">
-                        </div>
+                    <article class="marcas_art">
+                        <a href="/products/asics">
+                            <div>
+                                <img class="marcas" src="/images/logosmarcas/asics.png" alt="logodemarcas">
+                            </div>
                     </article></a>
-                    <article  class="marcas_art">
+                    <article class="marcas_art">
                         <a href="products/nike">
-                        <div>
-                           <img cass="marcas" src="/public/images/logosmarcas/nike_sport.png" alt="logodemarcas">
-                        </div></a>
+                            <div>
+                                <img class="marcas" src="/images/logosmarcas/nike_sport.png" alt="logodemarcas">
+                            </div>
+                        </a>
                     </article>
                     <!--marcasPC-->
-                    <article  class="marcas_art marcas_ocultas">
+                    <article class="marcas_art marcas_ocultas">
                         <a href="/products/fila">
-                        <div>
-                            <img class="marcas" src="/images/logosmarcas/fila.png" alt="logodemarcas">
-                        </div></a>
-                    </article >
-                    <article  class="marcas_art marcas_ocultas">
+                            <div>
+                                <img class="marcas" src="/images/logosmarcas/fila.png" alt="logodemarcas">
+                            </div>
+                        </a>
+                    </article>
+                    <article class="marcas_art marcas_ocultas">
                         <a href="/products/adidasoriginal">
-                        <div>
-                            <img class="marcas" src="/images/logosmarcas/adidas.png" alt="logodemarcas">
-                        </div></a>
-                    </article >
-                    <article  class="marcas_art marcas_ocultas">
+                            <div>
+                                <img class="marcas" src="/images/logosmarcas/adidas.png" alt="logodemarcas">
+                            </div>
+                        </a>
+                    </article>
+                    <article class="marcas_art marcas_ocultas">
                         <a href="/products/converse">
-                        <div >
-                            <img class="marcas" src="/images/logosmarcas/logoconverse_new.png" alt="logodemarcas">
-                        </div></a>
+                            <div>
+                                <img class="marcas" src="/images/logosmarcas/logoconverse_new.png" alt="logodemarcas">
+                            </div>
+                        </a>
                     </article>
-                 <article  class="marcas_art marcas_ocultas">
-                            <a href="/products/puma">
-                        <div>
-                            <img class="marcas" src="/images/logosmarcas/puma.png" alt="logodemarcas">
-                        </div></a>
-                    </article>
-                    
-                    <article  class="marcas_art marcas_ocultas">
-                        <a href="/products/topper">
-                        <div>
-                            <img class="marcas" src="/images/logosmarcas/topper.png" alt="logodemarcas">
-                        </div></a>
-                    </article>
-                    <article  class="marcas_art marcas_ocultas">
-                        <a href="/products/newbalance">
-                        <div>
-                            <img class="marcas" src="/images/logosmarcas/new-balance.png" alt="logodemarcas">
-                        </div></a>
+                    <article class="marcas_art marcas_ocultas">
+                        <a href="/products/puma">
+                            <div>
+                                <img class="marcas" src="/images/logosmarcas/puma.png" alt="logodemarcas">
+                            </div>
+                        </a>
                     </article>
 
-                    
+                    <article class="marcas_art marcas_ocultas">
+                        <a href="/products/topper">
+                            <div>
+                                <img class="marcas" src="/images/logosmarcas/topper.png" alt="logodemarcas">
+                            </div>
+                        </a>
+                    </article>
+                    <article class="marcas_art marcas_ocultas">
+                        <a href="/products/newbalance">
+                            <div>
+                                <img class="marcas" src="/images/logosmarcas/new-balance.png" alt="logodemarcas">
+                            </div>
+                        </a>
+                    </article>
+
+
                 </section>
                 <!-- marcasZapatillas -->
 

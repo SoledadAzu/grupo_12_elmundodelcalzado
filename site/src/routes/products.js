@@ -4,6 +4,7 @@ const{product,carrito,general,mercaderia,hombre,mujer,temporada,ofertas,adidas,a
 
 
 
+
 router.get('/productDetail/:id',product)
 router.get('/carritoDeCompras',carrito)
 router.get('/general',general)

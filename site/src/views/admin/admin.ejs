@@ -23,12 +23,12 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="/admin">Administrador</a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="#">Outlet</a>
-              </li>
+              </li>-->
               <li class="nav-item dropdown">
-                <a class="nav-link" href="#">temporada</a>
-              </li>
+                <a class="nav-link" href="/admin/usuarios">Usuarios</a>
+              </li> 
               <li class="nav-item">
                 <a class="nav-link disabled"></a>
               </li>
@@ -38,8 +38,13 @@
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
           </div>
+          <div style="margin-left: 5px;">
+            <a href="/admin/cerrar">
+              <button class="btn btn-outline-success">CERRAR SESION</button></a>
+          </div>
         </div>
-      </nav>
+    </div>
+    </nav>
     </div>
     <!-- navegacion -->
 
@@ -50,7 +55,7 @@
       <div class="">
         <table class="table" style="width: 150%;">
           <thead>
-            <tr style="background-color:#F1948A" >
+            <tr style="background-color:#F1948A">
               <th scope="col">#</th>
               <th scope="col">Nombre</th>
               <th scope="col">Precios</th>
@@ -83,8 +88,10 @@
                 </td>
 
                 <td>
+                  <div>
                   <a href="/admin/edit/<%= e.id %> " class="btn btn-outline-primary" role="button"
-                    aria-disabled="true">Editar</a>
+                    aria-disabled="true">EDITAR</a>
+                  </div>
                   <form action="/admin/eliminar/<%= e.id %>?_method=DELETE " method="POST" style="display: inline-flex">
                     <button type="submit" class="btn btn-outline-danger">ELIMINAR</button>
                   </form>

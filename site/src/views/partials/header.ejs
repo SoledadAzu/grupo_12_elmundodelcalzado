@@ -17,6 +17,8 @@
                 <i class="fas fa-bars"></i>
             </label>
             <ul>
+
+                <li><a href="/admin">Administrador</a></li>
                 <li><a href="/user/login">Login</a></li>
                 <li><a href="/user/register">Register</a></li>
                 <li><a href="/products/hombre">Hombre</a></li>
@@ -27,19 +29,35 @@
         </nav>
         
             <div class="logo">
-                <a href="/"> <img src="/images/logo.png" alt="logo"></a>
-            
+                <a href="/"> <img src="/images/logo.png" alt="logo"></a> 
             </div>
-        
+                    
             <form action="/products/general" class="buscar" method="GET">
                 <input  type="text" name="keywords" placeholder="¿Que estas buscando? " > <i class="fas fa-search"> </i>
             </form>
         <div class="iconos">
+            <% if(locals.user && locals.user.rol === "admin"){ %> 
+            <div class="administrador">
+               <a href="/admin"><h3>ADMIN</h3></a>
+              
+                <a href="/user/perfiluser/<%= locals.user.id %>"><h3>Hola:<%= locals.user.nombre %></h3>
+            
+               
+               <a href="/admin/cerrar">Cerrar Session</a>
+            </div>
+            <% } else if(locals.user && locals.user.rol === "user"){%> 
+                <div class="administrador">
+                    <a href="/user/perfiluser/<%=locals.user.id%> "><h3>Hola:<%= locals.user.nombre %></h3></a>
+                    <a href="/admin/cerrar">Cerrar Session</a>
+                 </div>
+                
+            <% } else {%>     
             <div class="usuario">
                 <i class="fas fa-user"></i>
                 <a href="/user/login">Ingresa</a>
                 <a href="/user/register">o Registrate</a>
             </div>
+            <%}%>
             <div class="iconos-search">
                 <div class="search">
                     <input type="checkbox" id="search">
@@ -61,6 +79,7 @@
             <li><a href="/products/mujer">MUJER</a></li>
             <li><a href="/products/temporada">TEMPORADA</a></li>
             <li><a href="/products/outlet">OUTLET</a></li>
+            <li><a href="/products">PRODUCTOS</a></li>
         </ul>
         
     </nav>

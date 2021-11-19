@@ -17,6 +17,20 @@ const controller ={
     },
     politicaDeCambio:(req,res)=>{
         res.render('extras/politicaDeCambios')
-    }
+    },
+    acercaDeNosotros:(req,res)=>{
+        res.render('extras/acercaDeNosotros')
+    },
+    denegado:(req,res)=>{
+        res.render("extras/denegado")
+    },
+    nuestrasSucursales:(req,res)=>{
+        res.render("extras/nuestrasSucursales")
+    },
+    webEnContruccion:(req,res)=>{
+        res.render("extras/webEnContruccion")
+    },
+    
+
 }
 module.exports=controller;
