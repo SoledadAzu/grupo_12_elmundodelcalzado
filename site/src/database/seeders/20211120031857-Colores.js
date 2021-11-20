@@ -3,22 +3,21 @@ const productos = require("../../database/productos.json")
 
 let colores = productos.map(product =>{
   let color = {
-    name: product.colors,
-    creatdAt: new Date,
-    updatedAt: new Date
+    nombre: product.colors,
+    
   }
   return color
 })
 module.exports = {
   up: async (queryInterface, Sequelize) => {
  
-     await queryInterface.bulkInsert('Colors', colores, {});
+     await queryInterface.bulkInsert('Colores', colores, {});
     
   },
 
   down: async (queryInterface, Sequelize) => {
    
-      await queryInterface.bulkDelete('Colors', null, {});
+      await queryInterface.bulkDelete('Colores', null, {});
      
   }
 };

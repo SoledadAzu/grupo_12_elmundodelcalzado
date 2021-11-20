@@ -1,26 +1,24 @@
 'use strict';
+const productos = require("../../database/productos.json")
 
-const generos = ["hombre","mujer"] 
 
-let generoArray = generos.map(gender => {
+let generoArray = productos.map(product => {
   let genero = {
-    nombre: gender,
-    createdAt: new Date,
-    updatedAt: new Date
-
+    nombre: product.genero,
+   
   }
   return genero
 })
 module.exports = {
   up: async (queryInterface, Sequelize) => {
    
-      await queryInterface.bulkInsert('generos', generoArray, {});
+      await queryInterface.bulkInsert('Generos', generoArray, {});
     
   },
 
   down: async (queryInterface, Sequelize) => {
 
-    await queryInterface.bulkDelete('generos', null, {});
+    await queryInterface.bulkDelete('Generos', null, {});
 
   }
 };

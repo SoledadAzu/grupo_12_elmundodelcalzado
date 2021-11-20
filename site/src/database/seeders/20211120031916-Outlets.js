@@ -1,13 +1,11 @@
 'use strict';
 
-const outlets = ["true","false"] 
+const outlets = [0,1] 
 
 let outletArray = outlets.map(productoutlet => {
   let outlet = {
     nombre: productoutlet,
-    createdAt: new Date,
-    updatedAt: new Date
-
+   
   }
   return outlet
 })

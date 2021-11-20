@@ -6,21 +6,20 @@ let productosArray = productos.map(product => {
     nombre: product.title,
     precio: product.price,
     descripcion: product.description,
-    createdAt: new Date,
-    updatedAt: new Date
+   
   }
   return producto
 })
 module.exports = {
   up: async (queryInterface, Sequelize) => {
    
-      await queryInterface.bulkInsert('productos', productosArray, {});
+      await queryInterface.bulkInsert('Productos', productosArray, {});
     
   },
 
   down: async (queryInterface, Sequelize) => {
 
-    await queryInterface.bulkDelete('productos', null, {});
+    await queryInterface.bulkDelete('Productos', null, {});
 
   }
 };

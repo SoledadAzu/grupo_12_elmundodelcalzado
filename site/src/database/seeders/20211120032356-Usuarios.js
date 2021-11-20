@@ -8,8 +8,7 @@ let usuariosArray = usuarios.map(usuario => {
     email: ususario.email,
     password: usuario.password,
     imagen: usuario.img,
-    createdAt: new Date,
-    updatedAt: new Date
+
   }
   return usuariosData
 })
