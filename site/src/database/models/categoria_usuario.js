@@ -12,13 +12,11 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Categoria_Usuarios.hasMany(models.Usuarios, { 
         as: "Usuarios",
-        foreignKey: 'id_categoria_usuario',
-        
-      
+        foreignKey: 'id_categoria_usuario',    
     })
-      // define association here
-    }
-  };
+  }
+}
+
   Categoria_Usuarios.init({
     nombre: DataTypes.STRING
   }, {
