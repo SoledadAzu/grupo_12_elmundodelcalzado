@@ -25,7 +25,7 @@ module.exports = {
       },
       imagen: {
         type: Sequelize.STRING(100)
-      },
+       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

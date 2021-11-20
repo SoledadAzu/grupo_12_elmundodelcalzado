@@ -9,19 +9,15 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-  }
-},
-
-
-    Usuarios.associate(Categoria_Usuario)
+     static associate(models){
       
-        Usuarios.belongsTo(models.Categoria_Usuario, {
-            as: "Categoria_Usuario",
-            foreignKey: "id_categoria_usuario",
-        })
-    
-
-       
+      Usuarios.belongsTo(models.Categoria_Usuarios, {
+          as: "Categoria_Usuario",
+          foreignKey: "id_categoria_usuario",
+      })
+  
+    };
+  }; 
       // define association here
   
   Usuarios.init({
@@ -32,7 +28,10 @@ module.exports = (sequelize, DataTypes) => {
     id_categoria_usuario: DataTypes.INTEGER,
     imagen: DataTypes.STRING
   }, {
+    timestamps: false,
     sequelize,
     modelName: 'Usuarios',
   });
   return Usuarios;
+
+}
