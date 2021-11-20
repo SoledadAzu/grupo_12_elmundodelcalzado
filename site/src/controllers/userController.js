@@ -4,7 +4,7 @@ const {validationResult} = require('express-validator')
 const bcrypt = require('bcryptjs');
 const usuariosFilePath =  path.join(__dirname, '../database/users.json')
 let usuarios = JSON.parse(fs.readFileSync( path.join(__dirname, '../database/users.json'), 'utf-8'));
-
+const db = require("../database/models")
 
 
 const controller ={
@@ -83,20 +83,37 @@ const controller ={
                 usuarios = JSON.parse(usuariosRegistrados)
             }
             
-        const usuario={
+       
+    //     usuario.id=usuarios.length + 1,
+    //  const usuario={
     
-            id:req.body.id,
-            nombre:req.body.nombre,
-            apellido:req.body.apellido,
-            email:req.body.email,
-            password: bcrypt.hashSync(req.body.password,10),
-            img: req.file ? req.file.filename : 'default.jpg',
-            rol:"user"
-        }
-        usuario.id=usuarios.length + 1,
-    
-         usuarios.push(usuario)
-         fs.writeFileSync(ruta, JSON.stringify(usuarios, null,4))
+    //         id:req.body.id,
+    //         nombre:req.body.nombre,
+    //         apellido:req.body.apellido,
+    //         email:req.body.email,
+    //         password: bcrypt.hashSync(req.body.password,10),
+    //         img: req.file ? req.file.filename : 'default.jpg',
+    //         rol:"user"
+    //     }
+    //      usuarios.push(usuario)
+    //      fs.writeFileSync(ruta, JSON.stringify(usuarios, null,4))
+
+    db.Usuarios.create({
+        nombre: req.body.nombre,
+        apellido: req.body.apellido,
+        email: req.body.email,
+        password: bcrypt.hashSync(req.body.password, 10),
+        rolesId: 1,
+        imagen: req.file ? req.file.filename: "default.jpg"
+    })
+    .then((Usuarios) => {
+        res.redirect("user/login")
+    })
+    .catch((errors) => (errors))
+
+
+
+    // res.render("user/register")
 
          req.session.usuarioLogueado ={
             email:req.body.email,
@@ -117,12 +134,20 @@ const controller ={
     res.render('users/perfiluser',{userPerfil})
 },
     deleteUser : (req, res) => {
-    
-    usuarios=usuarios.filter(e=> e.id !== +req.params.id)
+        
+            let userId = req.params.id;
+            Usuarios
+            .destroy({where: {id: userId}, force: true}) // force: true es para asegurar que se ejecute la acción
+            .then(()=>{
+                return res.redirect('admin/usuariosRegistrados')})
+            .catch(error => res.send(error)) 
+        
+    // usuarios=usuarios.filter(e=> e.id !== +req.params.id)
 
-    fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
-    res.redirect("admin/usuariosRegistrados")
+    // fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
+    // res.redirect("admin/usuariosRegistrados")
 },
+
 // guarda en usuarios registrados
     updateUser:(req,res)=>{
     
@@ -166,21 +191,40 @@ const controller ={
         if(errors.isEmpty()){
             
           
-        const upDateUser = usuarios.find(e=> e.id === +req.params.id)
+        // const upDateUser = usuarios.find(e=> e.id === +req.params.id)
 	
-		if(upDateUser){
+		// if(upDateUser){
 			
-            upDateUser.nombre=req.body.nombre,
-            upDateUser.apellido=req.body.apellido,
-            upDateUser.email=req.body.email,
-            upDateUser.password=bcrypt.hashSync(req.body.password,10),
-            upDateUser.img=req.file ? req.file.filename 
-                : upDateUser.img ? upDateUser.img 
-                : null
+        //     upDateUser.nombre=req.body.nombre,
+        //     upDateUser.apellido=req.body.apellido,
+        //     upDateUser.email=req.body.email,
+        //     upDateUser.password=bcrypt.hashSync(req.body.password,10),
+        //     upDateUser.img=req.file ? req.file.filename 
+        //         : upDateUser.img ? upDateUser.img 
+        //         : null
       	
-        }
+        // }
 
-        fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
+        // fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
+
+        let userId = req.params.id;
+        Usuarios
+        .update(
+            {
+                nombre: req.body.nombre,
+                apellido: req.body.apellido,
+                password: bcrypt.hashSync(req.body.password,10),
+                rolesid: 1,
+                imagen: req.file ? req.file.filename: "default.jpg"
+    },
+            {
+                where: {id: userId}
+            })
+        .then(()=> {
+            return res.redirect('user/login')})            
+        .catch(error => res.send(error))
+        
+
 
         if(req.session.usuarioLogueado || req.cookies.rememberMe){
 			req.session.destroy()	
@@ -202,17 +246,10 @@ const controller ={
 }
 module.exports=controller
 
-db.user.create({
-    user: user,
-    email: email,
-    password: bcrypt.hashSync(password, 7),
-    rolesId: 1,
-    avatar: req.file ? req.file.filename: "defaultAvatarImage.png"
-})
-.then(() => {
-    res.redirect("/login")
-})
+
+
+
     
 
-res.render("user/register")
+
 
