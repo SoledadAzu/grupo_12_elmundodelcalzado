@@ -98,7 +98,7 @@ const controller ={
     //      usuarios.push(usuario)
     //      fs.writeFileSync(ruta, JSON.stringify(usuarios, null,4))
 
-    db.Usuarios.create({
+    db.Usuario.create({
         nombre: req.body.nombre,
         apellido: req.body.apellido,
         email: req.body.email,
