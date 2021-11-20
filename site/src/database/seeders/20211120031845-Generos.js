@@ -1,24 +1,26 @@
 'use strict';
+const { DataTypes } = require("sequelize/types");
+const productos = require("../../database/productos.json")
 
+let generoArray = productos.map (product => {
+  let genero = {
+    nombre: product.genero,
+    createdAt: new Date,
+    updatedAt: new Date
+
+  }
+  return genero
+})
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+   
+      await queryInterface.bulkInsert('productos', genero, {});
+    
   },
 
   down: async (queryInterface, Sequelize) => {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+
+    await queryInterface.bulkDelete('People', null, {});
+
   }
 };
