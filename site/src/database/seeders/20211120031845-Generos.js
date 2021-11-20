@@ -1,10 +1,10 @@
 'use strict';
-const { DataTypes } = require("sequelize/types");
-const productos = require("../../database/productos.json")
 
-let generoArray = productos.map (product => {
+const generos = ["hombre","mujer"] 
+
+let generoArray = generos.map(gender => {
   let genero = {
-    nombre: product.genero,
+    nombre: gender,
     createdAt: new Date,
     updatedAt: new Date
 
@@ -14,13 +14,13 @@ let generoArray = productos.map (product => {
 module.exports = {
   up: async (queryInterface, Sequelize) => {
    
-      await queryInterface.bulkInsert('productos', genero, {});
+      await queryInterface.bulkInsert('generos', generoArray, {});
     
   },
 
   down: async (queryInterface, Sequelize) => {
 
-    await queryInterface.bulkDelete('People', null, {});
+    await queryInterface.bulkDelete('generos', null, {});
 
   }
 };

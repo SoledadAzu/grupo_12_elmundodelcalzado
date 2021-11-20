@@ -3,7 +3,7 @@ const productos = require("../../database/productos.json")
 
 let colores = productos.map(product =>{
   let color = {
-    name: product.color,
+    name: product.colors,
     creatdAt: new Date,
     updatedAt: new Date
   }
@@ -12,7 +12,7 @@ let colores = productos.map(product =>{
 module.exports = {
   up: async (queryInterface, Sequelize) => {
  
-     await queryInterface.bulkInsert('Colors', [], {});
+     await queryInterface.bulkInsert('Colors', colores, {});
     
   },
 
