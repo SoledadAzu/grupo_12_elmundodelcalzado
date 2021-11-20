@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       nombre: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(50)
       },
       id_productos: {
         type: Sequelize.INTEGER

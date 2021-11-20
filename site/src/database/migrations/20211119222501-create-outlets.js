@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       nombre: {
-        type: Sequelize.STRING
+        type: Sequelize.BOOLEAN(2)
       },
       createdAt: {
         allowNull: false,
