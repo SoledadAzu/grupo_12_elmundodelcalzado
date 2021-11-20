@@ -59,10 +59,11 @@ const controller ={
     register:(req,res)=>{
         res.render('users/registro')
     },
+
     uploadRegister:(req, res)=>{
-        const ruta =path.join(__dirname,"..", "database","users.json")
-        const usuariosRegistrados =fs.readFileSync(ruta,"utf-8")
-        let usuarios
+        // const ruta =path.join(__dirname,"..", "database","users.json")
+        // const usuariosRegistrados =fs.readFileSync(ruta,"utf-8")
+        // let usuarios
         const errors = validationResult(req)
        
         if(req.fileValidationError){
@@ -77,11 +78,11 @@ const controller ={
         
         if(errors.isEmpty()){
 
-            if(usuariosRegistrados ===""){
-                usuarios = []
-            }else{
-                usuarios = JSON.parse(usuariosRegistrados)
-            }
+            // if(usuariosRegistrados ===""){
+            //     usuarios = []
+            // }else{
+            //     usuarios = JSON.parse(usuariosRegistrados)
+            
             
        
     //     usuario.id=usuarios.length + 1,
@@ -98,29 +99,29 @@ const controller ={
     //      usuarios.push(usuario)
     //      fs.writeFileSync(ruta, JSON.stringify(usuarios, null,4))
 
-    db.Usuario.create({
-        nombre: req.body.nombre,
-        apellido: req.body.apellido,
-        email: req.body.email,
-        password: bcrypt.hashSync(req.body.password, 10),
-        rolesId: 1,
-        imagen: req.file ? req.file.filename: "default.jpg"
-    })
-    .then((Usuarios) => {
-        res.redirect("user/login")
-    })
-    .catch((errors) => (errors))
-
-
-
-    // res.render("user/register")
-
-         req.session.usuarioLogueado ={
-            email:req.body.email,
+        db.Usuarios.create({
             nombre: req.body.nombre,
-            rol:"user"
-        } 
-         res.redirect("/")
+            apellido: req.body.apellido,
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.password, 10),
+            id_categoria_usuario:1,
+            imagen: req.file ? req.file.filename: "default.jpg"
+    })
+        .then((Usuarios) => {
+            if(Usuarios){
+                req.session.usuarioLogueado ={
+                        email:req.body.email,
+                        nombre: req.body.nombre,
+                        rol:"user"
+                    } 
+                     res.redirect("/")
+            }
+            res.redirect("/user/login")
+            
+    })
+        .catch((errors) => console.log(errors))
+
+        
     }else{
         res.render('users/registro',{
             errors:errors.mapped(),
