@@ -19,42 +19,78 @@ const controller ={
         if(errors.isEmpty()){ // consulta si esta vacio de errores
 
             // busco al usuario
-            const userEncontrado= usuarios.find(element=>{
-                return element.email===req.body.email  
-                })
+            // const userEncontrado= usuarios.find(element=>{
+            //     return element.email===req.body.email  
+            //     })
 
-               //consulta si se encontro y valido la contraseñas
-               if(userEncontrado && bcrypt.compareSync(req.body.password,userEncontrado.password) ){
-                    // se crea una session
-                    req.session.usuarioLogueado ={
-                        email:userEncontrado.email,
-                        nombre: userEncontrado.nombre,
-                        rol:userEncontrado.rol,
-                        id:userEncontrado.id
-                    } 
-                    // crea una cookie en el caso de que tilde la casilla RECORDAME
-                    if(req.body.recordame != undefined){
-                        res.cookie('rememberMe',req.session.usuarioLogueado,{maxAge: 60000})
-                    }
-                    res.redirect('/')
+            //    //consulta si se encontro y valido la contraseñas
+            //    if(userEncontrado && bcrypt.compareSync(req.body.password,userEncontrado.password) ){
+            //         // se crea una session
+            //         req.session.usuarioLogueado ={
+            //             email:userEncontrado.email,
+            //             nombre: userEncontrado.nombre,
+            //             rol:userEncontrado.rol,
+            //             id:userEncontrado.id
+            //         } 
+            //         // crea una cookie en el caso de que tilde la casilla RECORDAME
+            //         if(req.body.recordame != undefined){
+            //             res.cookie('rememberMe',req.session.usuarioLogueado,{maxAge: 60000})
+            //         }
+            //         res.redirect('/')
                     
+            //     }else{
+            //         // en el caso de error de contraseña, se lo manda a la vista
+            //         let mensaje = "la contraseña es incorrecta"
+            //         res.render("users/login",{
+            //             mensaje:mensaje,
+            //             oldData:req.body})
+            //         }
+            db.Usuarios.findOne({
+                where:{
+                    email:req.body.email  
+                },
+                
+                 include:[{association:"Categoria_Usuario"}]
+                
+            })
+            .then(usuario=>{
+                // res.json(usuario)
+                if(bcrypt.compareSync(req.body.password,usuario.password)){
+                            // se crea una session
+                            req.session.usuarioLogueado ={
+                                email:usuario.email,
+                                nombre: usuario.nombre,
+                                rol:usuario.Categoria_Usuario.nombre,
+                                id:usuario.id
+                            } 
+                            
+                            // crea una cookie en el caso de que tilde la casilla RECORDAME
+                            if(req.body.recordame != undefined){
+                                res.cookie('rememberMe',req.session.usuarioLogueado,{maxAge: 60000})
+                            }
+                            res.redirect('/')
+                            
                 }else{
-                    // en el caso de error de contraseña, se lo manda a la vista
-                    let mensaje = "la contraseña es incorrecta"
-                    res.render("users/login",{
-                        mensaje:mensaje,
-                        oldData:req.body})
-                    }
-                     
-                }
-                //se manda ERRORES de los input
-                res.render('users/login',{
-                errors:errors.mapped(),
-                oldData:req.body
+                            // en el caso de error de contraseña, se lo manda a la vista
+                            let mensaje = "la contraseña es incorrecta"
+                            res.render("users/login",{
+                                mensaje:mensaje,
+                                oldData:req.body})
+                             }
             })
         
-
-    },
+            .catch(error=>{
+                console.log(error);
+            })
+               
+    }else{
+        //se manda ERRORES de los input
+        res.render('users/login',{
+        errors:errors.mapped(),
+        oldData:req.body
+    })
+    }    
+},
 
     register:(req,res)=>{
         res.render('users/registro')
@@ -166,6 +202,7 @@ const controller ={
                 fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
                 res.render('admin/usuariosRegistrados',{usuarios})
          }
+       
       
 },
     perfilEdit:(req,res)=>{
@@ -215,7 +252,6 @@ const controller ={
                 nombre: req.body.nombre,
                 apellido: req.body.apellido,
                 password: bcrypt.hashSync(req.body.password,10),
-                rolesid: 1,
                 imagen: req.file ? req.file.filename: "default.jpg"
     },
             {

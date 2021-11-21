@@ -1,17 +1,15 @@
 'use strict';
 const productos = require("../../database/productos.json")
-
-
 let generoArray = productos.map(product => {
-  let genero = {
+  let generos= {
     nombre: product.genero,
-   
   }
-  return genero
+  return generos
 })
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-   
+    
       await queryInterface.bulkInsert('Generos', generoArray, {});
     
   },

@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
   Categoria_Usuarios.init({
     nombre: DataTypes.STRING
   }, {
+    timestamps: false,
     sequelize,
     modelName: 'Categoria_Usuarios',
   });
