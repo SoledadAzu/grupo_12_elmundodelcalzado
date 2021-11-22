@@ -6,6 +6,7 @@ const usuarios = JSON.parse(fs.readFileSync( path.join(__dirname, '../database/u
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const {validationResult} = require('express-validator');
 const db = require('../database/models');
+const { RSA_NO_PADDING } = require('constants');
 
 const controller={
 
@@ -123,17 +124,18 @@ const controller={
 						nombre: req.body.title,
 						precio: req.body.price,
 						descripcion: req.body.description,
-						genero: req.body.genero,
-						marcas: req.body.marca,
-						temporadas:req.body.temporada,
-						outlet:req.body.outlet,
-						talles:req.body.talles,
-						colores:req.body.colors
+						id_generos: 1,
+						id_marcas: 1,
+						id_temporadas:1,
+						id_outlets:1,
+						id_talles:1,
+						id_colores:1
 						//creando un producto
 					}
 				)
 			 .then(producto=>{
-				res.redirect('/admin')
+				/*res.redirect('/admin')*/
+				res.json(producto)
 			 })
 		     .catch(error =>{
 				 res.status("problema del servidor")
@@ -214,22 +216,22 @@ const controller={
         .then(()=>{
             return res.redirect('/admin')})
         .catch(error => res.send(error)) 
-    }
-}
+    },
+
     
 
-   /* deleteprod : (req, res) => {
+    deleteprod : (req, res) => {
 		products=products.filter(e=> e.id !== +req.params.id)
 
 		fs.writeFileSync(productsFilePath,JSON.stringify(products,null,2))
 		res.redirect('/admin')
-	},*/
+	},
 	
 
 
 
 	// vista de todos los usuarios registrados
-	usuarios:(req,res) => {
+	usuarios : (req, res) => {
 		db.Usuarios.findAll({
 			include:[{association:"Categoria_Usuario"}]
 		})
@@ -245,5 +247,5 @@ const controller={
 		// res.render("admin/usuariosRegistrados",{usuarios})
 	}
 	
-
+}
 module.exports=controller;

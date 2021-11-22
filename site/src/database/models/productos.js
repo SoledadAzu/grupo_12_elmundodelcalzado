@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     
-};
+
       // define association here
       static associate(models) {
         /*Productos.associate = function (models) {
@@ -20,8 +20,8 @@ module.exports = (sequelize, DataTypes) => {
               foreignKey: 'Productos_id',
               otherKey: 'movie_id',
               timestamps: false
-          })
-        }*/
+          })*/
+        }
    }
   Productos.init({
     nombre: DataTypes.STRING,
