@@ -9,10 +9,17 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       nombre: {
-        type: Sequelize.STRING(50)
+        type: Sequelize.STRING
       },
       id_productos: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references : {
+          model : {
+            tableName : "Productos"
+          },
+          key : "id"     
+        },
+        onDelete : "cascade" 
       },
       createdAt: {
         allowNull: false,

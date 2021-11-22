@@ -1,14 +1,14 @@
 'use strict';
-const productos = require("../../database/productos.json")
+const productos = require("../productos.json")
 
 let productosArray = productos.map(product => {
-  let producto = {
+  let myproduct = {
     nombre: product.title,
     precio: product.price,
-    descripcion: product.description,
-   
-  }
-  return producto
+    decripcion: product.description,
+
+  } 
+  return myproduct
 })
 module.exports = {
   up: async (queryInterface, Sequelize) => {

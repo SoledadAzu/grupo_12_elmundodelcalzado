@@ -1,10 +1,10 @@
 'use strict';
 
-const outlets = [0,1] 
+const outlets = require("../productos.json")
 
 let outletArray = outlets.map(productoutlet => {
   let outlet = {
-    nombre: productoutlet,
+    nombre: productoutlet.outlet,
    
   }
   return outlet
@@ -12,13 +12,13 @@ let outletArray = outlets.map(productoutlet => {
 module.exports = {
   up: async (queryInterface, Sequelize) => {
    
-      await queryInterface.bulkInsert('outlets', outletArray, {});
+      await queryInterface.bulkInsert('Outlets', outletArray, {});
     
   },
 
   down: async (queryInterface, Sequelize) => {
 
-    await queryInterface.bulkDelete('outlets', null, {});
+    await queryInterface.bulkDelete('Outlets', null, {});
 
   }
 };

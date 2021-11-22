@@ -41,7 +41,7 @@ DROP TABLE IF EXISTS `el_mundo_del_calzado`.`colores` ;
 
 CREATE TABLE IF NOT EXISTS `el_mundo_del_calzado`.`colores` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `nombre` VARCHAR(50) NOT NULL,
+  `nombre` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
@@ -55,7 +55,7 @@ DROP TABLE IF EXISTS `el_mundo_del_calzado`.`generos` ;
 
 CREATE TABLE IF NOT EXISTS `el_mundo_del_calzado`.`generos` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `nombre` CHAR(6) NOT NULL,
+  `nombre` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
@@ -83,7 +83,7 @@ DROP TABLE IF EXISTS `el_mundo_del_calzado`.`outlets` ;
 
 CREATE TABLE IF NOT EXISTS `el_mundo_del_calzado`.`outlets` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `nombre` TINYINT(2) UNSIGNED ZEROFILL NOT NULL,
+  `nombre` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
@@ -97,12 +97,12 @@ DROP TABLE IF EXISTS `el_mundo_del_calzado`.`talles` ;
 
 CREATE TABLE IF NOT EXISTS `el_mundo_del_calzado`.`talles` (
   `id` INT NOT NULL,
-  `nombre` CHAR(2) NOT NULL,
-  PRIMARY KEY (`id`, `nombre`))
+  `nombre` VARCHAR(50) NOT NULL,
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
-
+temporadas
 
 -- -----------------------------------------------------
 -- Table `el_mundo_del_calzado`.`temporadas`
@@ -111,7 +111,7 @@ DROP TABLE IF EXISTS `el_mundo_del_calzado`.`temporadas` ;
 
 CREATE TABLE IF NOT EXISTS `el_mundo_del_calzado`.`temporadas` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `nombre` TINYINT(2) UNSIGNED ZEROFILL NOT NULL,
+  `nombre` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
@@ -171,7 +171,7 @@ DROP TABLE IF EXISTS `el_mundo_del_calzado`.`detalles` ;
 
 CREATE TABLE IF NOT EXISTS `el_mundo_del_calzado`.`detalles` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `nombre` VARCHAR(50) NOT NULL,
+  `nombre` LONGTEXT NOT NULL,
   `id_productos` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `FK_id_productos_idx` (`id_productos` ASC) VISIBLE,

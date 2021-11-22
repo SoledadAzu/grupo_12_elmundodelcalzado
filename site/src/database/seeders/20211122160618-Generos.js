@@ -1,11 +1,10 @@
 'use strict';
-const productos = require("../../database/productos.json")
 
+const generos = require("../../database/productos.json")
 
-let generoArray = productos.map(product => {
+let generoArray = generos.map(gender => {
   let genero = {
-    nombre: product.genero,
-   
+    nombre: gender.genero,
   }
   return genero
 })

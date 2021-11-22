@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       nombre: {
-        type: Sequelize.STRING(50)
+        type: Sequelize.STRING
       },
       precio: {
         type: Sequelize.DECIMAL(6,2)
@@ -18,22 +18,64 @@ module.exports = {
         type: Sequelize.TEXT
       },
       id_generos: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+      references : {
+        model : {
+          tableName : "Generos"
+        },
+        key : "id"
       },
+      onDelete : "cascade" 
+    },
       id_marcas: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references : {
+          model : {
+            tableName : "Marcas"
+          },
+          key : "id"
+        },
+        onDelete : "cascade" 
       },
       id_temporadas: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references : {
+          model : {
+            tableName : "Temporadas"
+          },
+          key : "id"
+        },
+        onDelete : "cascade" 
       },
       id_outlets: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references : {
+          model : {
+            tableName : "Outlets"
+          },
+          key : "id"
+        },
+        onDelete : "cascade" 
       },
       id_talles: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references : {
+          model : {
+            tableName : "Talles"
+          },
+          key : "id"
+        },
+        onDelete : "cascade" 
       },
       id_colores: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references : {
+          model : {
+            tableName : "Colores"
+          },
+          key : "id"
+        },
+        onDelete : "cascade" 
       },
       
       createdAt: {

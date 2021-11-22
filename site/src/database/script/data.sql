@@ -101,7 +101,7 @@ DROP TABLE IF EXISTS `detalles`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `detalles` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(50) NOT NULL,
+  `nombre` varchar(255) NOT NULL,
   `id_productos` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_id_productos_idx` (`id_productos`),
@@ -127,7 +127,7 @@ DROP TABLE IF EXISTS `generos`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `generos` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nombre` char(6) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -225,7 +225,7 @@ DROP TABLE IF EXISTS `outlets`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `outlets` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nombre` tinyint(2) unsigned zerofill NOT NULL,
+  `nombre` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -291,8 +291,8 @@ DROP TABLE IF EXISTS `talles`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `talles` (
   `id` int NOT NULL,
-  `nombre` char(2) NOT NULL,
-  PRIMARY KEY (`id`,`nombre`)
+  `nombre` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -314,7 +314,7 @@ DROP TABLE IF EXISTS `temporadas`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `temporadas` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nombre` tinyint(2) unsigned zerofill NOT NULL,
+  `nombre` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
