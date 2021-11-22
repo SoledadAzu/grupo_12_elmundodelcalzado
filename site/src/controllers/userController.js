@@ -205,7 +205,8 @@ const controller ={
     // fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
     // res.redirect("admin/usuariosRegistrados")
 },
-deleteUserPerfil:(req,res)=>{
+// elimina el usuario de su perfil
+    deleteUserPerfil:(req,res)=>{
     let userId = req.params.id;
             db.Usuarios.destroy(
                 {where: {id: userId}, 
