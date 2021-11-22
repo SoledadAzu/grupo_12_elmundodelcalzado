@@ -143,12 +143,12 @@ const controller ={
             imagen: req.file ? req.file.filename: "default.jpg"
     })
         .then((Usuarios) => {
-           
-            if(Usuarios){
+          
+           if(Usuarios){
                 req.session.usuarioLogueado ={
                         email:req.body.email,
                         nombre: req.body.nombre,
-                        rol:"user"
+                        rol:"admin"
                     } 
                      res.redirect("/")
             }

@@ -119,7 +119,7 @@ const controller={
 	          //logica para que se comunique a la base de datos
 			  //create: function 
 			  
-			  db.Producto.create(
+			  db.Productos.create(
 					{
 						nombre: req.body.title,
 						precio: req.body.price,
@@ -155,26 +155,28 @@ const controller={
 	//accion de buscar el producto y editarlo
 
 	update: function (req,res) {
-        let movieId = req.params.id;
-        Movies
+        let productos = req.params.id;
+        db.Productos
         .update(
             {
-            
-			         nombre: req.body.title,
-						precio: req.body.price,
-						descripcion: req.body.description,
-						genero: req.body.genero,
-						marcas: req.body.marca,
-						temporadas:req.body.temporada,
-						outlet:req.body.outlet,
-						talles:req.body.talles,
-						colores:req.body.colors
+				nombre: req.body.title,
+				precio: req.body.price,
+				descripcion: req.body.description,
+				id_generos: 1,
+				id_marcas: 1,
+				id_temporadas:1,
+				id_outlets:1,
+				id_talles:1,
+				id_colores:1
+			            
             },
             {
-                where: {id: movieId}
+                where: {id: productos}
             })
-        .then(()=> {
-            return res.redirect('/admin')})            
+        .then(editar=> {
+			res.json(editar)
+            /*return res.redirect('/admin')*/
+		})           
         .catch(error => res.send(error))
     },
 
