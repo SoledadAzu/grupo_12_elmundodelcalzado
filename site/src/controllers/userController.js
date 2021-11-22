@@ -143,6 +143,7 @@ const controller ={
             imagen: req.file ? req.file.filename: "default.jpg"
     })
         .then((Usuarios) => {
+           
             if(Usuarios){
                 req.session.usuarioLogueado ={
                         email:req.body.email,
@@ -153,7 +154,7 @@ const controller ={
             }
             res.redirect("/user/login")
             
-    })
+     })
         .catch((errors) => res.send(errors))
 
         
