@@ -84,8 +84,11 @@
                 <td class="td_rol" style="display:flex">
                   <form action="/user/update/<%= e.id %>?_method=PUT " method="POST" style="display: inline-flex">
                     <select name="rol" id="rol" class="form-input" style="width: 90px; font-size: 22px;">
-										  <option  value="admin"<%= e.rol==="admin" ? "selected" : null %>>Admin</option>
-										  <option value="user"<%= e.rol==="user" ? "selected" : null %>>User</option>
+                      <% categorias.forEach(categoria => {%>
+                        <option  value="<%= categoria.nombre %>" <% if (e.id_categoria_usuario == categoria.id){%><%= 'selected'  %><%}%>><%= categoria.nombre %> </option>
+										  
+                      <% }); %> 
+										  
 									
 									  </select>
                       <button type="submit" class="bt_modif">Modificar</button>
