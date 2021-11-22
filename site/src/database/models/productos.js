@@ -13,16 +13,38 @@ module.exports = (sequelize, DataTypes) => {
 
       // define association here
       static associate(models) {
-        /*Productos.associate = function (models) {
-          Productos.belongsToMany(models.Productos, {
-              as: "Productos",
-              through: 'Productos_movie',
-              foreignKey: 'Productos_id',
-              otherKey: 'movie_id',
-              timestamps: false
-          })*/
-        }
+        
+          Productos.belongsTo(models.Generos, {
+            as: "Genero",
+            foreignKey: "id_generos",
+          })
+          Productos.belongsTo(models.Marcas, {
+            as: "Marca",
+            foreignKey: "id_marcas",
+          })
+          Productos.belongsTo(models.Temporadas, {
+            as: "Temporada",
+            foreignKey: "id_temporadas",
+          })
+          Productos.belongsTo(models.Outlets, {
+            as: "Outlet",
+            foreignKey: "id_outlets",
+          })
+          Productos.belongsTo(models.Talles, {
+            as: "Talle",
+            foreignKey: "id_talles",
+          })
+          Productos.belongsTo(models.Colores, {
+            as: "Color",
+            foreignKey: "id_colores",
+          })
+          Productos.hasMany(models.Detalles, { 
+            as: "Detalle",
+            foreignKey: 'id_productos',
+        
+        })
    }
+  }
   Productos.init({
     nombre: DataTypes.STRING,
     precio: DataTypes.INTEGER,

@@ -6,14 +6,31 @@ const usuarios = JSON.parse(fs.readFileSync( path.join(__dirname, '../database/u
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const {validationResult} = require('express-validator');
 const db = require('../database/models');
-const { RSA_NO_PADDING } = require('constants');
+
 
 const controller={
 
 	// vista admin
     admin:(req,res)=>{
-		
-        res.render('admin/admin',{products,toThousand})
+		db.Productos.findAll({
+			include:[{
+				association:"Genero"
+			},{
+				
+				association:"Marca"
+			},{
+				
+				association:"Temporada"
+			}]
+		})
+		.then(producto=>{
+			
+			res.render('admin/admin',{products:producto,toThousand})
+		})
+		.catch(error=>{
+			res.send(error)
+		})
+        
 	
     },
 	// accion de cerrar session
@@ -119,7 +136,9 @@ const controller={
 	          //logica para que se comunique a la base de datos
 			  //create: function 
 			  
+	
 			  db.Productos.create(
+
 					{
 						nombre: req.body.title,
 						precio: req.body.price,
@@ -134,12 +153,14 @@ const controller={
 					}
 				)
 			 .then(producto=>{
-				/*res.redirect('/admin')*/
-				res.json(producto)
+				 
+				res.redirect('/admin')
+				
 			 })
-		     .catch(error =>{
-				 res.status("problema del servidor")
+			 .catch(error=>{
+				 res.send(error)
 			 })
+		     
 	
 			}else{
 				res.render('admin/create',{

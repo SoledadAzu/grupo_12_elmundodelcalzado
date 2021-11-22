@@ -145,7 +145,7 @@ const controller ={
                 imagen: req.file ? req.file.filename: "default.jpg"
             })
             .then((Usuarios) => {
-                res.send(Usuarios)
+                
                 if(Usuarios){
                     req.session.usuarioLogueado ={
                         id:Usuarios.id,   
