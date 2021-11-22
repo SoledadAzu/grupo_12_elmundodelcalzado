@@ -10,20 +10,19 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Categoria_Usuario.hasMany(models.Usuarios, { 
+      Categoria_Usuarios.hasMany(models.Usuarios, { 
         as: "Usuarios",
-        foreignKey: 'id_categoria_usuario',
-        
-      
+        foreignKey: 'id_categoria_usuario',    
     })
-      // define association here
-    }
-  };
+  }
+}
+
   Categoria_Usuarios.init({
     nombre: DataTypes.STRING
   }, {
+    timestamps: false,
     sequelize,
-    modelName: 'Categoria_Usuario',
+    modelName: 'Categoria_Usuarios',
   });
-  return Categoria_Usuario;
+  return Categoria_Usuarios;
 };

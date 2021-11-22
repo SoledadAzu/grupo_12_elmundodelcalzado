@@ -23,7 +23,7 @@ module.exports = {
       id_marcas: {
         type: Sequelize.INTEGER
       },
-      id_tempradas: {
+      id_temporadas: {
         type: Sequelize.INTEGER
       },
       id_outlets: {

@@ -230,7 +230,19 @@ const controller={
 
 	// vista de todos los usuarios registrados
 	usuarios:(req,res) => {
-		res.render("admin/usuariosRegistrados",{usuarios})
+		db.Usuarios.findAll({
+			include:[{association:"Categoria_Usuario"}]
+		})
+		.then(usuario=>{
+			db.Categoria_Usuarios.findAll()
+			.then(categoria=>{
+				res.send(categoria)
+			})
+		})
+		.catch(error=>{
+			res.send(error)
+		})
+		// res.render("admin/usuariosRegistrados",{usuarios})
 	}
 	
 
