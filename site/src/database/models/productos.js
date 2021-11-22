@@ -9,10 +9,20 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(models) {
+    
+};
       // define association here
-    }
-  };
+      static associate(models) {
+        /*Productos.associate = function (models) {
+          Productos.belongsToMany(models.Productos, {
+              as: "Productos",
+              through: 'Productos_movie',
+              foreignKey: 'Productos_id',
+              otherKey: 'movie_id',
+              timestamps: false
+          })
+        }*/
+   }
   Productos.init({
     nombre: DataTypes.STRING,
     precio: DataTypes.INTEGER,
