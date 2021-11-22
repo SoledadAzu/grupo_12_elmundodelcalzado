@@ -133,28 +133,34 @@ const controller ={
     //     }
     //      usuarios.push(usuario)
     //      fs.writeFileSync(ruta, JSON.stringify(usuarios, null,4))
-
-        db.Usuarios.create({
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            email: req.body.email,
-            password: bcrypt.hashSync(req.body.password, 10),
-            id_categoria_usuario:1,
-            imagen: req.file ? req.file.filename: "default.jpg"
-    })
-        .then((Usuarios) => {
-          
-           if(Usuarios){
-                req.session.usuarioLogueado ={
-                        email:req.body.email,
-                        nombre: req.body.nombre,
-                        rol:"admin"
+        db.Categoria_Usuarios.findAll()
+        .then(categoria=>{
+           
+             db.Usuarios.create({
+                nombre: req.body.nombre,
+                apellido: req.body.apellido,
+                email: req.body.email,
+                password: bcrypt.hashSync(req.body.password, 10),
+                id_categoria_usuario: categoria[1].id,
+                imagen: req.file ? req.file.filename: "default.jpg"
+            })
+            .then((Usuarios) => {
+                res.send(Usuarios)
+                if(Usuarios){
+                    req.session.usuarioLogueado ={
+                        id:Usuarios.id,   
+                        email:Usuarios.email,
+                        nombre: Usuarios.nombre,
+                        rol:"user"
                     } 
                      res.redirect("/")
             }
             res.redirect("/user/login")
             
-     })
+            })
+            .catch((errors) => res.send(errors))
+        })
+
         .catch((errors) => res.send(errors))
 
         
@@ -176,9 +182,31 @@ const controller ={
         })
     
 },
+ //elimina un usuario de tabla admin
     deleteUser : (req, res) => {
         
             let userId = req.params.id;
+            db.Usuarios.destroy(
+                {where: {id: userId}, 
+                force: true}) // force: true es para asegurar que se ejecute la acción
+            .then(usuario=>{
+                if(usuario === 1){
+                    
+                    res.redirect('/admin/usuarios')
+                }else{
+                    res.send('no se pudo eliminar')
+                }
+                
+            })
+            .catch(error => res.send(error)) 
+        
+    // usuarios=usuarios.filter(e=> e.id !== +req.params.id)
+
+    // fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
+    // res.redirect("admin/usuariosRegistrados")
+},
+deleteUserPerfil:(req,res)=>{
+    let userId = req.params.id;
             db.Usuarios.destroy(
                 {where: {id: userId}, 
                 force: true}) // force: true es para asegurar que se ejecute la acción
@@ -196,31 +224,45 @@ const controller ={
                 
             })
             .catch(error => res.send(error)) 
-        
-    // usuarios=usuarios.filter(e=> e.id !== +req.params.id)
-
-    // fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
-    // res.redirect("admin/usuariosRegistrados")
 },
 
 // guarda en usuarios registrados y cambio el Rol
     updateUser:(req,res)=>{
     
         
-        let id = req.params.id
-		let idFind=usuarios.find(e=>{
-			return e.id === +id
+        // let id = req.params.id
+		// let idFind=usuarios.find(e=>{
+		// 	return e.id === +id
 			
-		})
+		// })
        
-         if(idFind){
-                idFind.rol= req.body.rol
+        //  if(idFind){
+        //         idFind.rol= req.body.rol
     
     
-                fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
-                res.render('admin/usuariosRegistrados',{usuarios})
-         }
-       
+        //         fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
+        //         
+        //  }
+        
+            db.Usuarios.update(
+                {
+                    id_categoria_usuario: req.body.rol === "user" ? 2 : 1        
+            },
+                {
+                    where: {id: req.params.id}
+                })
+            .then(usuario=>{
+                if(usuario[0] !== 0){
+                    
+                    res.redirect('/admin/usuarios')
+                }else{
+                    res.send("no se pudo hacer el cambio")
+                }
+            })
+            .catch(error=>{
+                res.send(error)
+            })
+     
       
 },
     perfilEdit:(req,res)=>{
