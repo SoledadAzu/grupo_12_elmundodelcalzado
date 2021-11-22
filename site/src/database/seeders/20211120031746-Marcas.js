@@ -1,24 +1,23 @@
 'use strict';
+const productos = require("../../database/productos.json")
 
+let marcasArray = productos.map(product => {
+  let marcas = {
+    nombre: product.marca,
+   
+  } 
+  return marcas
+})
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+   
+      await queryInterface.bulkInsert('marcas', marcasArray, {});
+    
   },
 
   down: async (queryInterface, Sequelize) => {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+
+    await queryInterface.bulkDelete('marcas', null, {});
+
   }
 };

@@ -21,11 +21,12 @@ module.exports = {
         type: Sequelize.STRING(100)
       },
       id_categoria_usuario: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        
       },
       imagen: {
         type: Sequelize.STRING(100)
-      },
+       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

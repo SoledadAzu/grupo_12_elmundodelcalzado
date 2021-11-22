@@ -5,6 +5,7 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const usuarios = JSON.parse(fs.readFileSync( path.join(__dirname, '../database/users.json'), 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const {validationResult} = require('express-validator')
+const db = require("../database/models")
 
 const controller={
 
@@ -117,7 +118,19 @@ const controller={
 	},
 	// vista de todos los usuarios registrados
 	usuarios:(req,res) => {
-		res.render("admin/usuariosRegistrados",{usuarios})
+		db.Usuarios.findAll({
+			include:[{association:"Categoria_Usuario"}]
+		})
+		.then(usuario=>{
+			db.Categoria_Usuarios.findAll()
+			.then(categoria=>{
+				res.send(categoria)
+			})
+		})
+		.catch(error=>{
+			res.send(error)
+		})
+		// res.render("admin/usuariosRegistrados",{usuarios})
 	}
 	
 }

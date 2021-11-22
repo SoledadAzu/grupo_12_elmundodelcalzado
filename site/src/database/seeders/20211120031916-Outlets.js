@@ -1,24 +1,24 @@
 'use strict';
 
+const outlets = [0,1] 
+
+let outletArray = outlets.map(productoutlet => {
+  let outlet = {
+    nombre: productoutlet,
+   
+  }
+  return outlet
+})
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+   
+      await queryInterface.bulkInsert('outlets', outletArray, {});
+    
   },
 
   down: async (queryInterface, Sequelize) => {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+
+    await queryInterface.bulkDelete('outlets', null, {});
+
   }
 };
