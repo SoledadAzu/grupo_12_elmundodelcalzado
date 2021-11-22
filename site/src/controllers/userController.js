@@ -3,7 +3,7 @@ const path = require("path")
 const {validationResult} = require('express-validator')
 const bcrypt = require('bcryptjs');
 const usuariosFilePath =  path.join(__dirname, '../database/users.json')
-let usuarios = JSON.parse(fs.readFileSync( path.join(__dirname, '../database/users.json'), 'utf-8'));
+// let usuarios = JSON.parse(fs.readFileSync( path.join(__dirname, '../database/users.json'), 'utf-8'));
 const db = require("../database/models")
 
 
@@ -51,7 +51,6 @@ const controller ={
                 },
                 
                  include:[{association:"Categoria_Usuario"}]
-                
             })
             .then(usuario=>{
                 // res.json(usuario)
@@ -65,7 +64,7 @@ const controller ={
                             } 
                             
                             // crea una cookie en el caso de que tilde la casilla RECORDAME
-                            if(req.body.recordame != undefined){
+                            if(req.body.recordame !== undefined){
                                 res.cookie('rememberMe',req.session.usuarioLogueado,{maxAge: 60000})
                             }
                             res.redirect('/')
@@ -80,7 +79,7 @@ const controller ={
             })
         
             .catch(error=>{
-                console.log(error);
+                res.send(error)
             })
                
     }else{
@@ -155,7 +154,7 @@ const controller ={
             res.redirect("/user/login")
             
     })
-        .catch((errors) => console.log(errors))
+        .catch((errors) => res.send(errors))
 
         
     }else{
@@ -166,17 +165,35 @@ const controller ={
     }
 },
     perfiluser:(req,res)=>{
-        userPerfil=usuarios.find(e=> e.id === +req.params.id)
-        
-    res.render('users/perfiluser',{userPerfil})
+        // userPerfil=usuarios.find(e=> e.id === +req.params.id)
+        db.Usuarios.findByPk(req.params.id)
+        .then(usuario=>{
+            res.render('users/perfiluser',{userPerfil:usuario})
+        })
+        .catch(error=>{
+            res.send(error)
+        })
+    
 },
     deleteUser : (req, res) => {
         
             let userId = req.params.id;
-            Usuarios
-            .destroy({where: {id: userId}, force: true}) // force: true es para asegurar que se ejecute la acción
-            .then(()=>{
-                return res.redirect('admin/usuariosRegistrados')})
+            db.Usuarios.destroy(
+                {where: {id: userId}, 
+                force: true}) // force: true es para asegurar que se ejecute la acción
+            .then(usuario=>{
+                if(usuario === 1){
+                    if(req.session.usuarioLogueado || req.cookies.rememberMe){
+                        req.session.destroy()	
+                        res.cookie('rememberMe',"{ maxAge:-1}")
+                        
+                    }
+                    res.redirect('/')
+                }else{
+                    res.send('no se pudo eliminar')
+                }
+                
+            })
             .catch(error => res.send(error)) 
         
     // usuarios=usuarios.filter(e=> e.id !== +req.params.id)
@@ -185,7 +202,7 @@ const controller ={
     // res.redirect("admin/usuariosRegistrados")
 },
 
-// guarda en usuarios registrados
+// guarda en usuarios registrados y cambio el Rol
     updateUser:(req,res)=>{
     
         
@@ -206,9 +223,16 @@ const controller ={
       
 },
     perfilEdit:(req,res)=>{
-        userPerfil=usuarios.find(e=> e.id === +req.params.id)
+        db.Usuarios.findByPk(req.params.id)
+        .then(usuario=>{
+            res.render('users/perfilUserEdit',{userPerfil:usuario})
+        })
+        .catch(error=>{
+            res.send(error)
+        })
+    //     userPerfil=usuarios.find(e=> e.id === +req.params.id)
         
-    res.render('users/perfilUserEdit',{userPerfil})
+    // res.render('users/perfilUserEdit',{userPerfil})
 },
     editePerfil:(req,res)=>{
        
@@ -246,8 +270,7 @@ const controller ={
         // fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
 
         let userId = req.params.id;
-        Usuarios
-        .update(
+        db.Usuarios.update(
             {
                 nombre: req.body.nombre,
                 apellido: req.body.apellido,
@@ -257,20 +280,22 @@ const controller ={
             {
                 where: {id: userId}
             })
-        .then(()=> {
-            return res.redirect('user/login')})            
+        .then(usuario=> {
+            
+            if(usuario[0] !== 0){
+                if(req.session.usuarioLogueado || req.cookies.rememberMe){
+                    req.session.destroy()	
+                    res.cookie('rememberMe',"{ maxAge:-1}")
+                    
+                }
+                return res.redirect('user/login')
+            }else{
+                res.send("no se pudo hacer el cambio")
+            }
+             
+        })          
         .catch(error => res.send(error))
         
-
-
-        if(req.session.usuarioLogueado || req.cookies.rememberMe){
-			req.session.destroy()	
-			res.cookie('rememberMe',"{ maxAge:-1}")
-		}
-
-        
-        res.redirect("/user/login")
-
      }else{
         res.render('users/perfilUserEdit',{
             errors:errors.mapped(),
