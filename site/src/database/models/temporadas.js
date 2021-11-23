@@ -19,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
   Temporadas.init({
     nombre: DataTypes.STRING
   }, {
+    timestamps: false,
     sequelize,
     modelName: 'Temporadas',
   });

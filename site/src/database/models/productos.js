@@ -47,6 +47,7 @@ module.exports = (sequelize, DataTypes) => {
     id_talles: DataTypes.INTEGER,
     id_colores: DataTypes.INTEGER,
   }, {
+    timestamps: false,
     sequelize,
     modelName: 'Productos',
   });

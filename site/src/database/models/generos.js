@@ -19,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
   Generos.init({
     nombre: DataTypes.STRING
   }, {
+    timestamps: false,
     sequelize,
     modelName: 'Generos',
   });

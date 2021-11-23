@@ -21,7 +21,8 @@ module.exports = {
         type: Sequelize.VARCHAR(100)
       },
       id_categoria_usuario: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        
       },
       imagen: {
         type: Sequelize.STRING(100)

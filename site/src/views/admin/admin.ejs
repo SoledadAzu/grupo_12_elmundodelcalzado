@@ -73,18 +73,23 @@
                   <%= e.id %>
                 </th>
                 <td>
-                  <%= e.title %>
+                  <%= e.nombre %>
                 </td>
-                <td>$<%= toThousand(e.price) %>
-                </td>
-                <td>
-                  <%= e.genero %>
+                <td>$<%= toThousand(e.precio) %>
                 </td>
                 <td>
-                  <%= e.marca %>
+                  <%= e.Genero.nombre %>
+
                 </td>
                 <td>
-                  <%= e.temporada %>
+                  <%= e.Marca.nombre %>
+                </td>
+                <td>
+                  <% if(e.Temporada.nombre=== 0){ %>
+                    <%= "false" %> 
+                  <%} else{%>
+                    <%= "true" %> 
+                    <%}%>
                 </td>
 
                 <td>

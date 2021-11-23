@@ -14,7 +14,7 @@
         <div class="perfil-usuario-header">
             <div class="perfil-usuario-portada">
                 <div class="perfil-usuario-avatar">
-                    <img src="/images/users/<%= userPerfil.img %> " alt="img-avatar">
+                    <img src="/images/users/<%= userPerfil.imagen %> " alt="img-avatar">
                     <!-- <button type="button" class="boton-avatar">
                         <input type="file" name="img" id="img" class= "boton-avatar2">
                         <i class="far fa-image"></i>
@@ -55,11 +55,18 @@
         </div>
         <div class="editarBtn">
             <button type="submit" class="bt_modif">Editar</button>
-            <button type="submit" class="bt_eliminar">Eliminar</button>
+            
         </div>
+        
     </section>
     
 </form>
+<form action="/user/eliminarPerfil/<%= userPerfil.id %>?_method=DELETE " method="POST" style="display: inline-flex">
+    <button type="submit" class="bt_eliminar">Eliminar</button>
+  </form>
+    
+        
+    
     <!--====  End of html  ====-->
      <!-- FOOTER -->
      <%- include('../partials/footer') %>

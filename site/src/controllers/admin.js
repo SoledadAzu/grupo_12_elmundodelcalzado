@@ -4,14 +4,33 @@ const productsFilePath =  path.join(__dirname, '../database/productos.json')
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const usuarios = JSON.parse(fs.readFileSync( path.join(__dirname, '../database/users.json'), 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-const {validationResult} = require('express-validator')
+const {validationResult} = require('express-validator');
+const db = require('../database/models');
+
 
 const controller={
 
 	// vista admin
     admin:(req,res)=>{
-		
-        res.render('admin/admin',{products,toThousand})
+		db.Productos.findAll({
+			include:[{
+				association:"Genero"
+			},{
+				
+				association:"Marca"
+			},{
+				
+				association:"Temporada"
+			}]
+		})
+		.then(producto=>{
+			
+			res.render('admin/admin',{products:producto,toThousand})
+		})
+		.catch(error=>{
+			res.send(error)
+		})
+        
 	
     },
 	// accion de cerrar session
@@ -45,7 +64,7 @@ const controller={
     },
     
     // accion de crear el producto
-	store: (req, res) => {
+	/*store: (req, res) => {
 
 		const errors = validationResult(req)
 		
@@ -86,10 +105,103 @@ const controller={
 			})
 		}
 		
-	},
+	},*/
+    
+		store: (req, res) => {
+
+			const errors = validationResult(req)
+			
+			if(req.fileValidationError){
+	
+				let img ={
+					param:"img",
+					msg:req.fileValidationError,
+				}
+				
+				errors.errors.push(img)
+			}
+			
+			if(errors.isEmpty()){
+				const formCreate = req.body
+				let img = []
+				req.files.forEach(imagen=>{
+					img.push(imagen.filename)
+	
+				})
+				formCreate.imgP = img[0]
+				let remove = img.shift()
+				formCreate.img = img
+				
+				
+	          //logica para que se comunique a la base de datos
+			  //create: function 
+			  
+	
+			  db.Productos.create(
+
+					{
+						nombre: req.body.title,
+						precio: req.body.price,
+						descripcion: req.body.description,
+						id_generos: 1,
+						id_marcas: 1,
+						id_temporadas:1,
+						id_outlets:1,
+						id_talles:1,
+						id_colores:1
+						//creando un producto
+					}
+				)
+			 .then(producto=>{
+				 
+				res.redirect('/admin')
+				
+			 })
+			 .catch(error=>{
+				 res.send(error)
+			 })
+		     
+	
+			}else{
+				res.render('admin/create',{
+					errors:errors.mapped(),
+					oldData:req.body
+				})
+			}
+			
+		},
+	
+	
 
 	//accion de buscar el producto y editarlo
-    update: (req, res) => {
+
+	update: function (req,res) {
+        let productos = req.params.id;
+        db.Productos
+        .update(
+            {
+				nombre: req.body.title,
+				precio: req.body.price,
+				descripcion: req.body.description,
+				id_generos: 1,
+				id_marcas: 1,
+				id_temporadas:1,
+				id_outlets:1,
+				id_talles:1,
+				id_colores:1
+			            
+            },
+            {
+                where: {id: productos}
+            })
+        .then(editar=> {
+			res.json(editar)
+            /*return res.redirect('/admin')*/
+		})           
+        .catch(error => res.send(error))
+    },
+
+    /*update: (req, res) => {
 		const upDate = products.find(e=> e.id === +req.params.id)
 	
 		if(upDate){
@@ -107,17 +219,57 @@ const controller={
 			fs.writeFileSync(productsFilePath,JSON.stringify(products,null,2))
 			
 			res.redirect('/admin')
-	},
+	},*/
+	
+
+
 	// accion de eliminar un producto encontrado por id
+	delete: function (req,res) {
+        let movieId = req.params.id;
+        Movies
+        .findByPk(movieId)
+        .then(Movie => {
+            return res.render(path.resolve(__dirname, '..', 'views',  'admin.js'), {Movie})})
+        .catch(error => res.send(error))
+    },
+	destroy: function (req,res) {
+        let movieId = req.params.id;
+        Movies
+        .destroy({where: {id: movieId}, force: true}) // force: true es para asegurar que se ejecute la acción
+        .then(()=>{
+            return res.redirect('/admin')})
+        .catch(error => res.send(error)) 
+    },
+
+    
+
     deleteprod : (req, res) => {
 		products=products.filter(e=> e.id !== +req.params.id)
 
 		fs.writeFileSync(productsFilePath,JSON.stringify(products,null,2))
 		res.redirect('/admin')
 	},
+	
+
+
+
 	// vista de todos los usuarios registrados
-	usuarios:(req,res) => {
-		res.render("admin/usuariosRegistrados",{usuarios})
+	usuarios : (req, res) => {
+		db.Usuarios.findAll({
+			// include:[{association:"Categoria_Usuario"}]
+		})
+		.then(usuario=>{
+			
+			db.Categoria_Usuarios.findAll()
+			.then(categoria=>{
+				
+				res.render("admin/usuariosRegistrados",{usuarios:usuario,categorias:categoria})
+			})
+		})
+		.catch(error=>{
+			res.send(error)
+		})
+		
 	}
 	
 }

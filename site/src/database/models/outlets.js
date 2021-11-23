@@ -19,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
   Outlets.init({
     nombre: DataTypes.STRING
   }, {
+    timestamps: false,
     sequelize,
     modelName: 'Outlets',
   });
