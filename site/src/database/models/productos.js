@@ -10,8 +10,31 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
-    }
+      Productos.belongsTo(models.Generos ,{
+        as: "Generos",
+        foreignKey: "id_generos",
+    })
+      Productos.belongsTo(models.Marcas ,{
+        as: "Marcas",
+        foreignKey: "id_marcas",
+    })
+      Productos.belongsTo(models.Temporadas ,{
+        as: "Temporadas",
+        foreignKey: "id_temporadas",
+    })
+      Productos.belongsTo(models.Outlets ,{
+        as: "Outlets",
+        foreignKey: "id_outlets",
+    })
+      Productos.belongsTo(models.Talles ,{
+        as: "Talles",
+        foreignKey: "id_talles",
+    })
+      Productos.belongsTo(models.Colores ,{
+        as: "Colores",
+        foreignKey: "id_Colores",
+    })
+  }
   };
   Productos.init({
     nombre: DataTypes.STRING,

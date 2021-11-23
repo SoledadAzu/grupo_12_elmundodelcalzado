@@ -4,7 +4,7 @@
     "title": "QT RACER SPORT",
    
     "description": "Estas zapatillas adidas te acompañan con comodidad durante todo el día, cuando corrés en la mañana, en tus actividades de la tarde y en tus reuniones nocturnas. La mediasuela Lightmotion ofrece amortiguación liviana que notarás mientras pasan las horas. Este producto está hecho con Primeblue, un material reciclado de alto rendimiento creado en parte con Parley Ocean Plastic.",
-    "price": "8999",
+    "price": 8999,
     "detalles": [
       "Amortiguación muy liviana",
       "Mediasuela Lightmotion",
@@ -111,7 +111,7 @@
     "id": 4,
     "title": "SUPERSTAR W  ",
     "description": "Las zapatillas Adidas Superstar no necesitan mucha presentación. Su historia hizo que dejen de ser un calzado para ser un ícono de la moda. Nacidas en los 70's para el básquet, fueron recorriendo el mundo urbano de la mano del skateboarding y principalmente el hip-hop. Estilo de sobra con el detalle de las tres tiras (three-stripes) típicas de la marca y su característica puntera de caucho.",
-    "price": "15.999  ",
+    "price": 15.999,
     "detalles": [
       "Cuero Vacuno Descarne",
       "Suela de goma",
@@ -147,7 +147,7 @@
     "id": 5,
     "title": "ADIDAS SLEEK SUPER ",
     "description": "¿A quién no le gusta el satén? Es suave, elegante y está presente en estas zapatillas adidas Sleek Super. Amarrá los cordones con punta de metal y sentí que formás parte de una comunidad única y alegre. La suela con plataforma agrega unos centímetros a tu altura.",
-    "price": "13.999 ",
+    "price": 13.999,
     "detalles": [
       "Exterior de satén",
       "Tacto suave",
@@ -1020,7 +1020,7 @@
   {
     "id": 29,
     "title": "ZAPATILLAS TERREX EASTRAIL   ",
-    "price": "12.999",
+    "price": 12.999,
     "detalles": [
       "Horma clásica",
       "Exterior de malla y material sintético",
@@ -1930,7 +1930,7 @@
     "id": 55,
     "title": "BOTINES PUMA ULTRA",
     "description": "Mejora tu juego con la velocidad adicional que te aportan estos botines de fútbol insuperables.Diseñados pensando en la velocidad, esta edición de los ULTRA está equipada con una serie de detalles funcionales imprescindibles como un empeine liviano y duradero, y una suela exterior SpeedUnit de TPU ultrarrápida e inspirada en los clavos de running, para proporcionarte la mejor mezcla de agilidad y estabilidad.Suela diseñada para canchas de césped natura",
-    "price": "7.799,00",
+    "price": 7.799,
     "detalles": [
       "Uso en césped",
       "Material sintético",
@@ -1961,7 +1961,7 @@
     "id": 56,
     "title": "ZAPATILLAS PUMA",
     "description": "Un par que va con todo y lleva la inspiración tenística en su diseño, son las zapatillas PUMA Jada para mujeres que ofrece un diseño adecuado para usar diariamente, además de mezclar detalles elegantes en color bronce que las hace únicas.",
-    "price": "8.999,00",
+    "price": 8.999,
     "detalles": [
       "Cuero Sintético",
       "con cordón",
@@ -1992,7 +1992,7 @@
     "id": 57,
     "title": "ZAPATILLAS ADIDAS",
     "description": "La cultura del skate reconoció su durabilidad y comodidad. Las calles apreciaron su estilo retroactivo y versátil. Debido a la naturaleza de exclusiva calidad de la piel y el ante, podría ocurrir que en algunos casos el producto destiñera levemente, sobre todo en condiciones de humedad. Mientras esté mojada, se aconseja que la zapatilla no entre en contacto con otras prendas claras hasta que no esté completamente seca.",
-    "price": "20.999,00",
+    "price": 20.999,
     "detalles": [
       "Running",
       "Poliéster",
@@ -2023,7 +2023,7 @@
     "id": 58,
     "title": "ZAPATILLAS ADIDAS",
     "description": "Zapatillas de alto rendimiento para correrAjuste ceñido y cómodo, tipo mediaExterior de tejido adidas Primeknit+Ajuste y sujeción gracias a la tecnología Tailored Fibre Placement",
-    "price": "26.999,00",
+    "price": 26.999,
     "detalles": [
       "Running",
       "Con Cordón",
@@ -2055,7 +2055,7 @@
     "id": 59,
     "title": "ZAPATILLA NIKE ",
     "description": "Para todos tus díasCamina suave y cómodamente con las Nike Court Vision Low para hombres. Estupendos para cualquier día de la semana y combinarlos con lo que sea. Una vez puestos, serán tus preferidos.",
-    "price": "12.499,00",
+    "price": 12.499,
     "detalles": [
       "Cuero Sintético",
       "Con Cordón",
@@ -2086,7 +2086,7 @@
     "id": 60,
     "title": "ZAPATILLA NIKE",
     "description": "Las Nike Downshifter 11 ofrecen una sujeción ligera y flexible para que nada te detenga.Incorporan la misma amortiguación suave de la última versión, y añaden más soporte alrededor del mediopié para ofrecer comodidad después del entrenamiento.",
-    "price": "11.999,00",
+    "price": 11.999,
     "detalles": [
       "Poliéster",
       "Con Cordón",
@@ -2120,7 +2120,7 @@
     "id": 61,
     "title": "ZAPATILLAS ASICS",
     "description": "Hechas de material de malla de alta calidad, estas zapatillas tienen todo lo que esperás en tecnología y rendimiento.Tiene un acolchado de gel que garantiza una excelente estabilidad y suavidad incluso en los terrenos más difíciles.",
-    "price": "14.990,00",
+    "price": 14.990,
     "detalles": [
       "Running",
       "Sintético",
@@ -2150,7 +2150,7 @@
     "id": 62,
     "title": "ZAPATILLA ASICS",
     "description": "Obtené una gran comodidad y ligereza al caminar con las zapatillas ASICS.Es un calzado para acompañarte en varios momentos, desde caminatas ligeras, gimnasio y día a día.",
-    "price": "14.990,00",
+    "price": 14.990,
     "detalles": [
       "Running",
       "Poliéster",
@@ -2182,7 +2182,7 @@
     "id": 63,
     "title": "ZAPATILLA TOPPER",
     "description": "Zapatillas topper urbanas •casuales •suela goma antideslizante •capellada cuero sintetico",
-    "price": "5.499,00",
+    "price": 5.499,
     "detalles": [
       "Con Cordón",
       "Atemporal",
@@ -2213,7 +2213,7 @@
     "id": 64,
     "title": "ZAPATILLAS TOPPER",
     "description": "Llega el Magnus en su segunda versión, un calzado hecho para los amantes de los deportes indoor.-Capellada: Liviana, de mesh con cuero sintético de alta resistencia que proporciona un buen ajuste del pie.-Suela: La amortiguación de la entresuela garantiza la absorción de impactos y protege las articulaciones.",
-    "price": "5.499,00",
+    "price": 5.499,
     "detalles": [
       "Training",
       "Con Cordón",
@@ -2247,7 +2247,7 @@
     "id": 65,
     "title": "ZAPATILLA CONVERSE ",
     "description": "Ligera y respirable, los jugadores serios no aceptaron ningún otro calzado. En los años posteriores, los fanáticos vieron algo más en la silueta atlética y el inconfundible logotipo de Star Chevron ",
-    "price": "8.695",
+    "price": 8.695,
     "detalles": [
       "Textil",
       "Algodón",
@@ -2279,7 +2279,7 @@
     "id": 66,
     "title": "ZAPATILLAS CONVERSE",
     "description": "El peso del calzado puede variar según el número solicitado. Los talles corresponden a numeración de Argentina.",
-    "price": "7.699,00",
+    "price": 7.699,
     "detalles": [
       "Con Cordón",
       "Lona",
@@ -2314,7 +2314,7 @@
     "title": "ZAPATILLA FILA",
 
     "description": "El peso del calzado puede variar según el número solicitado. Los talles corresponden a numeración de Argentina.",
-    "price": "7.490,00",
+    "price": 7.490,
     "detalles": [
       "Con Cordón",
       "Atemporal",
@@ -2348,7 +2348,7 @@
     "title": "ZAPATILLA FILA",
 
     "description": "Calzado moderno de moda con suela robusta de EVA con capellada en materiales sinteticos de alta calidad y detalles en los pasacordones.",
-    "price": "7.590,00",
+    "price": 7.590,
     "detalles": [
       "Sintético",
       "Con Cordón",
@@ -2383,7 +2383,7 @@
     "title": "ZAPATILLAS NEW BALANCE",
    
     "description": "Las zapatillas de mujer New Balance  estan hechas en una combinación atemporal de mesh y cuero descarne, disponible en colores clásicos y sútiles.No importa donde vayas, estas  zapatillas urbanas cuentan con tecnología ENCAP con una amortiguación suave de EVA en la entresuela que te brinda el soporte que necesitas",
-    "price": "10.049,00",
+    "price": 10.049,
     "detalles": [
       "Fitness",
       "Atemporal",
@@ -2413,7 +2413,7 @@
   },
   {
     "title": "zapatillas  celeste",
-    "price": "15.999",
+    "price": 15.999,
     "colors": [
       "rojo",
       "marron",
@@ -2441,7 +2441,7 @@
   },
   {
     "title": "adiddas  genial",
-    "price": "7.999",
+    "price": 7.999,
     "colors": [
       "rojo",
       "rojo",

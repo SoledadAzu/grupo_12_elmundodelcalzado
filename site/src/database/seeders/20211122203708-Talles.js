@@ -7,20 +7,19 @@ let tallesArray = productos.map(product =>{
     nombre: talles.join(",")
 
 }
-
   return mytalles
 })
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
  
-     await queryInterface.bulkInsert('talles', tallesArray, {});
+     await queryInterface.bulkInsert('Talles', tallesArray, {});
     
   },
 
   down: async (queryInterface, Sequelize) => {
    
-      await queryInterface.bulkDelete('talles', null, {});
+      await queryInterface.bulkDelete('Talles', null, {});
      
   }
 };

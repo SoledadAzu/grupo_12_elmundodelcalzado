@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       estado: {
-        type: Sequelize.STRING(100)
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

@@ -83,7 +83,7 @@ DROP TABLE IF EXISTS `el_mundo_del_calzado`.`outlets` ;
 
 CREATE TABLE IF NOT EXISTS `el_mundo_del_calzado`.`outlets` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `nombre` VARCHAR(50) NOT NULL,
+  `nombre` VARCHAR(7) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
@@ -96,8 +96,8 @@ COLLATE = utf8mb4_0900_ai_ci;
 DROP TABLE IF EXISTS `el_mundo_del_calzado`.`talles` ;
 
 CREATE TABLE IF NOT EXISTS `el_mundo_del_calzado`.`talles` (
-  `id` INT NOT NULL,
-  `nombre` VARCHAR(50) NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
