@@ -225,7 +225,7 @@ CREATE TABLE IF NOT EXISTS `el_mundo_del_calzado`.`categoria_usuarios` (
   `nombre` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 3
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 

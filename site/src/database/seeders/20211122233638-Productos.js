@@ -7,6 +7,7 @@ let productosArray = productos.map(product => {
     precio: product.price,
     descripcion: product.description,
     
+    
   }
   
   return producto

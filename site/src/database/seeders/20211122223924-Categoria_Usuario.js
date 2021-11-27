@@ -3,7 +3,7 @@ const usuarios = require("../users.json")
 
 let rolArray = usuarios.map(roluser => {
   let users = {
-    nombre: roluser.rol,  
+    nombre: roluser.rol,    
   } 
   return users
 })
