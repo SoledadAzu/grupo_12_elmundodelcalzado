@@ -176,27 +176,31 @@ const controller={
 			// 	)
 			 .then(talle=>{
 				//  res.json(producto)
-				 let talles = talle.map(element=>{
-					 return element.nombre
-				 })
-				 let bodyTalles = req.body.talles
-				
-				 console.log(talles)
-				let encontrado = bodyTalles.map(talle=>{
-					return talles.includes(talle)
-				})
-				console.log(encontrado)
-				console.log(bodyTalles);
-				// res.redirect('/admin')
 				db.Productos.findAll()
 				.then(producto=>{
-					let array= producto.length + 2
-					res.send(talle)
-					
+
 				})
 				.catch(error=>{
 					res.send(error)
 				})
+				 let talles = talle.map(element=>{
+					 return element.nombre
+				 })
+				 let bodyTalles = req.body.talles
+				let agragandoTalles = bodyTalles.forEach(elemento=>{
+					db.Talles.create({
+						nombre: elemento,
+						// id_producto: Productos.id+1
+					})
+					.then(talle=>{
+						console.log(agragandoTalles)
+					})
+					.catch(error=>{
+
+					})
+				})
+				
+				// res.redirect('/admin')
 				
 			 })
 			 .catch(error=>{
