@@ -266,8 +266,6 @@ CREATE TABLE `productos` (
   KEY `FK:_id_marcas_idx` (`id_marcas`),
   KEY `FK_id_temporadas_idx` (`id_temporadas`),
   KEY `FK_id_outlets_idx` (`id_outlets`),
-  KEY `FK_id_colores_idx` (`id_colores`),
-  CONSTRAINT `FK_id_colores` FOREIGN KEY (`id_colores`) REFERENCES `colores` (`id`),
   CONSTRAINT `FK_id_generos` FOREIGN KEY (`id_generos`) REFERENCES `generos` (`id`),
   CONSTRAINT `FK_id_marcas` FOREIGN KEY (`id_marcas`) REFERENCES `marcas` (`id`),
   CONSTRAINT `FK_id_outlets` FOREIGN KEY (`id_outlets`) REFERENCES `outlets` (`id`),
