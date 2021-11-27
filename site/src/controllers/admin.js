@@ -155,10 +155,10 @@ const controller={
 				
 	          //logica para que se comunique a la base de datos
 			  //create: function 
-				db.Talles.findAll({
+				
 					// include:[{association:"Producto"}]
 							
-				})
+				
 				
 			//   db.Productos.create(
 
@@ -174,11 +174,30 @@ const controller={
 			// 			//creando un producto
 			// 		}
 			// 	)
-			 .then(talle=>{
+			 
 				//  res.json(producto)
 				db.Productos.findAll()
 				.then(producto=>{
+					let bodyTalles = req.body.talles
+				
+					let ultimoId=producto.length -1
+				   let agregandoTalles = bodyTalles.map(elemento=>{
+						let index = producto[ultimoId].id +1
+						
+					   db.Talles.create({
+						   nombre: elemento,
+						   id_producto: index
 
+					   })
+					   .then(talle=>{
+						   console.log(agregandoTalles)
+					   })   				   
+						.catch(error=>{
+							
+					   })
+				   })
+					
+					
 				})
 				.catch(error=>{
 					res.send(error)
@@ -201,12 +220,9 @@ const controller={
 					})
 				})
 				
-				// res.redirect('/admin')
+				res.redirect('/admin')
 				
-			 })
-			 .catch(error=>{
-				 res.send(error)
-			 })
+			 
 		     
 	
 			}else{
