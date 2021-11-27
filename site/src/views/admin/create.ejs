@@ -69,31 +69,43 @@
 										<label for="genero" class="form-label">Genero</label>
 										<select name="genero" id="genero" class="form-input">
 											<option value="" hidden selected>Elegí</option>
-											<option value="hombre">Hombre</option>
-											<option value="mujer">Mujer</option>
+											<!-- <option value="hombre">Hombre</option>
+											<option value="mujer">Mujer</option> -->
+											<% generos.forEach(genero => {%>
+												<option  value="<%= genero.nombre %>"><%= genero.nombre %> </option>
+																  
+											  <% }); %> 
 										</select>
 									</div>
 									<div>
 									<label for="temporada" class="form-label">Temporada</label>
 									<select name="temporada" id="temporada" class="form-input">
 										<option value="" hidden selected>Elegí</option>
-										<option value="true">True</option>
-										<option value="false">False</option>
+										<!-- <option value="true">True</option>
+										<option value="false">False</option> -->
+										<% temporadas.forEach(temporada => {%>
+											<option  value="<%= temporada.nombre %>"><%= temporada.nombre %> </option>
+															  
+										  <% }); %> 
 									</select>
 							    </div>
 								<div>
 									<label for="category" class="form-label">Outlet</label>
 									<select name="outlet" id="outlet" class="form-input">
 										<option value="" hidden selected>Elegí</option>
-										<option value="true">True</option>
-										<option value="false">False</option>
+										<!-- <option value="true">True</option>
+										<option value="false">False</option> -->
+										<% outlets.forEach(outlet=> {%>
+											<option  value="<%= outlet.nombre %>"><%= outlet.nombre %> </option>
+															  
+										  <% }); %> 
 									</select>
 								</div>
 								<div>
 									<label for="marca" class="form-label">Marca</label>
 									<select name="marca" id="marca" class="form-input">
 										<option value="" hidden selected>Marca</option>
-										<option value="adiddas">Adiddas</option>
+										<!-- <option value="adiddas">Adiddas</option>
 										<option value="nike">Nike</option>
 										<option value="asics">Asics</option>
 										<option value="fila">Fila</option>
@@ -101,7 +113,11 @@
 										<option value="converse">Converse</option>
 										<option value="newbalance">New Balance</option>
 										<option value="puma">Puma</option>
-										<option value="adidasoriginal">Adidas Original</option>
+										<option value="adidasoriginal">Adidas Original</option> -->
+										<% marcas.forEach(marca => {%>
+											<option  value="<%= marca.nombre %>"><%= marca.nombre %> </option>
+															  
+										  <% }); %> 
 									</select>
 							    </div>
 								</div>

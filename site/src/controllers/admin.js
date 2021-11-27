@@ -45,7 +45,20 @@ const controller={
 
 	// vista de crear un producto
     create:(req,res)=>{
-        res.render('admin/create')
+		
+		let genero = db.Generos.findAll();
+        let temporada = db.Temporadas.findAll();
+		let outlet = db.Outlets.findAll();
+		let marca =db.Marcas.findAll();
+        Promise
+        .all([genero, temporada, outlet,marca])
+        .then(([generos, temporadas, outlets,marcas]) => {
+            res.render('admin/create',{generos,temporadas,outlets,marcas})
+		})
+        .catch(error => res.send(error))
+		
+
+        
     },
 
 	// vista del producto a editar por ID
@@ -135,7 +148,7 @@ const controller={
 				
 	          //logica para que se comunique a la base de datos
 			  //create: function 
-			  
+			 
 	
 			  db.Productos.create(
 
