@@ -57,6 +57,7 @@ module.exports = {
         },
         onDelete : "cascade" 
       },
+<<<<<<< HEAD
       id_talles: {
         type: Sequelize.INTEGER,
         references : {
@@ -67,6 +68,9 @@ module.exports = {
         },
         onDelete : "cascade" 
       },
+=======
+      
+>>>>>>> 1dba871f426f24ecf0b8412bb117f740dc9c4fb2
       id_colores: {
         type: Sequelize.INTEGER,
         references : {
