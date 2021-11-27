@@ -6,6 +6,7 @@ const usuarios = JSON.parse(fs.readFileSync( path.join(__dirname, '../database/u
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const {validationResult} = require('express-validator');
 const db = require('../database/models');
+const productos = require('../database/models/productos');
 
 
 const controller={
@@ -21,8 +22,14 @@ const controller={
 			},{
 				
 				association:"Temporada"
-			}]
+			}
+			]	
 		})
+		// db.Talles.findAll({
+		// 	include:[{
+		// 		association:"Producto"
+		// 	}]
+		// })
 		.then(producto=>{
 			
 			res.render('admin/admin',{products:producto,toThousand})
@@ -148,26 +155,48 @@ const controller={
 				
 	          //logica para que se comunique a la base de datos
 			  //create: function 
-			 
-	
-			  db.Productos.create(
+				db.Talles.findAll({
+					// include:[{association:"Producto"}]
+							
+				})
+				
+			//   db.Productos.create(
 
-					{
-						nombre: req.body.title,
-						precio: req.body.price,
-						descripcion: req.body.description,
-						id_generos: 1,
-						id_marcas: 1,
-						id_temporadas:1,
-						id_outlets:1,
-						id_talles:1,
-						id_colores:1
-						//creando un producto
-					}
-				)
-			 .then(producto=>{
-				 
-				res.redirect('/admin')
+			// 		{
+			// 			nombre: req.body.title,
+			// 			precio: req.body.price,
+			// 			descripcion: req.body.description,
+			// 			id_generos: 1,
+			// 			id_marcas: 1,
+			// 			id_temporadas:1,
+			// 			id_outlets:1,
+			// 			id_colores:1
+			// 			//creando un producto
+			// 		}
+			// 	)
+			 .then(talle=>{
+				//  res.json(producto)
+				 let talles = talle.map(element=>{
+					 return element.nombre
+				 })
+				 let bodyTalles = req.body.talles
+				
+				 console.log(talles)
+				let encontrado = bodyTalles.map(talle=>{
+					return talles.includes(talle)
+				})
+				console.log(encontrado)
+				console.log(bodyTalles);
+				// res.redirect('/admin')
+				db.Productos.findAll()
+				.then(producto=>{
+					let array= producto.length + 2
+					res.send(talle)
+					
+				})
+				.catch(error=>{
+					res.send(error)
+				})
 				
 			 })
 			 .catch(error=>{

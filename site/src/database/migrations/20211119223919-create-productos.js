@@ -29,9 +29,7 @@ module.exports = {
       id_outlets: {
         type: Sequelize.INTEGER
       },
-      id_talles: {
-        type: Sequelize.INTEGER
-      },
+      
       id_colores: {
         type: Sequelize.INTEGER
       },
