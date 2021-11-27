@@ -9,33 +9,6 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-<<<<<<< HEAD
-    static associate(models) {
-      Productos.belongsTo(models.Generos ,{
-        as: "Generos",
-        foreignKey: "id_generos",
-    })
-      Productos.belongsTo(models.Marcas ,{
-        as: "Marcas",
-        foreignKey: "id_marcas",
-    })
-      Productos.belongsTo(models.Temporadas ,{
-        as: "Temporadas",
-        foreignKey: "id_temporadas",
-    })
-      Productos.belongsTo(models.Outlets ,{
-        as: "Outlets",
-        foreignKey: "id_outlets",
-    })
-      Productos.belongsTo(models.Talles ,{
-        as: "Talles",
-        foreignKey: "id_talles",
-    })
-      Productos.belongsTo(models.Colores ,{
-        as: "Colores",
-        foreignKey: "id_Colores",
-    })
-=======
     
 
       // define association here
@@ -74,7 +47,6 @@ module.exports = (sequelize, DataTypes) => {
         
       })
    }
->>>>>>> 1dba871f426f24ecf0b8412bb117f740dc9c4fb2
   }
   };
   Productos.init({
