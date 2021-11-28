@@ -31,13 +31,13 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: "id_outlets",
           })
           
-          Productos.belongsTo(models.Colores, {
+          Productos.hasMany(models.Colores, {
             as: "Color",
-            foreignKey: "id_colores",
+            foreignKey: "id_producto",
           })
           Productos.hasMany(models.Detalles, { 
             as: "Detalle",
-            foreignKey: 'id_productos',
+            foreignKey: 'id_producto',
         
         })
         Productos.hasMany(models.Talles, { 
