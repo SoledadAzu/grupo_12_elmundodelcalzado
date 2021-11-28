@@ -11,6 +11,10 @@ module.exports = {
       nombre: {
         type: Sequelize.STRING(50)
       },
+      
+      id_producto: {
+        type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

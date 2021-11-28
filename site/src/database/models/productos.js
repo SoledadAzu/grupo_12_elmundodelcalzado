@@ -31,13 +31,15 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: "id_outlets",
           })
           
-          Productos.belongsTo(models.Colores, {
+           Productos.hasMany(models.Colores, { 
+      
             as: "Color",
-            foreignKey: "id_colores",
-          })
+            foreignKey: 'id_producto',
+        
+        })
           Productos.hasMany(models.Detalles, { 
             as: "Detalle",
-            foreignKey: 'id_productos',
+            foreignKey: 'id_producto',
         
         })
         Productos.hasMany(models.Talles, { 
@@ -56,7 +58,7 @@ module.exports = (sequelize, DataTypes) => {
     id_marcas: DataTypes.INTEGER,
     id_temporadas: DataTypes.INTEGER,
     id_outlets: DataTypes.INTEGER,
-    id_colores: DataTypes.INTEGER,
+   
   }, {
     timestamps: false,
     sequelize,

@@ -4,7 +4,7 @@ const productsFilePath =  path.join(__dirname, '../database/productos.json')
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const usuarios = JSON.parse(fs.readFileSync( path.join(__dirname, '../database/users.json'), 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-const {validationResult} = require('express-validator');
+const {validationResult, body} = require('express-validator');
 const db = require('../database/models');
 const productos = require('../database/models/productos');
 
@@ -148,8 +148,8 @@ const controller={
 					img.push(imagen.filename)
 	
 				})
-				formCreate.imgP = img[0]
-				let remove = img.shift()
+				// formCreate.imgP = img[0]
+				// let remove = img.shift()
 				formCreate.img = img
 				
 				
@@ -160,42 +160,101 @@ const controller={
 							
 				
 				
-			//   db.Productos.create(
+			  db.Productos.create(
 
-			// 		{
-			// 			nombre: req.body.title,
-			// 			precio: req.body.price,
-			// 			descripcion: req.body.description,
-			// 			id_generos: 1,
-			// 			id_marcas: 1,
-			// 			id_temporadas:1,
-			// 			id_outlets:1,
-			// 			id_colores:1
-			// 			//creando un producto
-			// 		}
-			// 	)
+					{
+						nombre: req.body.title,
+						precio: req.body.price,
+						descripcion: req.body.description,
+						id_generos: req.body.genero === "hombre" ? 1 : 2, 
+						id_marcas: 1,
+						id_temporadas:req.body.temporada === 0 ? 1:2,
+						id_outlets:req.body.outlet === 0 ? 1 : 2
+						//creando un producto
+					}
+				)
 			 
 				//  res.json(producto)
-				db.Productos.findAll()
 				.then(producto=>{
-					let bodyTalles = req.body.talles
-				
-					let ultimoId=producto.length -1
-				   let agregandoTalles = bodyTalles.map(elemento=>{
-						let index = producto[ultimoId].id +1
-						
-					   db.Talles.create({
-						   nombre: elemento,
-						   id_producto: index
-
-					   })
-					   .then(talle=>{
-						   console.log(agregandoTalles)
-					   })   				   
+					let productId=producto.id
+					let bodyTalles=req.body.talles
+					let tallesNuevos = bodyTalles.map(e=>{
+						db.Talles.create({
+							nombre: e,
+							id_producto:productId
+						})
+						.then(talle=>{
+							console.log(talle)
+						})
 						.catch(error=>{
+							res.send(error)
+						})
+					})
+
+					// //////////////////////////////////////
+					let bodyColores= req.body.colors
+					let colores = bodyColores.forEach(e=>{
+						db.Colores.create({
+							nombre: e,
+							id_producto:productId
+						})
+						.then(color=>{
+							console.log(color)
+						})
+						.catch(error=>{
+							res.send(error)
+						})
+					})
+					// ///////////////////////////////////////
+					let bodyDetalles= req.body.detalles
+					let detalles = bodyDetalles.forEach(e=>{
+						db.Detalles.create({
+							nombre: e,
+							id_productos:productId
+						})
+						.then(detalle=>{
+							console.log(detalle)
+						})
+						.catch(error=>{
+							res.send(error)
+						})
+					})
+					////////////////////////////////////////
+					let bodyImg= req.body.img
+					
+					let imagenes = bodyImg.forEach(e=>{
+						db.Imagenes_Productos.create({
+							nombre: e,
+							id_producto:productId
+						})
+						.then(imagen=>{
+							console.log(imagen)
+						})
+						.catch(error=>{
+							res.send(error)
+						})
+					})
+					//////////////////////////////////////////
+
+
+					// res.send(producto)
+				
+				// 	let ultimoId=producto.length -1
+				//    let agregandoTalles = bodyTalles.map(elemento=>{
+				// 		let index = producto[ultimoId].id +1
+						
+				// 	   db.Talles.create({
+				// 		   nombre: elemento,
+				// 		   id_producto: index
+
+				// 	   })
+				// 	   .then(talle=>{
+				// 		   console.log(agregandoTalles)
+				// 	   })   				   
+				// 		.catch(error=>{
 							
-					   })
-				   })
+				// 	   })
+				//    })
 					
 					
 				})
@@ -205,7 +264,7 @@ const controller={
 				 
 				
 				
-				res.redirect('/admin')
+				// res.redirect('/admin')
 				
 			 
 		     
@@ -235,8 +294,7 @@ const controller={
 				id_marcas: 1,
 				id_temporadas:1,
 				id_outlets:1,
-				id_talles:1,
-				id_colores:1
+				id_talles:1
 			            
             },
             {

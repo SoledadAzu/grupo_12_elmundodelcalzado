@@ -17,6 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     nombre: DataTypes.STRING,
     id_producto: DataTypes.INTEGER
   }, {
+    timestamps: false,
     sequelize,
     modelName: 'Imagenes_Productos',
   });

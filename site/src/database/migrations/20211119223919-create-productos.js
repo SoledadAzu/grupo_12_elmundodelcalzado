@@ -30,9 +30,6 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       
-      id_colores: {
-        type: Sequelize.INTEGER
-      },
       
       createdAt: {
         allowNull: false,
