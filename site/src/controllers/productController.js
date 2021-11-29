@@ -7,6 +7,7 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const oferta = require('../database/productOferta.json')
 const productos = require('../database/productos.json')
+const db = require('../database/models');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const ofertas=productos.filter(e=>{
@@ -54,13 +55,78 @@ const prodNewBalance=productos.filter(e=>{
 
 const controller={
 
-    // vista del producto por ID
+    // vista del producto por ID en detalles de producto
     product:(req,res)=>{
-        let id = req.params.id;
-        let idProduct = productos.find(e=>{
-            return e.id === +id
+        // let id = req.params.id;
+        // let idProduct = productos.find(e=>{
+        //     return e.id === +id
+        // })
+        // res.render('products/detalleProducto',{idProduct,ofertas,toThousand})
+        let id=req.params.id
+        db.Productos.findByPk(id)
+        .then(producto=>{
+            db.Imagenes_Productos.findAll({
+                where:{
+                    id_producto:id
+                }
+            })
+            .then(imagen=>{
+                
+                restoImagen=imagen.filter(e=>{
+                    return e !== imagen[0]
+                })
+                db.Colores.findAll({
+                    where:{
+                        id_producto:id
+                    }
+                })
+                .then(color=>{
+                    db.Talles.findAll({
+                        where:{
+                            id_producto:id
+                        }
+                    })
+                    .then(talle=>{
+                        //res.send(talle)
+                        
+                        db.Detalles.findAll({
+                            where:{
+                                id_producto:id
+                            }
+                        })
+                        .then(detalle=>{
+                            // res.send(detalle)
+                            res.render('products/detalleProducto',{
+                                idProduct:producto,
+                                imagen,colors:color,
+                                talles:talle,
+                                detalles:detalle,
+                                restoImagen,
+                                ofertas,
+                                toThousand})
+                        })
+                        .catch(error=>{
+                            res.send(error)
+                        })
+                    })
+                    .catch(error=>{
+                        res.send(error)
+                    })
+                    
+                })
+                .catch(error=>{
+                    res.send(error)
+                })
+                
+            })
+            .catch(error=>{
+                res.send(error)
+            })
+            
         })
-        res.render('products/detalleProducto',{idProduct,ofertas,toThousand})
+        .catch(error=>{
+            res.send(error)
+        })
     },
     // vista del carrito por ID
     carrito:(req,res)=>{

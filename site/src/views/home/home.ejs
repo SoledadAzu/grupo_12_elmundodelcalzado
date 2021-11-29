@@ -71,18 +71,19 @@
                                     <article class="zapatilla-img">
                                         <a href="/products/productDetail/<%=e.id %> ">
                                             <div>
-                                                <img class="zapatilla-img1" src="/images/articulos/<%= e.imgP %> "
-                                                    alt="zapatilla-img1">
+                                               
+                                                
+
                                             </div>
                                             <div class="ofertasZapatillaPrecio">
 
-                                                <h4>$<%=toThousand(e.price) %>
+                                                <h4>$<%=toThousand(e.precio) %>
                                                 </h4>
                                                 <p>
-                                                    <%= e.marca %>
+                                                    <%= e.Marca.nombre %>
                                                 </p>
                                                 <strong>
-                                                    <%= e.title%>
+                                                    <%= e.nombre%>
                                                 </strong>
                                             </div>
                                         </a>
@@ -107,17 +108,16 @@
                                     <article class="zapatilla-img">
                                         <a href="/products/productDetail/<%=e.id%> ">
                                             <div>
-                                                <img class="zapatilla-img1" src="/images/articulos/<%= e.imgP %> "
-                                                    alt="zapatilla-img1">
+                                                
                                             </div>
                                             <div class="ofertasZapatillaPrecio">
-                                                <h4>$<%=toThousand(e.price) %>
+                                                <h4>$<%=toThousand(e.precio) %>
                                                 </h4>
                                                 <p>
-                                                    <%= e.marca %>
+                                                    <%= e.Marca.nombre %>
                                                 </p>
                                                 <strong>
-                                                    <%= e.title%>
+                                                    <%= e.nombre%>
                                                 </strong>
                                             </div>
                                         </a>

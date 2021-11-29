@@ -68,7 +68,7 @@ const controller={
         
     },
 
-	// vista del producto a editar por ID
+	// vista del producto admin y editar por ID
     edit:(req,res)=>{
         let id = req.params.id
 		let idFind=products.find(e=>{
@@ -158,8 +158,6 @@ const controller={
 				
 					// include:[{association:"Producto"}]
 							
-				
-				
 			  db.Productos.create(
 
 					{
@@ -167,14 +165,14 @@ const controller={
 						precio: req.body.price,
 						descripcion: req.body.description,
 						id_generos: req.body.genero === "hombre" ? 1 : 2, 
-						id_marcas: 1,
-						id_temporadas:req.body.temporada === 0 ? 1:2,
-						id_outlets:req.body.outlet === 0 ? 1 : 2
+						id_marcas: 3,
+						id_temporadas:req.body.temporada === "0" ? 1 : 2,
+						id_outlets:req.body.outlet === "0" ? 1 : 2
 						//creando un producto
 					}
 				)
 			 
-				//  res.json(producto)
+			
 				.then(producto=>{
 					let productId=producto.id
 					let bodyTalles=req.body.talles
@@ -210,7 +208,7 @@ const controller={
 					let detalles = bodyDetalles.forEach(e=>{
 						db.Detalles.create({
 							nombre: e,
-							id_productos:productId
+							id_producto:productId
 						})
 						.then(detalle=>{
 							console.log(detalle)
@@ -237,7 +235,7 @@ const controller={
 					//////////////////////////////////////////
 
 
-					// res.send(producto)
+			// 		// res.send(producto)
 				
 				// 	let ultimoId=producto.length -1
 				//    let agregandoTalles = bodyTalles.map(elemento=>{
@@ -255,7 +253,7 @@ const controller={
 							
 				// 	   })
 				//    })
-					
+				res.redirect('/admin')
 					
 				})
 				.catch(error=>{
@@ -264,7 +262,7 @@ const controller={
 				 
 				
 				
-				// res.redirect('/admin')
+				
 				
 			 
 		     
@@ -293,9 +291,7 @@ const controller={
 				id_generos: 1,
 				id_marcas: 1,
 				id_temporadas:1,
-				id_outlets:1,
-				id_talles:1
-			            
+				id_outlets:1,							            
             },
             {
                 where: {id: productos}

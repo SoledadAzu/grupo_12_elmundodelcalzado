@@ -3,7 +3,7 @@ const router = express.Router();
 const {admin,create,edit,store,update,deleteprod,usuarios,cerrar} = require('../controllers/admin');
 const permisoMiddleware = require('../middleware/permisoMiddleware')
 const validadorCreate = require('../middleware/validadorProductos')
-const imgUpload = require('../middleware/middlewareStorage');
+const imgUpload = require('../middleware/middlewareStorageProducto');
 
 
 
@@ -17,7 +17,7 @@ router.get('/edit/:id',permisoMiddleware,edit);
 //router.delete('/eliminar/:id',permisoMiddleware,deleteprod) 
 router.get("/usuarios",permisoMiddleware,usuarios)
 
-//crud
+//crud de producto en admin
 router.get('/create',permisoMiddleware,create);
 router.post('/create',permisoMiddleware,imgUpload.array('img'),validadorCreate,store);
 router.put('/edit/:id',permisoMiddleware,update);

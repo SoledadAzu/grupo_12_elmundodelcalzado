@@ -30,18 +30,19 @@
                     <article class="zapatillas1-articulos">
 
                         <div class="zapatilla-principal">
-                            <img src="/images/articulos/<%=idProduct.imgP %>" alt="">
+                            <!-- img principar -->
+                            <img src="/images/articulos/<%=imagen[0].nombre %>" alt="<%= idProduct.nombre %>">
                         </div>
 
                         <div class="zapatillas1-colores">
-                            <% idProduct.img.map(e=>{ %>
+                            <!-- img -->
+                            <% restoImagen.map(e=>{ %>
 
 
                                 <div class="zapatillas1-colors_eleccion">
-                                    <img src="/images/articulos/<%= e %> " alt="<%= e.nombre %> ">
+                                    <img src="/images/articulos/<%= e.nombre %> " alt="<%= idProduct.nombre %> ">
                                 </div>
                                 <% }) %>
-
                         </div>
 
                     </article>
@@ -52,37 +53,38 @@
                 <aside class="talles">
                     <div class="talles-descripcion">
                         <h3>
-                            <%= idProduct.title %>
+                            <%= idProduct.nombre %>
                         </h3>
                         <h4>
-                            <% idProduct.colors.map(e=>{ %>
-                                <span>
-                                    <%= e %>
+                           <!-- colors -->
+                           <% colors.map(e=>{ %>
+                            <span>
+                                <%= e.nombre %>
 
 
-                                </span>
-                                <%}) %>
-
+                            </span>
+                            <%}) %>
 
                         </h4>
-                        <h5>$<%= toThousand(idProduct.price) %>
+                        <h5>$<%= toThousand(idProduct.precio) %>
                         </h5>
                     </div>
 
                     <form class="talles-datos" action="/products/carritoDeCompras" method="GET">
                         <h3>TALLES</h3>
                         <div class="talles-datos-numero">
-                            <% idProduct.talles.map(e=>{ %>
+                           
+                            <!-- talles -->
+                            <% talles.map(e=>{ %>
                                 <div>
-                                    <input type="checkbox" name="<%= e %> " id="talle<%= e %>">
-                                    <label for="talle<%= e %>">
-                                        <%= e %>
+                                    <input type="checkbox" name="<%= e.nombre %> " id="talle<%= e.nombre %>">
+                                    <label for="talle<%= e.nombre %>">
+                                        <%= e.nombre %>
                                     </label>
                                 </div>
                                 <% }) %>
 
-
-                                    <input class="boton" type="submit" value="AGREGAR A CARRITO">
+                        <input class="boton" type="submit" value="AGREGAR A CARRITO">
 
                     </form>
                 </aside>
@@ -95,22 +97,21 @@
                         <h4>
                             <%=idProduct.nombre %>
                         </h4>
-                        <h5>
-                            <%=idProduct.subtitle %>
-                        </h5>
+                        
                         <p>
-                            <%=idProduct.description %>
+                            <%=idProduct.descripcion %>
                         </p>
                     </div>
                     <h3>Detalles del producto</h3>
                     <nav class="descripciones-detalles">
-                        <% idProduct.detalles.map(e=>{ %>
+                        
+
+                        <!-- detalles -->
+                        <% detalles.map(e=>{ %>
                             <li>
-                                <%= e %>
+                                <%= e.nombre %>
                             </li>
                             <% }) %>
-
-
 
                     </nav>
                 </section>
