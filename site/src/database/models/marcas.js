@@ -12,12 +12,9 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Marcas.hasMany(models.Productos, { 
         as: "Productos",
-        foreignKey: 'id_marcas',
-        
-      
+        foreignKey: 'id_marcas',    
     })
-      // define association here
-    }
+  }
   };
   Marcas.init({
     nombre: DataTypes.STRING

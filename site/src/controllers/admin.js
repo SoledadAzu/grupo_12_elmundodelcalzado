@@ -259,8 +259,23 @@ const controller={
 				.catch(error=>{
 					res.send(error)
 				})
-				 
-				
+				 let talles = talle.map(element=>{
+					 return element.nombre
+				 })
+				 let bodyTalles = req.body.talles
+				 let ultimoproduct = productos.length - 1
+				let agragandoTalles = bodyTalles.forEach(elemento=>{
+					db.Talles.create({
+						nombre: elemento,
+						id_producto: productos[ultimoproduct].id + 1
+					})
+					.then(talle=>{
+						console.log(agragandoTalles)
+					})
+					.catch(error=>{
+
+					})
+				})
 				
 				
 				

@@ -15,8 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       as: "Producto",
       foreignKey: "id_producto",
     })
-      // define association here
-    }
+  }
   };
   Talles.init({
     nombre: DataTypes.STRING,

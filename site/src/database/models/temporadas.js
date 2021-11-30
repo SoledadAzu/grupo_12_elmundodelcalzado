@@ -12,12 +12,9 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Temporadas.hasMany(models.Productos, { 
         as: "Productos",
-        foreignKey: 'id_temporadas',
-        
-      
+        foreignKey: 'id_temporadas',    
     })
-      // define association here
-    }
+  }
   };
   Temporadas.init({
     nombre: DataTypes.STRING

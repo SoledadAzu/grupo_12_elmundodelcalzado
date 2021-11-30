@@ -49,7 +49,8 @@ module.exports = (sequelize, DataTypes) => {
         
       })
    }
-  }
+  
+  };
   Productos.init({
     nombre: DataTypes.STRING,
     precio: DataTypes.INTEGER,

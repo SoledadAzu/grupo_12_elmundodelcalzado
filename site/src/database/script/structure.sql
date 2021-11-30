@@ -75,7 +75,7 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `el_mundo_del_calzado`.`colores` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `nombre` VARCHAR(50) NOT NULL,
+  `nombre` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
@@ -87,7 +87,7 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `el_mundo_del_calzado`.`generos` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `nombre` CHAR(6) NOT NULL,
+  `nombre` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
@@ -111,7 +111,7 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `el_mundo_del_calzado`.`outlets` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `nombre` TINYINT(2) UNSIGNED ZEROFILL NOT NULL,
+  `nombre` VARCHAR(7) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
@@ -122,20 +122,20 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- Table `el_mundo_del_calzado`.`talles`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `el_mundo_del_calzado`.`talles` (
-  `id` INT NOT NULL,
-  `nombre` CHAR(2) NOT NULL,
-  PRIMARY KEY (`id`, `nombre`))
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
-
+temporadas
 
 -- -----------------------------------------------------
 -- Table `el_mundo_del_calzado`.`temporadas`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `el_mundo_del_calzado`.`temporadas` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `nombre` TINYINT(2) UNSIGNED ZEROFILL NOT NULL,
+  `nombre` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
@@ -191,9 +191,14 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `el_mundo_del_calzado`.`carrito_de_compras` (
   `id` INT NOT NULL AUTO_INCREMENT,
+<<<<<<< HEAD
+  `nombre` LONGTEXT NOT NULL,
+  `id_productos` INT NOT NULL,
+=======
   `id_producto` INT NOT NULL,
   `id_usuario` INT NOT NULL,
   `id_orden` INT NOT NULL,
+>>>>>>> 1dba871f426f24ecf0b8412bb117f740dc9c4fb2
   PRIMARY KEY (`id`),
   INDEX `FK_id_producto_idx` (`id_producto` ASC) VISIBLE,
   INDEX `FK_id_usuario_idx` (`id_usuario` ASC) VISIBLE,
@@ -220,7 +225,7 @@ CREATE TABLE IF NOT EXISTS `el_mundo_del_calzado`.`categoria_usuarios` (
   `nombre` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 3
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 

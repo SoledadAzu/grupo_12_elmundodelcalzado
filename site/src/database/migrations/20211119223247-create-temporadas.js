@@ -9,7 +9,11 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       nombre: {
+<<<<<<< HEAD
         type: Sequelize.BOOLEAN(1)
+=======
+        type: Sequelize.STRING
+>>>>>>> 5185e2db6244289e29e88e56cf7aa853966fc3fb
       },
       createdAt: {
         allowNull: false,
