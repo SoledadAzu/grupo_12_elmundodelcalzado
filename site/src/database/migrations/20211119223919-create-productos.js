@@ -67,20 +67,7 @@ module.exports = {
         },
         onDelete : "cascade" 
       },
-<<<<<<< HEAD
       
-=======
-      id_colores: {
-        type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName : "Colores"
-          },
-          key : "id"
-        },
-        onDelete : "cascade" 
-      },
->>>>>>> 5185e2db6244289e29e88e56cf7aa853966fc3fb
       
       createdAt: {
         allowNull: false,
