@@ -57,16 +57,7 @@ module.exports = {
         },
         onDelete : "cascade" 
       },
-      id_talles: {
-        type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName : "Talles"
-          },
-          key : "id"
-        },
-        onDelete : "cascade" 
-      },
+      
       
       
       createdAt: {

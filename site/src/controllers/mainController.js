@@ -26,7 +26,7 @@ const controller ={
             let outlet=producto.filter(e=>{
                 return e.id_outlets===2
             })
-            console.log(lanzamiento)
+            
             db.Imagenes_Productos.findAll()
             .then(imagen=>{
                 

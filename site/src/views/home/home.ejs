@@ -64,10 +64,10 @@
                 </section>
                 <section class="zapatillas">
                     <!-- lanzamiento -->
-                    <% let contadorL=0 %>
+                    
                         <% lanzamiento.map(e=>{%>
-                            <% contadorL++ %>
-                                <%if(contadorL<=8){%>
+                            
+                               
                                     <article class="zapatilla-img">
                                         <a href="/products/productDetail/<%=e.id %> ">
                                             <div>
@@ -88,7 +88,7 @@
                                             </div>
                                         </a>
                                     </article>
-                                    <% } %>
+                                    
                                         <% }) %>
 
                                             <!-- lanzamiento -->
@@ -101,10 +101,10 @@
                 </section>
                 <section class="zapatillas">
                     <!-- zapatillas -->
-                    <% let contador=0 %>
+                    
                         <% outlet.map(e=>{%>
-                            <% contador++ %>
-                                <%if(contador<=8){%>
+                           
+                                
                                     <article class="zapatilla-img">
                                         <a href="/products/productDetail/<%=e.id%> ">
                                             <div>
@@ -122,7 +122,7 @@
                                             </div>
                                         </a>
                                     </article>
-                                    <% } %>
+                                 
                                         <% }) %>
 
                                             <!-- zapatillas -->
