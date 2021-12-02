@@ -191,14 +191,9 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `el_mundo_del_calzado`.`carrito_de_compras` (
   `id` INT NOT NULL AUTO_INCREMENT,
-<<<<<<< HEAD
-  `nombre` LONGTEXT NOT NULL,
-  `id_productos` INT NOT NULL,
-=======
   `id_producto` INT NOT NULL,
   `id_usuario` INT NOT NULL,
   `id_orden` INT NOT NULL,
->>>>>>> 1dba871f426f24ecf0b8412bb117f740dc9c4fb2
   PRIMARY KEY (`id`),
   INDEX `FK_id_producto_idx` (`id_producto` ASC) VISIBLE,
   INDEX `FK_id_usuario_idx` (`id_usuario` ASC) VISIBLE,

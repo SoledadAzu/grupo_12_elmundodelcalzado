@@ -297,7 +297,7 @@ CREATE TABLE `productos` (
   CONSTRAINT `FK_id_marcas` FOREIGN KEY (`id_marcas`) REFERENCES `marcas` (`id`),
   CONSTRAINT `FK_id_outlets` FOREIGN KEY (`id_outlets`) REFERENCES `outlets` (`id`),
   CONSTRAINT `FK_id_temporadas` FOREIGN KEY (`id_temporadas`) REFERENCES `temporadas` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
