@@ -60,6 +60,7 @@ const controller={
         Promise
         .all([genero, temporada, outlet,marca])
         .then(([generos, temporadas, outlets,marcas]) => {
+			
             res.render('admin/create',{generos,temporadas,outlets,marcas})
 		})
         .catch(error => res.send(error))
@@ -158,6 +159,7 @@ const controller={
 				
 					// include:[{association:"Producto"}]
 							
+							
 			  db.Productos.create(
 
 					{
@@ -189,7 +191,7 @@ const controller={
 						})
 					})
 
-					// //////////////////////////////////////
+			// 		// //////////////////////////////////////
 					let bodyColores= req.body.colors
 					let colores = bodyColores.forEach(e=>{
 						db.Colores.create({
@@ -203,7 +205,7 @@ const controller={
 							res.send(error)
 						})
 					})
-					// ///////////////////////////////////////
+			// 		// ///////////////////////////////////////
 					let bodyDetalles= req.body.detalles
 					let detalles = bodyDetalles.forEach(e=>{
 						db.Detalles.create({
@@ -217,7 +219,7 @@ const controller={
 							res.send(error)
 						})
 					})
-					////////////////////////////////////////
+			// 		////////////////////////////////////////
 					let bodyImg= req.body.img
 					
 					let imagenes = bodyImg.forEach(e=>{
@@ -235,51 +237,11 @@ const controller={
 					//////////////////////////////////////////
 
 
-			// 		// res.send(producto)
-				
-				// 	let ultimoId=producto.length -1
-				//    let agregandoTalles = bodyTalles.map(elemento=>{
-				// 		let index = producto[ultimoId].id +1
-						
-				// 	   db.Talles.create({
-				// 		   nombre: elemento,
-				// 		   id_producto: index
-
-				// 	   })
-				// 	   .then(talle=>{
-				// 		   console.log(agregandoTalles)
-				// 	   })   				   
-				// 		.catch(error=>{
-							
-				// 	   })
-				//    })
 				res.redirect('/admin')
-					
 				})
 				.catch(error=>{
 					res.send(error)
-				})
-				 let talles = talle.map(element=>{
-					 return element.nombre
-				 })
-				 let bodyTalles = req.body.talles
-				 let ultimoproduct = productos.length - 1
-				let agragandoTalles = bodyTalles.forEach(elemento=>{
-					db.Talles.create({
-						nombre: elemento,
-						id_producto: productos[ultimoproduct].id + 1
-					})
-					.then(talle=>{
-						console.log(agragandoTalles)
-					})
-					.catch(error=>{
-
-					})
-				})
-				
-				
-				
-			 
+				})	
 		     
 	
 			}else{
