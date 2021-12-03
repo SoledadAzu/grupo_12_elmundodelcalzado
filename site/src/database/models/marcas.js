@@ -19,7 +19,6 @@ module.exports = (sequelize, DataTypes) => {
   Marcas.init({
     nombre: DataTypes.STRING
   }, {
-    timestamps: false,
     sequelize,
     modelName: 'Marcas',
   });

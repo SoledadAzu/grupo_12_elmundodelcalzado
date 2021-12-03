@@ -9,16 +9,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       nombre: {
-        type: Sequelize.VARCHAR(50)
+        type: Sequelize.STRING(50)
       },
       apellido: {
-        type: Sequelize.VARCHAR(50)
+        type: Sequelize.STRING(50)
       },
       email: {
-        type: Sequelize.VARCHAR(50)
+        type: Sequelize.STRING(50)
       },
       password: {
-        type: Sequelize.VARCHAR(100)
+        type: Sequelize.STRING(100)
       },
       id_categoria_usuario: {
         type: Sequelize.INTEGER,

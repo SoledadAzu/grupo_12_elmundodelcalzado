@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       nombre: {
-        type: Sequelize.VARCHAR(50)
+        type: Sequelize.STRING(50)
       },
       createdAt: {
         allowNull: false,
