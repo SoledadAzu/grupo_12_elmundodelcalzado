@@ -47,3 +47,23 @@ const controller ={
     
 }
 module.exports= controller;
+
+// product:(req,res)=>{
+//     let products = db.products.findAll({
+//         include : [
+//             colores,
+//             imagenes,
+//             detalles,
+//             talles
+//         ]
+//     })
+//     let adidas = db.Marcas.findAll({
+//         where: {
+//             id :  1
+//         },
+//         include : [
+//             {association:'Productos'},
+//         ]
+//     })
+//     Promise.all([adidas,puma,nike])
+//     .then(([adidas,puma,nike]) => {
