@@ -65,13 +65,14 @@
                 <section class="zapatillas">
                     <!-- lanzamiento -->
                     
-                        <% lanzamiento.map(e=>{%>
+                        <% producto.map(e=>{%>
                             
-                               
+                            <% if(e.Temporada.nombre === "Si"){ %> 
                                     <article class="zapatilla-img">
                                         <a href="/products/productDetail/<%=e.id %> ">
                                             <div>
-                                               
+                                                <img class="zapatilla-img1" src="/images/articulos/<%=e.Imagen[0].nombre%> "
+                                                alt="<%=e.Imagen.nombre  %> ">
                                                 
 
                                             </div>
@@ -89,7 +90,8 @@
                                         </a>
                                     </article>
                                     
-                                        <% }) %>
+                                        <% } %>
+                                 <% })%>
 
                                             <!-- lanzamiento -->
 
@@ -101,30 +103,31 @@
                 </section>
                 <section class="zapatillas">
                     <!-- zapatillas -->
-                    
-                        <% outlet.map(e=>{%>
+                
+                        <% producto.map(el=>{%>
                            
-                                
+                            <% if(el.Outlet.nombre === "Si"){ %> 
                                     <article class="zapatilla-img">
-                                        <a href="/products/productDetail/<%=e.id%> ">
+                                        <a href="/products/productDetail/<%=el.id%> ">
                                             <div>
-                                                
+                                                <img class="zapatilla-img1" src="/images/articulos/<%=el.Imagen[0].nombre%> "
+                                                alt="<%=el.Imagen.nombre  %> ">
                                             </div>
                                             <div class="ofertasZapatillaPrecio">
-                                                <h4>$<%=toThousand(e.precio) %>
+                                                <h4>$<%=toThousand(el.precio) %>
                                                 </h4>
                                                 <p>
-                                                    <%= e.Marca.nombre %>
+                                                    <%= el.Marca.nombre %>
                                                 </p>
                                                 <strong>
-                                                    <%= e.nombre%>
+                                                    <%= el.nombre%>
                                                 </strong>
                                             </div>
                                         </a>
                                     </article>
                                  
-                                        <% }) %>
-
+                                        <% } %>
+                                <% })%>
                                             <!-- zapatillas -->
                 </section>
                 <!--marcas-->

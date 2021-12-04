@@ -17,27 +17,29 @@
         <h1>TODOS LOS PRODUCTOS</h1>
         <br>
     <section class="mercaderia">
-    <%  productos.map(e=>{%>
- 
-       <article>
-        <a href="/products/productDetail/<%= e.id %>">
-           <div>
-               <img src="/images/articulos/<%= e.imgP %>" alt="zapatilla-img1">
-           </div>  
-           <div>
-            <strong>
-                <%= toThousand(e.price)%>
-            </strong>
-            <p>
-                <%=e.marca%>
-            </p>
-            <h4>
-                <%= e.title%>
-            </h4>
-           </div>
-        </a>   
-       </article>
-       <% }) %>
+        <%  producto.map(e=>{%>
+            
+       
+             <article>
+              <a href="/products/productDetail/<%= e.id %>">
+                 <div>
+                     <img src="/images/articulos/<%= e.Imagen[0].nombre %>" alt="e.Imagen.nombre">
+                 </div>  
+                 <div>
+                  <strong>
+                    <%= toThousand(e.precio)%>
+                  </strong>
+                  <p>
+                      <%=e.marca%>
+                  </p>
+                  <h4>
+                      <%= e.nombre%>
+                  </h4>
+                 </div>
+              </a>   
+             </article>
+             
+             <% }) %>
     </section>
 </main>
     <!-- MAIN -->

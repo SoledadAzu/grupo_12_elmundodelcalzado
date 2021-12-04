@@ -85,7 +85,7 @@
                   <form action="/user/update/<%= e.id %>?_method=PUT " method="POST" style="display: inline-flex">
                     <select name="rol" id="rol" class="form-input" style="width: 90px; font-size: 22px;">
                       <% categorias.forEach(categoria => {%>
-                        <option  value="<%= categoria.nombre %>" <% if (e.id_categoria_usuario == categoria.id){%><%= 'selected'  %><%}%>><%= categoria.nombre %> </option>
+                        <option  value="<%= categoria.nombre %>" <% if (e.categoriaId == categoria.id){%><%= 'selected'  %><%}%>><%= categoria.nombre %> </option>
 										  
                       <% }); %> 
 										  

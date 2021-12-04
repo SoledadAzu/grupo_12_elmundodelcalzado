@@ -2138,7 +2138,7 @@
       "asics2H.jpg"
     ],
     "marca": "asics",
-    "genero": "Unisex",
+    "genero": "hombre",
     "outlet": "false",
     "temporada": "true"
   },
@@ -2201,7 +2201,7 @@
       "topper2m.jpg"
     ],
     "marca": "topper",
-    "genero": "Unisex",
+    "genero": "hombre",
     "outlet": "false",
     "temporada": "true"
   },
@@ -2358,7 +2358,7 @@
     
     ],
     "marca": "fila",
-    "genero": "Mujer",
+    "genero": "mujer",
     "outlet": "false",
     "temporada": "true"
   },
@@ -2392,8 +2392,8 @@
       "new2H.jpg",
       "new3H.jpg"
     ],
-    "marca": "New Balance",
-    "genero": "Hombre",
+    "marca": "newbalance",
+    "genero": "hombre",
     "outlet": "false",
     "temporada": "true"
   }

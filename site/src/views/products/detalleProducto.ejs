@@ -121,32 +121,30 @@
                 <section class="ofertas">
                     <h3>Tambien puede interesarte estas ofertas</h3>
                     <section class="mercaderia">
-                        <% let contador=0 %>
-                            <% ofertas.map(e=>{ %>
-                                <% contador++ %>
-                                    <%if(contador <= 4){%>
-                                        <article >
-                                            <a href="/products/productDetail/<%= e.id %> ">
-                                                <div class="ofertas-zapatilla_img">
-                                                    <img src="/images/articulos/<%= e.imgP%>" alt="<%=e.title%>">
-                                                </div>
-
-                                                <div class="ofertas-zapatilla-precio">
-                                                    <strong>
-                                                        <%= toThousand(e.price)%>
-                                                    </strong>
-                                                    <p>
-                                                        <%=e.marca%>
-                                                    </p>
-                                                    <h4>
-                                                        <%= e.title%>
-                                                    </h4>
-
-                                                </div>
-                                            </a>
-                                        </article>
-                                        <%}%> 
-                                    <% }) %>
+                        <%  productos.map(e=>{%>
+                            <% if(e.Outlet.nombre =="Si"){ %> 
+                       
+                             <article>
+                              <a href="/products/productDetail/<%= e.id %>">
+                                 <div>
+                                     <img src="/images/articulos/<%= e.Imagen[0].nombre %>" alt="e.Imagen.nombre">
+                                 </div>  
+                                 <div class="ofertas-zapatilla-precio">
+                                  <strong>
+                                    <%= toThousand(e.precio)%>
+                                  </strong>
+                                  <p>
+                                      <%=e.marca%>
+                                  </p>
+                                  <h4>
+                                      <%= e.nombre%>
+                                  </h4>
+                                 </div>
+                              </a>   
+                             </article>
+                             <% } %> 
+                             <% }) %>
+                            
 
 
                     </section>

@@ -65,9 +65,9 @@ const controller={
         let id=req.params.id
         db.Productos.findByPk(id)
         .then(producto=>{
-            db.Imagenes_Productos.findAll({
+            db.Imagenes.findAll({
                 where:{
-                    id_producto:id
+                    productoId:id
                 }
             })
             .then(imagen=>{
@@ -75,15 +75,16 @@ const controller={
                 restoImagen=imagen.filter(e=>{
                     return e !== imagen[0]
                 })
+                
                 db.Colores.findAll({
                     where:{
-                        id_producto:id
+                        productoId:id
                     }
                 })
                 .then(color=>{
                     db.Talles.findAll({
                         where:{
-                            id_producto:id
+                            productoId:id
                         }
                     })
                     .then(talle=>{
@@ -91,19 +92,30 @@ const controller={
                         
                         db.Detalles.findAll({
                             where:{
-                                id_producto:id
+                                productoId:id
                             }
                         })
                         .then(detalle=>{
                             // res.send(detalle)
-                            res.render('products/detalleProducto',{
-                                idProduct:producto,
-                                imagen,colors:color,
-                                talles:talle,
-                                detalles:detalle,
-                                restoImagen,
-                                ofertas,
-                                toThousand})
+                            db.Productos.findAll({
+                                include:[{all:true}]
+                            })
+                            .then(otro=>{
+                                // res.send(producto)
+                                res.render('products/detalleProducto',{
+                                    productos:otro,
+                                    idProduct:producto,
+                                    imagen,colors:color,
+                                    talles:talle,
+                                    detalles:detalle,
+                                    restoImagen,
+                                    ofertas,
+                                    toThousand})
+                            })
+                            .catch(error=>{
+                                res.send(error)
+                            })
+                            
                         })
                         .catch(error=>{
                             res.send(error)
@@ -130,7 +142,18 @@ const controller={
     },
     // vista del carrito por ID
     carrito:(req,res)=>{
-        res.render('products/carritoDeCompras',{ofertas,oferta,toThousand})
+        db.Productos.findAll({
+            include:[{all:true}]
+        })
+        .then(productos=>{
+            // res.send(producto)
+            res.render('products/carritoDeCompras',{productos,ofertas,oferta,toThousand})
+        })
+        .catch(error=>{
+            res.send(error)
+        })
+        
+        
     },
     
     // vista del search y aplicacion del mismo
@@ -147,61 +170,195 @@ const controller={
 	},
     // vista de todos los productos
     mercaderia: (req,res)=>{
-        res.render("products/todosLosProductos", {productos,toThousand})
+        db.Productos.findAll({
+            include:[{all:true}]
+        })
+        .then(producto=>{
+            // res.send(producto)
+            res.render("products/todosLosProductos", {producto,toThousand})
+        })
+        .catch(error=>{
+            res.send(error)
+        })
         
         
     },
     // vista de todos los productos de hombre
     hombre: (req,res)=>{
-        res.render("products/hombre", {prodHombre,toThousand})    
+        db.Productos.findAll({
+            include:[{all:true}]
+        })
+        .then(producto=>{
+            // res.send(producto)
+            res.render("products/hombre", {producto,toThousand})
+        })
+        .catch(error=>{
+            res.send(error)
+        })
+            
     },
     // vista de todos los productos de mujer
     mujer: (req,res)=>{
-        res.render("products/mujer",{prodMujer,toThousand})
+        db.Productos.findAll({
+            include:[{all:true}]
+        })
+        .then(producto=>{
+            // res.send(producto)
+            res.render("products/mujer",{producto,toThousand})
+        })
+        .catch(error=>{
+            res.send(error)
+        })
+        
     },
     // vista de todos los productos de temporada
     temporada: (req,res)=>{
-        res.render("products/temporada",{prodTemporada,toThousand})
+        db.Productos.findAll({
+            include:[{all:true}]
+        })
+        .then(producto=>{
+            // res.send(producto)
+            res.render("products/temporada",{producto,toThousand})
+            
+        })
+        .catch(error=>{
+            res.send(error)
+        })
+        
     },
     // vista de todos los productos de outlet
     ofertas: (req,res)=>{
-        res.render("products/outlet",{ofertas,toThousand})
+        db.Productos.findAll({
+            include:[{all:true}]
+        })
+        .then(producto=>{
+            // res.send(producto)
+            res.render("products/outlet",{producto,toThousand})
+            
+        })
+        .catch(error=>{
+            res.send(error)
+        })
+        
     },
     // vista de todos los productos de adiddas
     adidas:(req,res)=>{
-        res.render("products/adidas", {prodAdidas,toThousand})    
+        db.Productos.findAll({
+            include:[{all:true}]
+        })
+        .then(producto=>{
+            // res.send(producto)
+            res.render("products/adidas", {producto,toThousand})
+        })
+        .catch(error=>{
+            res.send(error)
+        })
+          
     },
     // vista de todos los productos de adiddasOriginal
     adidasoriginal:(req,res)=>{
-        res.render("products/adidasoriginal", {prodAdidasOriginal,toThousand})    
+        db.Productos.findAll({
+            include:[{all:true}]
+        })
+        .then(producto=>{
+            // res.send(producto)
+            res.render("products/adidasoriginal", {producto,toThousand})
+        })
+        .catch(error=>{
+            res.send(error)
+        })      
     },
     // vista de todos los productos de nike
     nike:(req,res)=>{
-        res.render("products/nike", {prodNike,toThousand})    
+        db.Productos.findAll({
+            include:[{all:true}]
+        })
+        .then(producto=>{
+            // res.send(producto)
+            res.render("products/nike", {producto,toThousand})
+        })
+        .catch(error=>{
+            res.send(error)
+        })   
     },
     // vista de todos los productos de tooper
     topper:(req,res)=>{
-        res.render("products/topper", {prodTopper,toThousand})    
+        db.Productos.findAll({
+            include:[{all:true}]
+        })
+        .then(producto=>{
+            // res.send(producto)
+            res.render("products/topper", {producto,toThousand})
+        })
+        .catch(error=>{
+            res.send(error)
+        })   
     },
     // vista de todos los productos de puma
     puma:(req,res)=>{
-        res.render("products/puma", {prodPuma,toThousand})    
+        db.Productos.findAll({
+            include:[{all:true}]
+        })
+        .then(producto=>{
+            // res.send(producto)
+            res.render("products/puma", {producto,toThousand})
+        })
+        .catch(error=>{
+            res.send(error)
+        })  
     },
     // vista de todos los productos de asics
     asics:(req,res)=>{
-        res.render("products/asics", {prodAsics,toThousand})    
+        db.Productos.findAll({
+            include:[{all:true}]
+        })
+        .then(producto=>{
+            // res.send(producto)
+            res.render("products/asics", {producto,toThousand})
+        })
+        .catch(error=>{
+            res.send(error)
+        }) 
     },
     // vista de todos los productos de converse
     converse:(req,res)=>{
-        res.render("products/converse", {prodConverse,toThousand})    
+        db.Productos.findAll({
+            include:[{all:true}]
+        })
+        .then(producto=>{
+            // res.send(producto)
+            res.render("products/converse", {producto,toThousand})
+        })
+        .catch(error=>{
+            res.send(error)
+        }) 
+  
     },
     // vista de todos los productos de fila
     fila:(req,res)=>{
-        res.render("products/fila", {prodFila,toThousand})    
+        db.Productos.findAll({
+            include:[{all:true}]
+        })
+        .then(producto=>{
+            // res.send(producto)
+            res.render("products/fila", {producto,toThousand})
+        })
+        .catch(error=>{
+            res.send(error)
+        }) 
     },
     // vista de todos los productos de newBalance
     newbalance:(req,res)=>{
-        res.render("products/newbalance", {prodNewBalance,toThousand})    
+        db.Productos.findAll({
+            include:[{all:true}]
+        })
+        .then(producto=>{
+            // res.send(producto)
+            res.render("products/newbalance", {producto,toThousand})
+        })
+        .catch(error=>{
+            res.send(error)
+        })  
     },
 }
 module.exports=controller

@@ -4,7 +4,8 @@ const {validationResult} = require('express-validator')
 const bcrypt = require('bcryptjs');
 const usuariosFilePath =  path.join(__dirname, '../database/users.json')
 // let usuarios = JSON.parse(fs.readFileSync( path.join(__dirname, '../database/users.json'), 'utf-8'));
-const db = require("../database/models")
+const db = require("../database/models");
+const { usuarios } = require("./admin");
 
 
 const controller ={
@@ -53,6 +54,7 @@ const controller ={
                  include:[{association:"Categoria_Usuario"}]
             })
             .then(usuario=>{
+                // let passwordEncriptado=bcrypt.hashSync(req.body.password, 10)
                 // res.json(usuario)
                 if(bcrypt.compareSync(req.body.password,usuario.password)){
                             // se crea una session
@@ -62,7 +64,7 @@ const controller ={
                                 rol:usuario.Categoria_Usuario.nombre,
                                 id:usuario.id
                             } 
-                            
+                            console.log(req.session.usuarioLogueado)
                             // crea una cookie en el caso de que tilde la casilla RECORDAME
                             if(req.body.recordame !== undefined){
                                 res.cookie('rememberMe',req.session.usuarioLogueado,{maxAge: 60000})
@@ -141,7 +143,7 @@ const controller ={
                 apellido: req.body.apellido,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 10),
-                id_categoria_usuario: categoria[1].id,
+                categoriaId: categoria[1].id,
                 imagen: req.file ? req.file.filename: "default.jpg"
             })
             .then((Usuarios) => {
@@ -247,7 +249,7 @@ const controller ={
         
             db.Usuarios.update(
                 {
-                    id_categoria_usuario: req.body.rol === "user" ? 2 : 1        
+                    categoriaId: req.body.rol === "user" ? 2 : 1        
             },
                 {
                     where: {id: req.params.id}
@@ -269,6 +271,7 @@ const controller ={
     perfilEdit:(req,res)=>{
         db.Usuarios.findByPk(req.params.id)
         .then(usuario=>{
+            
             res.render('users/perfilUserEdit',{userPerfil:usuario})
         })
         .catch(error=>{
@@ -318,6 +321,7 @@ const controller ={
             {
                 nombre: req.body.nombre,
                 apellido: req.body.apellido,
+                email:req.body.email,
                 password: bcrypt.hashSync(req.body.password,10),
                 imagen: req.file ? req.file.filename: "default.jpg"
     },
@@ -332,7 +336,7 @@ const controller ={
                     res.cookie('rememberMe',"{ maxAge:-1}")
                     
                 }
-                return res.redirect('user/login')
+                return res.redirect('/')
             }else{
                 res.send("no se pudo hacer el cambio")
             }

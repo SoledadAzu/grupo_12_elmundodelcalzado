@@ -15,26 +15,28 @@
       <h1>PRODUCTOS DE MARCA: FILA</h1>
    
       <section class="mercaderia">
-        <%  prodFila.map(e=>{%>
+        <%  producto.map(e=>{%>
+          <% if(e.Marca.nombre =="Fila"){ %> 
      
            <article>
             <a href="/products/productDetail/<%= e.id %>">
                <div>
-                   <img src="/images/articulos/<%= e.imgP %>" alt="zapatilla-img1">
+                   <img src="/images/articulos/<%= e.Imagen[0].nombre %>" alt="e.Imagen.nombre">
                </div>  
                <div>
                 <strong>
-                  <%= toThousand(e.price)%>
+                  <%= toThousand(e.precio)%>
                 </strong>
                 <p>
                     <%=e.marca%>
                 </p>
                 <h4>
-                    <%= e.title%>
+                    <%= e.nombre%>
                 </h4>
                </div>
             </a>   
            </article>
+           <% } %> 
            <% }) %>
         </section>
     </main>
