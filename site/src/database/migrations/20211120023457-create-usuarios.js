@@ -22,6 +22,13 @@ module.exports = {
       },
       categoriaId: {
         type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: "Categoria_usuarios",
+          },
+          key: "id",
+        },
+        onDelete: "cascade",
         
       },
       imagen: {
