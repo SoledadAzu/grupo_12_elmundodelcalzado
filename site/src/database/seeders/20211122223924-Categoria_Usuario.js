@@ -1,12 +1,17 @@
 'use strict';
-const usuarios = require("../users.json")
 
-let rolArray = usuarios.map(roluser => {
-  let users = {
-    nombre: roluser.rol,    
-  } 
-  return users
-})
+let rolArray = [
+  {
+    nombre: 'Admin',
+    createdAt: new Date,
+    updatedAt: new Date 
+  },
+  {
+    nombre: 'User',
+    createdAt: new Date,
+    updatedAt: new Date 
+  }
+]
 module.exports = {
   up: async (queryInterface, Sequelize) => {
    

@@ -1,76 +1,73 @@
-'use strict';
+"use strict";
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('Productos', {
+    await queryInterface.createTable("Productos", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       nombre: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       precio: {
-        type: Sequelize.DECIMAL(10,2)
+        type: Sequelize.DECIMAL(10, 2),
       },
       descripcion: {
-        type: Sequelize.TEXT
+        type: Sequelize.TEXT,
       },
-      id_generos: {
+      generoId: {
         type: Sequelize.INTEGER,
-      references : {
-        model : {
-          tableName : "Generos"
-        },
-        key : "id"
-      },
-      onDelete : "cascade" 
-    },
-      id_marcas: {
-        type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName : "Marcas"
+        references: {
+          model: {
+            tableName: "Generos",
           },
-          key : "id"
+          key: "id",
         },
-        onDelete : "cascade" 
+        onDelete: "cascade",
       },
-      id_temporadas: {
+      marcaId: {
         type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName : "Temporadas"
+        references: {
+          model: {
+            tableName: "Marcas",
           },
-          key : "id"
+          key: "id",
         },
-        onDelete : "cascade" 
+        onDelete: "cascade",
       },
-      id_outlets: {
+      temporadaId: {
         type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName : "Outlets"
+        references: {
+          model: {
+            tableName: "Temporadas",
           },
-          key : "id"
+          key: "id",
         },
-        onDelete : "cascade" 
+        onDelete: "cascade",
       },
-      
-      
-      
+      outletId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: "Outlets",
+          },
+          key: "id",
+        },
+        onDelete: "cascade",
+      },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Productos');
-  }
+    await queryInterface.dropTable("Productos");
+  },
 };

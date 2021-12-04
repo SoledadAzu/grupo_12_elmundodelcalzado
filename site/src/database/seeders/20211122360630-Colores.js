@@ -1,12 +1,17 @@
 'use strict';
 const productos = require("../productos.json")
 
-let coloresArray = productos.map(product =>{
-  let color =  product.colors 
-  let mycolores = {
-    nombre: color.join(",")
-}
-  return mycolores
+let coloresArray = []
+let colores = productos.map((product,index) =>{
+  let color = product.colors.map(color => {
+    let colors = {
+      nombre: color,
+      productoId: index + 1,
+      createdAt: new Date,
+      updatedAt: new Date 
+    }
+    coloresArray.push(colors)
+  })
 })
 
 module.exports = {

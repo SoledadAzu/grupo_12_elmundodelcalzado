@@ -1,14 +1,17 @@
 'use strict';
 
-const temporadas = require("../productos.json")
-
-let temporadasArray = temporadas.map(product => {
-  let mytemporada = {
-    nombre: product.temporada,
-   
+let temporadasArray = [
+  {
+    nombre: 'Si',
+    createdAt: new Date,
+    updatedAt: new Date 
+  },
+  {
+    nombre: 'No',
+    createdAt: new Date,
+    updatedAt: new Date 
   }
-  return mytemporada
-})
+]
 module.exports = {
   up: async (queryInterface, Sequelize) => {
    

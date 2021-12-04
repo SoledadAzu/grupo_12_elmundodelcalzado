@@ -31,12 +31,10 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: "id_outlets",
           })
           
-           Productos.hasMany(models.Colores, { 
-      
+          Productos.hasMany(models.Colores, {
             as: "Color",
-            foreignKey: 'id_producto',
-        
-        })
+            foreignKey: "id_producto",
+          })
           Productos.hasMany(models.Detalles, { 
             as: "Detalle",
             foreignKey: 'id_producto',
@@ -55,13 +53,11 @@ module.exports = (sequelize, DataTypes) => {
     nombre: DataTypes.STRING,
     precio: DataTypes.INTEGER,
     descripcion: DataTypes.STRING,
-    id_generos: DataTypes.INTEGER,
-    id_marcas: DataTypes.INTEGER,
-    id_temporadas: DataTypes.INTEGER,
-    id_outlets: DataTypes.INTEGER,
-   
+    generoId: DataTypes.INTEGER,
+    marcaId: DataTypes.INTEGER,
+    temporadaId: DataTypes.INTEGER,
+    outletId: DataTypes.INTEGER,
   }, {
-    timestamps: false,
     sequelize,
     modelName: 'Productos',
   });

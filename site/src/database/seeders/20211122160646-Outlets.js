@@ -1,14 +1,18 @@
 'use strict';
 
-const outlets = require("../productos.json")
-
-let outletArray = outlets.map(productoutlet => {
-  let outlet = {
-    nombre: productoutlet.outlet,
-   
+let outletArray = [
+  {
+    nombre: 'Si',
+    createdAt: new Date,
+    updatedAt: new Date 
+  },
+  {
+    nombre: 'No',
+    createdAt: new Date,
+    updatedAt: new Date 
   }
-  return outlet
-})
+]
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
    
