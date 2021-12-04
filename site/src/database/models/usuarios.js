@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       
       Usuarios.belongsTo(models.Categoria_Usuarios, {
           as: "Categoria_Usuario",
-          foreignKey: "id_categoria_usuario",
+          foreignKey: "categoriaId",
       })
   
     };
@@ -25,10 +25,10 @@ module.exports = (sequelize, DataTypes) => {
     apellido: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
-    id_categoria_usuario: DataTypes.INTEGER,
+    categoriaId: DataTypes.INTEGER,
     imagen: DataTypes.STRING
   }, {
-    timestamps: false,
+    
     sequelize,
     modelName: 'Usuarios',
   });

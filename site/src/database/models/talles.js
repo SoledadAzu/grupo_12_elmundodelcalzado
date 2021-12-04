@@ -13,15 +13,14 @@ module.exports = (sequelize, DataTypes) => {
      
     Talles.belongsTo(models.Productos, {
       as: "Producto",
-      foreignKey: "id_producto",
+      foreignKey: "productoId",
     })
   }
   };
   Talles.init({
     nombre: DataTypes.STRING,
-    id_producto: DataTypes.INTEGER
+    productoId: DataTypes.INTEGER
   }, {
-    timestamps: false,
     sequelize,
     modelName: 'Talles',
   });

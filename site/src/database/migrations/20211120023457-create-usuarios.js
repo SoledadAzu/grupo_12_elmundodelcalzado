@@ -20,7 +20,7 @@ module.exports = {
       password: {
         type: Sequelize.STRING(100)
       },
-      id_categoria_usuario: {
+      categoriaId: {
         type: Sequelize.INTEGER,
         
       },

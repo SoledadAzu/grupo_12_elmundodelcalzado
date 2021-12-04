@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Categoria_Usuarios.hasMany(models.Usuarios, { 
         as: "Usuarios",
-        foreignKey: 'id_categoria_usuario',    
+        foreignKey: 'categoriaId',    
     })
   }
 }
@@ -20,7 +20,6 @@ module.exports = (sequelize, DataTypes) => {
   Categoria_Usuarios.init({
     nombre: DataTypes.STRING
   }, {
-    timestamps: false,
     sequelize,
     modelName: 'Categoria_Usuarios',
   });
