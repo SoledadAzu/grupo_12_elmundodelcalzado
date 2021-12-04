@@ -8,8 +8,10 @@ let usersArray = usersjson.map(user => {
     apellido: user.apellido,
     email: user.email,
     password: user.password, 
-    id_categoria_usuarios: user.rol === "admin" ? 1 : 2,
-    imagen: user.img 
+    categoriaId: user.rol === "admin" ? 1 : 2,
+    imagen: user.img,
+    createdAt: new Date,
+    updatedAt: new Date  
   }
   
   return usuario

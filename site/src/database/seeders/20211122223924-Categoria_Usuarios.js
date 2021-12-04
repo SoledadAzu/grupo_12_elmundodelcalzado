@@ -15,13 +15,13 @@ let rolArray = [
 module.exports = {
   up: async (queryInterface, Sequelize) => {
    
-      await queryInterface.bulkInsert('Categoria_Usuario', rolArray, {});
+      await queryInterface.bulkInsert('Categoria_Usuarios', rolArray, {});
     
   },
 
   down: async (queryInterface, Sequelize) => {
 
-    await queryInterface.bulkDelete('Categoria_Usuario', null, {});
+    await queryInterface.bulkDelete('Categoria_Usuarios', null, {});
 
   }
 };
