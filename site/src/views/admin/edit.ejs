@@ -14,7 +14,7 @@
           <div class="">
             <div class="">
               <h2 class="">Estás editando: <i>
-                  <%= idFind.title %>
+                  <%= idFind.nombre %>
                     </i></h2>
             </div>
           </div>
@@ -25,25 +25,25 @@
                 <div class="labelForm">
                   <label for="title" class="">Nombre del producto:</label>
                   <input type="text" id="title" name="title" placeholder="Ej: Zapatillas Reebok" class="form-input"
-                    value="<%= idFind.title %> ">
+                    value="<%= idFind.nombre %> ">
                 </div>
                 <div class="labelForm">
                   <label for="price" class="">Precio del producto:</label>
                   <input type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input"
-                    value="<%= toThousand(idFind.price) %>">
+                    value="<%= toThousand(idFind.precio) %>">
                 </div>
                 <section class="seccion">
                   <div class="labelForm width">
                     <label for="colors" class="">Colores:</label>
-                    <% colores.map(e=> {%>
-                      <input type="text" id="colors" name="colors" value="<%= e %>" class="form-input1">
+                    <% idFind.Color.map(e=> {%>
+                      <input type="text" id="colors" name="colors" value="<%= e.nombre %>" class="form-input1">
                       <%}) %>
 
                   </div>
                   <div class="labelForm width">
                     <label for="detalles" class="1">Detalles:</label>
-                    <% detalles.map(e=> {%>
-                      <input type="text" id="detalles" name="detalles" value="<%= e %>" class="form-input1">
+                    <% idFind.Detalle.map(e=> {%>
+                      <input type="text" id="detalles" name="detalles" value="<%= e.nombre %>" class="form-input1">
                       <%}) %>
 
 
@@ -55,43 +55,42 @@
                     <label for="genero" class="form-label" value="<%= idFind.genero %>">Genero</label>
                     <select name="genero" id="genero" class="form-input">
                       <option value="" hidden selected>Elegí</option>
-                      <option value="hombre" <%=idFind.genero==="hombre" ? "selected" : null %>>Hombre</option>
-                      <option value="mujer" <%=idFind.genero==="mujer" ? "selected" : null %>>Mujer</option>
+                      
+                      <option value="hombre" <%=idFind.Genero.nombre==="Hombre" ? "selected" : null %>>Hombre</option>
+                      <option value="mujer" <%=idFind.Genero.nombre==="Mujer" ? "selected" : null %>>Mujer</option>
                     </select>
                   </div>
                   <div>
-                    <label for="temporada" class="form-label" value="<%= idFind.temporada %>">Temporada</label>
+                    <label for="temporada" class="form-label" value="<%= idFind.Temporada.nombre %>">Temporada</label>
                     <select name="temporada" id="temporada" class="form-input">
                       <option value="" hidden selected>Elegí</option>
-                      <option value="true" <%=idFind.temporada==="true" ? "selected" : null %>>True</option>
-                      <option value="false" <%=idFind.temporada==="false" ? "selected" : null %>>False</option>
+                      <option value="Si" <%=idFind.Temporada.nombre==="Si" ? "selected" : null %>>Si</option>
+                      <option value="No" <%=idFind.Temporada.nombre==="No" ? "selected" : null %>>No</option>
 
                     </select>
                   </div>
                   <div>
-                    <label for="outlet" class="form-label" value="<%= idFind.outlet %>">Outlet</label>
+                    <label for="outlet" class="form-label" value="<%= idFind.Outlet.nombre %>">Outlet</label>
                     <select name="outlet" id="outlet" class="form-input">
                       <option value="" hidden selected>Elegí</option>
-                      <option value="true" <%=idFind.outlet==="true" ? "selected" : null %>>True</option>
-                      <option value="false" <%=idFind.outlet==="false" ? "selected" : null %>>False</option>
+                      <option value="Si" <%=idFind.Outlet.nombre==="Si" ? "selected" : null %>>Si</option>
+                      <option value="No" <%=idFind.Outlet.nombre==="No" ? "selected" : null %>>No</option>
 
                     </select>
                   </div>
                   <div>
-                    <label for="marca" class="form-label">Marca</label>
+                    <label for="marca" class="form-label" value="<%= idFind.Marca.nombre %>">Marca</label>
                     <select name="marca" id="marca" class="form-input">
                       <option value="" hidden selected>Marca</option>
-                      <option value="adidas" <%=idFind.marca==="adidas" ? "selected" : null %>>Adidas</option>
-                      <option value="nike" <%=idFind.marca==="nike" ? "selected" : null %>>Nike</option>
-                      <option value="asics" <%=idFind.marca==="asics" ? "selected" : null %>>Asics</option>
-                      <option value="fila" <%=idFind.marca==="fila" ? "selected" : null %>>Fila</option>
-                      <option value="topper" <%=idFind.marca==="topper" ? "selected" : null %>>Topper</option>
-                      <option value="converse" <%=idFind.marca==="converse" ? "selected" : null %>>Converse</option>
-                      <option value="newbalance" <%=idFind.marca==="newbalance" ? "selected" : null %>>New Balance
-                      </option>
-                      <option value="puma" <%=idFind.marca==="puma" ? "selected" : null %>>Puma</option>
-                      <option value="adidasoriginal" <%=idFind.marca==="adidasoriginal" ? "selected" : null %>>Adidas
-                        Original</option>
+                      <option value="adidas" <%=idFind.Marca.nombre==="Adidas" ? "selected" : null %>>Adidas</option>
+                      <option value="nike" <%=idFind.Marca.nombre==="Nike" ? "selected" : null %>>Nike</option>
+                      <option value="asics" <%=idFind.Marca.nombre==="Asics" ? "selected" : null %>>Asics</option>
+                      <option value="fila" <%=idFind.Marca.nombre==="Fila" ? "selected" : null %>>Fila</option>
+                      <option value="topper" <%=idFind.Marca.nombre==="Topper" ? "selected" : null %>>Topper</option>
+                      <option value="converse" <%=idFind.Marca.nombre==="Converse" ? "selected" : null %>>Converse</option>
+                      <option value="newbalance" <%=idFind.Marca.nombre==="New Balance" ? "selected" : null %>>New Balance</option>
+                      <option value="puma" <%=idFind.Marca.nombre==="Puma" ? "selected" : null %>>Puma</option>
+                      <option value="adidasoriginal" <%=idFind.Marca.nombre==="Adidas Original" ? "selected" : null %>>Adidas Original</option>
                     </select>
                   </div>
                 </div>
@@ -101,80 +100,80 @@
 
                     <div>
                       <label>
-                        <input type="checkbox" name="talles" id="35" value="35"<% editartalles.filter(element=> {%>
-                        <%= element==="35" ? 'checked' : null%>
+                        <input type="checkbox" name="talles" id="35" value="35"<% idFind.Talle.filter(element=> {%>
+                        <%= element.nombre==="35" ? 'checked' : null%>
                           <%})%>>
                             35
                       </label>
                     </div>
                     <div>
                       <label>
-                        <input type="checkbox" name="talles" id="36" value="36"<% editartalles.filter(element=> {%>
-                        <%= element==="36" ? 'checked' : null%>
+                        <input type="checkbox" name="talles" id="36" value="36"<% idFind.Talle.filter(element=> {%>
+                        <%= element.nombre==="36" ? 'checked' : null%>
                           <%})%>>
                             36
                       </label>
                     </div>
                     <div>
                       <label>
-                        <input type="checkbox" name="talles" id="37" value="37"<% editartalles.filter(element=> {%>
-                        <%= element==="37" ? 'checked' : null%>
+                        <input type="checkbox" name="talles" id="37" value="37"<% idFind.Talle.filter(element=> {%>
+                        <%= element.nombre==="37" ? 'checked' : null%>
                           <%})%>>
                             37
                       </label>
                     </div>
                     <div>
                       <label>
-                        <input type="checkbox" name="talles" id="38" value="38"<% editartalles.filter(element=> {%>
-                        <%= element==="38" ? 'checked' : null%>
+                        <input type="checkbox" name="talles" id="38" value="38"<% idFind.Talle.filter(element=> {%>
+                        <%= element.nombre==="38" ? 'checked' : null%>
                           <%})%>>
                             38
                       </label>
                     </div>
                     <div>
                       <label>
-                        <input type="checkbox" name="talles" id="39" value="39"<% editartalles.filter(element=> {%>
-                        <%= element==="39" ? 'checked' : null%>
+                        <input type="checkbox" name="talles" id="39" value="39"<% idFind.Talle.filter(element=> {%>
+                        <%= element.nombre==="39" ? 'checked' : null%>
                           <%})%>>
                             39
                       </label>
                     </div>
                     <div>
                       <label>
-                        <input type="checkbox" name="talles" id="40" value="40"<% editartalles.filter(element=> {%>
-                        <%= element==="40" ? 'checked' : null%>
+                        <input type="checkbox" name="talles" id="40" value="40"<% idFind.Talle.filter(element=> {%>
+                        <%= element.nombre==="40" ? 'checked' : null%>
                           <%})%>>
                             40
                       </label>
                     </div>
                     <div>
                       <label>
-                        <input type="checkbox" name="talles" id="41" value="41"<% editartalles.filter(element=> {%>
-                        <%= element==="41" ? 'checked' : null%>
+                        <input type="checkbox" name="talles" id="41" value="41"<% idFind.Talle.filter(element=> {%>
+                        <%= element.nombre==="41" ? 'checked' : null%>
                           <%})%>>
                             41
                       </label>
                     </div>
                     <div>
                       <label>
-                        <input type="checkbox" name="talles" id="42" value="42"<% editartalles.filter(element=> {%>
-                        <%= element==="42" ? 'checked' : null%>
+                        <input type="checkbox" name="talles" id="42" value="42"<% idFind.Talle.filter(element=> {%>
+                        <%= element.nombre==="42" ? 'checked' : null%>
                           <%})%>>
                             42
                       </label>
                     </div>
                     <div>
                       <label>
-                        <input type="checkbox" name="talles" id="43" value="43"<% editartalles.filter(element=> {%>
-                        <%= element==="43" ? 'checked' : null%>
+                        <input type="checkbox" name="talles" id="43" value="43"<% idFind.Talle.filter(element=> {%>
+                        <%= element.nombre==="43" ? 'checked' : null%>
                           <%})%>>
                             43
                       </label>
                     </div>
                     <div>
                       <label>
-                        <input type="checkbox" name="talles" id="44" value="44"<% editartalles.filter(element=> {%>
-                        <%= element==="44" ? 'checked' : null%>
+                        <input type="checkbox" name="talles" id="44" value="44"<% idFind.Talle.filter(element=> {%>
+                        <%= element.nombre==="44" ? 'checked' : null%>
                           <%})%>>
                             44
                       </label>
@@ -190,7 +189,7 @@
                 </div>
                 <div class="labelForm">
                   <label for="description" class="form-label" value="">Descripción:</label>
-                  <textarea name="description" id="description" class="form-input"><%= idFind.description %></textarea>
+                  <textarea name="description" id="description" class="form-input"><%= idFind.descripcion %></textarea>
                 </div>
                 <div class="">
                   <button class="btn btn-outline-success" type="submit">Editar Producto</button>

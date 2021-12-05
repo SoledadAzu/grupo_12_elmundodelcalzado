@@ -20,7 +20,6 @@ module.exports = (sequelize, DataTypes) => {
     nombre: DataTypes.STRING,
     productoId: DataTypes.INTEGER
   }, {
-    timestamps: false,
     sequelize,
     modelName: 'Detalles',
   });

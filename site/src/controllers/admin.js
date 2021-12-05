@@ -9,6 +9,7 @@ const db = require('../database/models');
 const productos = require('../database/models/productos');
 
 
+
 const controller={
 
 	// vista admin
@@ -69,66 +70,35 @@ const controller={
         
     },
 
-	// vista del producto admin y editar por ID
+	// vista del producto admin y editar por ID (VISTA)
     edit:(req,res)=>{
         let id = req.params.id
-		let idFind=products.find(e=>{
-			return e.id === +id
-			
+		db.Productos.findByPk(id,{
+			include:[{all:true}]
 		})
-		const detalles = idFind.detalles.map(e=>e)
-		const colores = idFind.colors.map(e=>e)
-		const editartalles = idFind.talles.map(e=> e)
+		.then(producto=>{
+	
+			res.render('admin/edit',{idFind:producto,toThousand})
+		})
+		.catch(error=>{
+			res.send(error)
+		})
+
+		// let idFind=products.find(e=>{
+		// 	return e.id === +id
+			
+		// })
+		// const detalles = idFind.detalles.map(e=>e)
+		// const colores = idFind.colors.map(e=>e)
+		// const editartalles = idFind.talles.map(e=> e)
 		
-        res.render('admin/edit',{idFind,toThousand,detalles,colores,editartalles})
+        // res.render('admin/edit',{idFind,toThousand,detalles,colores,editartalles})
 		
     },
     
-    // accion de crear el producto
-	/*store: (req, res) => {
-
-		const errors = validationResult(req)
-		
-		if(req.fileValidationError){
-
-			let img ={
-				param:"img",
-				msg:req.fileValidationError,
-			}
-            
-			errors.errors.push(img)
-        }
-		
-		if(errors.isEmpty()){
-			const formCreate = req.body
-			let img = []
-			req.files.forEach(imagen=>{
-				img.push(imagen.filename)
-
-			})
-			formCreate.imgP = img[0]
-			let remove = img.shift()
-			formCreate.img = img
-			
-			
-
-		formCreate.id = products.length + 1
-
-		products.push(formCreate);
-
-		fs.writeFileSync(productsFilePath,JSON.stringify(products,null,2))
-	
-		res.redirect('/admin')
-		}else{
-			res.render('admin/create',{
-				errors:errors.mapped(),
-				oldData:req.body
-			})
-		}
-		
-	},*/
     
-		store: (req, res) => {
+    // creacion de un producto en la parte ADMIN
+	store: (req, res) => {
 
 			const errors = validationResult(req)
 			
@@ -149,39 +119,57 @@ const controller={
 					img.push(imagen.filename)
 	
 				})
-				// formCreate.imgP = img[0]
-				// let remove = img.shift()
+				
 				formCreate.img = img
 				
 				
 	          //logica para que se comunique a la base de datos
-			  //create: function 
-				
-					// include:[{association:"Producto"}]
-							
-							
-			  db.Productos.create(
+			  //create: function
+			  		
+					let genero = db.Generos.findOne({
+						where:{
+							nombre:req.body.genero
+						}
+					});
+					let temporada = db.Temporadas.findOne({
+						where:{
+							nombre:req.body.temporada
+						}
+					});
+					let outlet = db.Outlets.findOne({
+						where:{
+							nombre:req.body.outlet
+						}
+					});
+					let marca =db.Marcas.findOne({
+						where:{
+							nombre:req.body.marca
+						}
+					});
+					Promise
+					.all([genero, temporada, outlet,marca])
+					.then(([generos, temporadas, outlets,marcas]) => {
+						db.Productos.create(
 
-					{
-						nombre: req.body.title,
-						precio: req.body.price,
-						descripcion: req.body.description,
-						id_generos: req.body.genero === "hombre" ? 1 : 2, 
-						id_marcas: 3,
-						id_temporadas:req.body.temporada === "0" ? 1 : 2,
-						id_outlets:req.body.outlet === "0" ? 1 : 2
-						//creando un producto
-					}
-				)
-			 
-			
-				.then(producto=>{
+							{
+								nombre: req.body.title,
+								precio: req.body.price,
+								descripcion: req.body.description,
+								generoId: generos.id, 
+								temporadaId:temporadas.id,
+								outletId:outlets.id,
+								marcaId:marcas.id,
+										
+									}
+								)
+					.then(producto=>{
+							
 					let productId=producto.id
 					let bodyTalles=req.body.talles
 					let tallesNuevos = bodyTalles.map(e=>{
 						db.Talles.create({
 							nombre: e,
-							id_producto:productId
+							productoId:productId
 						})
 						.then(talle=>{
 							console.log(talle)
@@ -190,13 +178,12 @@ const controller={
 							res.send(error)
 						})
 					})
-
-			// 		// //////////////////////////////////////
+			////////////////////////////////////////////////////////
 					let bodyColores= req.body.colors
 					let colores = bodyColores.forEach(e=>{
 						db.Colores.create({
 							nombre: e,
-							id_producto:productId
+							productoId:productId
 						})
 						.then(color=>{
 							console.log(color)
@@ -205,12 +192,12 @@ const controller={
 							res.send(error)
 						})
 					})
-			// 		// ///////////////////////////////////////
+			// // 		// ///////////////////////////////////////
 					let bodyDetalles= req.body.detalles
 					let detalles = bodyDetalles.forEach(e=>{
 						db.Detalles.create({
 							nombre: e,
-							id_producto:productId
+							productoId:productId
 						})
 						.then(detalle=>{
 							console.log(detalle)
@@ -219,13 +206,13 @@ const controller={
 							res.send(error)
 						})
 					})
-			// 		////////////////////////////////////////
+			// // 		////////////////////////////////////////
 					let bodyImg= req.body.img
 					
 					let imagenes = bodyImg.forEach(e=>{
-						db.Imagenes_Productos.create({
+						db.Imagenes.create({
 							nombre: e,
-							id_producto:productId
+							productoId:productId
 						})
 						.then(imagen=>{
 							console.log(imagen)
@@ -234,16 +221,16 @@ const controller={
 							res.send(error)
 						})
 					})
-					//////////////////////////////////////////
-
-
-				res.redirect('/admin')
+			// 		//////////////////////////////////////////
+						
+					res.redirect('/admin')	
+					})
 				})
 				.catch(error=>{
 					res.send(error)
-				})	
-		     
-	
+				})
+					
+					
 			}else{
 				res.render('admin/create',{
 					errors:errors.mapped(),
@@ -258,27 +245,102 @@ const controller={
 	//accion de buscar el producto y editarlo
 
 	update: function (req,res) {
-        let productos = req.params.id;
-        db.Productos
-        .update(
-            {
-				nombre: req.body.title,
-				precio: req.body.price,
-				descripcion: req.body.description,
-				id_generos: 1,
-				id_marcas: 1,
-				id_temporadas:1,
-				id_outlets:1,							            
-            },
-            {
-                where: {id: productos}
-            })
-        .then(editar=> {
-			res.json(editar)
-            /*return res.redirect('/admin')*/
-		})           
-        .catch(error => res.send(error))
-    },
+		let genero = db.Generos.findOne({
+			where:{
+				nombre:req.body.genero
+			}
+		});
+		let temporada = db.Temporadas.findOne({
+			where:{
+				nombre:req.body.temporada
+			}
+		});
+		let outlet = db.Outlets.findOne({
+			where:{
+				nombre:req.body.outlet
+			}
+		});
+		let marca =db.Marcas.findOne({
+			where:{
+				nombre:req.body.marca
+			}
+		});
+		Promise
+		.all([genero, temporada, outlet,marca])
+		.then(([generos, temporadas, outlets,marcas]) => {
+			
+			let id = +req.params.id;
+				db.Productos.update({
+					nombre:req.body.title,
+					precio:req.body.price,
+					descripcion:req.body.description,
+					generoId: generos.id, 
+					temporadaId:temporadas.id,
+					outletId:outlets.id,
+					marcaId:marcas.id,
+
+				},{
+					where:{id:id}
+				})
+		
+				.then(producto => {
+					db.Talles.findAll({
+						where:{
+							productoId:id
+						}
+					})
+					.then(talle=>{
+						let bodyTalle=req.body.talle
+						let edit = bodyTalle.forEach(e=>{
+							db.Talles.update({
+								nombre:e
+							},{
+								where:{productoId:id}
+							})
+							.then(tall=>{
+								res.json(tall)
+							})
+							.catch(error=>{
+								res.send(error)
+							})
+						})
+						
+					})
+					.catch(error=>{
+						res.send(error)
+					})
+					})
+				.catch(error=>{
+					res.send(error)
+				})
+			})
+				.catch(error=>{
+					res.send(error)
+				})
+
+        
+
+
+        // db.Productos
+        // .update(
+        //     {
+		// 		nombre: req.body.title,
+		// 		precio: req.body.price,
+		// 		descripcion: req.body.description,
+		// 		id_generos: 1,
+		// 		id_marcas: 1,
+		// 		id_temporadas:1,
+		// 		id_outlets:1,							            
+        //     },
+        //     {
+        //         where: {id: productos}
+        //     })
+        // .then(editar=> {
+		// 	res.json(editar)
+        //     /*return res.redirect('/admin')*/
+		// })           
+        // .catch(error => res.send(error))
+    
 
     /*update: (req, res) => {
 		const upDate = products.find(e=> e.id === +req.params.id)
@@ -300,7 +362,7 @@ const controller={
 			res.redirect('/admin')
 	},*/
 	
-
+	},
 
 	// accion de eliminar un producto encontrado por id
 	delete: function (req,res) {
