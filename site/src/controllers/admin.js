@@ -245,79 +245,83 @@ const controller={
 	//accion de buscar el producto y editarlo
 
 	update: function (req,res) {
-		let genero = db.Generos.findOne({
+		db.Productos.findOne({
 			where:{
-				nombre:req.body.genero
-			}
-		});
-		let temporada = db.Temporadas.findOne({
-			where:{
-				nombre:req.body.temporada
-			}
-		});
-		let outlet = db.Outlets.findOne({
-			where:{
-				nombre:req.body.outlet
-			}
-		});
-		let marca =db.Marcas.findOne({
-			where:{
-				nombre:req.body.marca
-			}
-		});
-		Promise
-		.all([genero, temporada, outlet,marca])
-		.then(([generos, temporadas, outlets,marcas]) => {
+				id:+req.params.id
+			},
+			include:[{association:"Talle"}]	
+		})
+		.then(producto=>{
+			res.send(producto)
+		})
+		.catch(error=>{
+			res.send(error)
+		})
+		// let genero = db.Generos.findOne({
+		// 	where:{
+		// 		nombre:req.body.genero
+		// 	}
+		// });
+		// let temporada = db.Temporadas.findOne({
+		// 	where:{
+		// 		nombre:req.body.temporada
+		// 	}
+		// });
+		// let outlet = db.Outlets.findOne({
+		// 	where:{
+		// 		nombre:req.body.outlet
+		// 	}
+		// });
+		// let marca =db.Marcas.findOne({
+		// 	where:{
+		// 		nombre:req.body.marca
+		// 	}
+		// });
+		// Promise
+		// .all([genero, temporada, outlet,marca])
+		// .then(([generos, temporadas, outlets,marcas]) => {
 			
-			let id = +req.params.id;
-				db.Productos.update({
-					nombre:req.body.title,
-					precio:req.body.price,
-					descripcion:req.body.description,
-					generoId: generos.id, 
-					temporadaId:temporadas.id,
-					outletId:outlets.id,
-					marcaId:marcas.id,
+		// 	let id = +req.params.id;
+		// 		db.Productos.update({
+		// 			nombre:req.body.title,
+		// 			precio:req.body.price,
+		// 			descripcion:req.body.description,
+		// 			generoId: generos.id, 
+		// 			temporadaId:temporadas.id,
+		// 			outletId:outlets.id,
+		// 			marcaId:marcas.id,
 
-				},{
-					where:{id:id}
-				})
+		// 		},{
+		// 			where:{id:id}
+		// 		})
 		
-				.then(producto => {
-					db.Talles.findAll({
-						where:{
-							productoId:id
-						}
-					})
-					.then(talle=>{
-						let bodyTalle=req.body.talle
-						let edit = bodyTalle.forEach(e=>{
-							db.Talles.update({
-								nombre:e
-							},{
-								where:{productoId:id}
-							})
-							.then(tall=>{
-								res.json(tall)
-							})
-							.catch(error=>{
-								res.send(error)
-							})
-						})
+		// 		.then(producto => {
+					
+					
+		// 			let edit = bodyTalle.forEach(e=>{
+		// 				db.Talles.update({
+		// 						nombre:e
+		// 					},{
+		// 						where:{productoId:73}
+		// 					})
+		// 					.then(tall=>{
+		// 						res.json(tall)
+		// 					})
+		// 					.catch(error=>{
+		// 						res.send(error)
+		// 					})
+		// 				})
 						
-					})
-					.catch(error=>{
-						res.send(error)
-					})
-					})
-				.catch(error=>{
-					res.send(error)
-				})
-			})
-				.catch(error=>{
-					res.send(error)
-				})
-
+					
+		// 			})
+		// 		.catch(error=>{
+		// 			res.send(error)
+		// 		})
+		// 	})
+		// 		.catch(error=>{
+		// 			res.send(error)
+		// 		})
+		/////////////////////////////////////////////////
         
 
 
@@ -365,30 +369,43 @@ const controller={
 	},
 
 	// accion de eliminar un producto encontrado por id
-	delete: function (req,res) {
-        let movieId = req.params.id;
-        Movies
-        .findByPk(movieId)
-        .then(Movie => {
-            return res.render(path.resolve(__dirname, '..', 'views',  'admin.js'), {Movie})})
-        .catch(error => res.send(error))
-    },
-	destroy: function (req,res) {
-        let movieId = req.params.id;
-        Movies
-        .destroy({where: {id: movieId}, force: true}) // force: true es para asegurar que se ejecute la acción
-        .then(()=>{
-            return res.redirect('/admin')})
-        .catch(error => res.send(error)) 
-    },
+	// delete: function (req,res) {
+    //     let productoId = req.params.id;
+    //     Movies
+    //     .findByPk(movieId)
+    //     .then(Movie => {
+    //         return res.render(path.resolve(__dirname, '..', 'views',  'admin.js'), {Movie})})
+    //     .catch(error => res.send(error))
+    // },
+
+	// destroy: function (req,res) {
+    //     let movieId = req.params.id;
+    //     Movies
+    //     .destroy({where: {id: movieId}, force: true}) // force: true es para asegurar que se ejecute la acción
+    //     .then(()=>{
+    //         return res.redirect('/admin')})
+    //     .catch(error => res.send(error)) 
+    // },
 
     
 
     deleteprod : (req, res) => {
-		products=products.filter(e=> e.id !== +req.params.id)
+		// products=products.filter(e=> e.id !== +req.params.id)
 
-		fs.writeFileSync(productsFilePath,JSON.stringify(products,null,2))
-		res.redirect('/admin')
+		// fs.writeFileSync(productsFilePath,JSON.stringify(products,null,2))
+		let productoId = req.params.id;
+        db.Productos.destroy(
+			{
+				where: {
+				id: productoId
+			}, 
+			force: true
+		}) // force: true es para asegurar que se ejecute la acción
+        .then(()=>{
+            return res.redirect('/admin')
+		})
+        .catch(error => res.send(error)) 
+		
 	},
 	
 

@@ -2105,7 +2105,6 @@
     "img": [
       "nikePortada.jpg",
       "nike1"
-   
     ],
     "marca": "nike",
     "genero": "mujer",
@@ -2260,7 +2259,6 @@
       "conversePortadaH.JPG",
       "converse1H.jpg",
       "converse2H.jpg"
-    
     ],
     "marca": "converse",
     "genero": "hombre",
@@ -2302,7 +2300,6 @@
   {
     "id": 67,
     "title": "ZAPATILLA FILA",
-
     "description": "El peso del calzado puede variar según el número solicitado. Los talles corresponden a numeración de Argentina.",
     "price": 7490,
     "detalles": [
@@ -2323,7 +2320,6 @@
     "img": [
       "filaPortadaH.jpg",
       "fila1H.jpg"
-     
     ],
     "marca": "fila",
     "genero": "hombre",
@@ -2333,7 +2329,6 @@
   {
     "id": 68,
     "title": "ZAPATILLA FILA",
-
     "description": "Calzado moderno de moda con suela robusta de EVA con capellada en materiales sinteticos de alta calidad y detalles en los pasacordones.",
     "price": 7590,
     "detalles": [
@@ -2355,7 +2350,6 @@
     "img": [
       "filaPortada.jpg",
       "fila1"
-    
     ],
     "marca": "fila",
     "genero": "mujer",
@@ -2365,7 +2359,6 @@
   {
     "id": 69,
     "title": "ZAPATILLAS NEW BALANCE",
-   
     "description": "Las zapatillas de mujer New Balance  estan hechas en una combinación atemporal de mesh y cuero descarne, disponible en colores clásicos y sútiles.No importa donde vayas, estas  zapatillas urbanas cuentan con tecnología ENCAP con una amortiguación suave de EVA en la entresuela que te brinda el soporte que necesitas",
     "price": 10049,
     "detalles": [
@@ -2397,5 +2390,4 @@
     "outlet": "false",
     "temporada": "true"
   }
-  
 ]
