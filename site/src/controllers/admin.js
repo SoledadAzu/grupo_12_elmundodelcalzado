@@ -245,82 +245,71 @@ const controller={
 	//accion de buscar el producto y editarlo
 
 	update: function (req,res) {
-		db.Productos.findOne({
-			where:{
-				id:+req.params.id
-			},
-			include:[{association:"Talle"}]	
-		})
-		.then(producto=>{
-			res.send(producto)
-		})
-		.catch(error=>{
-			res.send(error)
-		})
-		// let genero = db.Generos.findOne({
-		// 	where:{
-		// 		nombre:req.body.genero
-		// 	}
-		// });
-		// let temporada = db.Temporadas.findOne({
-		// 	where:{
-		// 		nombre:req.body.temporada
-		// 	}
-		// });
-		// let outlet = db.Outlets.findOne({
-		// 	where:{
-		// 		nombre:req.body.outlet
-		// 	}
-		// });
-		// let marca =db.Marcas.findOne({
-		// 	where:{
-		// 		nombre:req.body.marca
-		// 	}
-		// });
-		// Promise
-		// .all([genero, temporada, outlet,marca])
-		// .then(([generos, temporadas, outlets,marcas]) => {
-			
-		// 	let id = +req.params.id;
-		// 		db.Productos.update({
-		// 			nombre:req.body.title,
-		// 			precio:req.body.price,
-		// 			descripcion:req.body.description,
-		// 			generoId: generos.id, 
-		// 			temporadaId:temporadas.id,
-		// 			outletId:outlets.id,
-		// 			marcaId:marcas.id,
-
-		// 		},{
-		// 			where:{id:id}
-		// 		})
 		
-		// 		.then(producto => {
+		let genero = db.Generos.findOne({
+			where:{
+				nombre:req.body.genero
+			}
+		});
+		let temporada = db.Temporadas.findOne({
+			where:{
+				nombre:req.body.temporada
+			}
+		});
+		let outlet = db.Outlets.findOne({
+			where:{
+				nombre:req.body.outlet
+			}
+		});
+		let marca =db.Marcas.findOne({
+			where:{
+				nombre:req.body.marca
+			}
+		});
+		Promise
+		.all([genero, temporada, outlet,marca])
+		.then(([generos, temporadas, outlets,marcas]) => {
+			
+			let id = +req.params.id;
+				db.Productos.update({
+					nombre:req.body.title,
+					precio:req.body.price,
+					descripcion:req.body.description,
+					generoId: generos.id, 
+					temporadaId:temporadas.id,
+					outletId:outlets.id,
+					marcaId:marcas.id,
+
+				},{
+					where:{id:id}
+				})
+		
+				.then(producto => {
 					
 					
-		// 			let edit = bodyTalle.forEach(e=>{
-		// 				db.Talles.update({
-		// 						nombre:e
-		// 					},{
-		// 						where:{productoId:73}
-		// 					})
-		// 					.then(tall=>{
-		// 						res.json(tall)
-		// 					})
-		// 					.catch(error=>{
-		// 						res.send(error)
-		// 					})
-		// 				})
+					let edit = bodyTalle.forEach(e=>{
+						db.Talles.update({
+								nombre:e
+							},{
+								where:{productoId:producto.id}
+							})
+							.then(tall=>{
+								res.json(tall)
+							})
+							.catch(error=>{
+								res.send(error)
+							})
+						})
 						
 					
-		// 			})
-		// 		.catch(error=>{
-		// 			res.send(error)
-		// 		})
-		// 	})
-		// 		.catch(error=>{
-		// 			res.send(error)
-		// 		})
+					})
+				.catch(error=>{
+					res.send(error)
+				})
+			})
+				.catch(error=>{
+					res.send(error)
+				})
 		/////////////////////////////////////////////////
         
 
