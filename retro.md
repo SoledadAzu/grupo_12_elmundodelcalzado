@@ -16,3 +16,7 @@ Sprint 5
 Sprint 6
 
 ![sprint6](https://user-images.githubusercontent.com/66876634/140598095-2e719c7c-c142-4af9-a5b8-3bf61baa88b5.png)
+
+Sprint 7
+
+![sprint7](https://user-images.githubusercontent.com/66876634/144953204-310ef096-aa03-48b4-b553-67709e21ae9e.png)
