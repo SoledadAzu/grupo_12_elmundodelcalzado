@@ -19,33 +19,7 @@ const controller ={
         
         if(errors.isEmpty()){ // consulta si esta vacio de errores
 
-            // busco al usuario
-            // const userEncontrado= usuarios.find(element=>{
-            //     return element.email===req.body.email  
-            //     })
-
-            //    //consulta si se encontro y valido la contraseñas
-            //    if(userEncontrado && bcrypt.compareSync(req.body.password,userEncontrado.password) ){
-            //         // se crea una session
-            //         req.session.usuarioLogueado ={
-            //             email:userEncontrado.email,
-            //             nombre: userEncontrado.nombre,
-            //             rol:userEncontrado.rol,
-            //             id:userEncontrado.id
-            //         } 
-            //         // crea una cookie en el caso de que tilde la casilla RECORDAME
-            //         if(req.body.recordame != undefined){
-            //             res.cookie('rememberMe',req.session.usuarioLogueado,{maxAge: 60000})
-            //         }
-            //         res.redirect('/')
-                    
-            //     }else{
-            //         // en el caso de error de contraseña, se lo manda a la vista
-            //         let mensaje = "la contraseña es incorrecta"
-            //         res.render("users/login",{
-            //             mensaje:mensaje,
-            //             oldData:req.body})
-            //         }
+            
             db.Usuarios.findOne({
                 where:{
                     email:req.body.email  
@@ -54,8 +28,9 @@ const controller ={
                  include:[{association:"Categoria_Usuario"}]
             })
             .then(usuario=>{
-                // let passwordEncriptado=bcrypt.hashSync(req.body.password, 10)
-                // res.json(usuario)
+                if(usuario !== null){
+
+                
                 if(bcrypt.compareSync(req.body.password,usuario.password)){
                             // se crea una session
                             req.session.usuarioLogueado ={
@@ -64,20 +39,27 @@ const controller ={
                                 rol:usuario.Categoria_Usuario.nombre,
                                 id:usuario.id
                             } 
-                            console.log(req.session.usuarioLogueado)
+                            
                             // crea una cookie en el caso de que tilde la casilla RECORDAME
                             if(req.body.recordame !== undefined){
                                 res.cookie('rememberMe',req.session.usuarioLogueado,{maxAge: 60000})
                             }
                             res.redirect('/')
                             
-                }else{
+                    }else{
                             // en el caso de error de contraseña, se lo manda a la vista
                             let mensaje = "la contraseña es incorrecta"
                             res.render("users/login",{
                                 mensaje:mensaje,
                                 oldData:req.body})
                              }
+                }else{
+                    let mensajeUsuario = "el usuario no existe"
+                    res.render("users/login",{
+                        mensajeUsuario:mensajeUsuario,
+                        oldData:req.body})
+                        }
+                
             })
         
             .catch(error=>{

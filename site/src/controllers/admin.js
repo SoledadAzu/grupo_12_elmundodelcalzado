@@ -41,7 +41,7 @@ const controller={
 	cerrar:(req,res)=>{
 		if(req.session.usuarioLogueado || req.cookies.rememberMe){
 			req.session.destroy()	
-			res.cookie('rememberMe',"{ maxAge:-1}")
+			res.cookie('rememberMe',null,"{ maxAge:-1}")
 		}
 		res.redirect('/')
 		},
