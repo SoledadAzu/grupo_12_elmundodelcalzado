@@ -64,3 +64,11 @@ position:fixed;
 .container-talles div{
     width: 20%;
 }
+
+.divInput input:focus {
+    outline-color: #1e9ba3;
+  }
+  .divInput .error-text {
+    color: #ca3434;
+    visibility: hidden;
+  }
