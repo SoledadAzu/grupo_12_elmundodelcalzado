@@ -283,6 +283,8 @@ const controller={
 													
 													
 													bodyImagen=req.body.img
+													let nuevoImagen;
+													let restoImagen;
 													if(imagen.length === bodyImagen.length){
 														imagen.forEach((e,i)=>{
 															db.Imagenes.update({
@@ -299,7 +301,7 @@ const controller={
 														})
 														
 													}else if(imagen.length > bodyImagen){
-														let nuevoImagen=imagen.slice(0,bodyImagen.length)
+														nuevoImagen=imagen.slice(0,bodyImagen.length)
 														nuevoImagen.forEach((e,i)=>{
 															db.Imagenes.update({
 																nombre:bodyImagen[i]
@@ -313,7 +315,7 @@ const controller={
 															})
 															.catch(error=>res.send(error))
 														})
-														let restoImagen=imagen.slice(bodyImagen)
+														restoImagen=imagen.slice(bodyImagen.length)
 														restoImagen.forEach(e=>{
 															db.Imagenes.destroy({
 																where:{
@@ -323,7 +325,31 @@ const controller={
 														})
 														
 													}else{
-														
+														nuevoImagen=bodyImagen.slice(0,imagen.length)
+														imagen.forEach((e,i)=>{
+															db.Imagenes.update({
+																nombre:nuevoImagen[i]
+															},{
+																where:{
+																	id:e.id
+																}
+															})
+															.then(imagen=>{
+
+															})
+															.catch(error=>res.send(error))
+														})
+														restoImagen=bodyImagen.slice(imagen.length)
+														restoImagen.forEach(e=>{
+															db.Imagenes.create({
+																nombre:e,
+																productoId:73
+															})
+														})
+														.then(imagen=>{
+															res.send(imagen)
+														})
+														.catch(error=>res.send(error))
 													}
 													
 												})
