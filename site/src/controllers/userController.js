@@ -64,7 +64,7 @@ const controller ={
                                 rol:usuario.Categoria_Usuario.nombre,
                                 id:usuario.id
                             } 
-                            console.log(req.session.usuarioLogueado)
+                           // console.log(req.session.usuarioLogueado)
                             // crea una cookie en el caso de que tilde la casilla RECORDAME
                             if(req.body.recordame !== undefined){
                                 res.cookie('rememberMe',req.session.usuarioLogueado,{maxAge: 60000})
