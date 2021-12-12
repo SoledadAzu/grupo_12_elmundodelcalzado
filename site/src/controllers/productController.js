@@ -1,67 +1,22 @@
 const fs = require('fs');
 const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../database/productSeleccionado.json');
-
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
 const oferta = require('../database/productOferta.json')
 const productos = require('../database/productos.json')
 const db = require('../database/models');
+const { Op } = require("sequelize");
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const ofertas=productos.filter(e=>{
     return e.outlet=== "true"
 })
-const prodHombre=productos.filter(e=>{
-    return e.genero ==="hombre"
-})
 
-const prodMujer=productos.filter(e=>{
-    return e.genero ==="mujer"
-   
-})
-const prodTemporada=productos.filter(e=>{
-    return e.temporada ==="true"
-   
-})
-const prodAdidas=productos.filter(e=>{
-    return e.marca ==="adidas"
-})
-const prodAdidasOriginal=productos.filter(e=>{
-    return e.marca ==="adidasoriginal"
-})
-const prodNike=productos.filter(e=>{
-    return e.marca ==="nike"
-})
-const prodTopper=productos.filter(e=>{
-    return e.marca ==="topper"
-})
-const prodPuma=productos.filter(e=>{
-    return e.marca ==="puma"
-})
-const prodAsics=productos.filter(e=>{
-    return e.marca ==="asics"
-})
-const prodFila=productos.filter(e=>{
-    return e.marca ==="fila"
-})
-const prodConverse=productos.filter(e=>{
-    return e.marca ==="converse"
-})
-const prodNewBalance=productos.filter(e=>{
-    return e.marca ==="newbalance"
-})
 
 const controller={
 
     // vista del producto por ID en detalles de producto
     product:(req,res)=>{
-        // let id = req.params.id;
-        // let idProduct = productos.find(e=>{
-        //     return e.id === +id
-        // })
-        // res.render('products/detalleProducto',{idProduct,ofertas,toThousand})
+        
         let id=req.params.id
         db.Productos.findByPk(id)
         .then(producto=>{
@@ -158,15 +113,25 @@ const controller={
     
     // vista del search y aplicacion del mismo
     general: (req, res) => {
-		const search = req.query.keywords.trim()
-		if(search !==''){
-			const titulo = productos.filter(e=> e.title.toLowerCase().includes(search.toLowerCase()))
-			const marca = productos.filter(e=> e.marca.toLowerCase().includes(search.toLowerCase()))
-			const genero = productos.filter(e=> e.genero.toLowerCase().includes(search.toLowerCase()))
-            	res.render('products/productosSearch',{titulo,marca,genero,search,toThousand})
-		}else{
-			res.redirect('/')
-		}
+        const search = req.query.keywords.trim()
+        db.Productos.findAll({
+            where:{
+                nombre:{
+                    [Op.substring]:`%${search}%`
+                } //busca lo que llega en body en la base de datos
+            },
+            include:[{all:true}]
+        })
+        .then(producto=>{
+            // res.send(producto)
+            if(search !==''){
+            res.render('products/productosSearch',{producto,search,toThousand})
+        }else{
+            	res.redirect('/')
+            }    
+        })
+        .catch(error=>res.send(error))
+		
 	},
     // vista de todos los productos
     mercaderia: (req,res)=>{

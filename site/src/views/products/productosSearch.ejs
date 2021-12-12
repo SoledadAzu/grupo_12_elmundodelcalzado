@@ -15,22 +15,22 @@
     <main>
         <h1>TU BUSQUEDA ES :<%= search %> </h1>
     <section class="mercaderia">
-    <%  titulo.map(e=>{%>
+    <%  producto.map(e=>{%>
  
        <article class="zapatilla-img">
         <a href="/products/productDetail/<%= e.id %> ">
            <div>
-               <img src="/images/articulos/<%= e.imgP %> " alt="zapatilla-img1">
+               <img src="/images/articulos/<%= e.Imagen[0].nombre %> " alt="<%=e.Imagen[0].nombre%> ">
            </div>  
            <div class="ofertasZapatillaPrecio">
             <strong>
-                <%= toThousand(e.price)%>
+                <%= toThousand(e.precio)%>
             </strong>
             <p>
-                <%=e.marca%>
+                <%=e.Marca.nombre%>
             </p>
             <h4>
-                <%= e.title%>
+                <%= e.nombre%>
             </h4>
            </div>
         </a>   

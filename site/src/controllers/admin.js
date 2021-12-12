@@ -1,12 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-const productsFilePath =  path.join(__dirname, '../database/productos.json')
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const usuarios = JSON.parse(fs.readFileSync( path.join(__dirname, '../database/users.json'), 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-const {validationResult, body} = require('express-validator');
+const {validationResult} = require('express-validator');
 const db = require('../database/models');
-const productos = require('../database/models/productos');
 
 
 
@@ -418,31 +414,10 @@ const controller={
 	
 	},
 
-	// accion de eliminar un producto encontrado por id
-	// delete: function (req,res) {
-    //     let productoId = req.params.id;
-    //     Movies
-    //     .findByPk(movieId)
-    //     .then(Movie => {
-    //         return res.render(path.resolve(__dirname, '..', 'views',  'admin.js'), {Movie})})
-    //     .catch(error => res.send(error))
-    // },
-
-	// destroy: function (req,res) {
-    //     let movieId = req.params.id;
-    //     Movies
-    //     .destroy({where: {id: movieId}, force: true}) // force: true es para asegurar que se ejecute la acción
-    //     .then(()=>{
-    //         return res.redirect('/admin')})
-    //     .catch(error => res.send(error)) 
-    // },
-
-    
+	
 
     deleteprod : (req, res) => {
-		// products=products.filter(e=> e.id !== +req.params.id)
-
-		// fs.writeFileSync(productsFilePath,JSON.stringify(products,null,2))
+		
 		let productoId = req.params.id;
         db.Productos.destroy(
 			{
