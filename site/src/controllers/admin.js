@@ -220,186 +220,201 @@ const controller={
 	//accion de buscar el producto y editarlo
 
 	update: function (req,res) {
-			
-			// let id = +req.params.id;
-			// 	db.Productos.update({
-			// 		nombre:req.body.title,
-			// 		precio:+req.body.price,
-			// 		descripcion:req.body.description,
-			// 		generoId: +req.body.genero, 
-			// 		temporadaId:+req.body.temporada,
-			// 		outletId:+req.body.outlet,
-			// 		marcaId:+req.body.marca,
 
-			// 	},{
-			// 		where:{id:id}
-			// 	})
+			
+			let id = +req.params.id;
+				db.Productos.update({
+					nombre:req.body.title,
+					precio:+req.body.price,
+					descripcion:req.body.description,
+					generoId: +req.body.genero, 
+					temporadaId:+req.body.temporada,
+					outletId:+req.body.outlet,
+					marcaId:+req.body.marca,
+
+				},{
+					where:{id:id}
+				})
 		
-			// 	.then(producto => {
-			// 		db.Colores.findAll({
-			// 			where:{
-			// 				productoId:id
-			// 			}
-			// 		})
-			// 		.then(color=>{
-			// 			let bodyColor = req.body.colors
-			// 			color.forEach((e,i)=>{
-			// 				db.Colores.update(
-			// 					{
-			// 						nombre:bodyColor[i],
-			// 					},
-			// 					{
-			// 						where:{
-			// 							id:e.id
-			// 						}
-			// 					}
-			// 					)
-			// 					.then(color=>{
-			// 						db.Detalles.findAll({
-			// 							where:{
-			// 								productoId:id
-			// 							}
-			// 						})
-			// 						.then(detalle=>{
-			// 							bodyDetalles=req.body.detalles
-			// 							detalle.forEach((e,i)=>{
-			// 								db.Detalles.update(
-			// 									{
-			// 									   nombre:bodyDetalles[i]
-			// 									},
-			// 									{
-			// 										where:{
-			// 											id:e.id
-			// 										}
-			// 									}
-			// 								)
-			// 								.then(detalle=>{
-												db.Imagenes.findAll({
-													where:{
-														productoId:73
-													}
-												})
-												.then(imagen=>{
-													
-													
-													bodyImagen=req.body.img
-													let nuevoImagen;
-													let restoImagen;
-													if(imagen.length === bodyImagen.length){
-														imagen.forEach((e,i)=>{
-															db.Imagenes.update({
-																nombre:bodyImagen[i]
-															},{
-																where:{
-																	id:e.id
-																}
-															})
-															.then(imagen=>{
+				.then(producto => {
+				let colores = db.Colores.findAll({where:{productoId:id}});
+        		let detalles = db.Detalles.findAll({where:{productoId:id}});
+				let imagenes = db.Imagenes.findAll({where:{productoId:id}});
+				let talles =db.Talles.findAll({where:{productoId:id}});
+        		Promise
+        			.all([colores, detalles, imagenes,talles])
+        			.then(([color, detalle, imagen,talle]) => {
+						let bodyColor = req.body.colors
+						let otroColor=color.forEach((e,i)=>{
+							db.Colores.update(
+								{
+									nombre:bodyColor[i],
+								},
+								{
+									where:{
+										id:e.id
+									}
+								}
+								)
+								.then(()=>console.log())
+								.catch(error=>res.send(error))
+            			})
+					////////////////////////////////////////////////
+						let bodyDetalles=req.body.detalles
+						let otroDetalle=detalle.forEach((e,i)=>{
+							db.Detalles.update(
+								{
+									nombre:bodyDetalles[i]
+								},
+								{
+									where:{
+										id:e.id
+									}
+								}
+								)
+								.then(()=>console.log())
+								.catch(error=>res.send(error))
+							})
+					/////////////////////////////////////////////////
+							let bodyImagen=req.body.img
+							let nuevoImagen;
+							let restoImagen;
 
-															})
-															.catch(error=>res.send(error))
-														})
-														
-													}else if(imagen.length > bodyImagen){
-														nuevoImagen=imagen.slice(0,bodyImagen.length)
-														nuevoImagen.forEach((e,i)=>{
-															db.Imagenes.update({
-																nombre:bodyImagen[i]
-															},{
-																where:{
-																	id:e.id
-																}
-															})
-															.then(imagen=>{
-
-															})
-															.catch(error=>res.send(error))
-														})
-														restoImagen=imagen.slice(bodyImagen.length)
-														restoImagen.forEach(e=>{
-															db.Imagenes.destroy({
-																where:{
-																	id:e.id
-																}
-															})
-														})
-														
-													}else{
-														nuevoImagen=bodyImagen.slice(0,imagen.length)
-														imagen.forEach((e,i)=>{
-															db.Imagenes.update({
-																nombre:nuevoImagen[i]
-															},{
-																where:{
-																	id:e.id
-																}
-															})
-															.then(imagen=>{
-
-															})
-															.catch(error=>res.send(error))
-														})
-														restoImagen=bodyImagen.slice(imagen.length)
-														restoImagen.forEach(e=>{
-															db.Imagenes.create({
-																nombre:e,
-																productoId:73
-															})
-														})
-														.then(imagen=>{
-															res.send(imagen)
-														})
-														.catch(error=>res.send(error))
-													}
-													
-												})
-												.catch(error=> res.send(error))
-												// return res.redirect('/admin')
-											// })
-				// 							.catch(error=>{
-				// 								res.send(error)
-				// 							})
-				// 						})
-									 	
-				// 					})
-				// 					.catch(error=>{
-				// 						res.send(error)
-				// 					})
-									 
-				// 				})
-				// 				.catch(error=>{
-				// 					res.send(error)
-				// 				})
-				// 		})
-						
-				// 	})
-					
-			
-					
-				// })
+							if(imagen.length === bodyImagen.length){
+								let otraImagen=imagen.forEach((e,i)=>{
+									db.Imagenes.update({
+										nombre:bodyImagen[i]
+									},{
+										where:{
+											id:e.id
+										}
+									})
+									.then(()=>console.log())
+									.catch(error=>res.send(error))
+								})
+								
+							}else if(imagen.length > bodyImagen.length){
+								nuevoImagen=imagen.slice(0,bodyImagen.length)
+								let otraNueva=nuevoImagen.forEach((e,i)=>{
+									db.Imagenes.update({
+										nombre:bodyImagen[i]
+									},{
+										where:{
+											id:e.id
+										}
+									})
+									.then(()=>console.log())
+									.catch(error=>res.send(error))
+								})
+								restoImagen=imagen.slice(bodyImagen.length)
+								let otroResto=restoImagen.forEach(e=>{
+									db.Imagenes.destroy({
+										where:{
+											id:e.id
+										}
+									})
+									.then(()=>console.log())
+									.catch(error=>res.send(error))
+								})
+								
+							}else{
+								nuevoImagen=bodyImagen.slice(0,imagen.length)
+								let otraImagenes=imagen.forEach((e,i)=>{
+									db.Imagenes.update({
+										nombre:nuevoImagen[i]
+									},{
+										where:{
+											id:e.id
+										}
+									})
+									.then(()=>console.log())
+									.catch(error=>res.send(error))
+								})
+								restoImagen=bodyImagen.slice(imagen.length)
+								let otroRestos=restoImagen.forEach(e=>{
+									db.Imagenes.create({
+										nombre:e,
+										productoId:id
+									})
+									.then(()=>console.log())
+									.catch(error=>res.send(error))
+								})
+								
+							}
+					////////////////////////////////////////////////////
+							bodyTalle=req.body.talles
+							let nuevoTalle;
+							let restoTalle;
+							if(talle.length === bodyTalle.length){
+								let otroTalle=talle.forEach((e,i)=>{
+									db.Talles.update({
+										nombre:bodyTalle[i]
+									},{
+										where:{
+											id:e.id
+										}
+									})
+									.then(()=>console.log())
+									.catch(error=>res.send(error))
+								})
+								
+							}else if(talle.length > bodyTalle.length){
+								nuevoTalle=talle.slice(0,bodyTalle.length)
+								let otroNuevo=nuevoTalle.forEach((e,i)=>{
+									db.Talles.update({
+										nombre:bodyTalle[i]
+									},{
+										where:{
+											id:e.id
+										}
+									})
+									.then(()=>console.log())
+									.catch(error=>res.send(error))
+								})
+								restoTalle=talle.slice(bodyTalle.length)
+								let otroRestos=restoTalle.forEach(e=>{
+									db.Talles.destroy({
+										where:{
+											id:e.id
+										}
+									})
+									.then(()=>console.log())
+									.catch(error=>res.send(error))
+								})
+								
+							}else{
+								nuevoTalle=bodyTalle.slice(0,talle.length)
+								let otroTalles=talle.forEach((e,i)=>{
+									db.Talles.update({
+										nombre:nuevoTalle[i]
+									},{
+										where:{
+											id:e.id
+										}
+									})
+									.then(()=>console.log())
+									.catch(error=>res.send(error))
+								})
+								restoTalle=bodyTalle.slice(talle.length)
+								let otroResto=restoTalle.forEach(e=>{
+									db.talles.create({
+										nombre:e,
+										productoId:id
+									})
+									.then(()=>console.log())
+									.catch(error=>res.send(error))
+								})
+								
+							}
+							()=>console.log()
+					})
+					return res.redirect('/admin')
+				})		
 					.catch(error=>{
 						res.send(error)
 					})
 					
-    /*update: (req, res) => {
-		const upDate = products.find(e=> e.id === +req.params.id)
-	
-		if(upDate){
-			upDate.title = req.body.title
-			upDate.price = req.body.price
-			upDate.marca = req.body.marca
-			upDate.genero = req.body.genero
-			upDate.temporada = req.body.temporada
-			upDate.description = req.body.description
-			upDate.color = req.body.color
-			upDate.detalles = req.body.detalles
-			upDate.outlet = req.body.outlet
-			upDate.talles = req.body.talles
-		}
-			fs.writeFileSync(productsFilePath,JSON.stringify(products,null,2))
-			
-			res.redirect('/admin')
-	},*/
+    
 	
 	},
 
