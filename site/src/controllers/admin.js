@@ -126,39 +126,17 @@ const controller={
 	          //logica para que se comunique a la base de datos
 			  //create: function
 			  		
-					let genero = db.Generos.findOne({
-						where:{
-							nombre:req.body.genero
-						}
-					});
-					let temporada = db.Temporadas.findOne({
-						where:{
-							nombre:req.body.temporada
-						}
-					});
-					let outlet = db.Outlets.findOne({
-						where:{
-							nombre:req.body.outlet
-						}
-					});
-					let marca =db.Marcas.findOne({
-						where:{
-							nombre:req.body.marca
-						}
-					});
-					Promise
-					.all([genero, temporada, outlet,marca])
-					.then(([generos, temporadas, outlets,marcas]) => {
-						db.Productos.create(
+			
+					db.Productos.create(
 
 							{
-								nombre: req.body.title,
-								precio: req.body.price,
-								descripcion: req.body.description,
-								generoId: generos.id, 
-								temporadaId:temporadas.id,
-								outletId:outlets.id,
-								marcaId:marcas.id,
+								nombre: req.body.title.trim(),
+								precio: +req.body.price,
+								descripcion: req.body.description.trim(),
+								generoId: +req.body.genero, 
+								temporadaId:+req.body.temporada,
+								outletId:+req.body.outlet,
+								marcaId:+req.body.marca,
 										
 									}
 								)
@@ -225,11 +203,8 @@ const controller={
 						
 					res.redirect('/admin')	
 					})
-				})
-				.catch(error=>{
-					res.send(error)
-				})
-					
+					.catch(error=>res.send(error))
+				
 					
 			}else{
 				res.render('admin/create',{
@@ -245,96 +220,141 @@ const controller={
 	//accion de buscar el producto y editarlo
 
 	update: function (req,res) {
-		
-		let genero = db.Generos.findOne({
-			where:{
-				nombre:req.body.genero
-			}
-		});
-		let temporada = db.Temporadas.findOne({
-			where:{
-				nombre:req.body.temporada
-			}
-		});
-		let outlet = db.Outlets.findOne({
-			where:{
-				nombre:req.body.outlet
-			}
-		});
-		let marca =db.Marcas.findOne({
-			where:{
-				nombre:req.body.marca
-			}
-		});
-		Promise
-		.all([genero, temporada, outlet,marca])
-		.then(([generos, temporadas, outlets,marcas]) => {
 			
-			let id = +req.params.id;
-				db.Productos.update({
-					nombre:req.body.title,
-					precio:req.body.price,
-					descripcion:req.body.description,
-					generoId: generos.id, 
-					temporadaId:temporadas.id,
-					outletId:outlets.id,
-					marcaId:marcas.id,
+			// let id = +req.params.id;
+			// 	db.Productos.update({
+			// 		nombre:req.body.title,
+			// 		precio:+req.body.price,
+			// 		descripcion:req.body.description,
+			// 		generoId: +req.body.genero, 
+			// 		temporadaId:+req.body.temporada,
+			// 		outletId:+req.body.outlet,
+			// 		marcaId:+req.body.marca,
 
-				},{
-					where:{id:id}
-				})
+			// 	},{
+			// 		where:{id:id}
+			// 	})
 		
-				.then(producto => {
-					
-					
-					let edit = bodyTalle.forEach(e=>{
-						db.Talles.update({
-								nombre:e
-							},{
-								where:{productoId:producto.id}
-							})
-							.then(tall=>{
-								res.json(tall)
-							})
-							.catch(error=>{
-								res.send(error)
-							})
-						})
+			// 	.then(producto => {
+			// 		db.Colores.findAll({
+			// 			where:{
+			// 				productoId:id
+			// 			}
+			// 		})
+			// 		.then(color=>{
+			// 			let bodyColor = req.body.colors
+			// 			color.forEach((e,i)=>{
+			// 				db.Colores.update(
+			// 					{
+			// 						nombre:bodyColor[i],
+			// 					},
+			// 					{
+			// 						where:{
+			// 							id:e.id
+			// 						}
+			// 					}
+			// 					)
+			// 					.then(color=>{
+			// 						db.Detalles.findAll({
+			// 							where:{
+			// 								productoId:id
+			// 							}
+			// 						})
+			// 						.then(detalle=>{
+			// 							bodyDetalles=req.body.detalles
+			// 							detalle.forEach((e,i)=>{
+			// 								db.Detalles.update(
+			// 									{
+			// 									   nombre:bodyDetalles[i]
+			// 									},
+			// 									{
+			// 										where:{
+			// 											id:e.id
+			// 										}
+			// 									}
+			// 								)
+			// 								.then(detalle=>{
+												db.Imagenes.findAll({
+													where:{
+														productoId:73
+													}
+												})
+												.then(imagen=>{
+													
+													
+													bodyImagen=req.body.img
+													if(imagen.length === bodyImagen.length){
+														imagen.forEach((e,i)=>{
+															db.Imagenes.update({
+																nombre:bodyImagen[i]
+															},{
+																where:{
+																	id:e.id
+																}
+															})
+															.then(imagen=>{
+
+															})
+															.catch(error=>res.send(error))
+														})
+														
+													}else if(imagen.length > bodyImagen){
+														let nuevoImagen=imagen.slice(0,bodyImagen.length)
+														nuevoImagen.forEach((e,i)=>{
+															db.Imagenes.update({
+																nombre:bodyImagen[i]
+															},{
+																where:{
+																	id:e.id
+																}
+															})
+															.then(imagen=>{
+
+															})
+															.catch(error=>res.send(error))
+														})
+														let restoImagen=imagen.slice(bodyImagen)
+														restoImagen.forEach(e=>{
+															db.Imagenes.destroy({
+																where:{
+																	id:e.id
+																}
+															})
+														})
+														
+													}else{
+														
+													}
+													
+												})
+												.catch(error=> res.send(error))
+												// return res.redirect('/admin')
+											// })
+				// 							.catch(error=>{
+				// 								res.send(error)
+				// 							})
+				// 						})
+									 	
+				// 					})
+				// 					.catch(error=>{
+				// 						res.send(error)
+				// 					})
+									 
+				// 				})
+				// 				.catch(error=>{
+				// 					res.send(error)
+				// 				})
+				// 		})
 						
+				// 	})
 					
+			
+					
+				// })
+					.catch(error=>{
+						res.send(error)
 					})
-				.catch(error=>{
-					res.send(error)
-				})
-			})
-				.catch(error=>{
-					res.send(error)
-				})
-		/////////////////////////////////////////////////
-        
-
-
-        // db.Productos
-        // .update(
-        //     {
-		// 		nombre: req.body.title,
-		// 		precio: req.body.price,
-		// 		descripcion: req.body.description,
-		// 		id_generos: 1,
-		// 		id_marcas: 1,
-		// 		id_temporadas:1,
-		// 		id_outlets:1,							            
-        //     },
-        //     {
-        //         where: {id: productos}
-        //     })
-        // .then(editar=> {
-		// 	res.json(editar)
-        //     /*return res.redirect('/admin')*/
-		// })           
-        // .catch(error => res.send(error))
-    
-
+					
     /*update: (req, res) => {
 		const upDate = products.find(e=> e.id === +req.params.id)
 	

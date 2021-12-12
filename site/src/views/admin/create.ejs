@@ -71,7 +71,7 @@
 											<option value="" hidden selected>Elegí</option>
 											
 											<% generos.forEach(genero => {%>
-												<option  value="<%= genero.nombre %>"><%= genero.nombre %> </option>
+												<option  value="<%= genero.id %>"><%= genero.nombre %> </option>
 																  
 											  <% }); %> 
 										</select>
@@ -82,7 +82,7 @@
 										<option value="" hidden selected>Elegí</option>
 									
 										<% temporadas.forEach(temporada => {%>
-											<option  value="<%= temporada.nombre %>"><%= temporada.nombre %> </option>
+											<option  value="<%= temporada.id %>"><%= temporada.nombre %> </option>
 															  
 										  <% }); %> 
 									</select>
@@ -93,7 +93,7 @@
 										<option value="" hidden selected>Elegí</option>
 									
 										<% outlets.forEach(outlet=> {%>
-											<option  value="<%= outlet.nombre %>"><%= outlet.nombre %> </option>
+											<option  value="<%= outlet.id %>"><%= outlet.nombre %> </option>
 															  
 										  <% }); %> 
 									</select>
@@ -104,7 +104,7 @@
 										<option value="" hidden selected>Elegi</option>
 									
 										<% marcas.forEach(marca=> {%>
-											<option  value="<%= marca.nombre %>"><%= marca.nombre %> </option>
+											<option  value="<%= marca.id %>"><%= marca.nombre %> </option>
 															  
 										  <% }); %> 
 									</select>

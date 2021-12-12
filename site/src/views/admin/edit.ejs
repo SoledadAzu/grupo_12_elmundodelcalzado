@@ -29,21 +29,21 @@
                 </div>
                 <div class="labelForm">
                   <label for="price" class="">Precio del producto:</label>
-                  <input type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input"
-                    value="<%= toThousand(idFind.precio) %>">
+                  <input type="text" id="price" name="price" class="form-input"
+                    value="<%= idFind.precio %>">
                 </div>
                 <section class="seccion">
                   <div class="labelForm width">
                     <label for="colors" class="">Colores:</label>
                     <% idFind.Color.map(e=> {%>
-                      <input type="text" id="colors" name="colors" value="<%= e.nombre %>" class="form-input1">
+                      <input type="text" id="colors" name="colors" value="<%= e.nombre %>" class="form-input">
                       <%}) %>
 
                   </div>
                   <div class="labelForm width">
-                    <label for="detalles" class="1">Detalles:</label>
+                    <label for="detalles" class="">Detalles:</label>
                     <% idFind.Detalle.map(e=> {%>
-                      <input type="text" id="detalles" name="detalles" value="<%= e.nombre %>" class="form-input1">
+                      <input type="text" id="detalles" name="detalles" value="<%= e.nombre %>" class="form-input">
                       <%}) %>
 
 
@@ -54,18 +54,17 @@
                   <div>
                     <label for="genero" class="form-label" value="<%= idFind.genero %>">Genero</label>
                     <select name="genero" id="genero" class="form-input">
-                      <option value="" hidden selected>Elegí</option>
-                      
-                      <option value="hombre" <%=idFind.Genero.nombre==="Hombre" ? "selected" : null %>>Hombre</option>
-                      <option value="mujer" <%=idFind.Genero.nombre==="Mujer" ? "selected" : null %>>Mujer</option>
+                      <option value="" hidden selected>Elegí</option>                     
+                      <option value="2" <%=idFind.Genero.nombre==="Hombre" ? "selected" : null %>>Hombre</option>
+                      <option value="1" <%=idFind.Genero.nombre==="Mujer" ? "selected" : null %>>Mujer</option>
                     </select>
                   </div>
                   <div>
                     <label for="temporada" class="form-label" value="<%= idFind.Temporada.nombre %>">Temporada</label>
                     <select name="temporada" id="temporada" class="form-input">
                       <option value="" hidden selected>Elegí</option>
-                      <option value="Si" <%=idFind.Temporada.nombre==="Si" ? "selected" : null %>>Si</option>
-                      <option value="No" <%=idFind.Temporada.nombre==="No" ? "selected" : null %>>No</option>
+                      <option value="1" <%=idFind.Temporada.nombre==="Si" ? "selected" : null %>>Si</option>
+                      <option value="2" <%=idFind.Temporada.nombre==="No" ? "selected" : null %>>No</option>
 
                     </select>
                   </div>
@@ -73,8 +72,8 @@
                     <label for="outlet" class="form-label" value="<%= idFind.Outlet.nombre %>">Outlet</label>
                     <select name="outlet" id="outlet" class="form-input">
                       <option value="" hidden selected>Elegí</option>
-                      <option value="Si" <%=idFind.Outlet.nombre==="Si" ? "selected" : null %>>Si</option>
-                      <option value="No" <%=idFind.Outlet.nombre==="No" ? "selected" : null %>>No</option>
+                      <option value="1" <%=idFind.Outlet.nombre==="Si" ? "selected" : null %>>Si</option>
+                      <option value="2" <%=idFind.Outlet.nombre==="No" ? "selected" : null %>>No</option>
 
                     </select>
                   </div>
@@ -82,15 +81,15 @@
                     <label for="marca" class="form-label" value="<%= idFind.Marca.nombre %>">Marca</label>
                     <select name="marca" id="marca" class="form-input">
                       <option value="" hidden selected>Marca</option>
-                      <option value="adidas" <%=idFind.Marca.nombre==="Adidas" ? "selected" : null %>>Adidas</option>
-                      <option value="nike" <%=idFind.Marca.nombre==="Nike" ? "selected" : null %>>Nike</option>
-                      <option value="asics" <%=idFind.Marca.nombre==="Asics" ? "selected" : null %>>Asics</option>
-                      <option value="fila" <%=idFind.Marca.nombre==="Fila" ? "selected" : null %>>Fila</option>
-                      <option value="topper" <%=idFind.Marca.nombre==="Topper" ? "selected" : null %>>Topper</option>
-                      <option value="converse" <%=idFind.Marca.nombre==="Converse" ? "selected" : null %>>Converse</option>
-                      <option value="newbalance" <%=idFind.Marca.nombre==="New Balance" ? "selected" : null %>>New Balance</option>
-                      <option value="puma" <%=idFind.Marca.nombre==="Puma" ? "selected" : null %>>Puma</option>
-                      <option value="adidasoriginal" <%=idFind.Marca.nombre==="Adidas Original" ? "selected" : null %>>Adidas Original</option>
+                      <option value="1" <%=idFind.Marca.nombre==="Adidas" ? "selected" : null %>>Adidas</option>
+                      <option value="3" <%=idFind.Marca.nombre==="Nike" ? "selected" : null %>>Nike</option>
+                      <option value="5" <%=idFind.Marca.nombre==="Asics" ? "selected" : null %>>Asics</option>
+                      <option value="7" <%=idFind.Marca.nombre==="Fila" ? "selected" : null %>>Fila</option>
+                      <option value="8" <%=idFind.Marca.nombre==="Topper" ? "selected" : null %>>Topper</option>
+                      <option value="6" <%=idFind.Marca.nombre==="Converse" ? "selected" : null %>>Converse</option>
+                      <option value="9" <%=idFind.Marca.nombre==="New Balance" ? "selected" : null %>>New Balance</option>
+                      <option value="4" <%=idFind.Marca.nombre==="Puma" ? "selected" : null %>>Puma</option>
+                      <option value="2" <%=idFind.Marca.nombre==="Adidas Original" ? "selected" : null %>>Adidas Original</option>
                     </select>
                   </div>
                 </div>
@@ -182,6 +181,13 @@
 
 
 
+                  </div>
+                  <div class="labelForm">
+                    <label for="img" class="" >ingrese sus imagenes:</label>
+                    <input type="file" id="img" name="img"class="form-input" multiple>
+                    <% if(locals.errors && errors.img){ %>
+                      <p style="color:red"><%= errors.img.msg %> </p>
+                      <% } %> 
                   </div>
 
 
