@@ -17,46 +17,53 @@
 						</div>
 					</div>
 					<div class="contenedor-form">
-						<form action="/admin/create" enctype="multipart/form-data" method="POST">
+						<form id="formcreate" action="/admin/create" enctype="multipart/form-data" method="POST">
 							<div class="contenedorLabel">
 
-								<div class="labelForm">
+								<div class="labelForm" id= "inputbox">
 									<label for="title" class="">Nombre del producto:</label>
 									<input type="text" id="title" name="title" value="<%= locals.oldData && oldData.title ? oldData.title : null %>" class="form-input">
+									<p class="error-text">Ingrese nombre del Producto</p>
 										<% if(locals.errors && errors.title){ %>
 											<p style="color : red"><%= errors.title.msg %> </p>
 											<% } %> 
 								</div>
-								<div class="labelForm">
+								<div class="labelForm" id="inputbox">
 									<label for="price" class="">Precio del producto:</label>
-									<input type="text" id="price" name="price" value="<%= locals.oldData && oldData.price ? oldData.price : null %>" class="form-input">
-										<% if(locals.errors && errors.price){ %>
+									<input type="number" id="price" name="price" value="<%= locals.oldData && oldData.price ? oldData.price : null %>" class="form-input">
+									<p class= "error-text">Ingrese el PRECIO</p>	
+									<% if(locals.errors && errors.price){ %>
 											<p style="color : red"><%= errors.price.msg %> </p>
 											<% } %> 
 								</div>
-								<section class="seccion">
-								<div class="labelForm width">
-									<label for="colores" class="">colores:</label>
-									<input type="text" id="colores" name="colors" placeholder="Color Primario"
-										class="form-input1">
+								<section class="seccion" >
+								<div class="labelForm width" id="inputbox">	
+									<div><label for="colores" class="">Colores:</label>
+									    <input type="text" id="colores" name="colors" placeholder="Color Primario"
+		                                class="form-input1"></div>
+									<div><label for="colores" class=""></label>
 										<input type="text" id="colores" name="colors" placeholder="Color secundario"
-										class="form-input1">
+										class="form-input1"></div>
+									<div><label for="colores" class=""></label>
 										<input type="text" id="colores" name="colors" placeholder="Color terciario"
-										class="form-input1">
+										class="form-input1"></div>
+										<p class= "error-text">Debe ingresar COLORES</p>
 										<% if(locals.errors && errors.colors){ %>
 											<p style="color : red"><%= errors.colors.msg %> </p>
 											<% } %> 
 								</div>
-								<div class="labelForm width">
-									<label for="genero" class="l">Detalles:</label>
+								<div class="labelForm width"id="inputbox">
+									<label for="detalle" class="l">Detalles:</label>
 									<input type="text" id="detalle" name="detalles" placeholder="ingrese su detalle"
-										class="form-input1">
+										class="form-input1 ">
 									<input type="text" id="detalle" name="detalles" placeholder="Ingrese su detalle"
 										class="form-input1">
 									<input type="text" id="detalle" name="detalles" placeholder="Ingrese su detalle"
 										class="form-input1">
 									<input type="text" id="detalle" name="detalles" placeholder="Ingrese su detalle"
 										class="form-input1">
+										<p class="error-text">Debe ingresar DETALLES</p>
+
 										<% if(locals.errors && errors.detalles){ %>
 											<p style="color : red"><%= errors.detalles.msg %> </p>
 											<% } %> 
@@ -113,44 +120,44 @@
 								<div>
 									<label for="talles">Talles:</label>
 									<div class="container-talles">
-										<div>
-											<input type="checkbox" name="talles" id="35" value="35">
+										<div class="checkdiv">
+											<input class="checkinput" type="checkbox" name="talles" id="35" value="35">
 											<label for="35">35</label>
 										</div>
-										<div>
-											<input type="checkbox" name="talles" id="36" value="36">
+										<div class="checkdiv">
+											<input class="checkinput" type="checkbox" name="talles" id="36" value="36">
 											<label for="36">36</label>
 										</div>
-										<div>
-											<input type="checkbox" name="talles" id="37" value="37">
+										<div class="checkdiv">
+											<input class="checkinput" type="checkbox" name="talles" id="37" value="37">
 											<label for="37">37</label>
 										</div>
-										<div>
-											<input type="checkbox" name="talles" id="38" value="38">
+										<div class="checkdiv">
+											<input class="checkinput" type="checkbox" name="talles" id="38" value="38">
 											<label for="38">38</label>
 										</div>
-										<div>
-											<input type="checkbox" name="talles" id="39" value="39">
+										<div class="checkdiv">
+											<input class="checkinput" type="checkbox" name="talles" id="39" value="39">
 											<label for="39">39</label>
 										</div>
-										<div>
-											<input type="checkbox" name="talles" id="40" value="40">
+										<div class="checkdiv">
+											<input class="checkinput" type="checkbox" name="talles" id="40" value="40">
 											<label for="40">40</label>
 										</div>
-										<div>
-											<input type="checkbox" name="talles" id="41" value="41">
+										<div class="checkdiv">
+											<input class="checkinput" type="checkbox" name="talles" id="41" value="41">
 											<label for="41">41</label>
 										</div>
-										<div>
-											<input type="checkbox" name="talles" id="42" value="42">
+										<div class="checkdiv">
+											<input class="checkinput" type="checkbox" name="talles" id="42" value="42">
 											<label for="42">42</label>
 										</div>
-										<div>
-											<input type="checkbox" name="talles" id="43" value="43">
+										<div class="chewckdiv">
+											<input class="checkinput" type="checkbox" name="talles" id="43" value="43">
 											<label for="43">43</label>
 										</div>
-										<div>
-											<input type="checkbox" name="talles" id="44" value="44">
+										<div class="checkdiv">
+											<input class="checkinput" type="checkbox" name="talles" id="44" value="44">
 											<label for="44">44</label>
 										</div>
 										<% if(locals.errors && errors.talles){ %>
@@ -166,7 +173,7 @@
 										<p style="color:red"><%= errors.img.msg %> </p>
 										<% } %> 
 								</div>
-								<div class="labelForm">
+								<div class="labelForm inputbox">
 									<label for="description" class="form-label">Descripción:</label>
 									<textarea name="description" id="description" value="<%= locals.oldData && oldData.description ? oldData.description : null %>"class="form-input"></textarea>
 								</div>
@@ -175,7 +182,7 @@
 									<% } %> 
 							
 								<div class="">
-									<button class="btn btn-outline-success"type="submit">Guardar Producto</button>
+									<button class="btn btn-outline-success" id="submit-btn" type="submit" disabled>Guardar Producto</button>
 								</div>
 							</div>
 						</form>
@@ -189,6 +196,7 @@
 					integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
 					crossorigin="anonymous"></script>
 			</main>
+      <script src="/js/createvalidafront.js"></script>
 	</body>
 
 </html>

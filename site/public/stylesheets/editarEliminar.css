@@ -65,10 +65,27 @@ position:fixed;
     width: 20%;
 }
 
-.divInput input:focus {
+#inputbox input:focus {
     outline-color: #1e9ba3;
   }
-  .divInput .error-text {
+#inputbox .error-text {
     color: #ca3434;
-    visibility: hidden;
+    visibility: hidden; 
+
+}.form button:disabled {
+    background: #82a0a2;
+    border: 4px solid #82a0a2;
+    color: lightgray;
   }
+  #inputbox.form-error input {
+    border: 4px solid red;
+    background: rgba(255, 19, 53, 0.25);
+  }
+  #inputbox.form-error .error-text {
+    visibility: visible;
+  } 
+  #inputbox.form-success input {
+    border: 4px solid #1e9ba3;
+    background: rgba(0, 255, 53, 0.25) ;
+  }
+  
