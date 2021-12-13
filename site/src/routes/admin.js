@@ -20,7 +20,7 @@ router.get("/usuarios",permisoMiddleware,usuarios)
 //crud de producto en admin
 router.get('/create',permisoMiddleware,create);
 router.post('/create',permisoMiddleware,imgUpload.array('img'),validadorCreate,store);
-router.put('/edit/:id',permisoMiddleware,update);
+router.put('/edit/:id',permisoMiddleware,imgUpload.array('img'),validadorCreate,update);
 router.delete('/eliminar/:id',permisoMiddleware,deleteprod) 
 
 module.exports = router

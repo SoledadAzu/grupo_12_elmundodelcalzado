@@ -19,18 +19,20 @@
             </div>
           </div>
           <div class="contenedor-form">
-            <form action="/admin/edit/<%= idFind.id %>?_method=PUT " method="POST">
+            <form action="/admin/edit/<%= idFind.id %>?_method=PUT " enctype="multipart/form-data" method="POST">
               <div class="contenedorLabel">
 
                 <div class="labelForm">
                   <label for="title" class="">Nombre del producto:</label>
                   <input type="text" id="title" name="title" placeholder="Ej: Zapatillas Reebok" class="form-input"
                     value="<%= idFind.nombre %> ">
+                    
                 </div>
                 <div class="labelForm">
                   <label for="price" class="">Precio del producto:</label>
                   <input type="text" id="price" name="price" class="form-input"
                     value="<%= idFind.precio %>">
+                    
                 </div>
                 <section class="seccion">
                   <div class="labelForm width">
@@ -38,6 +40,7 @@
                     <% idFind.Color.map(e=> {%>
                       <input type="text" id="colors" name="colors" value="<%= e.nombre %>" class="form-input">
                       <%}) %>
+                      
 
                   </div>
                   <div class="labelForm width">
@@ -45,8 +48,7 @@
                     <% idFind.Detalle.map(e=> {%>
                       <input type="text" id="detalles" name="detalles" value="<%= e.nombre %>" class="form-input">
                       <%}) %>
-
-
+                      
                   </div>
                 </section>
 
@@ -177,7 +179,7 @@
                             44
                       </label>
                     </div>
-
+                    
 
 
 
@@ -187,7 +189,7 @@
                     <input type="file" id="img" name="img"class="form-input" multiple>
                     <% if(locals.errors && errors.img){ %>
                       <p style="color:red"><%= errors.img.msg %> </p>
-                      <% } %> 
+                      <% }%>
                   </div>
 
 
@@ -197,6 +199,7 @@
                   <label for="description" class="form-label" value="">Descripción:</label>
                   <textarea name="description" id="description" class="form-input"><%= idFind.descripcion %></textarea>
                 </div>
+                
                 <div class="">
                   <button class="btn btn-outline-success" type="submit">Editar Producto</button>
                 </div>

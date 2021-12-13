@@ -79,16 +79,6 @@ const controller={
 		.catch(error=>{
 			res.send(error)
 		})
-
-		// let idFind=products.find(e=>{
-		// 	return e.id === +id
-			
-		// })
-		// const detalles = idFind.detalles.map(e=>e)
-		// const colores = idFind.colors.map(e=>e)
-		// const editartalles = idFind.talles.map(e=> e)
-		
-        // res.render('admin/edit',{idFind,toThousand,detalles,colores,editartalles})
 		
     },
     
@@ -217,12 +207,34 @@ const controller={
 
 	update: function (req,res) {
 
+			const errors = validationResult(req)
 			
+			if(req.fileValidationError){
+	
+				let img ={
+					param:"img",
+					msg:req.fileValidationError,
+				}
+				
+				errors.errors.push(img)
+			}
+				
+				
+				if(errors.isEmpty()){
+					const formCreate = req.body
+					let img = []
+					req.files.forEach(imagen=>{
+					img.push(imagen.filename)
+	
+					})
+					formCreate.img = img
+					
+
 			let id = +req.params.id;
 				db.Productos.update({
-					nombre:req.body.title,
+					nombre:req.body.title.trim(),
 					precio:+req.body.price,
-					descripcion:req.body.description,
+					descripcion:req.body.description.trim(),
 					generoId: +req.body.genero, 
 					temporadaId:+req.body.temporada,
 					outletId:+req.body.outlet,
@@ -409,13 +421,33 @@ const controller={
 					.catch(error=>{
 						res.send(error)
 					})
+				
+			}else{
+				let id = req.params.id
+				db.Productos.findByPk(id,{
+					include:[{all:true}]
+				})
+				.then(producto=>{
+					res.render('admin/edit',{
+						errors:errors.mapped(),
+						idFind:producto
+					})
+				})
+				.catch(error=>{
+					res.send(error)
+				})
+				
+			}
+		
+
+		
 					
     
 	
 	},
 
 	
-
+	// borrar el producto por ID
     deleteprod : (req, res) => {
 		
 		let productoId = req.params.id;

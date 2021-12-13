@@ -2,16 +2,17 @@ const fs = require("fs")
 const path = require("path")
 const {validationResult} = require('express-validator')
 const bcrypt = require('bcryptjs');
-const usuariosFilePath =  path.join(__dirname, '../database/users.json')
-// let usuarios = JSON.parse(fs.readFileSync( path.join(__dirname, '../database/users.json'), 'utf-8'));
+
 const db = require("../database/models");
-const { usuarios } = require("./admin");
+
 
 
 const controller ={
+    // vista del login de usuario
     login:(req,res)=>{
         res.render('users/login')
     },
+    // accion de encontrar al usuario logueado
     upload:(req, res) =>{
       
         const errors = validationResult(req)
@@ -74,15 +75,13 @@ const controller ={
     })
     }    
 },
-
+    // vista de registro
     register:(req,res)=>{
         res.render('users/registro')
     },
-
+    // accion de registrar al usuario por primera vez
     uploadRegister:(req, res)=>{
-        // const ruta =path.join(__dirname,"..", "database","users.json")
-        // const usuariosRegistrados =fs.readFileSync(ruta,"utf-8")
-        // let usuarios
+        
         const errors = validationResult(req)
        
         if(req.fileValidationError){
@@ -97,26 +96,6 @@ const controller ={
         
         if(errors.isEmpty()){
 
-            // if(usuariosRegistrados ===""){
-            //     usuarios = []
-            // }else{
-            //     usuarios = JSON.parse(usuariosRegistrados)
-            
-            
-       
-    //     usuario.id=usuarios.length + 1,
-    //  const usuario={
-    
-    //         id:req.body.id,
-    //         nombre:req.body.nombre,
-    //         apellido:req.body.apellido,
-    //         email:req.body.email,
-    //         password: bcrypt.hashSync(req.body.password,10),
-    //         img: req.file ? req.file.filename : 'default.jpg',
-    //         rol:"user"
-    //     }
-    //      usuarios.push(usuario)
-    //      fs.writeFileSync(ruta, JSON.stringify(usuarios, null,4))
         db.Categoria_Usuarios.findAll()
         .then(categoria=>{
            
@@ -155,6 +134,7 @@ const controller ={
         })
     }
 },
+    // vista principal del perfil del usuario
     perfiluser:(req,res)=>{
         // userPerfil=usuarios.find(e=> e.id === +req.params.id)
         db.Usuarios.findByPk(req.params.id)
@@ -250,6 +230,7 @@ const controller ={
      
       
 },
+// vista del perfil elegido
     perfilEdit:(req,res)=>{
         db.Usuarios.findByPk(req.params.id)
         .then(usuario=>{
@@ -259,10 +240,9 @@ const controller ={
         .catch(error=>{
             res.send(error)
         })
-    //     userPerfil=usuarios.find(e=> e.id === +req.params.id)
-        
-    // res.render('users/perfilUserEdit',{userPerfil})
+  
 },
+// edicion del perfil
     editePerfil:(req,res)=>{
        
         const errors = validationResult(req)
@@ -280,24 +260,7 @@ const controller ={
        
          
         if(errors.isEmpty()){
-            
-          
-        // const upDateUser = usuarios.find(e=> e.id === +req.params.id)
-	
-		// if(upDateUser){
-			
-        //     upDateUser.nombre=req.body.nombre,
-        //     upDateUser.apellido=req.body.apellido,
-        //     upDateUser.email=req.body.email,
-        //     upDateUser.password=bcrypt.hashSync(req.body.password,10),
-        //     upDateUser.img=req.file ? req.file.filename 
-        //         : upDateUser.img ? upDateUser.img 
-        //         : null
-      	
-        // }
-
-        // fs.writeFileSync(usuariosFilePath,JSON.stringify(usuarios,null,2))
-
+       
         let userId = req.params.id;
         db.Usuarios.update(
             {
