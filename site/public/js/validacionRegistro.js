@@ -4,17 +4,24 @@ function qs (element){
 window.addEventListener("load", function(){
     let $inputName = qs("#nombre")
     let $nameErrors = qs("#nombreErrors")
-//     inputLastname = qs ("#apellido"),
-//     $lastnameErrors =qs("#lastnameErrors"),
-//     $email = qs("#email"),
+   let inputLastname = qs ("#apellido")
+//    $lastnameErrors =qs("#lastnameErrors"),
+   let $email = qs("#email")
 //     $emailErrors = qs("#emailErrors"),
-//     $pass = qp("#password"),
+   let $pass = qs("#password")
 //     $pass = qp("#passErrors"),
-//     $terms = qp("#terminos"),
+    let $terms = qs("#terminos")
    
-// [regExAlpha = /[a-zA-Z\sñáéíóú]*$/,
+//  [regExAlpha = /[a-zA-Z\sñáéíóú]*$/,
 // regExEmail = /[-\w.%+]{1,64}@(?:[A-ZO-9-]{1,63}\_){1,125},
 // regExPass = /(?=,*\d)(?=,*[a-z])(?=.*[A-Z]).{6,12}$/;
 
-console.log($inputName)
+// console.log($inputName)
+// console.log(inputLastname)
+// console.log($email)
+// console.log($pass)
+// console.log($terms) 
+$inputName.addEventListener("keypress",e =>{
+    console.log(e.key)
+})
 })
