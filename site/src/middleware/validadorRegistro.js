@@ -12,3 +12,9 @@ const validatorRegister=[
         
 ]
 module.exports = validatorRegister
+
+/*formulario de usuario*/
+
+
+
+

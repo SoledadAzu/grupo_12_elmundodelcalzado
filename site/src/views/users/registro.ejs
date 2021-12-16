@@ -24,7 +24,7 @@
                 <label class=name_label for="nombre">Nombre<strong class="obligatorio">*</strong></label>
                 <input type="text" name="nombre" id="nombre" placeholder="Nombre" value="<%= locals.oldData && oldData.nombre ? oldData.nombre : null %>">
                 <% if(locals.errors && errors.nombre){ %>
-                    <p style="color : red"><%= errors.nombre.msg %> </p>
+                    <p style="color : red" id="nombreErrors"><%= errors.nombre.msg %> </p>
                     <% } %> 
             </div>
             <div class="apellido">
@@ -80,6 +80,7 @@
         <!-- FOOTER -->
           <%- include('../partials/footer') %> 
         <!-- FOOTER -->
-
+<script src="/js/validacionRegistro.js"></script>
     </body>
+
 </html>
