@@ -169,13 +169,21 @@ main .mercaderia {
 main .mercaderia article div {
   text-align: center;
 }
+/* agregando estilo zoom de cuadro de imagenes */
 main .mercaderia article {
   width: 45%;
   border: 1px solid var(--gris);
   margin: 5px;
   margin-bottom: 20px;
   box-shadow: 10px 5px 5px var(--gris-oscuro);
-}main .mercaderia article div strong{
+  transition: all 300ms;
+  position: relative;
+}
+main .mercaderia article:hover{
+  transform: scale(1.10);
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++ */
+main .mercaderia article div strong{
   font-size: 22px;
   color: var(--azul-claro)
 }
