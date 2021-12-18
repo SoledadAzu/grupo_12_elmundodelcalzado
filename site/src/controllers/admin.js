@@ -1,12 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-const productsFilePath =  path.join(__dirname, '../database/productos.json')
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const usuarios = JSON.parse(fs.readFileSync( path.join(__dirname, '../database/users.json'), 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-const {validationResult, body} = require('express-validator');
+const {validationResult} = require('express-validator');
 const db = require('../database/models');
-const productos = require('../database/models/productos');
 
 
 
@@ -45,7 +41,7 @@ const controller={
 	cerrar:(req,res)=>{
 		if(req.session.usuarioLogueado || req.cookies.rememberMe){
 			req.session.destroy()	
-			res.cookie('rememberMe',"{ maxAge:-1}")
+			res.cookie('rememberMe',null,"{ maxAge:-1}")
 		}
 		res.redirect('/')
 		},
@@ -83,16 +79,6 @@ const controller={
 		.catch(error=>{
 			res.send(error)
 		})
-
-		// let idFind=products.find(e=>{
-		// 	return e.id === +id
-			
-		// })
-		// const detalles = idFind.detalles.map(e=>e)
-		// const colores = idFind.colors.map(e=>e)
-		// const editartalles = idFind.talles.map(e=> e)
-		
-        // res.render('admin/edit',{idFind,toThousand,detalles,colores,editartalles})
 		
     },
     
@@ -220,188 +206,250 @@ const controller={
 	//accion de buscar el producto y editarlo
 
 	update: function (req,res) {
-			
-			// let id = +req.params.id;
-			// 	db.Productos.update({
-			// 		nombre:req.body.title,
-			// 		precio:+req.body.price,
-			// 		descripcion:req.body.description,
-			// 		generoId: +req.body.genero, 
-			// 		temporadaId:+req.body.temporada,
-			// 		outletId:+req.body.outlet,
-			// 		marcaId:+req.body.marca,
 
-			// 	},{
-			// 		where:{id:id}
-			// 	})
+			const errors = validationResult(req)
+			
+			if(req.fileValidationError){
+	
+				let img ={
+					param:"img",
+					msg:req.fileValidationError,
+				}
+				
+				errors.errors.push(img)
+			}
+				
+				
+				if(errors.isEmpty()){
+					const formCreate = req.body
+					let img = []
+					req.files.forEach(imagen=>{
+					img.push(imagen.filename)
+	
+					})
+					formCreate.img = img
+					
+
+			let id = +req.params.id;
+				db.Productos.update({
+					nombre:req.body.title.trim(),
+					precio:+req.body.price,
+					descripcion:req.body.description.trim(),
+					generoId: +req.body.genero, 
+					temporadaId:+req.body.temporada,
+					outletId:+req.body.outlet,
+					marcaId:+req.body.marca,
+
+				},{
+					where:{id:id}
+				})
 		
-			// 	.then(producto => {
-			// 		db.Colores.findAll({
-			// 			where:{
-			// 				productoId:id
-			// 			}
-			// 		})
-			// 		.then(color=>{
-			// 			let bodyColor = req.body.colors
-			// 			color.forEach((e,i)=>{
-			// 				db.Colores.update(
-			// 					{
-			// 						nombre:bodyColor[i],
-			// 					},
-			// 					{
-			// 						where:{
-			// 							id:e.id
-			// 						}
-			// 					}
-			// 					)
-			// 					.then(color=>{
-			// 						db.Detalles.findAll({
-			// 							where:{
-			// 								productoId:id
-			// 							}
-			// 						})
-			// 						.then(detalle=>{
-			// 							bodyDetalles=req.body.detalles
-			// 							detalle.forEach((e,i)=>{
-			// 								db.Detalles.update(
-			// 									{
-			// 									   nombre:bodyDetalles[i]
-			// 									},
-			// 									{
-			// 										where:{
-			// 											id:e.id
-			// 										}
-			// 									}
-			// 								)
-			// 								.then(detalle=>{
-												db.Imagenes.findAll({
-													where:{
-														productoId:73
-													}
-												})
-												.then(imagen=>{
-													
-													
-													bodyImagen=req.body.img
-													if(imagen.length === bodyImagen.length){
-														imagen.forEach((e,i)=>{
-															db.Imagenes.update({
-																nombre:bodyImagen[i]
-															},{
-																where:{
-																	id:e.id
-																}
-															})
-															.then(imagen=>{
+				.then(producto => {
+				let colores = db.Colores.findAll({where:{productoId:id}});
+        		let detalles = db.Detalles.findAll({where:{productoId:id}});
+				let imagenes = db.Imagenes.findAll({where:{productoId:id}});
+				let talles =db.Talles.findAll({where:{productoId:id}});
+        		Promise
+        			.all([colores, detalles, imagenes,talles])
+        			.then(([color, detalle, imagen,talle]) => {
+						let bodyColor = req.body.colors
+						let otroColor=color.forEach((e,i)=>{
+							db.Colores.update(
+								{
+									nombre:bodyColor[i],
+								},
+								{
+									where:{
+										id:e.id
+									}
+								}
+								)
+								.then(()=>console.log())
+								.catch(error=>res.send(error))
+            			})
+					////////////////////////////////////////////////
+						let bodyDetalles=req.body.detalles
+						let otroDetalle=detalle.forEach((e,i)=>{
+							db.Detalles.update(
+								{
+									nombre:bodyDetalles[i]
+								},
+								{
+									where:{
+										id:e.id
+									}
+								}
+								)
+								.then(()=>console.log())
+								.catch(error=>res.send(error))
+							})
+					/////////////////////////////////////////////////
+							let bodyImagen=req.body.img
+							let nuevoImagen;
+							let restoImagen;
 
-															})
-															.catch(error=>res.send(error))
-														})
-														
-													}else if(imagen.length > bodyImagen){
-														let nuevoImagen=imagen.slice(0,bodyImagen.length)
-														nuevoImagen.forEach((e,i)=>{
-															db.Imagenes.update({
-																nombre:bodyImagen[i]
-															},{
-																where:{
-																	id:e.id
-																}
-															})
-															.then(imagen=>{
-
-															})
-															.catch(error=>res.send(error))
-														})
-														let restoImagen=imagen.slice(bodyImagen)
-														restoImagen.forEach(e=>{
-															db.Imagenes.destroy({
-																where:{
-																	id:e.id
-																}
-															})
-														})
-														
-													}else{
-														
-													}
-													
-												})
-												.catch(error=> res.send(error))
-												// return res.redirect('/admin')
-											// })
-				// 							.catch(error=>{
-				// 								res.send(error)
-				// 							})
-				// 						})
-									 	
-				// 					})
-				// 					.catch(error=>{
-				// 						res.send(error)
-				// 					})
-									 
-				// 				})
-				// 				.catch(error=>{
-				// 					res.send(error)
-				// 				})
-				// 		})
-						
-				// 	})
-					
-			
-					
-				// })
+							if(imagen.length === bodyImagen.length){
+								let otraImagen=imagen.forEach((e,i)=>{
+									db.Imagenes.update({
+										nombre:bodyImagen[i]
+									},{
+										where:{
+											id:e.id
+										}
+									})
+									.then(()=>console.log())
+									.catch(error=>res.send(error))
+								})
+								
+							}else if(imagen.length > bodyImagen.length){
+								nuevoImagen=imagen.slice(0,bodyImagen.length)
+								let otraNueva=nuevoImagen.forEach((e,i)=>{
+									db.Imagenes.update({
+										nombre:bodyImagen[i]
+									},{
+										where:{
+											id:e.id
+										}
+									})
+									.then(()=>console.log())
+									.catch(error=>res.send(error))
+								})
+								restoImagen=imagen.slice(bodyImagen.length)
+								let otroResto=restoImagen.forEach(e=>{
+									db.Imagenes.destroy({
+										where:{
+											id:e.id
+										}
+									})
+									.then(()=>console.log())
+									.catch(error=>res.send(error))
+								})
+								
+							}else{
+								nuevoImagen=bodyImagen.slice(0,imagen.length)
+								let otraImagenes=imagen.forEach((e,i)=>{
+									db.Imagenes.update({
+										nombre:nuevoImagen[i]
+									},{
+										where:{
+											id:e.id
+										}
+									})
+									.then(()=>console.log())
+									.catch(error=>res.send(error))
+								})
+								restoImagen=bodyImagen.slice(imagen.length)
+								let otroRestos=restoImagen.forEach(e=>{
+									db.Imagenes.create({
+										nombre:e,
+										productoId:id
+									})
+									.then(()=>console.log())
+									.catch(error=>res.send(error))
+								})
+								
+							}
+					////////////////////////////////////////////////////
+							bodyTalle=req.body.talles
+							let nuevoTalle;
+							let restoTalle;
+							if(talle.length === bodyTalle.length){
+								let otroTalle=talle.forEach((e,i)=>{
+									db.Talles.update({
+										nombre:bodyTalle[i]
+									},{
+										where:{
+											id:e.id
+										}
+									})
+									.then(()=>console.log())
+									.catch(error=>res.send(error))
+								})
+								
+							}else if(talle.length > bodyTalle.length){
+								nuevoTalle=talle.slice(0,bodyTalle.length)
+								let otroNuevo=nuevoTalle.forEach((e,i)=>{
+									db.Talles.update({
+										nombre:bodyTalle[i]
+									},{
+										where:{
+											id:e.id
+										}
+									})
+									.then(()=>console.log())
+									.catch(error=>res.send(error))
+								})
+								restoTalle=talle.slice(bodyTalle.length)
+								let otroRestos=restoTalle.forEach(e=>{
+									db.Talles.destroy({
+										where:{
+											id:e.id
+										}
+									})
+									.then(()=>console.log())
+									.catch(error=>res.send(error))
+								})
+								
+							}else{
+								nuevoTalle=bodyTalle.slice(0,talle.length)
+								let otroTalles=talle.forEach((e,i)=>{
+									db.Talles.update({
+										nombre:nuevoTalle[i]
+									},{
+										where:{
+											id:e.id
+										}
+									})
+									.then(()=>console.log())
+									.catch(error=>res.send(error))
+								})
+								restoTalle=bodyTalle.slice(talle.length)
+								let otroResto=restoTalle.forEach(e=>{
+									db.talles.create({
+										nombre:e,
+										productoId:id
+									})
+									.then(()=>console.log())
+									.catch(error=>res.send(error))
+								})
+								
+							}
+							()=>console.log()
+					})
+					return res.redirect('/admin')
+				})		
 					.catch(error=>{
 						res.send(error)
 					})
+				
+			}else{
+				let id = req.params.id
+				db.Productos.findByPk(id,{
+					include:[{all:true}]
+				})
+				.then(producto=>{
+					res.render('admin/edit',{
+						errors:errors.mapped(),
+						idFind:producto
+					})
+				})
+				.catch(error=>{
+					res.send(error)
+				})
+				
+			}
+		
+
+		
 					
-    /*update: (req, res) => {
-		const upDate = products.find(e=> e.id === +req.params.id)
-	
-		if(upDate){
-			upDate.title = req.body.title
-			upDate.price = req.body.price
-			upDate.marca = req.body.marca
-			upDate.genero = req.body.genero
-			upDate.temporada = req.body.temporada
-			upDate.description = req.body.description
-			upDate.color = req.body.color
-			upDate.detalles = req.body.detalles
-			upDate.outlet = req.body.outlet
-			upDate.talles = req.body.talles
-		}
-			fs.writeFileSync(productsFilePath,JSON.stringify(products,null,2))
-			
-			res.redirect('/admin')
-	},*/
+    
 	
 	},
 
-	// accion de eliminar un producto encontrado por id
-	// delete: function (req,res) {
-    //     let productoId = req.params.id;
-    //     Movies
-    //     .findByPk(movieId)
-    //     .then(Movie => {
-    //         return res.render(path.resolve(__dirname, '..', 'views',  'admin.js'), {Movie})})
-    //     .catch(error => res.send(error))
-    // },
-
-	// destroy: function (req,res) {
-    //     let movieId = req.params.id;
-    //     Movies
-    //     .destroy({where: {id: movieId}, force: true}) // force: true es para asegurar que se ejecute la acción
-    //     .then(()=>{
-    //         return res.redirect('/admin')})
-    //     .catch(error => res.send(error)) 
-    // },
-
-    
-
+	
+	// borrar el producto por ID
     deleteprod : (req, res) => {
-		// products=products.filter(e=> e.id !== +req.params.id)
-
-		// fs.writeFileSync(productsFilePath,JSON.stringify(products,null,2))
+		
 		let productoId = req.params.id;
         db.Productos.destroy(
 			{

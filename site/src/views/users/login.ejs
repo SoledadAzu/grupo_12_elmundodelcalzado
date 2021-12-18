@@ -27,7 +27,9 @@
                                     <input type="email" name="email" id="email" placeholder="Email" value="<%= locals.oldData && oldData.email ? oldData.email : null %> ">
                                     <% if(locals.errors && errors.email){ %>
                                         <p style="color: red;"><%= errors.email.msg %> </p>
-                                        <% } %> 
+                                        <% }else if(locals.mensajeUsuario){ %>
+                                            <p style="color: red;"><%= locals.mensajeUsuario %> </p>
+                                            <%}%> 
                                 </div>
                     
                                 <div class="password">
