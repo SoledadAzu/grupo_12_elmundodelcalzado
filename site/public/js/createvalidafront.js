@@ -1,8 +1,20 @@
+(function() {
+  
 
-let form = document.getElementById("formcreate");
-let submitbutton = document.getElementById("submit-btn");
+ var form = document.getElementById("formcreate");
+     elementos = form.elements;
+     submitbutton = document.getElementById("submit-btn");
+     boxInput = inputbox.querySelectorAll("input");
 
-let timeout = null
+   var validarinput = function () {
+    if (form.nput.value ==='') {
+      showError(true,box,boxInput);
+    } else {
+      showError(false,box,boxInput);
+    }
+   }
+
+/* let timeout = null
 
 let errors = {
   title: true,
@@ -24,8 +36,32 @@ document.querySelectorAll("#inputbox").forEach((box) => {
     });
 });
 
+let checkinput = document.getElementById("formcreate").checkinput.forEach((check)=>{ 
+   const checkinput = check.querySelector(".checkinput") 
+  total_checked = 0
+  
+ for(i=0;i<checkinput;i++)
+         {
+     if((checkinput.elements[i].type=="checkbox")
+               &&(checkdiv.elements[i].checked))
+               { total_checked++; }
+         }
+    
+       form.addEventListener("clic", (event) =>{
+      if(total_checked == 0){ 
+        alert ("NO HAY TALLES SELECCIONADOS")
+         errors[checkinput.name] = true;
+      } else {
+        errors[checkinput.name] = false;
+      } 
+    }) 
+    
+  }) 
+        
+        
 
-validation = (box,boxInput) => {
+
+let validation = (box,boxInput) => {
   if (boxInput.name == 'title') {  
     if (boxInput.value ==='') {
       showError(true,box,boxInput);
@@ -41,7 +77,7 @@ validation = (box,boxInput) => {
     }
   }
   if (boxInput.name == 'detalles') {  
-    if (boxInput.value ==='') {
+    if (boxInput.value[0]=== 0|| boxInput.value[1]=== 0|| boxInput.value[2]=== 0|| boxInput.value[3]=== 0) {
       showError(true,box,boxInput);
     } else {
       showError(false,box,boxInput);
@@ -63,22 +99,9 @@ validation = (box,boxInput) => {
   
 
     submitActivado();
-  };
-let checkboxresul=document.querySelectorAll(".checkdiv").forEach(() => {
-submitbutton.addEventListener("clic", (event)=>{  
-      var elementosTotales = checkdiv.elements.length;
-      var total_checked = 0;
-      for(i=0;i<elementosTotales;i++)
-         {
-     if((checkdiv.elements[i].type=="checkbox")
-               &&(checkdiv.elements[i].checked))
-               { total_checked++; }
-         }
-      alert("hay "+total_checked+" checkboxs marcados")
-        })
-});
-console.log(checkboxresul)
-showError = (check,box,boxInput) => {
+  }; */ 
+
+ showError = (check,box,boxInput) => {
     if (check) {
       box.classList.remove('form-success');
       box.classList.add('form-error');
@@ -88,14 +111,14 @@ showError = (check,box,boxInput) => {
       box.classList.add('form-success');
       errors[boxInput.name] = false;
     }
-};
+}; /* 
 submitActivado = () => {
   if (errors.title || errors.price || errors.colors || errors.detalles ){
     submitbutton.toggleAttribute('disabled', true);
   } else {
     submitbutton.toggleAttribute('disabled', false);
   }
-};
+}; */
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -105,4 +128,5 @@ form.addEventListener('submit', (event) => {
     console.log(`${key}: ${value}`);
   }
 });
-
+ 
+}())
