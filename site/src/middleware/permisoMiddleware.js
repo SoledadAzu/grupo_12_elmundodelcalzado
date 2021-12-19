@@ -2,7 +2,7 @@ function permiso(req,res,next){
     if(res.locals.user.rol==="admin"){
         next()
     }else{
-        res.redirect("/../../informacion/denegado")
+        res.render("extras/denegado")
     }
       
 }
