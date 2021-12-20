@@ -1,132 +1,222 @@
-(function() {
-  
-
- var form = document.getElementById("formcreate");
-     elementos = form.elements;
-     submitbutton = document.getElementById("submit-btn");
-     boxInput = inputbox.querySelectorAll("input");
-
-   var validarinput = function () {
-    if (form.nput.value ==='') {
-      showError(true,box,boxInput);
-    } else {
-      showError(false,box,boxInput);
-    }
-   }
-
-/* let timeout = null
+const form = document.getElementById("formcreate")
+const boton = document.getElementById("submit-btn")
+const inputs = document.querySelectorAll("#formcreate .input1")
+const selects = document.querySelectorAll("#formcreate select")
 
 let errors = {
   title: true,
   price: true,
-  colors: true,
-  detalles: true,
+  colors1: true,
+  colors2: true,
+  colors3: true,
+  detalles1: true,
+  detalles2: true,
+  detalles3: true,
+  detalles4: true,
+  description:true
+};
+const expresiones = {
+  precio:/^\d{4,6}$/
+} 
+const validarInput = (e) => {
+  switch (e.target.id) {
+    case "title":
+      if (e.target.value == "") {
+        title.classList.remove('form-success');
+        title.classList.add('form-error');
+         errors[e.target.id] = true;
+      } else {
+        title.classList.remove('form-error');
+        title.classList.add('form-success');
+         errors[e.target.id] = false;
+      }
+      break;
+    case "price":
+      if  (expresiones.precio.test(e.target.value) && e.target.value !== "") {
+        price.classList.remove('form-error');
+        price.classList.add('form-success');
+        errors[e.target.id] = false; 
+      } else {
+        price.classList.remove('form-success');
+        price.classList.add('form-error');
+         errors[e.target.id] = true; 
+      }
+      break;
+    case "colors1":
+      if (e.target.value == "") {
+        colors1.classList.remove('form-success');
+        colors1.classList.add('form-error');
+         errors[e.target.id] = true; 
+      } else {
+        colors1.classList.remove('form-error');
+        colors1.classList.add('form-success');
+        errors[e.target.id] = false; 
+      }
+      break;
+    case "colors2":
+      if (e.target.value == "") {
+        colors2.classList.remove('form-success');
+        colors2.classList.add('form-error');
+         errors[e.target.id] = true; 
+      } else {
+        colors2.classList.remove('form-error');
+        colors2.classList.add('form-success');
+        errors[e.target.id] = false; 
+      }
+      break;
+    case "colors3":
+      if (e.target.value == "") {
+        colors3.classList.remove('form-success');
+        colors3.classList.add('form-error');
+         errors[e.target.id] = true; 
+      } else {
+        colors3.classList.remove('form-error');
+        colors3.classList.add('form-success');
+        errors[e.target.id] = false; 
+      }
+      break;
+    case "detalles1":
+      if (e.target.value == "") {
+        detalles1.classList.remove('form-success');
+        detalles1.classList.add('form-error');
+        errors[e.target.id] = true; 
+      } else {
+        detalles1.classList.remove('form-error');
+        detalles1.classList.add('form-success');
+          errors[e.target.id] = false; 
+      }
+      break;
+    case "detalles2":
+      if (e.target.value == "") {
+        detalles2.classList.remove('form-success');
+        detalles2.classList.add('form-error');
+         errors[e.target.id] = true; 
+      } else {
+        detalles2.classList.remove('form-error');
+        detalles2.classList.add('form-success');
+         errors[e.target.id] = false; 
+      }
+      break;
+    case "detalles3":
+      if (e.target.value == "") {
+        detalles3.classList.remove('form-success');
+        detalles3.classList.add('form-error');
+         errors[e.target.id] = true; 
+      } else {
+        detalles3.classList.remove('form-error');
+        detalles3.classList.add('form-success');
+          errors[e.target.id] = false; 
+      }
+      break;
+    case "detalles4":
+      if (e.target.value == "") {
+        detalles4.classList.remove('form-success');
+        detalles4.classList.add('form-error');
+         errors[e.target.id] = true; 
+      } else {
+        detalles4.classList.remove('form-error');
+        detalles4.classList.add('form-success');
+          errors[e.target.id] = false; 
+      }
+      break;
+    case "description":
+      if (e.target.value == "") {
+        description.classList.remove('form-success');
+        description.classList.add('form-error');
+        errors[e.target.id] = true;
+      } else {
+        description.classList.remove('form-error');
+        description.classList.add('form-success');
+         errors[e.target.id] = false; 
+      }
+      break;
+  }
+
+  submitActivado()
+}
+
+
+
+inputs.forEach((input) => {
+  input.addEventListener("keyup", validarInput)
+  input.addEventListener("blur", validarInput)
+})
+
+function validar() {
+  const genero = document.getElementById("genero")
+  const temporada = document.getElementById("temporada")
+  const outlet = document.getElementById("outlet")
+  const marca = document.getElementById("marca")
+  if (genero.value == "") {
+    genero.classList.remove('form-success');
+    genero.classList.add('form-error');
+    alert("SELECCIONE UN GENERO!!!")
+      
+  } else {
+    genero.classList.remove('form-error');
+    genero.classList.add('form-success');
+     
+  }
+  if (temporada.value == "") {
+    temporada.classList.remove('form-success');
+    temporada.classList.add('form-error');
+    alert("SELECCIONE SI ES DE TEMPORADA!!!")
+    
+  } else {
+    temporada.classList.remove('form-error');
+    temporada.classList.add('form-success');
+   
+  }
+  if (outlet.value == "") {
+    outlet.classList.remove('form-success');
+    outlet.classList.add('form-error');
+    alert("SELECCIONE SI ES OFERTA!!!")
+   
+  } else {
+    outlet.classList.remove('form-error');
+    outlet.classList.add('form-success');
+   
+  }
+  if (marca.value == "") {
+    marca.classList.remove('form-success');
+    marca.classList.add('form-error');
+    alert("SELECCIONE UNA MARCA!!!")
+   
+  } else {
+    marca.classList.remove('form-error');
+    marca.classList.add('form-success');
+    
+  }
+   
+    const checkdivs = document.querySelectorAll(".checkdiv");
+    checkdivs.forEach((check) => {
+     const checkinput= check.querySelector("input")
+     
+  console.log(checkinput)
+    var total_checked = 0
+   
+ for(i=0;i<checkinput;i++) {
+      if((checkinput[i].type =="checkbox")
+                &&(checkinput[i].checked))
+                { total_checked = total_checked + 1;}
+          }
+          if (total_checked == 0){
+            alert("seleccionar talles")
+          }
+        })  
+    
+} 
+        
+submitActivado = () => {
+  if (errors.title || errors.price || errors.colors1 || errors.colors2 || errors.colors3 || errors.detalles1 || errors.detalles2 || errors.detalles3 || errors.detalles4 || errors.description ){
+    boton.toggleAttribute('disabled', true);
+  } else {
+    boton.toggleAttribute('disabled', false);
+  }
 };
 
-document.querySelectorAll("#inputbox").forEach((box) => {
-    const boxInput = box.querySelector("input");
-
-    boxInput.addEventListener("keydown", (event) => {
-        clearTimeout(timeout);
-        timeout = setTimeout(() => {
-             console.log(`Input ${boxInput.name} value:`, boxInput.value); 
-
-            validation(box,boxInput)
-        }, 300);
-    });
-});
-
-let checkinput = document.getElementById("formcreate").checkinput.forEach((check)=>{ 
-   const checkinput = check.querySelector(".checkinput") 
-  total_checked = 0
-  
- for(i=0;i<checkinput;i++)
-         {
-     if((checkinput.elements[i].type=="checkbox")
-               &&(checkdiv.elements[i].checked))
-               { total_checked++; }
-         }
-    
-       form.addEventListener("clic", (event) =>{
-      if(total_checked == 0){ 
-        alert ("NO HAY TALLES SELECCIONADOS")
-         errors[checkinput.name] = true;
-      } else {
-        errors[checkinput.name] = false;
-      } 
-    }) 
-    
-  }) 
-        
-        
 
 
-let validation = (box,boxInput) => {
-  if (boxInput.name == 'title') {  
-    if (boxInput.value ==='') {
-      showError(true,box,boxInput);
-    } else {
-      showError(false,box,boxInput);
-    }
-  }
-  if (boxInput.name == 'colors') {  
-    if (boxInput.value ==='') {
-      showError(true,box,boxInput);
-    } else {
-      showError(false,box,boxInput);
-    }
-  }
-  if (boxInput.name == 'detalles') {  
-    if (boxInput.value[0]=== 0|| boxInput.value[1]=== 0|| boxInput.value[2]=== 0|| boxInput.value[3]=== 0) {
-      showError(true,box,boxInput);
-    } else {
-      showError(false,box,boxInput);
-    }
-  }
-    if (boxInput.name =='price') {
-      if (boxInput.value ==='') {
-        showError(true,box,boxInput);
-      } else {
-        showError(false,box,boxInput);
-      }
-            
-      if (boxInput.value.length <= 3) {
-        showError(true,box,boxInput);
-      } else {
-        showError(false,box,boxInput);
-      }
-    }
-  
-
-    submitActivado();
-  }; */ 
-
- showError = (check,box,boxInput) => {
-    if (check) {
-      box.classList.remove('form-success');
-      box.classList.add('form-error');
-      errors[boxInput.name] = true;
-    } else {
-      box.classList.remove('form-error');
-      box.classList.add('form-success');
-      errors[boxInput.name] = false;
-    }
-}; /* 
-submitActivado = () => {
-  if (errors.title || errors.price || errors.colors || errors.detalles ){
-    submitbutton.toggleAttribute('disabled', true);
-  } else {
-    submitbutton.toggleAttribute('disabled', false);
-  }
-}; */
-
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const formData = new FormData(event.target);
-  console.log([...formData]);
-  for (let [key, value] of formData.entries()) {
-    console.log(`${key}: ${value}`);
-  }
-});
- 
-}())
+form.addEventListener("submit", (e) => {
+  e.preventDefault()
+})
