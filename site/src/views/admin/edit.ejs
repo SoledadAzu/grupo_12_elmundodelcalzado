@@ -19,34 +19,36 @@
             </div>
           </div>
           <div class="contenedor-form">
-            <form action="/admin/edit/<%= idFind.id %>?_method=PUT " enctype="multipart/form-data" method="POST">
+            <form id="formcreate" action="/admin/edit/<%= idFind.id %>?_method=PUT " enctype="multipart/form-data" method="POST">
               <div class="contenedorLabel">
 
-                <div class="labelForm">
+                <div class="labelForm"id= "inputbox">
                   <label for="title" class="">Nombre del producto:</label>
-                  <input type="text" id="title" name="title" placeholder="Ej: Zapatillas Reebok" class="form-input"
+                  <input type="text" id="title" name="title" placeholder="Ej: Zapatillas Reebok" class="input1 form-input"
                     value="<%= idFind.nombre %> ">
+                    <small class="error-title"></small>
                     
                 </div>
-                <div class="labelForm">
+                <div class="labelForm"id= "inputbox">
                   <label for="price" class="">Precio del producto:</label>
-                  <input type="text" id="price" name="price" class="form-input"
+                  <input type="number" id="price" name="price" class="input1 form-input"
                     value="<%= idFind.precio %>">
+                    <small class= "error-price"></small>
                     
                 </div>
-                <section class="seccion">
+                <section class="selection"id="inputbox">
                   <div class="labelForm width">
                     <label for="colors" class="">Colores:</label>
                     <% idFind.Color.map(e=> {%>
-                      <input type="text" id="colors" name="colors" value="<%= e.nombre %>" class="form-input">
+                      <input type="text" id="colors" name="colors" value="<%= e.nombre %>" class="input1 form-input">
                       <%}) %>
                       
 
                   </div>
-                  <div class="labelForm width">
+                  <div class="labelForm width"id="inputbox">
                     <label for="detalles" class="">Detalles:</label>
                     <% idFind.Detalle.map(e=> {%>
-                      <input type="text" id="detalles" name="detalles" value="<%= e.nombre %>" class="form-input">
+                      <input type="text" id="detalles" name="detalles" value="<%= e.nombre %>" class="input1 form-input">
                       <%}) %>
                       
                   </div>
@@ -99,7 +101,7 @@
                   <label for="talles">Talles:</label>
                   <div class="container-talles">
 
-                    <div>
+                    <div class="checkdiv">
                       <label>
                         <input type="checkbox" name="talles" id="35" value="35"<% idFind.Talle.filter(element=> {%>
                         <%= element.nombre==="35" ? 'checked' : null%>
@@ -195,13 +197,13 @@
 
 
                 </div>
-                <div class="labelForm">
+                <div class="labelForm"id="inputbox">
                   <label for="description" class="form-label" value="">Descripción:</label>
-                  <textarea name="description" id="description" class="form-input"><%= idFind.descripcion %></textarea>
+                  <textarea name="description" id="description" class="input1 form-input"><%= idFind.descripcion %></textarea>
                 </div>
                 
                 <div class="">
-                  <button class="btn btn-outline-success" type="submit">Editar Producto</button>
+                  <button class="btn btn-outline-success"id="submit-btn" type="submit"onclick="validar()" disabled>Editar Producto</button>
                 </div>
               </div>
             </form>
@@ -211,7 +213,7 @@
 
 
 
-
+<script src="/js/createvalidafront.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
           crossorigin="anonymous"></script>

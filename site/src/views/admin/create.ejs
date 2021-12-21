@@ -23,7 +23,7 @@
 								<div class="labelForm" id= "inputbox">
 									<label for="title" class="">Nombre del producto:</label>
 									<input type="text" id="title" name="title" value="<%= locals.oldData && oldData.title ? oldData.title : null %>" class="input1 form-input ">
-									<p class="error-text">Ingrese nombre del Producto</p>
+									<small class="error-title"></small>
 										<% if(locals.errors && errors.title){ %>
 											<p style="color : red"><%= errors.title.msg %> </p>
 											<% } %> 
@@ -31,12 +31,12 @@
 								<div class="labelForm" id="inputbox">
 									<label for="price" class="">Precio del producto:</label>
 									<input  type="number" id="price" name="price" value="<%= locals.oldData && oldData.price ? oldData.price : null %>" class="input1 form-input">
-									<p class= "error-text">Ingrese el PRECIO</p>	
+									<small class= "error-price"></small>	
 									<% if(locals.errors && errors.price){ %>
 											<p style="color : red"><%= errors.price.msg %> </p>
 											<% } %> 
 								</div>
-								<section class="seccion" >
+								<section class="selection" >
 								<div class="labelForm width"id="inputbox">	
 									<label for="colores" class="colors">Colores:</label>
 									    <input  type="text" id="colors1" name="colors" placeholder="Color Primario"
@@ -45,7 +45,7 @@
 										class="input1 form-input">									
 										<input  type="text" id="colors3" name="colors" placeholder="Color terciario"
 										class="input1 form-input">
-										<p class= "error-text">Debe ingresar COLORES</p>
+										<small class= "error-color"></small>
 										<% if(locals.errors && errors.colors){ %>
 											<p style="color : red"><%= errors.colors.msg %> </p>
 											<% } %> 
@@ -60,7 +60,7 @@
 										class="input1 form-input">
 									<input type="text" id="detalles4" name="detalles" placeholder="Ingrese su detalle"
 										class="input1 form-input">
-										<p class="error-text">Debe ingresar DETALLES</p>
+										<small class="error-detalle"></small>
 
 										<% if(locals.errors && errors.detalles){ %>
 											<p style="color : red"><%= errors.detalles.msg %> </p>
@@ -179,9 +179,10 @@
 								<% if(locals.errors && errors.description){ %>
 									<p style="color : red"><%= errors.description.msg %> </p>
 									<% } %> 
+									<small class="error-description"></small>
 							
 								<div class="">
-									<button class="btn btn-outline-success" id="submit-btn" type="submit" onclick="validar()" >Guardar Producto</button>
+									<button class="btn btn-outline-success" id="submit-btn" type="submit" onclick="validar()" disabled>Guardar Producto</button>
 								</div>
 							</div>
 						</form>
