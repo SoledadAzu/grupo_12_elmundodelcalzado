@@ -2,9 +2,14 @@ const form = document.getElementById("formcreate")
 const boton = document.getElementById("submit-btn")
 const inputs = document.querySelectorAll("#formcreate .input1")
 const selects = document.querySelectorAll("#formcreate select")
-
+const smalltitle = document.querySelector(".error-title")
+const smallprice = document.querySelector(".error-price")
+const smallcolors = document.querySelector(".error-color")
+const smalldetalles = document.querySelector(".error-detalle")
+const smalldescription = document.querySelector(".error-description")
+const smalltalles = document.querySelector(".errortalles")
 let errors = {
-  title: true,
+title: true,
   price: true,
   colors1: true,
   colors2: true,
@@ -27,22 +32,26 @@ const validarInput = (e) => {
       if (e.target.value == "") {
         title.classList.remove('form-success');
         title.classList.add('form-error');
+        smalltitle.innerHTML= "* Debe completar el campo "
         errors[e.target.id] = true;
         
       } else {
         title.classList.remove('form-error');
         title.classList.add('form-success');
+        smalltitle.innerHTML= ""
         errors[e.target.id] = false;
       }
       break;
     case "price":
-      if (expresiones.precio.test(e.target.value) && e.target.value !== "") {
+      if (expresiones.precio.test(e.target.value) && e.target.value !=="") {
         price.classList.remove('form-error');
         price.classList.add('form-success');
+        smallprice.innerHTML= ""
         errors[e.target.id] = false;
       } else {
         price.classList.remove('form-success');
         price.classList.add('form-error');
+        smallprice.innerHTML= "Debe ingresar un PRECIO de 4 a 6 digitos"
         errors[e.target.id] = true;
       }
       break;
@@ -50,10 +59,12 @@ const validarInput = (e) => {
       if (e.target.value == "") {
         colors1.classList.remove('form-success');
         colors1.classList.add('form-error');
+        smallcolors.innerHTML= "Debe agregar colores"
         errors[e.target.id] = true;
       } else {
         colors1.classList.remove('form-error');
         colors1.classList.add('form-success');
+        smallcolors.innerHTML= ""
         errors[e.target.id] = false;
       }
       break;
@@ -61,10 +72,12 @@ const validarInput = (e) => {
       if (e.target.value == "") {
         colors2.classList.remove('form-success');
         colors2.classList.add('form-error');
+        smallcolors.innerHTML= "Debe agregar colores"
         errors[e.target.id] = true;
       } else {
         colors2.classList.remove('form-error');
         colors2.classList.add('form-success');
+        smallcolors.innerHTML= ""
         errors[e.target.id] = false;
       }
       break;
@@ -72,10 +85,12 @@ const validarInput = (e) => {
       if (e.target.value == "") {
         colors3.classList.remove('form-success');
         colors3.classList.add('form-error');
+        smallcolors.innerHTML= "Debe agregar colores"
         errors[e.target.id] = true;
       } else {
         colors3.classList.remove('form-error');
         colors3.classList.add('form-success');
+        smallcolors.innerHTML= ""
         errors[e.target.id] = false;
       }
       break;
@@ -83,10 +98,12 @@ const validarInput = (e) => {
       if (e.target.value == "") {
         detalles1.classList.remove('form-success');
         detalles1.classList.add('form-error');
+        smalldetalles.innerHTML= "Destacar 4 detalles del Producto"
         errors[e.target.id] = true;
       } else {
         detalles1.classList.remove('form-error');
         detalles1.classList.add('form-success');
+        smalldetalles.innerHTML= ""
         errors[e.target.id] = false;
       }
       break;
@@ -94,10 +111,12 @@ const validarInput = (e) => {
       if (e.target.value == "") {
         detalles2.classList.remove('form-success');
         detalles2.classList.add('form-error');
+        smalldetalles.innerHTML= "Destacar 4 detalles del Producto"
         errors[e.target.id] = true;
       } else {
         detalles2.classList.remove('form-error');
         detalles2.classList.add('form-success');
+        smalldetalles.innerHTML= ""
         errors[e.target.id] = false;
       }
       break;
@@ -105,10 +124,12 @@ const validarInput = (e) => {
       if (e.target.value == "") {
         detalles3.classList.remove('form-success');
         detalles3.classList.add('form-error');
+        smalldetalles.innerHTML= "Destacar 4 detalles del Producto"
         errors[e.target.id] = true;
       } else {
         detalles3.classList.remove('form-error');
         detalles3.classList.add('form-success');
+        smalldetalles.innerHTML= ""
         errors[e.target.id] = false;
       }
       break;
@@ -116,10 +137,12 @@ const validarInput = (e) => {
       if (e.target.value == "") {
         detalles4.classList.remove('form-success');
         detalles4.classList.add('form-error');
+        smalldetalles.innerHTML= "Destacar 4 detalles del Producto"
         errors[e.target.id] = true;
       } else {
         detalles4.classList.remove('form-error');
         detalles4.classList.add('form-success');
+        smalldetalles.innerHTML= ""
         errors[e.target.id] = false;
       }
       break;
@@ -127,10 +150,12 @@ const validarInput = (e) => {
       if (e.target.value == "") {
         description.classList.remove('form-success');
         description.classList.add('form-error');
+        smalldescription.innerHTML = "Agregar una descripcion del Producto"
         errors[e.target.id] = true;
       } else {
         description.classList.remove('form-error');
         description.classList.add('form-success');
+        smalldescription.innerHTML= ""
         errors[e.target.id] = false;
       }
       break;
@@ -158,37 +183,30 @@ btn.onclick = function () {
       genero.classList.remove('form-success');
       genero.classList.add('form-error');
       alert("SELECCIONE UN GENERO!!!")
-    
     } else {
       genero.classList.remove('form-error');
       genero.classList.add('form-success');
-    
     }
     if (temporada.value == "") {
       temporada.classList.remove('form-success');
       temporada.classList.add('form-error');
       alert("SELECCIONE SI ES DE TEMPORADA!!!")
-    
     } else {
       temporada.classList.remove('form-error');
       temporada.classList.add('form-success');
-    
     }
     if (outlet.value == "") {
       outlet.classList.remove('form-success');
       outlet.classList.add('form-error');
       alert("SELECCIONE SI ES OFERTA!!!")
-    
     } else {
       outlet.classList.remove('form-error');
       outlet.classList.add('form-success');
-    
     }
     if (marca.value == "") {
       marca.classList.remove('form-success');
       marca.classList.add('form-error');
-      alert("SELECCIONE UNA MARCA!!!")
-    
+      alert("SELECCIONE UNA MARCA!!!")  
     } else {
       marca.classList.remove('form-error');
       marca.classList.add('form-success');
@@ -207,7 +225,10 @@ btn.onclick = function () {
         }
          if (total_checked == 0) {
           alert("seleccionar talles")
-        } 
+          smalltalles.innerHTML= "Seleccionar talles del Producto"
+        } else {
+           smalltalles.innerHTML= ""
+        }
       }) */
     /* -------------  Validar Imagen -------------*/
       var imagen = document.getElementById("img").files;
