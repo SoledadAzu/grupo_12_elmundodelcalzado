@@ -19,7 +19,7 @@ const expresiones = {
   precio: /^\d{4,6}$/
 }
 
-/* validar input */
+/* ------------- validar input ------------- */
 
 const validarInput = (e) => {
   switch (e.target.id) {
@@ -145,56 +145,56 @@ inputs.forEach((input) => {
   input.addEventListener("keyup", validarInput)
   input.addEventListener("blur", validarInput)
 })
-/* validar select */
-function validar() {
-  const genero = document.getElementById("genero")
-  const temporada = document.getElementById("temporada")
-  const outlet = document.getElementById("outlet")
-  const marca = document.getElementById("marca")
-  if (genero.value == "") {
-    genero.classList.remove('form-success');
-    genero.classList.add('form-error');
-    alert("SELECCIONE UN GENERO!!!")
 
-  } else {
-    genero.classList.remove('form-error');
-    genero.classList.add('form-success');
 
-  }
-  if (temporada.value == "") {
-    temporada.classList.remove('form-success');
-    temporada.classList.add('form-error');
-    alert("SELECCIONE SI ES DE TEMPORADA!!!")
-
-  } else {
-    temporada.classList.remove('form-error');
-    temporada.classList.add('form-success');
-
-  }
-  if (outlet.value == "") {
-    outlet.classList.remove('form-success');
-    outlet.classList.add('form-error');
-    alert("SELECCIONE SI ES OFERTA!!!")
-
-  } else {
-    outlet.classList.remove('form-error');
-    outlet.classList.add('form-success');
-
-  }
-  if (marca.value == "") {
-    marca.classList.remove('form-success');
-    marca.classList.add('form-error');
-    alert("SELECCIONE UNA MARCA!!!")
-
-  } else {
-    marca.classList.remove('form-error');
-    marca.classList.add('form-success');
-
-  }}
-  
-  var btn = document.getElementById("submit-btn");
-  btn.onclick = function () {
-      /*  validar checkbox */
+var btn = document.getElementById("submit-btn");
+btn.onclick = function () {
+  /* ------------ validar select ------------- */
+    const genero = document.getElementById("genero")
+    const temporada = document.getElementById("temporada")
+    const outlet = document.getElementById("outlet")
+    const marca = document.getElementById("marca")
+    if (genero.value == "") {
+      genero.classList.remove('form-success');
+      genero.classList.add('form-error');
+      alert("SELECCIONE UN GENERO!!!")
+    
+    } else {
+      genero.classList.remove('form-error');
+      genero.classList.add('form-success');
+    
+    }
+    if (temporada.value == "") {
+      temporada.classList.remove('form-success');
+      temporada.classList.add('form-error');
+      alert("SELECCIONE SI ES DE TEMPORADA!!!")
+    
+    } else {
+      temporada.classList.remove('form-error');
+      temporada.classList.add('form-success');
+    
+    }
+    if (outlet.value == "") {
+      outlet.classList.remove('form-success');
+      outlet.classList.add('form-error');
+      alert("SELECCIONE SI ES OFERTA!!!")
+    
+    } else {
+      outlet.classList.remove('form-error');
+      outlet.classList.add('form-success');
+    
+    }
+    if (marca.value == "") {
+      marca.classList.remove('form-success');
+      marca.classList.add('form-error');
+      alert("SELECCIONE UNA MARCA!!!")
+    
+    } else {
+      marca.classList.remove('form-error');
+      marca.classList.add('form-success');
+    
+    }
+      /*------------  validar checkbox ------------ */
    /*    const checkdivs = document.querySelectorAll(".checkdiv");
       checkdivs.forEach((check) => {
         const checkinput = check.querySelector("input")
@@ -209,7 +209,7 @@ function validar() {
           alert("seleccionar talles")
         } 
       }) */
-    /*  Validar Imagen */
+    /* -------------  Validar Imagen -------------*/
       var imagen = document.getElementById("img").files;
 
       if (imagen.length == 0) {
@@ -226,10 +226,7 @@ function validar() {
     /*   }else */ if (imagen.size > 320000) {
         alert('El peso de la imagen no puede exceder los 320kb')
       }
-      else {
-        alert('Imagen correcta :)')
-      }
-      /* img.src = URL.createObjectURL(uploadFile); */
+      
     }
 
   submitActivado = () => {
