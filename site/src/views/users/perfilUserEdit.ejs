@@ -9,6 +9,7 @@
   <!-- HEADER -->
 
 <body>
+  
     <form action="/user/updatePerfil/<%= userPerfil.id %> " method="POST" enctype="multipart/form-data">
     <section class="seccion-perfil-usuario">
         <div class="perfil-usuario-header">
@@ -26,9 +27,11 @@
               
             </div>
         </div>
-       
+        <div class="errores">
+            <ul></ul>
+        </div>
         <div class="perfil-usuario-body">
-            
+          
             <div class="perfil-usuario-bio">
                 <div style="margin: 0 auto;">
                     <% if(locals.errors && errors.img){ %>
@@ -38,7 +41,7 @@
                 <h2 class="titulo">
                     <i class="fas fa-user"></i>
                     <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" value="<%= locals.oldData && oldData.nombre ? oldData.nombre : null %>"> 
-                     
+                    <small id="errores"></small
 
                     <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido"value="<%= locals.oldData && oldData.apellido ? oldData.apellido : null %>"> 
                     <% if(locals.errors && errors.apellido){ %>
@@ -93,6 +96,7 @@
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
      crossorigin="anonymous"></script>
+     <script src="/js/validaciondeperfil.js"></script>
 </body>
 
 </html>
