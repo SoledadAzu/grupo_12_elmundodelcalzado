@@ -31,3 +31,30 @@ a{
 .table tr:nth-child(even) {
     background-color: var(--rojo-claro);
 }
+/* ***************BOTON SCROLL ************* */
+.scroll{
+    position: fixed;
+    z-index: 2;
+    bottom: 30px;
+    right: 30px;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--rojo-claro);
+    color: var(--azul-claro);
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    transition: all 0.3s ease-out;
+}
+.scroll:hover{
+    background-color: var(--azul-claro);
+    color: var(--rojo-claro);
+}
+
+.btnOculto{
+    visibility: hidden;
+    opacity: 0;
+}
