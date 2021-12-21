@@ -3,10 +3,15 @@ function qs (element){
 }
 window.addEventListener("load", function(){
     let $inputName = qs("#nombre")
+    let errorname= qs("#errorname")
     let $inputLastname = qs ("#apellido")
+    let errorlastname = qs ("#errorlastname")
     let $email = qs("#email")
+    let erroremail = qs ("#erroremail")
     let $pass = qs("#password")
+    let errorpass = qs ("#errorpass")
     let $terms = qs("#terminos")
+    let errorterm = qs ("#errorterm")
 
 
 
@@ -27,17 +32,17 @@ window.addEventListener("load", function(){
 $inputName.addEventListener("blur", (e) => {
     const validate = /^[a-zA-Z\sñáéíóú]*$/
 
-    if (validateName.test(e.target.value)) {
+    if (validate.test(e.target.value)) {
         $inputName.classList.remove("is-invalid")
         $inputName .classList.add("is-valid")
-        smallName.innerHTML = "El campo nombre es obligatorio"
+        errorname.innerHTML = "El campo nombre es obligatorio"
         $inputName .title = true
         console.log("nombre válido");
         
     } else {
         $inputName.classList.add("is-invalid")
         $inputName.classList.remove("is-valid")
-        smallName.innerHTML = "debe ingresar un nombre valido"
+        errorname.innerHTML = "debe ingresar un nombre valido"
         
         $inputName.title = false
         console.log("nombre inválido");
@@ -48,17 +53,17 @@ $inputName.addEventListener("blur", (e) => {
     $inputLastname.addEventListener("blur", (e) => {
         const validate = /^[a-zA-Z\sñáéíóú]*$/
     
-        if (validateName.test(e.target.value)) {
+        if (validate.test(e.target.value)) {
             $inputLastname.classList.remove("is-invalid")
             $inputLastname .classList.add("is-valid")
-            smalllastname.innerHTML = "El campo nombre es obligatorio"
+            errorlastname.innerHTML = "El campo nombre es obligatorio"
             $inputLastname .title = true
             console.log("apellido válido");
             
         } else {
             $inputLastname.classList.add("is-invalid")
             $inputLastname.classList.remove("is-valid")
-            smallLastname.innerHTML = "debe ingresar un nombre valido"
+            errorLastname.innerHTML = "debe ingresar un nombre valido"
             
             $inputLastname.title = false
             console.log("apellido inválido");
@@ -69,19 +74,19 @@ $inputName.addEventListener("blur", (e) => {
 
 
 $email.addEventListener("input", (e) => {
-    const validateEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test
+    const validateEmail= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
 
     if (validateEmail.test(e.target.value)) {
         $email.classList.remove("is-invalid")
         $email.classList.add("is-valid")
-        smallEmail.innerHTML = ""
+        erroremail.innerHTML = ""
         $email.title = true
         console.log("email válido");
         
     } else {
         $email.classList.add("is-invalid")
         $email.classList.remove("is-valid")
-        $smallEmail.innerHTML = "debe ingresar un email valido"
+        erroremail.innerHTML = "debe ingresar un email valido"
         
         $email.title = false
         console.log("email inválido");
@@ -94,14 +99,14 @@ $email.addEventListener("input", (e) => {
     if (validatePass.test(e.target.value)) {
        $pass.classList.remove("is-invalid")
         $pass.classList.add("is-valid")
-        smallPass.innerHTML = ""
+        errorpass.innerHTML = ""
         $pass.title = true
         console.log("Contraseña válida");
         
     } else {
         $pass.classList.add("is-invalid")    
         $pass.classList.remove("is-valid")
-       smallPass.innerHTML = "La contraseña debe contener una mayúscula, una misnúscula, un número y entre 8 y 15 caracteres"
+       errorpass.innerHTML = "La contraseña debe contener una mayúscula, una misnúscula, un número y entre 8 y 15 caracteres"
         
         $pass.title = false
        console.log("Contraseña inválida");
@@ -113,12 +118,12 @@ $email.addEventListener("input", (e) => {
     
      if (!$terms.checked) {
         $terms.classList.add("is-invalid")
-         smallTerminos.innerHTML = "debes aceptar los terminos y condiciones"
+         errorterm.innerHTML = "debes aceptar los terminos y condiciones"
          $terms .title = true
          
          
      }
-     if(!error){
+     if(!errorterm){
          console.log("todo bien")
     }
 })

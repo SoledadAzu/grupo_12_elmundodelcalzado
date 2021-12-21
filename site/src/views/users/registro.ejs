@@ -24,7 +24,7 @@
             <div class="nombre">
                 <label class=name_label for="nombre">Nombre<strong class="obligatorio">*</strong></label>
                 <p><input type="text" name="nombre" id="nombre" placeholder="Nombre" value="<%= locals.oldData && oldData.nombre ? oldData.nombre : null %>"></p>
-               
+               <small id="errorname"></small>
                 <% if(locals.errors && errors.nombre){ %>
                     <p style="color : red" id="nombreErrors"><%= errors.nombre.msg %> </p>
                     <% } %> 
@@ -32,7 +32,7 @@
             <div class="apellido">
                 <label class=name_label for="apellido">Apellido <strong class="obligatorio">*</strong></label>
                 <input type="text" name="apellido" id="apellido" placeholder="Apellido" value="<%= locals.oldData && oldData.apellido ? oldData.apellido : null %>">
-                
+                <small id="errorlastname"></small>
                 <% if(locals.errors && errors.apellido){ %>
                     <p style="color:red"><%= errors.apellido.msg %> </p>
                     <% } %> 
@@ -40,6 +40,7 @@
             <div class="email">
                 <label class=name_label for="email">Email <strong class="obligatorio">*</strong></label>
                 <input type="text" name="email" id="email" placeholder="Email" value="<%= locals.oldData && oldData.email ? oldData.email : null %>">
+                <small id="erroremail"></small
                 <% if(locals.errors && errors.email){ %>
                     <p style="color:red"><%= errors.email.msg %> </p>
                     <% } %> 
@@ -47,6 +48,7 @@
             <div class="password">
                 <label class=name_label for="password">Contraseña <strong class="obligatorio">*</strong></label>
                 <input type="password" name="password" id="password" placeholder="Contraseña">
+                <small id="errorpass"></small
                 <% if(locals.errors && errors.password){ %>
                     <p style="color:red"><%= errors.password.msg %> </p>
                     <% } %> 
@@ -62,7 +64,7 @@
             <div class="terminos">
                 <input type="checkbox" name="terminos" id="terminos">
                 <label for="terminos"> He leido y acepto los <a href="">términos y condiciones</a> y las <a href="/informacion/privacidad">politicas de privacidad</a> del Mundo del Calzado.</label>
-           <small></small>
+           <small id="errorterm"></small>
             </div>
             <small class="obligatorio">*Campo Obligatorio</small>
             <div class="btn" >
