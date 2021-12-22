@@ -27,9 +27,7 @@
               
             </div>
         </div>
-        <div class="errores">
-            <ul></ul>
-        </div>
+       
         <div class="perfil-usuario-body">
           
             <div class="perfil-usuario-bio">
@@ -41,9 +39,10 @@
                 <h2 class="titulo">
                     <i class="fas fa-user"></i>
                     <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" value="<%= locals.oldData && oldData.nombre ? oldData.nombre : null %>"> 
-                    <small id="errores"></small
+                    <strong id="errorN"> </strong>
 
                     <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido"value="<%= locals.oldData && oldData.apellido ? oldData.apellido : null %>"> 
+                    <strong id="errorA"> </strong>
                     <% if(locals.errors && errors.apellido){ %>
                         <p style="color:red"><%= errors.apellido.msg %> </p>
                         <% } else if(locals.errors && errors.nombre){ %> 
@@ -62,16 +61,21 @@
                         Email de usuario:
                     </label>
                     <input type="email" name="email" id="email" placeholder="Ingrese su email"value="<%= locals.oldData && oldData.email ? oldData.email : null %>">
+                    <strong id="errorE"> </strong>
+
                     <% if(locals.errors && errors.email){ %> 
                         <p style="color:red"><%= errors.email.msg %> </p>
                         <% } %> 
-                </div>        
+                </div> 
+
                 <div>
                     <label for="password">
                         <i class="fas fa-key"></i>
                         Password:
                     </label>
                     <input type="password" name="password" id="password" placeholder="Ingrese su password" value="">
+                    <strong id="errorP"> </strong>
+
                     <% if(locals.errors && errors.password){ %> 
                         <p style="color:red"><%= errors.password.msg %> </p>
                         <% } %>    
@@ -83,6 +87,7 @@
 
             <a href="/user/perfiluser/<%= userPerfil.id %> "class="bt_eliminar">Cancelar</a>
         </div>
+     
     </section>
     
     
