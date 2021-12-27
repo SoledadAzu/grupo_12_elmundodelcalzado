@@ -12,11 +12,11 @@
     <!-- MAIN -->
     <main>
       <img width="100%" src="/images/bannerlogomarcas/Adidas2.jpg" alt="">
-      <h1>PRODUCTOS DE MARCA: ADIDAS</h1>
+      <h1 class="titulos">PRODUCTOS DE MARCA: ADIDAS</h1>
    
       <section class="mercaderia">
         <%  producto.map(e=>{%>
-          <% if(e.Marca.nombre ==="Adidas"){ %> 
+          <% if(e.Marca.nombre =="Adidas"){ %> 
      
            <article>
             <a href="/products/productDetail/<%= e.id %>">

@@ -12,11 +12,11 @@
     <!-- MAIN -->
     <main>
       <img width="100%" src="/images/bannerlogomarcas/NIKE_BANNER.jpg" alt="">
-      <h1>PRODUCTOS DE MARCA: NIKE</h1>
+      <h1 class="titulos">PRODUCTOS DE MARCA: NIKE</h1>
    
       <section class="mercaderia">
         <%  producto.map(e=>{%>
-          <% if(e.Marca.nombre =="Nike"){ %> 
+          <% if(e.Marca.nombre ==="Nike"){ %> 
      
            <article>
             <a href="/products/productDetail/<%= e.id %>">
