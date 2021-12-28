@@ -10,7 +10,7 @@ window.addEventListener("load", function(){
     let mostrar=qs("#mostrar")
 // console.log("login")
 
-bttn.disabled= true
+bttn.disabled= true 
 
 const validate={
     email:false,

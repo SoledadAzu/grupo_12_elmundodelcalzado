@@ -136,8 +136,8 @@ margin-bottom: 5px;
 
 /*reg******/
 .is-invalid{
-    background-color: red;
+    border-color: red;
 }
 .is-valid{
-    background-color: green;
+    border-color: green;
 }
