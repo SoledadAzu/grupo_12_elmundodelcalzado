@@ -50,7 +50,7 @@ hr{
 
  .login .caja1 .bttn{
     background-color: red;
-    color: white;
+    color:white;
     align-content: center;
     padding: 5px 10px;
     border-radius: 10px;
@@ -129,4 +129,13 @@ hr{
     margin-top: 10px;
     margin-bottom: 5px;
 }
+
 }
+.is-invalid{
+    border-color: red;
+    
+}
+.is-valid{
+    border-color: green;
+}
+
