@@ -67,7 +67,7 @@ $email.addEventListener("input", (e) => {
     } else {
         $pass.classList.add("is-invalid")    
         $pass.classList.remove("is-valid")
-       errorspass.innerHTML = "La contraseña debe contener una mayúscula, una misnúscula, un número y entre 8 y 15 caracteres"
+       errorspass.innerHTML = "La contraseña debe contener un minimo de 6 caracteres"
      validate.password = false
        console.log("Contraseña inválida");
         
