@@ -120,16 +120,21 @@
 
                 <section class="ofertas">
                     <h3>Tambien puede interesarte estas ofertas</h3>
-                    <section class="mercaderia">
+                    <!-- <section class="mercaderia"> -->
+                        <div class="zapas-recomendadas contenedor">
+                            <div class="contenedor-principal">
+                                <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+                                  <div class="contenedor-carousel">
+                                     <div class="carousel">
                         <%  productos.map(e=>{%>
                             <% if(e.Outlet.nombre =="Si"){ %> 
                        
-                             <article>
+                             <article id="zapatilla-img"class="zapatilla-img">
                               <a href="/products/productDetail/<%= e.id %>">
                                  <div>
-                                     <img src="/images/articulos/<%= e.Imagen[0].nombre %>" alt="e.Imagen.nombre">
+                                     <img class="zapatilla-img1"src="/images/articulos/<%= e.Imagen[0].nombre %>" alt="e.Imagen.nombre">
                                  </div>  
-                                 <div class="ofertas-zapatilla-precio">
+                                 <div id= "ofertasZapatillaPrecio"class="ofertasZapatillaPrecio">
                                   <strong>
                                     <%= toThousand(e.precio)%>
                                   </strong>
@@ -144,7 +149,11 @@
                              </article>
                              <% } %> 
                              <% }) %>
-                            
+                             </div>
+                          </div>
+                        <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+                    </div>
+                </div>
 
 
                     </section>
@@ -159,7 +168,8 @@
             <%- include('../partials/footer') %>
                 <!-- FOOTER -->
 
-
+                <script src="/js/carrousel.js"></script>
+                <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script> 
 
     </body>
 

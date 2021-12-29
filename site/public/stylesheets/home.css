@@ -125,25 +125,23 @@
     margin:3px;
     cursor: pointer
 }
- .zapatillas{
+  .zapatillas{
     display:flex ;
     justify-content: space-evenly;
     flex-wrap: wrap; 
-  
-    
-
 }
+
 .zapatilla-img1{
     width: 100%;
+    
 }
 .zapatilla-img{
     border: 1px solid black;
-    width: 45%;
+    width: 50%;
     margin-bottom: 5px;
-    box-shadow: 10px 5px var(--gris-oscuro);
+    box-shadow: 15px 5px var(--gris-oscuro);
 
-}
-.ofertasZapatillaPrecio{
+} .ofertasZapatillaPrecio{
     text-align: center;
 }
 
@@ -284,7 +282,7 @@
 @media (min-width:1024px){
     
     .zapatilla-img{
-        width: 22%;
+        width: 400%;
     }
     
 

@@ -62,21 +62,23 @@
                         <h1>LANZAMIENTO</h1>
                     </article>
                 </section>
-                <section class="zapatillas">
+               <!--  <section class="mercaderia" > -->
                     <!-- lanzamiento -->
-                    
-                        <% producto.map(e=>{%>
+                    <div class="zapas-recomendadas contenedor">
+                        <div class="contenedor-principal">
+                            <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+                              <div class="contenedor-carousel">
+                                 <div class="carousel">
+                                       <% producto.map(e=>{%>
                             
-                            <% if(e.Temporada.nombre === "Si"){ %> 
-                                    <article class="zapatilla-img">
+                                     <% if(e.Temporada.nombre === "Si"){ %> 
+                                     <article id="zapatilla-img" class="zapatilla-img">
                                         <a href="/products/productDetail/<%=e.id %> ">
                                             <div>
                                                 <img class="zapatilla-img1" src="/images/articulos/<%=e.Imagen[0].nombre%> "
                                                 alt="<%=e.Imagen.nombre  %> ">
-                                                
-
                                             </div>
-                                            <div class="ofertasZapatillaPrecio">
+                                            <div id= "ofertasZapatillaPrecio"class="ofertasZapatillaPrecio">
 
                                                 <h4>$<%=toThousand(e.precio) %>
                                                 </h4>
@@ -92,22 +94,33 @@
                                     
                                         <% } %>
                                  <% })%>
+                            </div>
+                          </div>
+                        <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+                    </div>
+                </div>
+                <!-- </div> -->
+                
+                                         <!-- lanzamiento -->
 
-                                            <!-- lanzamiento -->
-
-                </section>
+                <!-- </section> -->
                 <section>
                     <article class="loMasVendido">
                         <h1>OUTLET</h1>
                     </article>
                 </section>
-                <section class="zapatillas">
-                    <!-- zapatillas -->
                 
+                <!-- <section class="mercaderia"> -->
+                    <!-- zapatillas -->
+                    <div class="zapas-recomendadas2 contenedor">
+                        <div class="contenedor-principal2">
+                            <button role="button" id="flecha-izquierda2" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+                              <div id="contenedor-carousel2" class="contenedor-carousel2">
+                                 <div class="carousel2">
                         <% producto.map(el=>{%>
                            
                             <% if(el.Outlet.nombre === "Si"){ %> 
-                                    <article class="zapatilla-img">
+                                    <article id= "zapatilla-img2"class="zapatilla-img">
                                         <a href="/products/productDetail/<%=el.id%> ">
                                             <div>
                                                 <img class="zapatilla-img1" src="/images/articulos/<%=el.Imagen[0].nombre%> "
@@ -128,6 +141,12 @@
                                  
                                         <% } %>
                                 <% })%>
+                            </div>
+                        </div>
+                      <button role="button" id="flecha-derecha2" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+                  </div>
+              </div>
+           <!--  </div> -->
                                             <!-- zapatillas -->
                 </section>
                 <!--marcas-->
@@ -215,7 +234,7 @@
             <!-- FOOTER -->
             <%- include('../partials/footer') %>
                 <!-- FOOTER -->
-        
+        <script src="/js/carrousel.js"></script>
+        <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>       
     </body>
-
 </html>

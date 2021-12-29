@@ -57,7 +57,9 @@
 .detalleProducto .zapatillas1 .zapatillas1-colors_eleccion img{
     width: 100%;
 }
-
+#ofertasZapatillaPrecio{
+    text-align: center;
+}
 
 /******************** TALLES DEL PRODUCTO********************/
 .detalleProducto .talles{
