@@ -31,6 +31,8 @@ hr{
 }
 .login .caja1 .email input{
         font-size: 18px;
+        border-radius: 10px;
+        border-color: rgb(157, 211, 230);
         margin-bottom: 5px;
         margin-top: 5px;
         width: 100%;
@@ -38,6 +40,8 @@ hr{
 }
 .login .caja1 .password input{
         font-size: 18px;
+        border-radius: 10px;
+        border-color: rgb(157, 211, 230);
         margin-bottom: 5px;
         margin-top: 5px;
         width: 100%;
