@@ -12,11 +12,11 @@
     <!-- MAIN -->
     <main>
       <img width="100%" src="/images/bannerlogomarcas/PUMA_BANNER.jpg" alt="">
-      <h1>PRODUCTOS DE MARCA: PUMA</h1>
+      <h1 class="titulos">PRODUCTOS DE MARCA: PUMA</h1>
    
       <section class="mercaderia">
         <%  producto.map(e=>{%>
-          <% if(e.Marca.nombre =="Puma"){ %> 
+          <% if(e.Marcas.nombre =="Puma"){ %> 
      
            <article>
             <a href="/products/productDetail/<%= e.id %>">
@@ -28,7 +28,7 @@
                   <%= toThousand(e.precio)%>
                 </strong>
                 <p>
-                    <%=e.marca%>
+                    <%=e.Marcas%>
                 </p>
                 <h4>
                     <%= e.nombre%>
@@ -45,5 +45,7 @@
     <!-- FOOTER -->
     <%- include('../partials/footer') %>
     <!-- FOOTER -->
+    <button class="scroll btnOculto">&#11014;</button>
+    <script src="/js/botonScroll.js"></script>
   </body>
 </html>

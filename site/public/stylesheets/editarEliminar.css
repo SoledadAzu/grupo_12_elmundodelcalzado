@@ -64,3 +64,34 @@ position:fixed;
 .container-talles div{
     width: 20%;
 }
+
+#inputbox input:focus {
+    outline-color: #1e9ba3;
+  }
+small {
+    color: rgba(209, 4, 4, 0.938);
+    
+}
+#formcreate #submit-btn:disabled {
+    background: #6b7070;
+    border: 4px solid #181a1a;
+    color: rgb(248, 246, 246);
+  }
+  #inputbox .form-error  {
+    border: 4px solid red;
+    background: #f7c0c8;
+  }
+  
+  #inputbox .form-success  {
+    border: 4px solid #009238;
+    background: rgb(222, 255, 228) ;
+  }
+  .selection div .form-success  {
+    border: 4px solid #009238;
+    background: rgb(222, 255, 228) ;
+  }
+  .selection div .form-error  {
+    border: 4px solid red;
+    background: #f7e2e5;
+  }
+  

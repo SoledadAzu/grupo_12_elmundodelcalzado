@@ -1,3 +1,5 @@
+@import url(/stylesheets/cssenvios);
+@import url(/stylesheets/cssdefensaAlConsumidor);
 @import url(/stylesheets/carritoDeCompras.css);
 @import url(/stylesheets/detalleProducto.css);
 @import url(/stylesheets/home.css);
@@ -7,8 +9,6 @@
 @import url(/stylesheets/header.css);
 @import url(/stylesheets/footer.css);
 @import url(/stylesheets/cssCompra.css);
-@import url(/stylesheets/cssdefensaAlConsumidor);
-@import url(/stylesheets/cssenvios);
 @import url(/stylesheets/cssgarantias.css);
 @import url(/stylesheets/cssprivacidad.css);
 @import url(/stylesheets/error404.css);
@@ -17,3 +17,5 @@
 @import url(/stylesheets/denegado.css);
 @import url(/stylesheets/cssNuestrasSucursales.css);
 @import url(/stylesheets/edituser.css);
+@import url(/stylesheets/carousel.css);
+@import url(/stylesheets/acercaDeNosotros.css);
