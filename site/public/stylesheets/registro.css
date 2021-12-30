@@ -137,10 +137,9 @@ margin-bottom: 5px;
 /*reg******/
 .is-invalid{
     border-color: red;
+    background-color: red;
 }
 .is-valid{
     border-color: green;
-}
-.button{
-    background-color: slategray;
+    background-color: green;
 }

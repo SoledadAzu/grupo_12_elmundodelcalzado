@@ -10,11 +10,12 @@ window.addEventListener("load", function () {
     let erroremail = qs("#erroremail")
     let $pass = qs("#password")
     let errorpass = qs("#errorpass")
+    let mostrar = qs("#mostrar")
     let $img = qs("#img")
     let $terms = qs("#terminos")
     let errorterm = qs("#errorterm")
     let btn = qs(".btn")
-    let mostrar = qs("#mostrar")
+    
 
 
 
@@ -37,7 +38,7 @@ window.addEventListener("load", function () {
         apellido: false,
         email: false,
         password: false,
-        terminos: false,
+        terminos: false
 
     }
 
@@ -46,7 +47,7 @@ window.addEventListener("load", function () {
 
         if (!arrValidate.includes(false)) {
             btn.disabled = false
-            // button.classList.remove("btn-invalid")
+            // btn.classList.remove("btn-invalid")
         } else {
             btn.disabled = true
 
@@ -58,9 +59,9 @@ window.addEventListener("load", function () {
 
 
     $name.addEventListener("blur", (e) => {
-        const validatenombre = /^[a-zA-Z\sñáéíóú]*$/
+        const validateNombre = /^[a-zA-Z\sñáéíóú]*$/
 
-        if (validatenombre.test(e.target.value)) {
+        if (validateNombre.test(e.target.value)) {
             $name.classList.remove("is-invalid")
             $name.classList.add("is-valid")
             errorname.innerHTML = "Este campo no puede estar vacio"
@@ -83,8 +84,8 @@ window.addEventListener("load", function () {
             const validateApellido = /^[a-zA-Z\sñáéíóú]*$/
 
             if (validateApellido.test(e.target.value)) {
-                $lastname.classList.remove("borde-rojo")
-                $lastname.classList.add("borde-green")
+                $lastname.classList.remove("is-invalid")
+                $lastname.classList.add("is-valid")
                 errorlastname.innerHTML = "Este campo no puede estar vacio"
                 validate.apellido = true
                 console.log("apellido válido");
@@ -125,8 +126,8 @@ window.addEventListener("load", function () {
         }),
 
         $pass.addEventListener("input", (e) => {
-            const validatePass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d$@$!%*?&]{8,15}$/
-            if (validatePass.test(e.target.value)) {
+            const validatePassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d$@$!%*?&]{8,15}$/
+            if (validatePassword.test(e.target.value)) {
                 $pass.classList.remove("is-invalid")
                 $pass.classList.add("is-valid")
                 errorpass.innerHTML = "Este campo no puede estar vacio"
@@ -134,9 +135,8 @@ window.addEventListener("load", function () {
                 console.log("Contraseña válida");
 
             } else {
-                $pass.classList.add("borde-rojo")
-                $pass.classList.remove("borde-green")
-                password.setAttribute("type", "text")
+                $pass.classList.add("is-invalid")
+                $pass.classList.remove("is-valid")
                 errorpass.innerHTML = "La contraseña debe contener un minimo de 6 caracteres"
 
                 validate.password = false
@@ -148,11 +148,11 @@ window.addEventListener("load", function () {
         }),
         $img.addEventListener("change", (e) => {
             const validateImg = /(.jpg|.jpeg|.png|.web)$/i   //Extensiones permitidas
-            if (!validateImg.exec(imgPath)) {     //el metodo exec() ejecuta una busqueda
+            if (!validateImg.exec(img)) {     //el metodo exec() ejecuta una busqueda
                 errorimg.innerHTML = "carga un archivo de imagen válido"
                 validate.img = true
                 return false;
-                console.log("$img.img")
+                
 
             } else {
 
@@ -167,12 +167,12 @@ window.addEventListener("load", function () {
 
         mostrar.addEventListener("click", (e) => {
 
-            if ($pass.getAttribute("type") == "pass") {
+            if ($pass.getAttribute("type") == "password") {
                 $pass.setAttribute("type", "text")
             } else {
-                $pass.setAttribute("type", "pass")
+                $pass.setAttribute("type", "password")
             }
-
+            funcValidate(validate)
         }),
 
         $terms.addEventListener("input", (e) => {
