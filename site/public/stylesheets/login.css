@@ -31,15 +31,19 @@ hr{
 }
 .login .caja1 .email input{
         font-size: 18px;
-        margin-bottom: 5px;
-        margin-top: 5px;
+        border-radius: 10px;
+        border-color: rgb(157, 211, 230);
+        margin-bottom: 8px;
+        margin-top: 8px;
         width: 100%;
         height: auto;
 }
 .login .caja1 .password input{
         font-size: 18px;
-        margin-bottom: 5px;
-        margin-top: 5px;
+        border-radius: 10px;
+        border-color: rgb(157, 211, 230);
+        margin-bottom: 8px;
+        margin-top: 8px;
         width: 100%;
         height: auto;
 }
@@ -89,6 +93,8 @@ hr{
     
 .login .caja1 .email input{
            display: block;
+           border-radius: 10px;
+           border-color: rgb(157, 211, 230);
             margin-bottom: 8px;
             margin-top: 8px;
             width: 80%;
@@ -96,6 +102,8 @@ hr{
     
 .login .caja1 .password input{
         display: block;
+        border-radius: 10px;
+        border-color: rgb(157, 211, 230);
         margin-bottom: 8px;
         margin-top: 8px;
         width: 80%;
@@ -110,7 +118,7 @@ hr{
     color: white;
     align-content: center;
     padding: 8px;
-    border-radius: 10px;
+    border-radius: 20px;
     width: 50%;
     margin-bottom: 15px;
     margin-top: 10px;
@@ -124,18 +132,19 @@ hr{
     color: white;
     align-content: center;
     padding: 8px;
-    border-radius: 10px;
+    border-radius: 20px;
     width: 50%;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 5px;
 }
 
 }
 .is-invalid{
     border-color: red;
-    
+    background-color: red;
 }
 .is-valid{
     border-color: green;
+    background-color: green;
 }
 
