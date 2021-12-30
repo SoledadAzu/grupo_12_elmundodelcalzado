@@ -135,7 +135,7 @@
     width: 100%;
     
 }
-.zapatilla-img{
+.zapatilla-img{ 
     border: 1px solid black;
     width: 50%;
     margin-bottom: 5px;
@@ -177,6 +177,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content:space-around;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 .botonVerMas{
     width: 100%;
