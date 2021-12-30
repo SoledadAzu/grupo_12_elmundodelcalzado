@@ -25,6 +25,7 @@
                                 <div class="email">
                                     <label for="email">Tu Email</label>
                                     <input type="email" name="email" id="email" placeholder="Email" value="<%= locals.oldData && oldData.email ? oldData.email : null %> ">
+                                    <small id="errorsemail"></small>
                                     <% if(locals.errors && errors.email){ %>
                                         <p style="color: red;"><%= errors.email.msg %> </p>
                                         <% }else if(locals.mensajeUsuario){ %>
@@ -35,6 +36,7 @@
                                 <div class="password">
                                     <label for="pasword"> Tu Contraseña</label>
                                     <input type="password" name="password" id="password" placeholder="Contraseña">
+                                    <small id="errorspass"></small>
                                     <% if(locals.errors && errors.password){ %>
                                         <p style="color: red;"><%= errors.password.msg %> </p>
                                         <% } else if(locals.mensaje){%>
@@ -42,7 +44,7 @@
                                         <%}%> 
                                 </div>
                                 <article>
-                                    <a href=""><i class="fas fa-eye-slash"></i>mostrar</a>
+                                    <a id="mostrar"><i class="fas fa-eye-slash"></i>mostrar</a>
                                 </article>
     
                                 <div class="checkbox">
@@ -85,7 +87,7 @@
             <!-- FOOTER -->
             <%- include('../partials/footer') %>
                 <!-- FOOTER -->
-
+<script src="/js/validacionLogin.js"></script>
     </body>
-
+    
 </html>
