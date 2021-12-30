@@ -1,0 +1,178 @@
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+.zapas-recomendadas .contenedor-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.zapas-recomendadas .contenedor-principal .flecha-izquierda,
+.zapas-recomendadas .contenedor-principal .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.zapas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.zapas-recomendadas .contenedor-principal .flecha-derecha:hover {
+	background: rgba(0,0,0, .9);
+}
+
+.zapas-recomendadas .contenedor-principal .flecha-izquierda {
+	left: 0;
+}
+
+.zapas-recomendadas .contenedor-principal .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.zapas-recomendadas .contenedor-carousel {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.zapas-recomendadas .contenedor-carousel .carousel {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.zapas-recomendadas .contenedor-carousel .carousel .zapatilla-img {
+	min-width: 18.5%;
+	transition: .3s ease all;
+	box-shadow: 7px 7px 10px rgba(0,0,0, .8);
+  margin: 15px
+}
+
+.zapas-recomendadas .contenedor-carousel .carousel .zapatilla-img.hover {
+	transform: scale(1.1);
+	transform-origin: center;
+}
+
+.zapas-recomendadas .contenedor-carousel .carousel .zapatilla-img img {
+	width: 100%;
+	vertical-align: top;
+}
+.ofertas .zapas-recomendadas .contenedor-carousel .carousel .zapatilla-img.hover {
+	transform: scale(1.1);
+	transform-origin: center;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+
+
+	.zapas-recomendadas .contenedor-carousel {
+		overflow: visible;
+	}
+
+	.zapas-recomendadas .contenedor-carousel .carousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.zapas-recomendadas .indicadores,
+	.zapas-recomendadas .flecha-izquierda,
+	.zapas-recomendadas .flecha-derecha {
+		display: none;
+	}
+}
+
+/* --------------------------------------------------- */
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+.zapas-recomendadas2 .contenedor-principal2 {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.zapas-recomendadas2 .contenedor-principal2 #flecha-izquierda2,
+.zapas-recomendadas2 .contenedor-principal2 #flecha-derecha2 {
+	position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.zapas-recomendadas2 .contenedor-principal2 #flecha-izquierda2:hover,
+.zapas-recomendadas2 .contenedor-principal2 #flecha-derecha2:hover {
+	background: rgba(0,0,0, .9);
+}
+
+.zapas-recomendadas2 .contenedor-principal2 #flecha-izquierda2 {
+	left: 0;
+}
+
+.zapas-recomendadas2 .contenedor-principal2 #flecha-derecha2 {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.zapas-recomendadas2 .contenedor-carousel2 {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.zapas-recomendadas2 .contenedor-carousel2 .carousel2 {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.zapas-recomendadas2 .contenedor-carousel2 .carousel2 .zapatilla-img {
+	min-width: 18.5%;
+	transition: .3s ease all;
+	box-shadow: 7px 7px 10px rgba(0,0,0, .8);
+  margin: 15px
+}
+
+.zapas-recomendadas2 .contenedor-carousel2 .carousel2 .zapatilla-img.hover {
+	transform: scale(1.1);
+	transform-origin: center;
+}
+
+.zapas-recomendadas2 .contenedor-carousel2 .carousel2 .zapatilla-img img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+
+
+	.zapas-recomendadas2 .contenedor-carousel2 {
+		overflow: visible;
+	}
+
+	.zapas-recomendadas2 .contenedor-carousel2 .carousel2 {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.zapas-recomendadas2 .indicadores,
+	.zapas-recomendadas2 #flecha-izquierda2,
+	.zapas-recomendadas2 #flecha-derecha2 {
+		display: none;
+	}
+}

@@ -213,15 +213,15 @@ btn.onclick = function () {
     
     }
       /*------------  validar checkbox ------------ */
-   /*    const checkdivs = document.querySelectorAll(".checkdiv");
+      const checkdivs = document.querySelectorAll(".checkdiv");
+      console.log(checkdivs)
       checkdivs.forEach((check) => {
         const checkinput = check.querySelector("input")
       
         var total_checked = 0
 
-      for (i=0; i<checkinput; i++) {
-          if ((checkinput[i].type == "checkbox")
-            && (checkinput[i].checked)) {total_checked ++; }
+      for (i=0; i < checkinput; i++) {
+          if (checkinput[i].checked) {total_checked ++; }
         }
          if (total_checked == 0) {
           alert("seleccionar talles")
@@ -229,7 +229,7 @@ btn.onclick = function () {
         } else {
            smalltalles.innerHTML= ""
         }
-      }) */
+      })
     /* -------------  Validar Imagen -------------*/
       var imagen = document.getElementById("img").files;
 
