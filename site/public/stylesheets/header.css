@@ -11,11 +11,8 @@ header{
     align-items: center;
     width: 100%;
 }
-.menu{
-    margin-right: 20px;
-    border: none;
-    background-color: white;
-}
+/* MENU HAMBURGUESA */
+
 .logo-iconos nav ul{
     display: block;
     position: fixed;
@@ -26,15 +23,16 @@ header{
     left: -100%;
     text-align: center;
     transition: all .5s;
+    z-index: 3;
 
 }
+/* menu SEARCH */
 .iconos-search{
     display: flex;
 }
 .search div{
     position: fixed;
-    width: 100%;
-    
+    width: 100%; 
     background: linear-gradient(180deg, #F52B0F 0%, #210DE9 100%);
     top: 77px;
     right:-100%;
