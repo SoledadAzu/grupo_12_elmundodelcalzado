@@ -64,32 +64,39 @@
             </div>
 
             <div  class="perfil-usuario-footer">
-                <div>
+               
+                <div class=>
                     <label for="email">
                         <i class="fas fa-envelope"></i>
-                        Email de usuario:
+                        Email:
                     </label>
+                    
                     <input type="email" name="email" id="email" placeholder="Ingrese su email"value="<%= locals.oldData && oldData.email ? oldData.email : null %>">
                     <p id="errorE" class="errorE"> </p>
 
                     <% if(locals.errors && errors.email){ %> 
                         <p style="color:red"><%= errors.email.msg %> </p>
                         <% } %> 
+                    
                 </div> 
 
                 <div>
                     <label for="password">
                         <i class="fas fa-key"></i>
-                        Password:
+                        Contraseña:
                     </label>
+                    
                     <input type="password" name="password" id="password" placeholder="Ingrese su password" value="">
                     <p id="errorP" class="errorP"> </p>
-                   
-
+                    
+            
                     <% if(locals.errors && errors.password){ %> 
                         <p style="color:red"><%= errors.password.msg %> </p>
-                        <% } %>    
+                        <% } %> 
+                    
                 </div>
+               
+
             </div>    
         </div>
         <div class="editarBtn">
