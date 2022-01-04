@@ -195,5 +195,67 @@ body {
 }
 
 .bordeverde{
-    background-color: green;
+    background-color: rgb(110, 233, 110);
+}
+
+.bttn-invalid{
+    background-color: #848484;
+}
+
+/*.perfil-usuario-body .perfil-usuario-bio .nombre input{
+    font-size: 100px;
+    display:block;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    width: 100%;
+    border: black 1px solid;
+}*/
+
+.erfil-usuario-body .perfil-usuario-bio .nombre {
+    color:red;
+
+}
+.titulo .errorN{
+    color:rgb(238, 14, 14);
+    font-size: 20px;
+    margin-top: 2px;
+    font-family: center;
+    font-weight: bold;
+}
+
+.titulo .errorA{
+    color:rgb(243, 21, 21);
+    font-size: 20px;
+    margin-top: 2px;
+    font-family: center;
+    font-weight: bold;
+   
+}
+
+.perfil-usuario-footer .errorE{
+    color:rgb(243, 21, 21);
+    font-size: 20px;
+    margin-top: 2px;
+    font-family: center;
+    font-weight: bold;
+    text-align: center;
+
+    
+    
+}
+
+.perfil-usuario-footer .errorP{
+    color:rgb(243, 21, 21);
+    font-size: 20px;
+    margin-top: 2px;
+    font-family: center;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+.perfil-usuario-body .perfil-usuario-bio .titulo{
+    display: flex;
+    justify-content: space-around;
 }
