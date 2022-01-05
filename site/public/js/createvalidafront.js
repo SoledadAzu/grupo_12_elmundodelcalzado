@@ -213,23 +213,25 @@ btn.onclick = function () {
     
     }
       /*------------  validar checkbox ------------ */
-      const checkdivs = document.querySelectorAll(".checkdiv");
-      console.log(checkdivs)
-      checkdivs.forEach((check) => {
-        const checkinput = check.querySelector("input")
       
-        var total_checked = 0
+        const checkinput = document.querySelectorAll(".tallescheck")
+     
+        var total_checked = []
 
       for (i=0; i < checkinput; i++) {
-          if (checkinput[i].checked) {total_checked ++; }
+          if (checkinput[i].checked) {
+            checkinput[i].push(total_checked) 
+          } 
+          
+          
         }
-         if (total_checked == 0) {
+         if (total_checked.length == 0) {
           alert("seleccionar talles")
           smalltalles.innerHTML= "Seleccionar talles del Producto"
         } else {
            smalltalles.innerHTML= ""
         }
-      })
+      
     /* -------------  Validar Imagen -------------*/
       var imagen = document.getElementById("img").files;
 
