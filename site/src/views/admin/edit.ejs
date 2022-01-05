@@ -39,17 +39,23 @@
                 <section class="selection"id="inputbox">
                   <div class="labelForm width">
                     <label for="colors" class="">Colores:</label>
-                    <% idFind.Color.map(e=> {%>
-                      <input type="text" id="colors" name="colors" value="<%= e.nombre %>" class="input1 form-input">
-                      <%}) %>
+                      <input type="text" id="colors1" name="colors" value="<%= idFind.Color[0].nombre %>"
+                      class="input1 form-input">
+                      <input type="text" id="colors2" name="colors" value="<%= idFind.Color[1].nombre %>"
+                      class="input1 form-input">
+                      <input type="text" id="colors3" name="colors" value="<%= idFind.Color[2].nombre %>"
+                      class="input1 form-input">
+                     
                       
 
                   </div>
                   <div class="labelForm width"id="inputbox">
                     <label for="detalles" class="">Detalles:</label>
-                    <% idFind.Detalle.map(e=> {%>
-                      <input type="text" id="detalles" name="detalles" value="<%= e.nombre %>" class="input1 form-input">
-                      <%}) %>
+                      <input type="text" id="detalles" name="detalles" value="<%= idFind.Detalle[0].nombre%>" class="input1 form-input">
+                      <input type="text" id="detalles" name="detalles" value="<%= idFind.Detalle[1].nombre%>" class="input1 form-input">
+                      <input type="text" id="detalles" name="detalles" value="<%= idFind.Detalle[2].nombre%>" class="input1 form-input">
+                      <input type="text" id="detalles" name="detalles" value="<%= idFind.Detalle[3].nombre%>" class="input1 form-input">
+                    
                       
                   </div>
                 </section>
