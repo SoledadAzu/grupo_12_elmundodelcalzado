@@ -17,73 +17,83 @@
                 <i class="fas fa-bars"></i>
             </label>
             <ul>
-                <% if(locals.user && locals.user.rol === "admin"){ %>
-                <li><a href="/admin">Administrador</a></li>
-                <li><a href="/products/hombre">Hombre</a></li>
-                <li><a href="/products/mujer">Mujer</a></li>
-                <li><a href="/products/temporada">temporada</a></li>
-                <li><a href="/products/outlet">Outlet</a></li>
-                <li><a href="/admin/cerrar">Cerrar Session</a></li>
-                <% } else if(locals.user && locals.user.rol === "user"){%> 
-                <li><a href="/user/perfiluser/<%=locals.user.id%> "><%= locals.user.nombre %></a></li>
-                <li><a href="/products/hombre">Hombre</a></li>
-                <li><a href="/products/mujer">Mujer</a></li>
-                <li><a href="/products/temporada">temporada</a></li>
-                <li><a href="/products/outlet">Outlet</a></li>
-                <li><a href="/admin/cerrar">Cerrar Session</a></li>
-                <% } else {%> 
-                <li><a href="/user/login">Login</a></li>
-                <li><a href="/user/register">Register</a></li>
-                <li><a href="/products/hombre">Hombre</a></li>
-                <li><a href="/products/mujer">Mujer</a></li>
-                <li><a href="/products/temporada">temporada</a></li>
-                <li><a href="/products/outlet">Outlet</a></li>
-                <%}%>
+                <% if(locals.user && locals.user.rol==="admin" ){ %>
+                    <li><a href="/admin">Administrador</a></li>
+                    <li><a href="/products/hombre">Hombre</a></li>
+                    <li><a href="/products/mujer">Mujer</a></li>
+                    <li><a href="/products/temporada">temporada</a></li>
+                    <li><a href="/products/outlet">Outlet</a></li>
+                    <li><a href="/admin/cerrar">Cerrar Session</a></li>
+                    <% } else if(locals.user && locals.user.rol==="user" ){%>
+                        <li><a href="/user/perfiluser/<%=locals.user.id%> ">
+                                <%= locals.user.nombre %>
+                            </a></li>
+                        <li><a href="/products/hombre">Hombre</a></li>
+                        <li><a href="/products/mujer">Mujer</a></li>
+                        <li><a href="/products/temporada">temporada</a></li>
+                        <li><a href="/products/outlet">Outlet</a></li>
+                        <li><a href="/admin/cerrar">Cerrar Session</a></li>
+                        <% } else {%>
+                            <li><a href="/user/login">Login</a></li>
+                            <li><a href="/user/register">Register</a></li>
+                            <li><a href="/products/hombre">Hombre</a></li>
+                            <li><a href="/products/mujer">Mujer</a></li>
+                            <li><a href="/products/temporada">temporada</a></li>
+                            <li><a href="/products/outlet">Outlet</a></li>
+                            <%}%>
             </ul>
         </nav>
-        
-            <div class="logo">
-                <a href="/"> <img src="/images/logo.png" alt="logo"></a> 
-            </div>
-                    
-            <form action="/products/general" class="buscar" method="GET">
-                <input  type="text" name="keywords" placeholder="¿Que estas buscando? " > <i class="fas fa-search"> </i>
-            </form>
+
+        <div class="logo">
+            <a href="/"> <img src="/images/logo.png" alt="logo"></a>
+        </div>
+
+        <form action="/products/general" class="buscar" method="GET">
+            <input type="text" name="keywords" placeholder="¿Que estas buscando? "> <i class="fas fa-search"> </i>
+        </form>
         <div class="iconos">
-            <% if(locals.user && locals.user.rol === "admin"){ %> 
-            <div class="administrador">
-               <a href="/admin"><h3>ADMIN</h3></a>
-              
-                <a href="/user/perfiluser/<%= locals.user.id %>"><h3>Hola:<%= locals.user.nombre %></h3>
-            
-               
-               <a href="/admin/cerrar">Cerrar Session</a>
-            </div>
-            <% } else if(locals.user && locals.user.rol === "user"){%> 
+            <% if(locals.user && locals.user.rol==="admin" ){ %>
                 <div class="administrador">
-                    <a href="/user/perfiluser/<%=locals.user.id%> "><h3>Hola:<%= locals.user.nombre %></h3></a>
-                    <a href="/admin/cerrar">Cerrar Session</a>
-                 </div>
-                
-            <% } else {%>     
-            <div class="usuario">
-                <i class="fas fa-user"></i>
-                <a href="/user/login">Ingresa</a>
-                <a href="/user/register">o Registrate</a>
-            </div>
-            <%}%>
-            <div class="iconos-search">
-                <div class="search">
-                    <input type="checkbox" id="search">
-                    <label for="search">
-                        <i class="fas fa-search ocultar"></i>
-                    </label>
-                    <div class="busqueda-input">
-                        <input type="search" name="keywords" placeholder="ingresa tu busqueda">
-                    </div>
+                    <a href="/admin">
+                        <h3>ADMIN</h3>
+                    </a>
+
+                    <a href="/user/perfiluser/<%= locals.user.id %>">
+                        <h3>Hola:<%= locals.user.nombre %>
+                        </h3>
+
+
+                        <a href="/admin/cerrar">Cerrar Session</a>
                 </div>
-                <a href="/products/carritoDeCompras" class="fas fa-shopping-cart "><span>Mi Compra</span></a>
-            </div>
+                <% } else if(locals.user && locals.user.rol==="user" ){%>
+                    <div class="administrador">
+                        <a href="/user/perfiluser/<%=locals.user.id%> ">
+                            <h3>Hola:<%= locals.user.nombre %>
+                            </h3>
+                        </a>
+                        <a href="/admin/cerrar">Cerrar Session</a>
+                    </div>
+
+                    <% } else {%>
+                        <div class="usuario">
+                            <i class="fas fa-user"></i>
+                            <a href="/user/login"><strong>- Ingresa</strong></a>
+                            <a href="/user/register"><strong>o Registrate</strong></a>
+                        </div>
+                        <%}%>
+                            <div class="iconos-search">
+                                <div class="search">
+                                    <input type="checkbox" id="search">
+                                    <label for="search">
+                                        <i class="fas fa-search ocultar"></i>
+                                    </label>
+                                    <div class="busqueda-input">
+                                        <input type="search" name="keywords" placeholder="ingresa tu busqueda">
+                                    </div>
+                                </div>
+                                <a href="/products/carritoDeCompras" class="fas fa-shopping-cart "><span>-Mi
+                                        Compra</span></a>
+                            </div>
         </div>
 
     </div>
@@ -95,7 +105,7 @@
             <li><a href="/products/outlet">OUTLET</a></li>
             <li><a href="/products">PRODUCTOS</a></li>
         </ul>
-        
+
     </nav>
 
 </header>

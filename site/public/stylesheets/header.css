@@ -77,6 +77,17 @@ header{
 }
 .buscar{
     display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: linear-gradient( 
+180deg ,#210DE9 0%, #F52B0F 100%);
+    padding: 10px;
+    height: 52px;
+    border-radius: 40px;
+    left: 35%;
+    width: auto;
+
 }
 
 
@@ -172,6 +183,7 @@ header{
     }
     .usuario a{
         color: black;
+        font-size: 22px;
     }
     .iconos-search{
         margin-top: 30px;
@@ -198,7 +210,7 @@ header{
     }
     
 }
-@media (min-width:1024px){
+@media (min-width:1025px){
     .headerFijo{
         width: 100%;
     }
@@ -262,7 +274,7 @@ header{
         margin:0;
         font-size: 22px;
         vertical-align: middle;
-        background-color: var(--azul-claro);
+        background-color: none;
         color:white;
         padding: 5px;
 
@@ -273,7 +285,7 @@ header{
     }
     .iconos-search a span{
         display: inline-block;
-        font-size: 18px;
+        font-size: 22px;
     }
     
     .datos div span{
@@ -294,10 +306,17 @@ header{
         
     }
     .buscar input{
-        width: 341px;
+        width: 460px;
         height: 32px;
-        font-size: 19px;
+        font-size: 22px;
+        background: none;
+       border: none;
+       outline: none;
+       color: white;
+       float: left;
+       
     }
+    .buscar input::placeholder { color: white; font-weight: bold; }
     .menu-principal{
         display: flex;
         width: 100%;
