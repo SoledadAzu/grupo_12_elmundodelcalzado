@@ -1,5 +1,5 @@
-const d=document
-const w=window
+/*const d=document
+const w=window*/
 
 const nombre=d.querySelector("#nombre")
 const apellido=d.querySelector("#apellido")

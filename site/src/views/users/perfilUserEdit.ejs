@@ -16,6 +16,8 @@
             <div class="perfil-usuario-portada">
                 <div class="perfil-usuario-avatar">
                     <img src="/images/users/<%= userPerfil.imagen %> " alt="img-avatar">
+                   
+                         
                     <label for="imge" class="boton-avatar">
                         <input type="file" name="imge" id="imge" class= "boton-avatar2">
                         <div>
@@ -37,27 +39,28 @@
                         <% } %> 
                     </div>
                 <div class="titulo">
-                    <div>
+                  <div class="nombreseparar">
                     <i class="fas fa-user"></i>
 
-                   <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" value="<%= locals.oldData && oldData.nombre ? oldData.nombre : null %>"> 
-                   <p id="errorN" class="errorN"> </p>
-                   <%if(locals.errors && errors.nombre){ %> 
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" value="<%= locals.oldData && oldData.nombre ? oldData.nombre : null %>"> 
+                    <p id="errorN" class="errorN"> </p>
+                    <%if(locals.errors && errors.nombre){ %> 
                     <p style="color:red"><%= errors.nombre.msg %> </p>
                     <% } %> 
-                </div>
+                  </div>
                    
-                <div>
-                   <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido"value="<%= locals.oldData && oldData.apellido ? oldData.apellido : null %>"> 
-                   <p id="errorA" class="errorA"> </p>
+                  <div class="apellidoseparar">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido"value="<%= locals.oldData && oldData.apellido ? oldData.apellido : null %>"> 
+                    <p id="errorA" class="errorA"> </p>
                 
 
                     <% if(locals.errors && errors.apellido){ %>
                         <p style="color:red"><%= errors.apellido.msg %> </p>
                         <% }%>
-                        </div>
+                  </div>
                 
-                    </div>
+                </div>
                 
                     
                 
@@ -65,7 +68,7 @@
 
             <div  class="perfil-usuario-footer">
                
-                <div class=>
+                <div class="emailseparar">
                     <label for="email">
                         <i class="fas fa-envelope"></i>
                         Email:
@@ -80,7 +83,7 @@
                     
                 </div> 
 
-                <div>
+                <div class="contraseñaseparar">
                     <label for="password">
                         <i class="fas fa-key"></i>
                         Contraseña:
