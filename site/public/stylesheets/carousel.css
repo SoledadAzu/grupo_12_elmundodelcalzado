@@ -69,7 +69,7 @@
 }
 
 /* ---- ----- ----- Media Queries ----- ----- ----- */
-@media(max-width: 1023px) {
+@media(max-width: 768px) {
 	.zapas-recomendadas .contenedor-carousel .carousel .zapatilla-img {
 		min-width: 50.5%;
 		transition: .3s ease all;
