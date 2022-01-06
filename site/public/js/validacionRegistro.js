@@ -15,45 +15,40 @@ window.addEventListener("load", function () {
     let $terms = qs("#terminos")
     let errorterm = qs("#errorterm")
     let btn = qs(".btn")
-    
+
+    btn.disabled = true
 
 
-
-
-
-
-
-    // console.log($name)
+     // console.log($name)
     //  console.log(lastname)
     // console.log($email)
     // console.log($pass)
     // console.log($terms) 
-    // $inputName.addEventListener("keypress",e =>{
-    //     console.log(e.key)
-    btn.disabled = true
+   
+    
     // btn.clasList.add("btn-invalid")
 
-    const validate = {
-        nombre: false,
-        apellido: false,
-        email: false,
-        password: false,
-        terminos: false
+    const validate={
+        nombre:false,
+        apellido:false,
+        email:false,
+        password:false,
+        terminos:false
 
     }
 
-    const funcValidate =(obj)=>{
-        let arrValidate = Object.values(obj)
+    //     const funcValidate =(obj)=>{
+    //     let arrValidate=Object.values(obj)
 
-        if (!arrValidate.includes(false)) {
-            btn.disabled = false
-            btn.classList.remove("btn-invalid")    
-        } else {
-            btn.disabled = true
+    //     if (!arrValidate.includes(false)){
+    //         btn.disabled=false
+    //         // btn.classList.remove("btn-invalid")    
+    //     }else{
+    //         btn.disabled=true
 
-        }
+    //     }
 
-    }
+    // }
     
 
 
@@ -71,8 +66,8 @@ window.addEventListener("load", function () {
 
 
     //     // }else if(e.target.value){
-    //     //     $name.classList.add("white")
-    //     //     $name.classList.remove("green")
+    //     //     $name.classList.add("")
+    //     //     $name.classList.remove("")
             
          } else {
              $name.classList.add("is-invalid")
