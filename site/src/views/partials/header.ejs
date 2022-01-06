@@ -51,6 +51,7 @@
         <form action="/products/general" class="buscar" method="GET">
             <input type="text" name="keywords" placeholder="¿Que estas buscando? "> <i class="fas fa-search"> </i>
         </form>
+    
         <div class="iconos">
             <% if(locals.user && locals.user.rol==="admin" ){ %>
                 <div class="administrador">
@@ -77,7 +78,7 @@
                     <% } else {%>
                         <div class="usuario">
                             <i class="fas fa-user"></i>
-                            <a href="/user/login"><strong>- Ingresa</strong></a>
+                            <a href="/user/login"><strong>Ingresa</strong></a>
                             <a href="/user/register"><strong>o Registrate</strong></a>
                         </div>
                         <%}%>
@@ -91,7 +92,7 @@
                                         <input type="search" name="keywords" placeholder="ingresa tu busqueda">
                                     </div>
                                 </div>
-                                <a href="/products/carritoDeCompras" class="fas fa-shopping-cart "><span>-Mi
+                                <a href="/products/carritoDeCompras" class="fas fa-shopping-cart "><span>Mi
                                         Compra</span></a>
                             </div>
         </div>

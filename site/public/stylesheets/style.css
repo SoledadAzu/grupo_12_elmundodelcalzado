@@ -1,5 +1,5 @@
-@import url(/stylesheets/cssenvios);
-@import url(/stylesheets/cssdefensaAlConsumidor);
+@import url(/stylesheets/cssenvios.css);
+@import url(/stylesheets/cssdefensaAlConsumidor.css);
 @import url(/stylesheets/carritoDeCompras.css);
 @import url(/stylesheets/detalleProducto.css);
 @import url(/stylesheets/home.css);

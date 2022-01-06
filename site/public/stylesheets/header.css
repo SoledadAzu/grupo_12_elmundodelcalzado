@@ -10,6 +10,8 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    background-image:linear-gradient(rgba(255,255,255,0.3),
+    rgba(255,255,255,0.3)), url(/images/headerfondo.jpg);
 }
 /* MENU HAMBURGUESA */
 
@@ -85,8 +87,8 @@ header{
     padding: 10px;
     height: 52px;
     border-radius: 40px;
-    left: 35%;
-    width: auto;
+    left: 22%;
+    width: 38%;
 
 }
 
@@ -169,7 +171,7 @@ header{
         
     }
     .iconos{
-        margin-right: 30px;
+        
         display: block;
         text-align: center;
     }
@@ -183,11 +185,11 @@ header{
     }
     .usuario a{
         color: black;
-        font-size: 22px;
+        font-size: 20px;
     }
     .iconos-search{
         margin-top: 30px;
-        margin-left: 30px;
+        margin-left: 55px;
     }
     
     .search div{
@@ -210,7 +212,7 @@ header{
     }
     
 }
-@media (min-width:1025px){
+@media (min-width:1024px){
     .headerFijo{
         width: 100%;
     }
@@ -285,7 +287,7 @@ header{
     }
     .iconos-search a span{
         display: inline-block;
-        font-size: 22px;
+        font-size: 20px;
     }
     
     .datos div span{
@@ -306,7 +308,7 @@ header{
         
     }
     .buscar input{
-        width: 460px;
+        width: 91%;
         height: 32px;
         font-size: 22px;
         background: none;
