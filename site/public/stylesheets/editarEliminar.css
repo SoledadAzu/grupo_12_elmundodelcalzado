@@ -65,7 +65,7 @@ position:fixed;
     width: 20%;
 }
 
-#inputbox input:focus {
+#inputbox input:focus{
     outline-color: #1e9ba3;
   }
 small {

@@ -1,3 +1,5 @@
+/* const nodemon = require("nodemon") */
+
 const form = document.getElementById("formcreate")
 const boton = document.getElementById("submit-btn")
 const inputs = document.querySelectorAll("#formcreate .input1")
@@ -213,23 +215,26 @@ btn.onclick = function () {
     
     }
       /*------------  validar checkbox ------------ */
-      const checkdivs = document.querySelectorAll(".checkdiv");
-      console.log(checkdivs)
-      checkdivs.forEach((check) => {
-        const checkinput = check.querySelector("input")
       
-        var total_checked = 0
+        const checkinput = document.querySelectorAll(".tallescheck");
+        let tallesChecked = false;
 
-      for (i=0; i < checkinput; i++) {
-          if (checkinput[i].checked) {total_checked ++; }
+        for (let i = 0; i < checkinput.length; i++) {
+            console.log(checkinput[i].checked);
+            if(checkinput[i].checked){
+              tallesChecked = true;
+            }
+                  
         }
-         if (total_checked == 0) {
+ 
+         if (!tallesChecked) {
           alert("seleccionar talles")
           smalltalles.innerHTML= "Seleccionar talles del Producto"
         } else {
            smalltalles.innerHTML= ""
         }
-      })
+
+      
     /* -------------  Validar Imagen -------------*/
       var imagen = document.getElementById("img").files;
 
