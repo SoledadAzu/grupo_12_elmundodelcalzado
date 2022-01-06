@@ -73,6 +73,9 @@
                 <% } else if(locals.user && locals.user.rol==="user" ){%>
                     <div class="administrador">
                         <a href="/user/perfiluser/<%=locals.user.id%> ">
+                            <div class="logo-usuario">
+                                <img class="logo-usuario-img" src="/images/users/<%= locals.user.imagen %> " alt="">
+                            </div>
                             <h3>Hola:<%= locals.user.nombre %>
                             </h3>
                         </a>

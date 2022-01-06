@@ -342,13 +342,13 @@ header{
     .logo-usuario{
         width: 40px;
         height: 40px;
-        
+        border-radius: 50%;
         margin: auto;
         
     }
     .logo-usuario .logo-usuario-img{
         width: 100%;
-        border-radius: 50px;
+        
     }
 
 }
