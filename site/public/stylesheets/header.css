@@ -339,5 +339,16 @@ header{
     .menu-principal ul li a:hover{
         color:rgba(255, 255, 255,.7)
     }
+    .logo-usuario{
+        width: 40px;
+        height: 40px;
+        
+        margin: auto;
+        
+    }
+    .logo-usuario .logo-usuario-img{
+        width: 100%;
+        border-radius: 50px;
+    }
 
 }
