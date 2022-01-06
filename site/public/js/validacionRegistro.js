@@ -15,50 +15,41 @@ window.addEventListener("load", function () {
     let $terms = qs("#terminos")
     let errorterm = qs("#errorterm")
     let btn = qs(".btn")
-    
+
+    btn.disabled = true
 
 
-
-
-
-
-
-    // console.log($nameame)
+     // console.log($name)
     //  console.log(lastname)
     // console.log($email)
     // console.log($pass)
     // console.log($terms) 
-    // $inputName.addEventListener("keypress",e =>{
-    //     console.log(e.key)
-    btn.disabled = true
-    // button.clasList.add("btn-invalid")
-
-    const validate = {
-        nombre: false,
-        apellido: false,
-        email: false,
-        password: false,
-        terminos: false
-
-    }
-
-    const funcValidate =(obj)=>{
-        let arrValidate = Object.values(obj)
-
-        if (!arrValidate.includes(false)) {
-            btn.disabled = false
-            // btn.classList.remove("btn-invalid")
-        } else {
-            btn.disabled = true
-
-        }
-
-    }
+   
     
+    // btn.clasList.add("btn-invalid")
 
+    const validate={
+        nombre:false,
+        apellido:false,
+        email:false,
+        password:false,
+        terminos:false
 
+    }
+    const funcValidate =(obj)=>{
+        let arrValidate=Object.values(obj)
+        
+        if(!arrValidate.includes(false)){
+            btn.disabled=false
+            // btn.clasList.add("btn-invalid")
+        }else{
+            btn.disabled=true
+            
+        }
+    
+}
 
-    $name.addEventListener("blur", (e) => {
+    $name.addEventListener("keyup", (e) => {
         const validateNombre = /^[a-zA-Z\sñáéíóú]*$/
 
         if (validateNombre.test(e.target.value)) {
@@ -68,16 +59,21 @@ window.addEventListener("load", function () {
             validate.nombre = true
             console.log("nombre válido");
 
-        } else {
-            $name.classList.add("is-invalid")
-            $name.classList.remove("is-valid")
-            errorname.innerHTML = "debe ingresar un nombre valido"
 
-            validate.nombre = false
-            console.log("nombre inválido");
+    //     // }else if(e.target.value){
+    //     //     $name.classList.add("")
+    //     //     $name.classList.remove("")
+            
+         } else {
+             $name.classList.add("is-invalid")
+             $name.classList.remove("is-valid")
+             errorname.innerHTML = "debe ingresar un nombre valido"
 
-        }
-    }),
+             validate.nombre = false
+             console.log("nombre inválido");
+
+         }
+     })
 
 
         $lastname.addEventListener("blur", (e) => {
@@ -99,7 +95,7 @@ window.addEventListener("load", function () {
                 console.log("apellido inválido");
 
             }
-        }),
+        })
 
 
 
@@ -123,7 +119,7 @@ window.addEventListener("load", function () {
 
             }
             funcValidate(validate)
-        }),
+        })
 
         $pass.addEventListener("input", (e) => {
             const validatePassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d$@$!%*?&]{8,15}$/
@@ -145,7 +141,7 @@ window.addEventListener("load", function () {
             }
             funcValidate(validate)
 
-        }),
+        })
         $img.addEventListener("change", (e) => {
             const validateImg = /(.jpg|.jpeg|.png|.web)$/i   //Extensiones permitidas
             if (!validateImg.exec(img)) {     //el metodo exec() ejecuta una busqueda
@@ -175,7 +171,7 @@ window.addEventListener("load", function () {
             funcValidate(validate)
         }),
 
-        $terms.addEventListener("input", (e) => {
+        $terms.addEventListener("click", (e) => {
 
             if (!$terms.checked) {
                 $terms.classList.add("is-invalid")
@@ -188,6 +184,7 @@ window.addEventListener("load", function () {
                 console.log("todo bien")
             }
         })
-})
+    })
+
 
 
