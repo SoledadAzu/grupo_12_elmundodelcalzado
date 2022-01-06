@@ -16,6 +16,7 @@
             <label for="menu">
                 <i class="fas fa-bars"></i>
             </label>
+            <!-- Modo CELULAR -->
             <ul>
                 <% if(locals.user && locals.user.rol==="admin" ){ %>
                     <li><a href="/admin">Administrador</a></li>
@@ -42,6 +43,7 @@
                             <li><a href="/products/outlet">Outlet</a></li>
                             <%}%>
             </ul>
+            <!-- ++++++++++++++ -->
         </nav>
 
         <div class="logo">
@@ -56,6 +58,9 @@
             <% if(locals.user && locals.user.rol==="admin" ){ %>
                 <div class="administrador">
                     <a href="/admin">
+                        <div class="logo-usuario">
+                            <img class="logo-usuario-img" src="/images/users/<%= locals.user.imagen %> " alt="">
+                        </div>
                         <h3>ADMIN</h3>
                     </a>
 
@@ -69,6 +74,9 @@
                 <% } else if(locals.user && locals.user.rol==="user" ){%>
                     <div class="administrador">
                         <a href="/user/perfiluser/<%=locals.user.id%> ">
+                            <div class="logo-usuario">
+                                <img class="logo-usuario-img" src="/images/users/<%= locals.user.imagen %> " alt="">
+                            </div>
                             <h3>Hola:<%= locals.user.nombre %>
                             </h3>
                         </a>

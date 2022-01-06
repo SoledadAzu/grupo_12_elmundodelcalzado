@@ -98,9 +98,73 @@
                         </div>
                     </div>
 
+<<<<<<< HEAD
                 </div>
             </main>
             <!-- MAIN -->
+=======
+            <div class="nombre">
+                <label class=name_label for="nombre">Nombre<strong class="obligatorio">*</strong></label>
+                <p><input type="text" name="nombre" id="nombre" placeholder="Nombre" value="<%= locals.oldData && oldData.nombre ? oldData.nombre : null %>"></p>
+               <small id="errorname"></small>
+                <% if(locals.errors && errors.nombre){ %>
+                    <p style="color : red" id="nombreErrors"><%= errors.nombre.msg %> </p>
+                    <% } %> 
+            </div>
+            <div class="apellido">
+                <label class=name_label for="apellido">Apellido <strong class="obligatorio">*</strong></label>
+                <input type="text" name="apellido" id="apellido" placeholder="Apellido" value="<%= locals.oldData && oldData.apellido ? oldData.apellido : null %>">
+                <small id="errorlastname"></small>
+                <% if(locals.errors && errors.apellido){ %>
+                    <p style="color:red"><%= errors.apellido.msg %> </p>
+                    <% } %> 
+            </div>
+            <div class="email">
+                <label class=name_label for="email">Email <strong class="obligatorio">*</strong></label>
+                <input type="text" name="email" id="email" placeholder="Email" value="<%= locals.oldData && oldData.email ? oldData.email : null %>">
+                <small id="erroremail"></small>
+                <% if(locals.errors && errors.email){ %>
+                    <p style="color:red"><%= errors.email.msg %></p>
+                    <% } %> 
+            </div>
+            <div class="password">
+                <label class=name_label for="password">Contraseña <strong class="obligatorio">*</strong></label>
+                <input type="password" name="password" id="password" placeholder="Contraseña">
+                <small id="errorpass"></small>
+                <% if(locals.errors && errors.password){ %>
+                    <p style="color:red"><%= errors.password.msg %> </p>
+                    <% } %> 
+            </div>
+            <article>
+                <a id="mostrar"><i class="fas fa-eye-slash"></i>mostrar</a>
+                </article>
+            <div class="select-img">
+                <label class=name_label for="img">Foto de Perfil</label>
+                <input type="file" name="img" id="img">
+                <small id="errorimg"></small>
+                <% if(locals.errors && errors.img){ %>
+                    <p style="color:red"><%= errors.img.msg %> </p>
+                    <% } %> 
+            </div>
+            
+            <div class="terminos">
+                <input type="checkbox" name="terminos" id="terminos">
+                <label for="terminos"> He leido y acepto los <a href="">términos y condiciones</a> y las <a href="/informacion/privacidad">politicas de privacidad</a> del Mundo del Calzado.</label>
+           <small id="errorterm"></small>
+            </div>
+            <small class="obligatorio">*Campo Obligatorio</small>
+            <div class="btn" >
+                <button  type="submit">CREAR</button>
+            </div>
+            <p>Si tiene una cuenta, inicie sesión con su dirección de correo electronico</p>
+        </form>
+        
+            <div class="btton" >
+                <a href="/user/login"><button  type="login" placeholder="INICIAR SESIÓN">INICIAR SESIÓN</button></a>
+            </div>
+        
+    </div>
+>>>>>>> 220d89032911414542673d83c9e95618e5dd9af3
 
 
 
