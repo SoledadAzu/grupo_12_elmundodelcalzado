@@ -15,8 +15,9 @@
         <div class="perfil-usuario-header">
             <div class="perfil-usuario-portada">
                 <div class="perfil-usuario-avatar">
-                    <img src="/images/users/<%= userPerfil.imagen %> " alt="img-avatar">
-                   
+                   <img src="/images/users/<%= userPerfil.imagen %> " alt="img-avatar">
+
+                    
                          
                     <label for="imge" class="boton-avatar">
                         <input type="file" name="imge" id="imge" class= "boton-avatar2">
@@ -71,7 +72,7 @@
                 <div class="emailseparar">
                     <label for="email">
                         <i class="fas fa-envelope"></i>
-                        Email:
+                        
                     </label>
                     
                     <input type="email" name="email" id="email" placeholder="Ingrese su email"value="<%= locals.oldData && oldData.email ? oldData.email : null %>">
@@ -86,10 +87,10 @@
                 <div class="contraseñaseparar">
                     <label for="password">
                         <i class="fas fa-key"></i>
-                        Contraseña:
+                        
                     </label>
                     
-                    <input type="password" name="password" id="password" placeholder="Ingrese su password" value="">
+                    <input type="password" name="password" id="password" placeholder="Ingrese su contraseña" value="">
                     <p id="errorP" class="errorP"> </p>
                     
             
