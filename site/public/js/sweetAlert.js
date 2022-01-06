@@ -2,10 +2,12 @@ const d=document;
 const w=window;
 
 const $eliminar=d.querySelector('#btn-eliminar')
-const $form=d.querySelector('#formEliminar')
+const $form=d.querySelectorAll('.formEliminar')
 
-// $eliminar.addEventListener('click',e=>{
-    $form.addEventListener('submit',e=>{
+console.log($form);
+
+$form.forEach(form=>{
+    form.addEventListener('submit',e=>{
         e.preventDefault()
     
     Swal.fire({
@@ -21,12 +23,8 @@ const $form=d.querySelector('#formEliminar')
     })
     .then(result=>{
         if(result.isConfirmed){
-            Swal.fire({
-                title:'Borrado!',
-                text:'el archivo ha sido eliminado.',
-                icon:'success'
-            })
-            $mensaje.innerHTML="este archivo ha sido eliminado"
+            form.submit();
+            
         }else if(result.dismiss===Swal.DismissReason.cancel){
             
             Swal.fire({
@@ -39,3 +37,7 @@ const $form=d.querySelector('#formEliminar')
     .catch(error=>console.log(error))
 
 })
+})
+
+
+

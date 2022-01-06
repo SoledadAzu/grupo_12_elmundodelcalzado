@@ -141,10 +141,10 @@ hr{
 }
 .is-invalid{
     border-color: red;
-    background-color: red;
+    background-color: #f7c0c8;
 }
 .is-valid{
     border-color: green;
-    background-color: green;
+    background-color: rgb(222, 255, 228);
 }
 
