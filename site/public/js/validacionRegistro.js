@@ -36,23 +36,18 @@ window.addEventListener("load", function () {
         terminos:false
 
     }
-
-    //     const funcValidate =(obj)=>{
-    //     let arrValidate=Object.values(obj)
-
-    //     if (!arrValidate.includes(false)){
-    //         btn.disabled=false
-    //         // btn.classList.remove("btn-invalid")    
-    //     }else{
-    //         btn.disabled=true
-
-    //     }
-
-    // }
+    const funcValidate =(obj)=>{
+        let arrValidate=Object.values(obj)
+        
+        if(!arrValidate.includes(false)){
+            btn.disabled=false
+            // btn.clasList.add("btn-invalid")
+        }else{
+            btn.disabled=true
+            
+        }
     
-
-
-})
+}
 
     $name.addEventListener("keyup", (e) => {
         const validateNombre = /^[a-zA-Z\sñáéíóú]*$/
@@ -78,7 +73,7 @@ window.addEventListener("load", function () {
              console.log("nombre inválido");
 
          }
-     }),
+     })
 
 
         $lastname.addEventListener("blur", (e) => {
@@ -100,7 +95,7 @@ window.addEventListener("load", function () {
                 console.log("apellido inválido");
 
             }
-        }),
+        })
 
 
 
@@ -124,7 +119,7 @@ window.addEventListener("load", function () {
 
             }
             funcValidate(validate)
-        }),
+        })
 
         $pass.addEventListener("input", (e) => {
             const validatePassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d$@$!%*?&]{8,15}$/
@@ -146,7 +141,7 @@ window.addEventListener("load", function () {
             }
             funcValidate(validate)
 
-        }),
+        })
         $img.addEventListener("change", (e) => {
             const validateImg = /(.jpg|.jpeg|.png|.web)$/i   //Extensiones permitidas
             if (!validateImg.exec(img)) {     //el metodo exec() ejecuta una busqueda
@@ -189,6 +184,7 @@ window.addEventListener("load", function () {
                 console.log("todo bien")
             }
         })
+    })
 
 
 
