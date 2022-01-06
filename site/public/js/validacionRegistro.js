@@ -23,7 +23,7 @@ window.addEventListener("load", function () {
 
 
 
-    // console.log($nameame)
+    // console.log($name)
     //  console.log(lastname)
     // console.log($email)
     // console.log($pass)
@@ -31,7 +31,7 @@ window.addEventListener("load", function () {
     // $inputName.addEventListener("keypress",e =>{
     //     console.log(e.key)
     btn.disabled = true
-    // button.clasList.add("btn-invalid")
+    // btn.clasList.add("btn-invalid")
 
     const validate = {
         nombre: false,
@@ -47,7 +47,7 @@ window.addEventListener("load", function () {
 
         if (!arrValidate.includes(false)) {
             btn.disabled = false
-            // btn.classList.remove("btn-invalid")
+            btn.classList.remove("btn-invalid")    
         } else {
             btn.disabled = true
 
@@ -57,8 +57,9 @@ window.addEventListener("load", function () {
     
 
 
+})
 
-    $name.addEventListener("blur", (e) => {
+    $name.addEventListener("keyup", (e) => {
         const validateNombre = /^[a-zA-Z\sñáéíóú]*$/
 
         if (validateNombre.test(e.target.value)) {
@@ -68,16 +69,21 @@ window.addEventListener("load", function () {
             validate.nombre = true
             console.log("nombre válido");
 
-        } else {
-            $name.classList.add("is-invalid")
-            $name.classList.remove("is-valid")
-            errorname.innerHTML = "debe ingresar un nombre valido"
 
-            validate.nombre = false
-            console.log("nombre inválido");
+    //     // }else if(e.target.value){
+    //     //     $name.classList.add("white")
+    //     //     $name.classList.remove("green")
+            
+         } else {
+             $name.classList.add("is-invalid")
+             $name.classList.remove("is-valid")
+             errorname.innerHTML = "debe ingresar un nombre valido"
 
-        }
-    }),
+             validate.nombre = false
+             console.log("nombre inválido");
+
+         }
+     }),
 
 
         $lastname.addEventListener("blur", (e) => {
@@ -175,7 +181,7 @@ window.addEventListener("load", function () {
             funcValidate(validate)
         }),
 
-        $terms.addEventListener("input", (e) => {
+        $terms.addEventListener("click", (e) => {
 
             if (!$terms.checked) {
                 $terms.classList.add("is-invalid")
@@ -188,6 +194,6 @@ window.addEventListener("load", function () {
                 console.log("todo bien")
             }
         })
-})
+
 
 
