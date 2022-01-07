@@ -56,15 +56,16 @@ window.addEventListener("load", function () {
         if (validateNombre.test(e.target.value)) {
             $name.classList.remove("is-invalid")
             $name.classList.add("is-valid")
-            errorname.innerHTML = "Este campo no puede estar vacio"
+            errorname.innerHTML = ""
             validate.nombre = true
             console.log("nombre válido");
 
 
-    //     // }else if(e.target.value){
-    //     //     $name.classList.add("")
-    //     //     $name.classList.remove("")
-            
+        }else if(e.target.value== ""){
+            $pass.classList.remove("is-valid")
+            $pass.classList.add("is-invalid")
+            errorname.innerHTML = "Este campo no puede estar vacio"
+
          } else {
              $name.classList.add("is-invalid")
              $name.classList.remove("is-valid")
@@ -74,18 +75,26 @@ window.addEventListener("load", function () {
              console.log("nombre inválido");
 
          }
+         funcValidate(validate)
+
      })
 
 
-        $lastname.addEventListener("blur", (e) => {
+        $lastname.addEventListener("keyup", (e) => {
             const validateApellido = /^[a-zA-Z\sñáéíóú]*$/
 
             if (validateApellido.test(e.target.value)) {
                 $lastname.classList.remove("is-invalid")
                 $lastname.classList.add("is-valid")
-                errorlastname.innerHTML = "Este campo no puede estar vacio"
+                errorlastname.innerHTML = ""
                 validate.apellido = true
                 console.log("apellido válido");
+
+            }else if(e.target.value== ""){
+                $pass.classList.remove("is-valid")
+                $pass.classList.add("is-invalid")
+                errorlastname.innerHTML = "Este campo no puede estar vacio"
+
 
             } else {
                 $lastname.classList.add("is-invalid")
@@ -96,6 +105,8 @@ window.addEventListener("load", function () {
                 console.log("apellido inválido");
 
             }
+            funcValidate(validate)
+
         })
 
 
@@ -106,9 +117,15 @@ window.addEventListener("load", function () {
             if (validateEmail.test(e.target.value)) {
                 $email.classList.remove("is-invalid")
                 $email.classList.add("is-valid")
-                erroremail.innerHTML = "Este campo no puede estar vacio"
+                erroremail.innerHTML = ""
                 validate.email = true
                 console.log("email válido");
+
+            }else if(e.target.value== ""){
+                $pass.classList.remove("is-valid")
+                $pass.classList.add("is-invalid")
+                erroremail.innerHTML = "Este campo no puede estar vacio"
+
 
             } else {
                 $email.classList.add("is-invalid")
@@ -117,6 +134,7 @@ window.addEventListener("load", function () {
 
                 validate.email = false
                 console.log("email inválido");
+                
 
             }
             funcValidate(validate)
