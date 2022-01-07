@@ -154,7 +154,7 @@ formulario.addEventListener("submit", e =>{
 })
 
 
-
+//icono de ojito//
 iconEye.addEventListener("click", function () {
     const icon = this.querySelector("i");
 
