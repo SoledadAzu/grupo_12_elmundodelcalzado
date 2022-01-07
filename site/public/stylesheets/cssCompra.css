@@ -1,4 +1,5 @@
 .paginfo{
+    padding: 10px;
     background-color:var(--rojo-claro);
     color: var(--gris-oscuro);
     font-family: 'Roboto Condensed',sans-serif,'Helvetica Neue',Helvetica,Arial,sans-serif;
