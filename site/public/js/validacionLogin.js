@@ -11,7 +11,7 @@ window.addEventListener("load", function(){
     let iconEyeLogin=qs(".iconEyeLogin")
 // console.log("login")
 
-bttn.disabled= true 
+// bttn.disabled= true 
 
 const validate={
     email:false,
