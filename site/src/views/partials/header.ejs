@@ -49,11 +49,13 @@
         <div class="logo">
             <a href="/"> <img src="/images/logo.png" alt="logo"></a>
         </div>
-
-        <form action="/products/general" class="buscar" method="GET">
-            <input type="text" name="keywords" placeholder="¿Que estas buscando? "> <i class="fas fa-search"> </i>
+        
+        <form id="formBuscador" action="/products/general" class="buscar" method="GET">
+            <input id="Buscador" type="text" name="keywords" placeholder="¿Que estas buscando? "> <i id="botonSearch" class="fas fa-search"> </i>
+            <p id="buscadorSmall" class="buscadorSmall"></p>
+            
         </form>
-    
+        
         <div class="iconos">
             <% if(locals.user && locals.user.rol==="admin" ){ %>
                 <div class="administrador">

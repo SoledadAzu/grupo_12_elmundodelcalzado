@@ -77,8 +77,9 @@ hr{
     margin-top: 15px;
     margin-bottom: 20px;
 }
-
-
+.bttn{
+    cursor: pointer;
+}
 
 @media(min-width:769px){
     .caja{
@@ -182,4 +183,5 @@ hr{
         
         
     }
+    
 }
