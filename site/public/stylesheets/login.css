@@ -76,6 +76,17 @@ hr{
     margin-top: 15px;
     margin-bottom: 20px;
 }
+.iconEyeLogin{
+    position: absolute;
+    right:22%;
+    top:31px ;
+    transform:translateY(-50);
+    cursor:pointer;
+    transition: .1s ease all ;
+    
+    
+    
+}
 @media(min-width:769px){
     .caja{
         display: flex;
@@ -146,5 +157,23 @@ hr{
 .is-valid{
     border-color: green;
     background-color: rgb(222, 255, 228);
+}
+.iconEyeLogin{
+    position: absolute;
+    right:22%;
+    top:31px ;
+    transform:translateY(-50);
+    cursor:pointer;
+    transition: .1s ease all ;
+    
+    
+    
+}
+.iconEyeLogin:hover{
+    color: rgb(18, 18, 19);
+       
+}
+.login .password{
+    position: relative;
 }
 

@@ -8,6 +8,7 @@ window.addEventListener("load", function(){
     let errorspass = qs ("#errorspass")
     let bttn = qs (".bttn")
     let mostrar=qs("#mostrar")
+    let iconEyeLogin=qs(".iconEyeLogin")
 // console.log("login")
 
 bttn.disabled= true 
@@ -76,6 +77,20 @@ $email.addEventListener("input", (e) => {
    funcValidate(validate)
 
 })
+iconEyeLogin.addEventListener("click", function () {
+    const icon = this.querySelector("i");
+
+    if(this.nextElementSibling.type === "password"){
+        this.nextElementSibling.type = "text";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+    } else {
+        this.nextElementSibling.type = "password";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+    };
+});
+
 mostrar.addEventListener("click", (e) => {
   
      if($pass.getAttribute("type")=="password"){
@@ -87,3 +102,4 @@ mostrar.addEventListener("click", (e) => {
 })
 
 })
+
