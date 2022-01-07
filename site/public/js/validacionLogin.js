@@ -10,7 +10,7 @@ window.addEventListener("load", function(){
     let mostrar=qs("#mostrar")
 // console.log("login")
 
-// bttn.disabled= true 
+bttn.disabled= true 
 
 const validate={
     email:false,
@@ -19,44 +19,44 @@ const validate={
 
 
 const funcValidate =(obj)=>{
-    // let arrValidate=Object.values(obj)
+    let arrValidate=Object.values(obj)
     
-    // if(!arrValidate.includes(false)){
-    //     bttn.disabled=false
+    if(!arrValidate.includes(false)){
+        bttn.disabled=false
         
-    // }else{
-    //     bttn.disabled=true
+    }else{
+        bttn.disabled=true
         
-    // }
+    }
    
 }
 
 
 $email.addEventListener("input", (e) => {
-    // const validateEmail= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
+    const validateEmail= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
 
-    // if (validateEmail.test(e.target.value)) {
-    //     $email.classList.remove("is-invalid")
-    //     $email.classList.add("is-valid")
-    //     errorsemail.innerHTML = ""
-    //     validate.email = true
-    //     console.log("email válido");
+    if (validateEmail.test(e.target.value)) {
+        $email.classList.remove("is-invalid")
+        $email.classList.add("is-valid")
+        errorsemail.innerHTML = ""
+        validate.email = true
+        console.log("email válido");
         
-    // } else {
-    //     $email.classList.add("is-invalid")
-    //     $email.classList.remove("is-valid")
-    //     errorsemail.innerHTML = "debe ingresar un email valido"
+    } else {
+        $email.classList.add("is-invalid")
+        $email.classList.remove("is-valid")
+        errorsemail.innerHTML = "debe ingresar un email valido"
         
-    //     validate.email = false
-    //     console.log("email inválido");
+        validate.email = false
+        console.log("email inválido");
         
-    // }
-    // funcValidate(validate)
+    }
+    funcValidate(validate)
 
 })
 
  $pass.addEventListener("input", (e) => {
-   const validatePass= /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d$@$!%*?&]{6,8}$/
+   const validatePass= /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d$@$!%*?&]{6,10}$/
     if (validatePass.test(e.target.value)) {
        $pass.classList.remove("is-invalid")
         $pass.classList.add("is-valid")

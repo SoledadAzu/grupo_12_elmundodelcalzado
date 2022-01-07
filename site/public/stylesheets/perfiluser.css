@@ -14,11 +14,12 @@ html {
     box-sizing: border-box;
 }
 
-body {
+.bodyUser{
     color: #404040;/** cambia de color los iconos*/
     font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
     background-color: blanchedalmond;
 }
+
 
 .seccion-perfil-usuario .perfil-usuario-body,
 .seccion-perfil-usuario {

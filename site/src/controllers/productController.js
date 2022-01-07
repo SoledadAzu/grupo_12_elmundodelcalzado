@@ -60,7 +60,8 @@ const controller={
                                 res.render('products/detalleProducto',{
                                     productos:otro,
                                     idProduct:producto,
-                                    imagen,colors:color,
+                                    imagen,
+                                    colors:color,
                                     talles:talle,
                                     detalles:detalle,
                                     restoImagen,
