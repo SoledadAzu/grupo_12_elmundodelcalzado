@@ -10,12 +10,15 @@
 
 <body>
   
-    <form action="/user/updatePerfil/<%= userPerfil.id %> " method="POST" enctype="multipart/form-data">
+    <form id="form"  action="/user/updatePerfil/<%= userPerfil.id %> " method="POST" enctype="multipart/form-data">
     <section class="seccion-perfil-usuario">
         <div class="perfil-usuario-header">
             <div class="perfil-usuario-portada">
                 <div class="perfil-usuario-avatar">
-                    <img src="/images/users/<%= userPerfil.imagen %> " alt="img-avatar">
+                   <img src="/images/users/<%= userPerfil.imagen %> " alt="img-avatar">
+
+                    
+                         
                     <label for="imge" class="boton-avatar">
                         <input type="file" name="imge" id="imge" class= "boton-avatar2">
                         <div>
@@ -28,7 +31,7 @@
             </div>
         </div>
        
-        <div class="perfil-usuario-body">
+        <div  class="perfil-usuario-body">
           
             <div class="perfil-usuario-bio">
                 <div style="margin: 0 auto;">
@@ -36,54 +39,76 @@
                         <p style="color:red"><%= errors.img.msg %> </p>
                         <% } %> 
                     </div>
-                <h2 class="titulo">
+                <div class="titulo">
+                  <div class="nombreseparar">
                     <i class="fas fa-user"></i>
-                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" value="<%= locals.oldData && oldData.nombre ? oldData.nombre : null %>"> 
-                    <strong id="errorN"> </strong>
 
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" value="<%= locals.oldData && oldData.nombre ? oldData.nombre : null %>"> 
+                    <p id="errorN" class="errorN"> </p>
+                    <%if(locals.errors && errors.nombre){ %> 
+                    <p style="color:red"><%= errors.nombre.msg %> </p>
+                    <% } %> 
+                  </div>
+                   
+                  <div class="apellidoseparar">
+                    <i class="fas fa-user"></i>
                     <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido"value="<%= locals.oldData && oldData.apellido ? oldData.apellido : null %>"> 
-                    <strong id="errorA"> </strong>
+                    <p id="errorA" class="errorA"> </p>
+                
+
                     <% if(locals.errors && errors.apellido){ %>
                         <p style="color:red"><%= errors.apellido.msg %> </p>
-                        <% } else if(locals.errors && errors.nombre){ %> 
-                            <p style="color:red"><%= errors.nombre.msg %> </p>
-                            <% } %> 
-                </h2>
+                        <% }%>
+                  </div>
+                
+                </div>
                 
                     
                 
             </div>
 
             <div  class="perfil-usuario-footer">
-                <div>
+               
+                <div class="emailseparar">
                     <label for="email">
                         <i class="fas fa-envelope"></i>
-                        Email de usuario:
+                        
                     </label>
+                    
                     <input type="email" name="email" id="email" placeholder="Ingrese su email"value="<%= locals.oldData && oldData.email ? oldData.email : null %>">
-                    <strong id="errorE"> </strong>
+                    <p id="errorE" class="errorE"> </p>
 
                     <% if(locals.errors && errors.email){ %> 
                         <p style="color:red"><%= errors.email.msg %> </p>
                         <% } %> 
+                    
                 </div> 
 
-                <div>
+                <div class="contraseñaseparar">
                     <label for="password">
                         <i class="fas fa-key"></i>
-                        Password:
+                        
                     </label>
-                    <input type="password" name="password" id="password" placeholder="Ingrese su password" value="">
-                    <strong id="errorP"> </strong>
-
+                    <span class="iconEye">
+                        <i class="fas fa-eye-slash"></i>
+                      </span>
+                    <input type="password" name="password" id="password" placeholder="Ingrese su contraseña" value="">                  
+                     
+                
+                    <p id="errorP" class="errorP"> </p>
+                    
+            
                     <% if(locals.errors && errors.password){ %> 
                         <p style="color:red"><%= errors.password.msg %> </p>
-                        <% } %>    
+                        <% } %> 
+                    
                 </div>
+               
+
             </div>    
         </div>
         <div class="editarBtn">
-            <button type="submit" class="bt_modif">Aceptar</button>
+            <button id="button" type="submit" class="bt_modif">Aceptar</button>
 
             <a href="/user/perfiluser/<%= userPerfil.id %> "class="bt_eliminar">Cancelar</a>
         </div>
@@ -102,6 +127,7 @@
      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
      crossorigin="anonymous"></script>
      <script src="/js/validaciondeperfil.js"></script>
+     
 </body>
 
 </html>
