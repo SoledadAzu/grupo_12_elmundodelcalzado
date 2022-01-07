@@ -11,6 +11,7 @@ const errorE=d.querySelector("#errorE")
 const errorP=d.querySelector("#errorP")
 const formulario=d.querySelector("#form")
 const button=d.querySelector("#button")
+const iconEye=d.querySelector(".iconEye")
 button.disabled=true
 console.log(formulario)
 const validate ={
@@ -151,3 +152,19 @@ formulario.addEventListener("submit", e =>{
     /*e.preventDefault()*/
 
 })
+
+
+
+iconEye.addEventListener("click", function () {
+    const icon = this.querySelector("i");
+
+    if(this.nextElementSibling.type === "password"){
+        this.nextElementSibling.type = "text";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+    } else {
+        this.nextElementSibling.type = "password";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+    };
+});
