@@ -69,9 +69,20 @@
 }
 
 /* ---- ----- ----- Media Queries ----- ----- ----- */
-@media screen and (max-width: 800px) {
-
-
+@media(max-width: 768px) {
+	.zapas-recomendadas .contenedor-carousel .carousel .zapatilla-img {
+		min-width: 50.5%;
+		transition: .3s ease all;
+		box-shadow: 7px 7px 10px rgb(0 0 0 / 80%);
+		margin: 15px;
+	}
+	.zapas-recomendadas2 .contenedor-carousel2 .carousel2 .zapatilla-img {
+		min-width: 50.5%;
+		transition: .3s ease all;
+		box-shadow: 7px 7px 10px rgb(0 0 0 / 80%);
+		margin: 15px;
+	}
+	
 	.zapas-recomendadas .contenedor-carousel {
 		overflow: visible;
 	}
@@ -157,7 +168,7 @@
 }
 
 /* ---- ----- ----- Media Queries ----- ----- ----- */
-@media screen and (max-width: 800px) {
+@media(max-width: 768px) {
 
 
 	.zapas-recomendadas2 .contenedor-carousel2 {
@@ -174,5 +185,17 @@
 	.zapas-recomendadas2 #flecha-izquierda2,
 	.zapas-recomendadas2 #flecha-derecha2 {
 		display: none;
+	}
+	.zapas-recomendadas .contenedor-carousel .carousel .zapatilla-img {
+		min-width: 87.5%;
+		transition: .3s ease all;
+		box-shadow: 7px 7px 10px rgb(0 0 0 / 80%);
+		margin: 15px;
+	}
+	.zapas-recomendadas2 .contenedor-carousel2 .carousel2 .zapatilla-img {
+		min-width: 87.5%;
+		transition: .3s ease all;
+		box-shadow: 7px 7px 10px rgb(0 0 0 / 80%);
+		margin: 15px;
 	}
 }

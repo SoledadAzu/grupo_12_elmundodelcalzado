@@ -2,12 +2,12 @@
 
 let rolArray = [
   {
-    nombre: 'Admin',
+    nombre: 'admin',
     createdAt: new Date,
     updatedAt: new Date 
   },
   {
-    nombre: 'User',
+    nombre: 'user',
     createdAt: new Date,
     updatedAt: new Date 
   }

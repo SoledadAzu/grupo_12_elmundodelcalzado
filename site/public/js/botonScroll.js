@@ -1,5 +1,5 @@
-const d=document
-const w=window
+// d=document;
+// w=window;
 
 const $btnScroll=d.querySelector(".scroll")
 

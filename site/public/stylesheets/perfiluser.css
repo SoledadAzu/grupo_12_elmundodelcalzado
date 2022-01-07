@@ -15,8 +15,9 @@ html {
 }
 
 body {
-    color: #404040;
+    color: #404040;/** cambia de color los iconos*/
     font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
+    background-color: blanchedalmond;
 }
 
 .seccion-perfil-usuario .perfil-usuario-body,
@@ -40,7 +41,7 @@ body {
     position: relative;
     width: 90%;
     height: 17rem;
-    background: linear-gradient(45deg, #BC3CFF, #317FFF);
+    background-image:linear-gradient(45deg, #BC3CFF, #317FFF);
     border-radius: 0 0 20px 20px;
 }
 
@@ -53,7 +54,9 @@ body {
     padding: 12px 25px;
     background-color: rgba(0, 0, 0, .5);
     color: #fff;
-    cursor: pointer;
+    cursor: pointer
+
+    
 }
 .seccion-perfil-usuario .perfil-usuario-portada .boton-portada .boton-portada2{
     position: absolute;  
@@ -73,6 +76,7 @@ body {
 }
 
 .seccion-perfil-usuario .perfil-usuario-avatar {
+    
     display: flex;
     width: 180px;
     height: 180px;
@@ -92,6 +96,7 @@ body {
     width: 100%;
     position: relative;
     border-radius: 50%;
+    
 }
 
 .seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar {
@@ -104,13 +109,14 @@ body {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    cursor: pointer;
+    
     
 
 }
 .seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar div{
     text-align: center;
     margin-top: 10px;
+    cursor: pointer
 
 }
 .seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar .boton-avatar2{
@@ -123,7 +129,7 @@ body {
     border-radius: 50%;
     cursor: pointer;
     opacity: 0.0;
-    
+   
 
 }
 
@@ -131,6 +137,7 @@ body {
     width: 70%;
     position: relative;
     max-width: 750px;
+    
 }
 
 .seccion-perfil-usuario .perfil-usuario-body .titulo {
@@ -138,11 +145,13 @@ body {
     width: 100%;
     font-size: 1.75em;
     margin-bottom: 0.5rem;
+    
 }
 
 .seccion-perfil-usuario .perfil-usuario-body .texto {
     color: #848484;
     font-size: 0.95em;
+    
 }
 
 .seccion-perfil-usuario .perfil-usuario-footer,
@@ -154,16 +163,20 @@ body {
     background-color: #fff;
     border-radius: 15px;
     width: 100%;
+    
+    
 }
 
 .seccion-perfil-usuario .perfil-usuario-bio {
     margin-bottom: 1.25rem;
     text-align: center;
+    
 }
 
 .seccion-perfil-usuario .lista-datos {
     width: 50%;
     list-style: none;
+   
 }
 
 .seccion-perfil-usuario .lista-datos li {
@@ -195,5 +208,106 @@ body {
 }
 
 .bordeverde{
-    background-color: green;
+    background-color: rgb(110, 233, 110);
+}
+
+.bttn-invalid{
+    background-color: #848484;
+}
+
+/*.perfil-usuario-body .perfil-usuario-bio .nombre input{
+    font-size: 100px;
+    display:block;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    width: 100%;
+    border: black 1px solid;
+}*/
+
+.erfil-usuario-body .perfil-usuario-bio .nombre {
+    color:red;
+
+}
+.titulo .errorN{
+    color:rgb(238, 14, 14);
+    font-size: 20px;
+    margin-top: 2px;
+    font-family: center;
+    font-weight: bold;
+}
+
+.titulo .errorA{
+    color:rgb(243, 21, 21);
+    font-size: 20px;
+    margin-top: 2px;
+    font-family: center;
+    font-weight: bold;
+   
+}
+
+.perfil-usuario-footer .errorE{
+    color:rgb(243, 21, 21);
+    font-size: 20px;
+    margin-top: 2px;
+    font-family: center;
+    font-weight: bold;
+    text-align: center;
+
+    
+    
+}
+
+.perfil-usuario-footer .errorP{
+    color:rgb(243, 21, 21);
+    font-size: 20px;
+    margin-top: 2px;
+    font-family: center;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+.perfil-usuario-body .perfil-usuario-bio .titulo{
+    display: flex;
+    justify-content: space-around;
+    margin: center 10px;
+}
+
+.nombreseparar{
+    cursor: pointer;
+    margin-left: 77px;
+}
+
+.apellidoseparar{
+    cursor: pointer;
+    margin-right: 84px;
+}
+.contraseñaseparar{
+    cursor: pointer;
+    margin-left: 63px;
+    position: relative;
+
+    
+}
+
+.emailseparar{
+    cursor: pointer;
+    margin-left: 110px;
+}
+
+.iconEye{
+    position: absolute;
+    right:0px;
+    top:2% ;
+    transform:translateY(-50);
+    cursor:pointer;
+    transition: .1s ease all ;
+    
+    
+    
+}
+.iconEye:hover{
+    color: rgb(18, 18, 19);
+       
 }

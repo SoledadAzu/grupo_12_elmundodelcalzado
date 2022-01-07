@@ -10,12 +10,11 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    background-image:linear-gradient(rgba(255,255,255,0.3),
+    rgba(255,255,255,0.3)), url(/images/headerfondo.jpg);
 }
-.menu{
-    margin-right: 20px;
-    border: none;
-    background-color: white;
-}
+/* MENU HAMBURGUESA */
+
 .logo-iconos nav ul{
     display: block;
     position: fixed;
@@ -26,15 +25,16 @@ header{
     left: -100%;
     text-align: center;
     transition: all .5s;
+    z-index: 3;
 
 }
+/* menu SEARCH */
 .iconos-search{
     display: flex;
 }
 .search div{
     position: fixed;
-    width: 100%;
-    
+    width: 100%; 
     background: linear-gradient(180deg, #F52B0F 0%, #210DE9 100%);
     top: 77px;
     right:-100%;
@@ -79,6 +79,17 @@ header{
 }
 .buscar{
     display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: linear-gradient( 
+180deg ,#210DE9 0%, #F52B0F 100%);
+    padding: 10px;
+    height: 52px;
+    border-radius: 40px;
+    left: 22%;
+    width: 38%;
+
 }
 
 
@@ -160,7 +171,7 @@ header{
         
     }
     .iconos{
-        margin-right: 30px;
+        
         display: block;
         text-align: center;
     }
@@ -174,10 +185,11 @@ header{
     }
     .usuario a{
         color: black;
+        font-size: 20px;
     }
     .iconos-search{
         margin-top: 30px;
-        margin-left: 30px;
+        margin-left: 55px;
     }
     
     .search div{
@@ -264,7 +276,7 @@ header{
         margin:0;
         font-size: 22px;
         vertical-align: middle;
-        background-color: var(--azul-claro);
+        background-color: none;
         color:white;
         padding: 5px;
 
@@ -275,7 +287,7 @@ header{
     }
     .iconos-search a span{
         display: inline-block;
-        font-size: 18px;
+        font-size: 20px;
     }
     
     .datos div span{
@@ -296,10 +308,17 @@ header{
         
     }
     .buscar input{
-        width: 341px;
+        width: 91%;
         height: 32px;
-        font-size: 19px;
+        font-size: 22px;
+        background: none;
+       border: none;
+       outline: none;
+       color: white;
+       float: left;
+       
     }
+    .buscar input::placeholder { color: white; font-weight: bold; }
     .menu-principal{
         display: flex;
         width: 100%;
@@ -321,6 +340,17 @@ header{
     }
     .menu-principal ul li a:hover{
         color:rgba(255, 255, 255,.7)
+    }
+    .logo-usuario{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin: auto;
+        
+    }
+    .logo-usuario .logo-usuario-img{
+        width: 100%;
+        
     }
 
 }

@@ -121,7 +121,7 @@
               <div class="selection">
                 <div>
                   <label for="genero" class="form-label">Genero</label>
-                  <select name="genero" id="genero" class="select">
+                  <select name="genero" id="genero" class="form-input select">
                     <option value="" hidden selected>Elegí</option>
 
                     <% generos.forEach(genero => {%>
@@ -134,7 +134,11 @@
                 </div>
                 <div>
                   <label for="temporada" class="form-label">Temporada</label>
-                  <select name="temporada" id="temporada" class="select">
+                  <select
+                    name="temporada"
+                    id="temporada"
+                    class="form-input select"
+                  >
                     <option value="" hidden selected>Elegí</option>
 
                     <% temporadas.forEach(temporada => {%>
@@ -147,7 +151,7 @@
                 </div>
                 <div>
                   <label for="category" class="form-label">Outlet</label>
-                  <select name="outlet" id="outlet" class="select">
+                  <select name="outlet" id="outlet" class="form-input select">
                     <option value="" hidden selected>Elegí</option>
 
                     <% outlets.forEach(outlet=> {%>
@@ -160,7 +164,7 @@
                 </div>
                 <div>
                   <label for="marca" class="form-label">Marca</label>
-                  <select name="marca" id="marca" class="select">
+                  <select name="marca" id="marca" class="form-input select">
                     <option value="" hidden selected>Elegi</option>
 
                     <% marcas.forEach(marca=> {%>
@@ -174,43 +178,103 @@
                 <label for="talles">Talles:</label>
                 <div class="container-talles">
                   <div class="checkdiv">
-                    <input type="checkbox" name="talles" id="35" value="35" />
+                    <input
+                      class="tallescheck"
+                      type="checkbox"
+                      name="talles"
+                      id="35"
+                      value="35"
+                    />
                     <label for="35">35</label>
                   </div>
                   <div class="checkdiv">
-                    <input type="checkbox" name="talles" id="36" value="36" />
+                    <input
+                      class="tallescheck"
+                      type="checkbox"
+                      name="talles"
+                      id="36"
+                      value="36"
+                    />
                     <label for="36">36</label>
                   </div>
                   <div class="checkdiv">
-                    <input type="checkbox" name="talles" id="37" value="37" />
+                    <input
+                      class="tallescheck"
+                      type="checkbox"
+                      name="talles"
+                      id="37"
+                      value="37"
+                    />
                     <label for="37">37</label>
                   </div>
                   <div class="checkdiv">
-                    <input type="checkbox" name="talles" id="38" value="38" />
+                    <input
+                      class="tallescheck"
+                      type="checkbox"
+                      name="talles"
+                      id="38"
+                      value="38"
+                    />
                     <label for="38">38</label>
                   </div>
                   <div class="checkdiv">
-                    <input type="checkbox" name="talles" id="39" value="39" />
+                    <input
+                      class="tallescheck"
+                      type="checkbox"
+                      name="talles"
+                      id="39"
+                      value="39"
+                    />
                     <label for="39">39</label>
                   </div>
                   <div class="checkdiv">
-                    <input type="checkbox" name="talles" id="40" value="40" />
+                    <input
+                      class="tallescheck"
+                      type="checkbox"
+                      name="talles"
+                      id="40"
+                      value="40"
+                    />
                     <label for="40">40</label>
                   </div>
                   <div class="checkdiv">
-                    <input type="checkbox" name="talles" id="41" value="41" />
+                    <input
+                      class="tallescheck"
+                      type="checkbox"
+                      name="talles"
+                      id="41"
+                      value="41"
+                    />
                     <label for="41">41</label>
                   </div>
                   <div class="checkdiv">
-                    <input type="checkbox" name="talles" id="42" value="42" />
+                    <input
+                      class="tallescheck"
+                      type="checkbox"
+                      name="talles"
+                      id="42"
+                      value="42"
+                    />
                     <label for="42">42</label>
                   </div>
                   <div class="checkdiv">
-                    <input type="checkbox" name="talles" id="43" value="43" />
+                    <input
+                      class="tallescheck"
+                      type="checkbox"
+                      name="talles"
+                      id="43"
+                      value="43"
+                    />
                     <label for="43">43</label>
                   </div>
                   <div class="checkdiv">
-                    <input type="checkbox" name="talles" id="44" value="44" />
+                    <input
+                      class="tallescheck"
+                      type="checkbox"
+                      name="talles"
+                      id="44"
+                      value="44"
+                    />
                     <label for="44">44</label>
                   </div>
                   <% if(locals.errors && errors.talles){ %>
@@ -254,8 +318,6 @@
                   class="btn btn-outline-success"
                   id="submit-btn"
                   type="submit"
-                  onclick="validar()"
-                  disabled
                 >
                   Guardar Producto
                 </button>

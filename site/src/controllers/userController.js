@@ -29,6 +29,7 @@ const controller ={
                  include:[{association:"Categoria_Usuario"}]
             })
             .then(usuario=>{
+                
                 if(usuario !== null){
 
                 
@@ -38,6 +39,7 @@ const controller ={
                                 email:usuario.email,
                                 nombre: usuario.nombre,
                                 rol:usuario.Categoria_Usuario.nombre,
+                                imagen:usuario.imagen, 
                                 id:usuario.id
                             } 
                             

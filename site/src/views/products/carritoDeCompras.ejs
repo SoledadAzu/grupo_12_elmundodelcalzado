@@ -93,35 +93,44 @@
                 <h2 class='oferta1'>APROVECHA LAS SUPER OFERTAS</h2>
                
                
-                    <section class="mercaderia">
-                  
-                        <%  productos.map(e=>{%>
-                            <% if(e.Outlet.nombre =="Si"){ %> 
-                       
-                             <article>
-                              <a href="/products/productDetail/<%= e.id %>">
-                                 <div>
-                                     <img src="/images/articulos/<%= e.Imagen[0].nombre %>" alt="e.Imagen.nombre">
-                                 </div>  
-                                 <div>
-                                  <strong>
-                                    <%= toThousand(e.precio)%>
-                                  </strong>
-                                  <p>
-                                      <%=e.marca%>
-                                  </p>
-                                  <h4>
-                                      <%= e.nombre%>
-                                  </h4>
-                                 </div>
-                              </a>   
-                             </article>
-                             <% } %> 
-                             <% }) %>
-                    
-                </section>
+                   <!--  <section class="mercaderia"> -->
+                    <div class="zapas-recomendadas contenedor">
+                        <div class="contenedor-principal">
+                            <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+                              <div id="contenedor-carousel" class="contenedor-carousel">
+                                 <div class="carousel">
+                        <% productos.map(el=>{%>
+                           
+                            <% if(el.Outlet.nombre === "Si"){ %> 
+                                    <article id= "zapatilla-img"class="zapatilla-img">
+                                        <a href="/products/productDetail/<%=el.id%> ">
+                                            <div>
+                                                <img class="zapatilla-img1" src="/images/articulos/<%=el.Imagen[0].nombre%> "
+                                                alt="<%=el.Imagen.nombre  %> ">
+                                            </div>
+                                            <div class="ofertasZapatillaPrecio">
+                                                <h4>$<%=toThousand(el.precio) %>
+                                                </h4>
+                                                <p>
+                                                    <%= el.Marca.nombre %>
+                                                </p>
+                                                <strong>
+                                                    <%= el.nombre%>
+                                                </strong>
+                                            </div>
+                                        </a>
+                                    </article>
+                                 
+                                        <% } %>
+                                <% })%>
+                            </div>
+                        </div>
+                      <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+                  </div>
+              </div>
+               <!--  </section> -->
             
-                <div class="button-vermas"><a href="./outlet"><button class="vermas"><strong>Ver más ></strong></button></a></div>
+               <!--  <div class="button-vermas"><a href="./outlet"><button class="vermas"><strong>Ver más ></strong></button></a></div> -->
 
             </main>
 
@@ -130,7 +139,8 @@
             <!-- FOOTER -->
             <%- include('../partials/footer') %>
                 <!-- FOOTER -->
-
+                <script src="/js/carrousel.js"></script>
+                <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script> 
     </body>
 
 </html>
