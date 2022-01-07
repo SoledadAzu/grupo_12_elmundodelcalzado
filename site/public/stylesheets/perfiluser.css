@@ -299,7 +299,7 @@ html {
 
 .iconEye{
     position: absolute;
-    right:0px;
+     right:0px;
     top:2% ;
     transform:translateY(-50);
     cursor:pointer;
