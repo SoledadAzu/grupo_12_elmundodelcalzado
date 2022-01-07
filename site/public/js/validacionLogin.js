@@ -8,9 +8,10 @@ window.addEventListener("load", function(){
     let errorspass = qs ("#errorspass")
     let bttn = qs (".bttn")
     let mostrar=qs("#mostrar")
+    let iconEyeLogin=qs(".iconEyeLogin")
 // console.log("login")
 
-// bttn.disabled= true 
+bttn.disabled= true 
 
 const validate={
     email:false,
@@ -19,44 +20,44 @@ const validate={
 
 
 const funcValidate =(obj)=>{
-    // let arrValidate=Object.values(obj)
+    let arrValidate=Object.values(obj)
     
-    // if(!arrValidate.includes(false)){
-    //     bttn.disabled=false
+    if(!arrValidate.includes(false)){
+        bttn.disabled=false
         
-    // }else{
-    //     bttn.disabled=true
+    }else{
+        bttn.disabled=true
         
-    // }
+    }
    
 }
 
 
 $email.addEventListener("input", (e) => {
-    // const validateEmail= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
+    const validateEmail= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
 
-    // if (validateEmail.test(e.target.value)) {
-    //     $email.classList.remove("is-invalid")
-    //     $email.classList.add("is-valid")
-    //     errorsemail.innerHTML = ""
-    //     validate.email = true
-    //     console.log("email válido");
+    if (validateEmail.test(e.target.value)) {
+        $email.classList.remove("is-invalid")
+        $email.classList.add("is-valid")
+        errorsemail.innerHTML = ""
+        validate.email = true
+        console.log("email válido");
         
-    // } else {
-    //     $email.classList.add("is-invalid")
-    //     $email.classList.remove("is-valid")
-    //     errorsemail.innerHTML = "debe ingresar un email valido"
+    } else {
+        $email.classList.add("is-invalid")
+        $email.classList.remove("is-valid")
+        errorsemail.innerHTML = "debe ingresar un email valido"
         
-    //     validate.email = false
-    //     console.log("email inválido");
+        validate.email = false
+        console.log("email inválido");
         
-    // }
-    // funcValidate(validate)
+    }
+    funcValidate(validate)
 
 })
 
  $pass.addEventListener("input", (e) => {
-   const validatePass= /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d$@$!%*?&]{6,8}$/
+   const validatePass= /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d$@$!%*?&]{6,10}$/
     if (validatePass.test(e.target.value)) {
        $pass.classList.remove("is-invalid")
         $pass.classList.add("is-valid")
@@ -76,6 +77,20 @@ $email.addEventListener("input", (e) => {
    funcValidate(validate)
 
 })
+iconEyeLogin.addEventListener("click", function () {
+    const icon = this.querySelector("i");
+
+    if(this.nextElementSibling.type === "password"){
+        this.nextElementSibling.type = "text";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+    } else {
+        this.nextElementSibling.type = "password";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+    };
+});
+
 mostrar.addEventListener("click", (e) => {
   
      if($pass.getAttribute("type")=="password"){
@@ -87,3 +102,4 @@ mostrar.addEventListener("click", (e) => {
 })
 
 })
+

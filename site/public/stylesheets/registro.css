@@ -160,3 +160,26 @@ margin-bottom: 5px;
 .is-valid{
     border-color: green;
 } 
+.emailseparar{
+    cursor: pointer;
+    margin-left: 110px;
+}
+.register .password{
+    position: relative;
+}
+.iconEyeRegistro{
+    position: absolute;
+    right:7px;
+    top:37px ;
+    transform:translateY(-50);
+    cursor:pointer;
+    transition: .1s ease all ;
+    
+    
+    
+}
+.iconEyeRegistro:hover{
+    color: rgb(18, 18, 19);
+       
+}
+

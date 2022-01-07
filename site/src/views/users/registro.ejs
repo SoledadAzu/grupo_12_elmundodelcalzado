@@ -59,8 +59,14 @@
                                 </div>
                                 <div class="password">
                                     <label class=name_label for="password">Contraseña <strong
-                                            class="obligatorio">*</strong></label>
+                                            class="obligatorio">*</strong>
+                                            </label>
+                                            <span class="iconEyeRegistro"> 
+                                                <i class="fas fa-eye-slash"></i>
+                                            </span>       
                                     <input type="password" name="password" id="password" placeholder="Contraseña">
+                                   
+                                    
                                     <small id="errorpass"></small <% if(locals.errors && errors.password){ %>
                                     <p style="color:red">
                                         <%= errors.password.msg %>
@@ -107,6 +113,7 @@
             <!-- FOOTER -->
             <%- include('../partials/footer') %>
                 <!-- FOOTER -->
+                <script src="https://kit.fontawesome.com/61253f2a8f.js" crossorigin="anonymous"></script>
                 <script src="/js/validacionRegistro.js"></script>
     </body>
 

@@ -248,17 +248,21 @@ const controller ={
     editePerfil:(req,res)=>{
        
         const errors = validationResult(req)
+       
         
-        if(req.fileValidationError){
+       if(req.fileValidationError){
 
             let img = {
-                param:"img",
-                msg:req.fileValidationError,
+                 param:"img",
+                 msg:req.fileValidationError,
 
-            }
+             }
             
             errors.errors.push(img)
-        }
+            
+         }
+         
+         
        
          
         if(errors.isEmpty()){
@@ -292,10 +296,19 @@ const controller ={
         .catch(error => res.send(error))
         
      }else{
-        res.render('users/perfilUserEdit',{
-            errors:errors.mapped(),
-            oldData:req.body
+        db.Usuarios.findByPk(req.params.id)
+        .then(usuario=>{
+            res.render('users/perfilUserEdit',{
+                errors:errors.mapped(),
+                oldData:req.body,
+                userPerfil:usuario
+            })
+            
         })
+        .catch(error=>{
+            res.send(error)
+        })
+        
       }
     },
     

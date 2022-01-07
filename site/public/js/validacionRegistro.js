@@ -15,6 +15,7 @@ window.addEventListener("load", function () {
     let $terms = qs("#terminos")
     let errorterm = qs("#errorterm")
     let btn = qs(".btn")
+    let iconEyeRegistro=qs(".iconEyeRegistro")
 
     btn.disabled = true
 
@@ -126,11 +127,16 @@ window.addEventListener("load", function () {
             if (validatePassword.test(e.target.value)) {
                 $pass.classList.remove("is-invalid")
                 $pass.classList.add("is-valid")
-                errorpass.innerHTML = "Este campo no puede estar vacio"
+                errorpass.innerHTML = ""
                 validate.password = true
                 console.log("Contraseña válida");
 
-            } else {
+            }else if(e.target.value== ""){
+                $pass.classList.remove("is-valid")
+                $pass.classList.add("is-invalid")
+                errorpass.innerHTML = "Este campo no puede estar vacio"
+
+            }else {
                 $pass.classList.add("is-invalid")
                 $pass.classList.remove("is-valid")
                 errorpass.innerHTML = "La contraseña debe contener un minimo de 6 caracteres"
@@ -142,6 +148,21 @@ window.addEventListener("load", function () {
             funcValidate(validate)
 
         })
+
+        iconEyeRegistro.addEventListener("click", function () {
+            const icon = this.querySelector("i");
+        
+            if(this.nextElementSibling.type === "password"){
+                this.nextElementSibling.type = "text";
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            } else {
+                this.nextElementSibling.type = "password";
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            };
+        });
+
         $img.addEventListener("change", (e) => {
             const validateImg = /(.jpg|.jpeg|.png|.web)$/i   //Extensiones permitidas
             if (!validateImg.exec(img)) {     //el metodo exec() ejecuta una busqueda
