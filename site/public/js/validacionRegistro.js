@@ -61,9 +61,9 @@ window.addEventListener("load", function () {
             console.log("nombre válido");
 
 
-        }else if(e.target.value== ""){
-            $pass.classList.remove("is-valid")
-            $pass.classList.add("is-invalid")
+        }else if(e.target.value==""){
+            $name.classList.remove("is-valid")
+            $name.classList.add("is-invalid")
             errorname.innerHTML = "Este campo no puede estar vacio"
 
          } else {
@@ -91,8 +91,8 @@ window.addEventListener("load", function () {
                 console.log("apellido válido");
 
             }else if(e.target.value== ""){
-                $pass.classList.remove("is-valid")
-                $pass.classList.add("is-invalid")
+                $lastname.classList.remove("is-valid")
+                $lastname.classList.add("is-invalid")
                 errorlastname.innerHTML = "Este campo no puede estar vacio"
 
 
@@ -122,8 +122,8 @@ window.addEventListener("load", function () {
                 console.log("email válido");
 
             }else if(e.target.value== ""){
-                $pass.classList.remove("is-valid")
-                $pass.classList.add("is-invalid")
+                $email.classList.remove("is-valid")
+                $email.classList.add("is-invalid")
                 erroremail.innerHTML = "Este campo no puede estar vacio"
 
 
@@ -200,15 +200,15 @@ window.addEventListener("load", function () {
             funcValidate(validate)
         }),
 
-        mostrar.addEventListener("click", (e) => {
+        // mostrar.addEventListener("click", (e) => {
 
-            if ($pass.getAttribute("type") == "password") {
-                $pass.setAttribute("type", "text")
-            } else {
-                $pass.setAttribute("type", "password")
-            }
-            funcValidate(validate)
-        }),
+        //     if ($pass.getAttribute("type") == "password") {
+        //         $pass.setAttribute("type", "text")
+        //     } else {
+        //         $pass.setAttribute("type", "password")
+        //     }
+        //     funcValidate(validate)
+        // }),
 
         $terms.addEventListener("click", (e) => {
 
