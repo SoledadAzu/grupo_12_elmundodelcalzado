@@ -35,6 +35,9 @@
                     
                                 <div class="password">
                                     <label for="pasword"> Tu Contraseña</label>
+                                    <span class="iconEyeLogin"> 
+                                        <i class="fas fa-eye-slash"></i>
+                                    </span>    
                                     <input type="password" name="password" id="password" placeholder="Contraseña">
                                     <small id="errorspass"></small>
                                     <% if(locals.errors && errors.password){ %>
@@ -43,9 +46,9 @@
                                             <p style="color: red;"><%= locals.mensaje %> </p>
                                         <%}%> 
                                 </div>
-                                <article>
+                                <!-- <article>
                                     <a id="mostrar"><i class="fas fa-eye-slash"></i>mostrar</a>
-                                </article>
+                                </article> -->
     
                                 <div class="checkbox">
                             
