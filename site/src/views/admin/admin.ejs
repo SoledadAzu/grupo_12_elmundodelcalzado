@@ -67,11 +67,13 @@
             </tr>
           </thead>
           <tbody>
-            <% products.map(e=>{%>
+           
+            <%products.map(e=>{%>
               <tr>
                 <th scope="row">
                   <%= e.id %>
                 </th>
+               
                 <td>
                   <%= e.nombre %>
                 </td>
@@ -85,7 +87,7 @@
                   <%= e.Marca.nombre %>
                 </td>
                 <td>
-                  <% if(e.Temporada.nombre=== "Si"){ %>
+                  <% if(e.Temporada.nombre === "Si"){ %>
                     <%= "false" %> 
                   <%} else{%>
                     <%= "true" %> 

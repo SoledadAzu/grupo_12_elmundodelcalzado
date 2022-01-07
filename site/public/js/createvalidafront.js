@@ -247,9 +247,7 @@ btn.onclick = function () {
           }
         }
       }
-      /* if (imagen.width !== 320 && imagen.height !== 320) {
-        alert('Las medidas deben ser hasta: 320 * 320'); */
-    /*   }else */ if (imagen.size > 320000) {
+     if (imagen.size > 320000) {
         alert('El peso de la imagen no puede exceder los 320kb')
       }
       
