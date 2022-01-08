@@ -19,13 +19,14 @@
             <!-- Modo CELULAR -->
             <ul>
                 <% if(locals.user && locals.user.rol==="admin" ){ %>
-                    <li><a href="/admin">Administrador</a></li>
+                    <li><a href="/admin">Administrador : <%= locals.user.nombre %></a> </li>
                     <li><a href="/products/hombre">Hombre</a></li>
                     <li><a href="/products/mujer">Mujer</a></li>
                     <li><a href="/products/temporada">temporada</a></li>
                     <li><a href="/products/outlet">Outlet</a></li>
                     <li><a href="/admin/cerrar">Cerrar Session</a></li>
                     <% } else if(locals.user && locals.user.rol==="user" ){%>
+
                         <li><a href="/user/perfiluser/<%=locals.user.id%> ">
                                 <%= locals.user.nombre %>
                             </a></li>
