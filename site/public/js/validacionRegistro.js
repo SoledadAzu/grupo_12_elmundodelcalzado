@@ -51,7 +51,7 @@ window.addEventListener("load", function () {
 }
 
     $name.addEventListener("keyup", (e) => {
-        const validateNombre = /^[a-zA-Z\sñáéíóú]*$/
+        const validateNombre = /^[a-zA-Z\sñáéíóú]/
 
         if (validateNombre.test(e.target.value)) {
             $name.classList.remove("is-invalid")
@@ -81,7 +81,7 @@ window.addEventListener("load", function () {
 
 
         $lastname.addEventListener("keyup", (e) => {
-            const validateApellido = /^[a-zA-Z\sñáéíóú]*$/
+            const validateApellido = /^[a-zA-Z\sñáéíóú]/
 
             if (validateApellido.test(e.target.value)) {
                 $lastname.classList.remove("is-invalid")
