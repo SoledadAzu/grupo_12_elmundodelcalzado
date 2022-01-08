@@ -107,18 +107,19 @@ const controller ={
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 10),
                 categoriaId: categoria[1].id,
-                imagen: req.file ? req.file.filename: "default.jpg"
+                imagen: req.file ? req.file.filename :"default.jpg"
             })
             .then((Usuarios) => {
-                
                 if(Usuarios){
                     req.session.usuarioLogueado ={
                         id:Usuarios.id,   
                         email:Usuarios.email,
                         nombre: Usuarios.nombre,
+                        imagen:Usuarios.imagen,
                         rol:"user"
                     } 
                      res.redirect("/")
+                   
             }
             res.redirect("/user/login")
             
