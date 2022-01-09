@@ -12,15 +12,15 @@ const errorP=d.querySelector("#errorP")
 const formulario=d.querySelector("#form")
 const button=d.querySelector("#button")
 const iconEye=d.querySelector(".iconEye")
+
 button.disabled=true
-console.log(formulario)
+
 const validate ={
     nombre:false,
     apellido:false,
     email:false,
     password:false
 }
-console.log("validate")
 
 const funcValidate = (obj) => {
     let arr = Object.values(obj)
@@ -38,28 +38,34 @@ const funcValidate = (obj) => {
 /*button.classList.add("bttn-invalid")*/
 
 //nombre
-nombre.addEventListener("input",e=>{
-    const validate = /^[a-zA-Z\sñáéíóú]*$/
+nombre.addEventListener("keyup",e=>{
+    const validate = /^[a-zA-Z\sñáéíóú]/
 
     if(validate.test(e.target.value)){
-        console.log("nombre válido"); 
-        nombre.classList.add("bordeverde")
-        nombre.classList.remove("borderojo")
+        
+        nombre.classList.add("is-valid")
+        nombre.classList.remove("is-invalid")
         errorN.innerHTML=""
         
         /*errorN.style.border = "3px solid red"*/
         validate.nombre= true
 
  
-    }else{
-        nombre.classList.add("borderojo")
-        nombre.classList.remove("bordeverde")
+    }else if(e.target.value==""){
+        nombre.classList.remove("is-valid")
+        nombre.classList.add("is-invalid")
+        errorN.innerHTML = "Este campo no puede estar vacio"
+       
+
+     }else{
+        nombre.classList.add("is-invalid")
+        nombre.classList.remove("is-valid")
         errorN.innerHTML='Nombre invalido';
         
         /*fileerrorN.style.border = "3px solid red"
         fileerrorN.style.margin-top;*/
         validate.nombre=false
-        e.preventDefault()
+        
 
         
 
@@ -70,24 +76,30 @@ nombre.addEventListener("input",e=>{
 })
 
 //apellido
-apellido.addEventListener("input",e=>{
-    const validate = /^[a-zA-Z\sñáéíóú]*$/
+apellido.addEventListener("keyup",e=>{
+    const validate = /^[a-zA-Z\sñáéíóú]/
 
     if(validate.test(e.target.value)){
-        console.log("apellido válido"); 
-        apellido.classList.add("bordeverde")
-        apellido.classList.remove("borderojo")
+        
+        apellido.classList.add("is-valid")
+        apellido.classList.remove("is-invalid")
         errorA.innerHTML=""
         validate.apellido= true
 
 
  
-    }else{
-        apellido.classList.add("borderojo")
-        apellido.classList.remove("bordeverde")
+    }else if(e.target.value==""){
+        apellido.classList.remove("is-valid")
+        apellido.classList.add("is-invalid")
+        errorA.innerHTML = "Este campo no puede estar vacio"
+        
+
+     }else{
+        apellido.classList.add("is-invalid")
+        apellido.classList.remove("is-valid")
         errorA.innerHTML="apellido invalido"
         validate.apellido= false
-        e.preventDefault()
+        
     }
 
     funcValidate(validate)
@@ -96,23 +108,29 @@ apellido.addEventListener("input",e=>{
 
 
 //email
-email.addEventListener("input",e=>{
+email.addEventListener("keyup",e=>{
     const validate = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
     if(validate.test(e.target.value)){
-        console.log("email válido"); 
-        email.classList.add("bordeverde")
-        email.classList.remove("borderojo")
+        
+        email.classList.add("is-valid")
+        email.classList.remove("is-invalid")
         errorE.innerHTML=""
         validate.email= true
 
 
  
-    }else{
-        email.classList.add("borderojo")
-        email.classList.remove("bordeverde")
+    }else if(e.target.value==""){
+        email.classList.remove("is-valid")
+        email.classList.add("is-invalid")
+        errorE.innerHTML = "Este campo no puede estar vacio"
+        
+
+     }else{
+        email.classList.add("is-invalid")
+        email.classList.remove("is-valid")
         errorE.innerHTML="email invalido"
         validate.email= false
-        e.preventDefault()
+        
         
 
     }
@@ -122,24 +140,30 @@ email.addEventListener("input",e=>{
 
 
 //password
-password.addEventListener("input",e=>{
+password.addEventListener("keyup",e=>{
     const validate = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{8,}$/;
 
     if(validate.test(e.target.value)){
-        console.log("contraseña valida"); 
-        password.classList.add("bordeverde")
-        password.classList.remove("borderojo")
+         
+        password.classList.add("is-valid")
+        password.classList.remove("is-invalid")
         errorP.innerHTML=""
         validate.password= true
 
 
  
-    }else{
-         password.classList.add("borderojo")
-         password.classList.remove("bordeverde")
+    }else if(e.target.value==""){
+        password.classList.remove("is-valid")
+        password.classList.add("is-invalid")
+        errorP.innerHTML = "Este campo no puede estar vacio"
+        
+
+     }else{
+         password.classList.add("is-invalid")
+         password.classList.remove("is-valid")
          errorP.innerHTML="contraseña invalida"
          validate.password= false
-         e.preventDefault()
+         
         
 
     }

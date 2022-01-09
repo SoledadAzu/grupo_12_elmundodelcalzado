@@ -47,7 +47,51 @@ const controller ={
                             if(req.body.recordame !== undefined){
                                 res.cookie('rememberMe',req.session.usuarioLogueado,{maxAge: 60000})
                             }
-                            res.redirect('/')
+                            /* carrito */
+                            req.session.cart = [];
+
+                            db.Ordens.findOne({
+                                where: {
+                                    usuarioId: req.session.usuarioLogueado.id,
+                                    estado: 'pendiente'
+                                },
+                                include: [
+                                    {
+                                        association: 'Carrito',
+                                        include: [
+                                            {
+                                                association: 'Producto',
+                                                include: [{ all: true }]
+                                            }
+                                        ]
+                                    }
+                                ],
+                            })
+                                .then(order => {
+                                    console.log(order)
+                                    if (order) {
+                                        order.Carrito.forEach(item => {
+                                            let product = {
+                                                id: item.productoId,
+                                                nombre: item.Producto.nombre,
+                                                imagen: item.Producto.Imagen[0].nombre,
+                                                precio: item.Producto.precio,
+                                                talles: item.talles,
+                                                cantidad: item.cantidad,
+                                                subtotal: item.Producto.precio * item.cantidad,
+                                                ordenId: order.id
+                                            }
+                                            req.session.cart.push(product)
+                                        })
+                                    }
+
+                                    return res.redirect('/')
+
+                                })
+
+
+
+                            
                             
                     }else{
                             // en el caso de error de contraseña, se lo manda a la vista
