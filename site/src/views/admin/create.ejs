@@ -121,7 +121,7 @@
               <div class="selection">
                 <div>
                   <label for="genero" class="form-label">Genero</label>
-                  <select name="genero" id="genero" class="form-input select">
+                  <select name="genero" id="genero" class="form-input select" >
                     <option value="" hidden selected>Elegí</option>
 
                     <% generos.forEach(genero => {%>
@@ -138,6 +138,7 @@
                     name="temporada"
                     id="temporada"
                     class="form-input select"
+                    onchange
                   >
                     <option value="" hidden selected>Elegí</option>
 
@@ -151,7 +152,7 @@
                 </div>
                 <div>
                   <label for="category" class="form-label">Outlet</label>
-                  <select name="outlet" id="outlet" class="form-input select">
+                  <select name="outlet" id="outlet" class="form-input select" onchange>
                     <option value="" hidden selected>Elegí</option>
 
                     <% outlets.forEach(outlet=> {%>
@@ -164,7 +165,7 @@
                 </div>
                 <div>
                   <label for="marca" class="form-label">Marca</label>
-                  <select name="marca" id="marca" class="form-input select">
+                  <select name="marca" id="marca" class="form-input select" onchange>
                     <option value="" hidden selected>Elegi</option>
 
                     <% marcas.forEach(marca=> {%>
