@@ -277,10 +277,10 @@ const marca = document.getElementById("marca")
     }
   };
 
-  form.addEventListener("submit", (e) => {
+  /* form.addEventListener("submit", (e) => {
     e.preventDefault()
     
 
 
 
-  })
+  }) */
