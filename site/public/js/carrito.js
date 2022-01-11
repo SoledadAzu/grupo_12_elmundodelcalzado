@@ -2,11 +2,11 @@ console.log('carrito.js connected');
 
 const $ = id => document.getElementById(id);
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
-
+const valor = document.querySelector(".valor")
+const cantidadCompra= document.querySelector(".cantidadCompra")
 const boxCarrito = $('carrito');
-
-
+let cantidadTotal = 0
+let precioTotal = 0
 const cargarTabla = (carrito) => {
 
     if (boxCarrito) {
@@ -14,13 +14,15 @@ const cargarTabla = (carrito) => {
         boxCarrito.innerHTML = '';
 
         carrito.forEach(producto => {
-
+          cantidadTotal += producto.cantidad
+          producto.subtotal = producto.precio * producto.cantidad
+          precioTotal += producto.subtotal
 
             boxCarrito.innerHTML += `
         
             <tr>
 
-            <td><button onClick="removeItem(event,${producto.id},${producto.talles})" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></button>
+            <td><button onClick="removeItem(event,${producto.id},${producto.talles})" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt papelera"></i></button>
             </td>
 
             <td class="d-flex flex-column">
@@ -41,7 +43,10 @@ const cargarTabla = (carrito) => {
             
             `
         })
-
+valor.innerHTML = `$ ${toThousand(precioTotal)}`
+precioTotal = 0
+cantidadCompra.innerHTML = cantidadTotal 
+cantidadTotal = 0
     }
 
 }

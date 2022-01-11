@@ -36,27 +36,27 @@ fila.addEventListener('mouseleave', () => {
 
 
 // // ? ----- ----- Event Listener para la flecha derecha. ----- -----
-// flechaDerecha2.addEventListener('click', () => {
-// 	fila2.scrollLeft += fila2.offsetWidth;
-// });
+flechaDerecha2.addEventListener('click', () => {
+ 	fila2.scrollLeft += fila2.offsetWidth;
+ });
 
-// // ? ----- ----- Event Listener para la flecha izquierda. ----- -----
-// flechaIzquierda2.addEventListener('click', () => {
-// 	fila2.scrollLeft -= fila2.offsetWidth;
-// });
+ // ? ----- ----- Event Listener para la flecha izquierda. ----- -----
+ flechaIzquierda2.addEventListener('click', () => {
+ 	fila2.scrollLeft -= fila2.offsetWidth;
+ });
 
 
-// // ? ----- ----- Hover ----- -----
-// zapatillas2.forEach((zapatilla) => {
-// 	zapatilla.addEventListener('mouseenter', (e) => {
-// 		const elemento = e.currentTarget;
-// 		setTimeout(() => {
-// 			zapatillas2.forEach(zapatilla => zapatilla.classList.remove('hover'));
-// 			elemento.classList.add('hover');
-// 		}, 300);
-// 	});
-// });
+ // ? ----- ----- Hover ----- -----
+ zapatillas2.forEach((zapatilla) => {
+ 	zapatilla.addEventListener('mouseenter', (e) => {
+ 		const elemento = e.currentTarget;
+ 		setTimeout(() => {
+ 			zapatillas2.forEach(zapatilla => zapatilla.classList.remove('hover'));
+ 			elemento.classList.add('hover');
+ 		}, 300);
+ 	});
+ });
 
-// fila2.addEventListener('mouseleave', () => {
-// 	zapatillas2.forEach(zapatilla => zapatilla.classList.remove('hover'));
-// }); 
+ fila2.addEventListener('mouseleave', () => {
+ 	zapatillas2.forEach(zapatilla => zapatilla.classList.remove('hover'));
+ }); 

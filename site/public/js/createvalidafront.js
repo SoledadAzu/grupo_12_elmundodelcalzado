@@ -21,10 +21,7 @@ let errors = {
   detalles3: true,
   detalles4: true,
   description: true,
-  marca: true,
-  genero: true,
-  temporada: true,
-  outlet: true
+  
 };
 const expresiones = {
   precio: /^\d{4,6}$/
@@ -230,7 +227,7 @@ const marca = document.getElementById("marca")
         marca.classList.add('form-success');
        
       }
-  }
+  
 
 
 
@@ -270,8 +267,7 @@ const marca = document.getElementById("marca")
   if (imagen.size > 320000) {
     alert('El peso de la imagen no puede exceder los 320kb')
   }
-
-  /*     } */
+ } 
 
   submitActivado = () => {
     if (errors.title || errors.price || errors.colors1 || errors.colors2 || errors.colors3 || errors.detalles1 || errors.detalles2 || errors.detalles3 || errors.detalles4 || errors.description) {

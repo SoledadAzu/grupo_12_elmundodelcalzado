@@ -19,7 +19,7 @@ const validate={
 }
 
 
-const funcValidate =(obj)=>{
+/* const funcValidate =(obj)=>{
     let arrValidate=Object.values(obj)
     
     if(!arrValidate.includes(false)){
@@ -31,7 +31,7 @@ const funcValidate =(obj)=>{
     }
    
 }
-
+ */
 
 $email.addEventListener("input", (e) => {
     const validateEmail= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
