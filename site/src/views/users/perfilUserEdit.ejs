@@ -39,7 +39,8 @@
                     <% if(locals.errors && errors.img){ %>
                         <p style="color:red"><%= errors.img.msg %> </p>
                         <% } %> 
-                    </div>
+                </div>
+                
                 <div class="titulo">
                   <div class="nombreseparar">
                     <i class="fas fa-user"></i>
@@ -86,12 +87,12 @@
                 </div> 
 
                 <div class="contraseñaseparar">
-                    <label for="password">
-                        <i class="fas fa-key"></i>
-                        
-                    </label>
+                    
+                   <label for="password">
+                       <i class="fas fa-key"></i>
+                   </label>
 
-                    //icono ojito//
+                   
 
                     <span class="iconEye">
                         <i class="fas fa-eye-slash"></i>
@@ -101,16 +102,19 @@
                 
                     <p id="errorP" class="errorP"> </p>
                     
-            
-                    <% if(locals.errors && errors.password){ %> 
+                    <% if(locals.errors && errors.password){ %>
                         <p style="color:red"><%= errors.password.msg %> </p>
-                        <% } %> 
-                    
-                </div>
-               
 
-            </div>    
-        </div>
+                        <% } %>
+            
+                     
+                </div>  
+                
+                
+               
+             </div>
+        </div>      
+        
         <div class="editarBtn">
             <button id="button" type="submit" class="bt_modif">Aceptar</button>
 
