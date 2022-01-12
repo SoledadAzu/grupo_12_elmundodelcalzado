@@ -11,7 +11,7 @@ window.addEventListener("load", function(){
     let iconEyeLogin=qs(".iconEyeLogin")
 // console.log("login")
 
-bttn.disabled= true 
+// bttn.disabled= true 
 
 const validate={
     email:false,
@@ -19,7 +19,7 @@ const validate={
 }
 
 
-const funcValidate =(obj)=>{
+/* const funcValidate =(obj)=>{
     let arrValidate=Object.values(obj)
     
     if(!arrValidate.includes(false)){
@@ -31,7 +31,7 @@ const funcValidate =(obj)=>{
     }
    
 }
-
+ */
 
 $email.addEventListener("input", (e) => {
     const validateEmail= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
@@ -41,7 +41,7 @@ $email.addEventListener("input", (e) => {
         $email.classList.add("is-valid")
         errorsemail.innerHTML = ""
         validate.email = true
-        console.log("email válido");
+        
         
     } else {
         $email.classList.add("is-invalid")
@@ -49,7 +49,7 @@ $email.addEventListener("input", (e) => {
         errorsemail.innerHTML = "debe ingresar un email valido"
         
         validate.email = false
-        console.log("email inválido");
+        
         
     }
     funcValidate(validate)
@@ -63,14 +63,14 @@ $email.addEventListener("input", (e) => {
         $pass.classList.add("is-valid")
         errorspass.innerHTML = ""
         validate.password = true
-        console.log("Contraseña válida");
+        
         
     } else {
         $pass.classList.add("is-invalid")    
         $pass.classList.remove("is-valid")
        errorspass.innerHTML = "La contraseña debe contener un minimo de 6 caracteres"
      validate.password = false
-       console.log("Contraseña inválida");
+       
         
    }
 
@@ -91,15 +91,15 @@ iconEyeLogin.addEventListener("click", function () {
     };
 });
 
-mostrar.addEventListener("click", (e) => {
+// mostrar.addEventListener("click", (e) => {
   
-     if($pass.getAttribute("type")=="password"){
-        $pass.setAttribute("type","text")
-     }else{
-        $pass.setAttribute("type","password")
-     }
+//      if($pass.getAttribute("type")=="password"){
+//         $pass.setAttribute("type","text")
+//      }else{
+//         $pass.setAttribute("type","password")
+//      }
 
-})
+// })
 
 })
 

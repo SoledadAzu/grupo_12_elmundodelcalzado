@@ -115,23 +115,25 @@ const controller={
     // vista del search y aplicacion del mismo
     general: (req, res) => {
         const search = req.query.keywords.trim()
-        db.Productos.findAll({
-            where:{
-                nombre:{
-                    [Op.substring]:`%${search}%`
-                } //busca lo que llega en body en la base de datos
-            },
-            include:[{all:true}]
-        })
-        .then(producto=>{
-            // res.send(producto)
-            if(search !==''){
-            res.render('products/productosSearch',{producto,search,toThousand})
-        }else{
-            	res.redirect('/')
-            }    
-        })
-        .catch(error=>res.send(error))
+            db.Productos.findAll({
+                where:{
+                    nombre:{
+                        [Op.substring]:`%${search}%`
+                    } //busca lo que llega en body en la base de datos
+                },
+                include:[{all:true}]
+            })
+            .then(producto=>{
+                // res.send(producto)
+                if(search !==''){
+                res.render('products/productosSearch',{producto,search,toThousand})
+            }else{
+                    res.redirect('/')
+                }    
+            })
+            .catch(error=>res.send(error))
+        
+        
 		
 	},
     // vista de todos los productos

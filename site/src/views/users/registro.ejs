@@ -51,7 +51,7 @@
                                             class="obligatorio">*</strong></label>
                                     <input type="text" name="email" id="email" placeholder="Email"
                                         value="<%= locals.oldData && oldData.email ? oldData.email : null %>">
-                                    <small id="erroremail"></small <% if(locals.errors && errors.email){ %>
+                                    <small id="erroremail"></small> <% if(locals.errors && errors.email){ %>
                                     <p style="color:red">
                                         <%= errors.email.msg %>
                                     </p>
@@ -65,9 +65,7 @@
                                                 <i class="fas fa-eye-slash"></i>
                                             </span>       
                                     <input type="password" name="password" id="password" placeholder="Contraseña">
-                                   
-                                    
-                                    <small id="errorpass"></small <% if(locals.errors && errors.password){ %>
+                                    <small id="errorpass"></small> <% if(locals.errors && errors.password){ %>
                                     <p style="color:red">
                                         <%= errors.password.msg %>
                                     </p>
@@ -92,7 +90,7 @@
                                 </div>
                                 <small class="obligatorio">*Campo Obligatorio</small>
                                 <div class="btn">
-                                    <button type="submit">CREAR</button>
+                                    <button id="btn" type="submit">CREAR</button>
                                 </div>
                                 <p>Si tiene una cuenta, inicie sesión con su dirección de correo electronico</p>
                             </form>

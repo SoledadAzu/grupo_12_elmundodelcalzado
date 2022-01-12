@@ -19,13 +19,14 @@
             <!-- Modo CELULAR -->
             <ul>
                 <% if(locals.user && locals.user.rol==="admin" ){ %>
-                    <li><a href="/admin">Administrador</a></li>
+                    <li><a href="/admin">Administrador : <%= locals.user.nombre %></a> </li>
                     <li><a href="/products/hombre">Hombre</a></li>
                     <li><a href="/products/mujer">Mujer</a></li>
                     <li><a href="/products/temporada">temporada</a></li>
                     <li><a href="/products/outlet">Outlet</a></li>
                     <li><a href="/admin/cerrar">Cerrar Session</a></li>
                     <% } else if(locals.user && locals.user.rol==="user" ){%>
+
                         <li><a href="/user/perfiluser/<%=locals.user.id%> ">
                                 <%= locals.user.nombre %>
                             </a></li>
@@ -49,11 +50,13 @@
         <div class="logo">
             <a href="/"> <img src="/images/logo.png" alt="logo"></a>
         </div>
-
-        <form action="/products/general" class="buscar" method="GET">
-            <input type="text" name="keywords" placeholder="¿Que estas buscando? "> <i class="fas fa-search"> </i>
+        
+        <form id="formBuscador" action="/products/general" class="buscar" method="GET">
+            <input id="Buscador" type="text" name="keywords" placeholder="¿Que estas buscando? "> <i id="botonSearch" class="fas fa-search"> </i>
+            <p id="buscadorSmall" class="buscadorSmall"></p>
+            
         </form>
-    
+        
         <div class="iconos">
             <% if(locals.user && locals.user.rol==="admin" ){ %>
                 <div class="administrador">
@@ -100,7 +103,8 @@
                                         <input type="search" name="keywords" placeholder="ingresa tu busqueda">
                                     </div>
                                 </div>
-                                <a href="/products/carritoDeCompras" class="fas fa-shopping-cart "><span>Mi
+                                <a href="/products/carritoDeCompras" class="fas fa-shopping-cart "><sup class="cantidadCompra">0</sup>
+                                    <span>Mi
                                         Compra</span></a>
                             </div>
         </div>

@@ -70,14 +70,14 @@
                         </h5>
                     </div>
 
-                    <form class="talles-datos" action="/products/carritoDeCompras" method="GET">
+                    <form class="talles-datos" onSubmit="addItem(event,'<%= idProduct.id %>')">
                         <h3>TALLES</h3>
                         <div class="talles-datos-numero">
                            
                             <!-- talles -->
                             <% talles.map(e=>{ %>
                                 <div>
-                                    <input type="checkbox" name="<%= e.nombre %> " id="talle<%= e.nombre %>">
+                                    <input type="checkbox" name="talles" id="talle<%= e.nombre %>" value="<%= e.nombre %>">
                                     <label for="talle<%= e.nombre %>">
                                         <%= e.nombre %>
                                     </label>

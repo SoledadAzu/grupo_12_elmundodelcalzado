@@ -25,7 +25,7 @@ html{
 
 }
 a{
-    text-decoration: none;
+    text-decoration: none !important;
     
 }
 .table tr:nth-child(even) {
@@ -60,4 +60,10 @@ a{
 }
 .titulos{
     margin-bottom: 15px;
+}
+
+.papelera{
+    font-size: 22px;
+    color: red;
+    outline: none
 }

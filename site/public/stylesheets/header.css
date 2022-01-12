@@ -145,6 +145,7 @@ header{
     display: none;
 }
 
+
 @media (min-width:769px){
     
     .administrador{
@@ -181,7 +182,7 @@ header{
     .iconos .fa-search{
         padding-right: 20px;
         font-size: 30px;
-        margin-top: 0px;
+        
     }
     .usuario a{
         color: black;
@@ -344,13 +345,20 @@ header{
     .logo-usuario{
         width: 40px;
         height: 40px;
-        border-radius: 50%;
+        
         margin: auto;
         
     }
     .logo-usuario .logo-usuario-img{
         width: 100%;
-        
+        height: 100%;
+        border-radius: 50%;
+    }
+    .buscadorSmall{
+        margin-top: 10px;
+    }
+    #botonSearch{
+        cursor: pointer;
     }
 
 }

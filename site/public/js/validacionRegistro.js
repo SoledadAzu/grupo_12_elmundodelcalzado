@@ -51,20 +51,22 @@ window.addEventListener("load", function () {
 }
 
     $name.addEventListener("keyup", (e) => {
-        const validateNombre = /^[a-zA-Z\sñáéíóú]*$/
+        const validateNombre = /^[a-zA-Z\sñáéíóú]/
 
         if (validateNombre.test(e.target.value)) {
             $name.classList.remove("is-invalid")
             $name.classList.add("is-valid")
-            errorname.innerHTML = "Este campo no puede estar vacio"
+            errorname.innerHTML = ""
             validate.nombre = true
             console.log("nombre válido");
 
 
-    //     // }else if(e.target.value){
-    //     //     $name.classList.add("")
-    //     //     $name.classList.remove("")
-            
+        }else if(e.target.value==""){
+            $name.classList.remove("is-valid")
+            $name.classList.add("is-invalid")
+            errorname.innerHTML = "Este campo no puede estar vacio"
+            validate.nombre = false
+
          } else {
              $name.classList.add("is-invalid")
              $name.classList.remove("is-valid")
@@ -74,18 +76,27 @@ window.addEventListener("load", function () {
              console.log("nombre inválido");
 
          }
+         funcValidate(validate)
+
      })
 
 
-        $lastname.addEventListener("blur", (e) => {
-            const validateApellido = /^[a-zA-Z\sñáéíóú]*$/
+        $lastname.addEventListener("keyup", (e) => {
+            const validateApellido = /^[a-zA-Z\sñáéíóú]/
 
             if (validateApellido.test(e.target.value)) {
                 $lastname.classList.remove("is-invalid")
                 $lastname.classList.add("is-valid")
-                errorlastname.innerHTML = "Este campo no puede estar vacio"
+                errorlastname.innerHTML = ""
                 validate.apellido = true
                 console.log("apellido válido");
+
+            }else if(e.target.value== ""){
+                $lastname.classList.remove("is-valid")
+                $lastname.classList.add("is-invalid")
+                errorlastname.innerHTML = "Este campo no puede estar vacio"
+                validate.apellido = false
+
 
             } else {
                 $lastname.classList.add("is-invalid")
@@ -96,6 +107,8 @@ window.addEventListener("load", function () {
                 console.log("apellido inválido");
 
             }
+            funcValidate(validate)
+
         })
 
 
@@ -106,9 +119,16 @@ window.addEventListener("load", function () {
             if (validateEmail.test(e.target.value)) {
                 $email.classList.remove("is-invalid")
                 $email.classList.add("is-valid")
-                erroremail.innerHTML = "Este campo no puede estar vacio"
+                erroremail.innerHTML = ""
                 validate.email = true
                 console.log("email válido");
+
+            }else if(e.target.value== ""){
+                $email.classList.remove("is-valid")
+                $email.classList.add("is-invalid")
+                erroremail.innerHTML = "Este campo no puede estar vacio"
+                validate.email = false
+
 
             } else {
                 $email.classList.add("is-invalid")
@@ -117,6 +137,7 @@ window.addEventListener("load", function () {
 
                 validate.email = false
                 console.log("email inválido");
+                
 
             }
             funcValidate(validate)
@@ -135,6 +156,7 @@ window.addEventListener("load", function () {
                 $pass.classList.remove("is-valid")
                 $pass.classList.add("is-invalid")
                 errorpass.innerHTML = "Este campo no puede estar vacio"
+                validate.password = false
 
             }else {
                 $pass.classList.add("is-invalid")
@@ -165,9 +187,9 @@ window.addEventListener("load", function () {
 
         $img.addEventListener("change", (e) => {
             const validateImg = /(.jpg|.jpeg|.png|.web)$/i   //Extensiones permitidas
-            if (!validateImg.exec(img)) {     //el metodo exec() ejecuta una busqueda
+            if (!validateImg.exec($img)) {     //el metodo exec() ejecuta una busqueda
                 errorimg.innerHTML = "carga un archivo de imagen válido"
-                validate.img = true
+                // validate.img = true
                 return false;
                 
 
@@ -175,22 +197,22 @@ window.addEventListener("load", function () {
 
                 errorimg.innerHTML = ""
 
-                validate.img = false
+                // validate.img = false
                 console.log("archivo de imagen inválida");
 
             }
-            funcValidate(validate)
+            // funcValidate(validate)
         }),
 
-        mostrar.addEventListener("click", (e) => {
+        // mostrar.addEventListener("click", (e) => {
 
-            if ($pass.getAttribute("type") == "password") {
-                $pass.setAttribute("type", "text")
-            } else {
-                $pass.setAttribute("type", "password")
-            }
-            funcValidate(validate)
-        }),
+        //     if ($pass.getAttribute("type") == "password") {
+        //         $pass.setAttribute("type", "text")
+        //     } else {
+        //         $pass.setAttribute("type", "password")
+        //     }
+        //     funcValidate(validate)
+        // }),
 
         $terms.addEventListener("click", (e) => {
 
@@ -203,6 +225,7 @@ window.addEventListener("load", function () {
             }
             if (!errorterm) {
                 console.log("todo bien")
+                validate.terminos = false
             }
         })
     })
